@@ -13,3 +13,9 @@ install-ci: # install projet dependencies for CI/CD environements
 	cd client && npm ci
 build: # build the application
 	cd client && npm run build
+test:
+	cd client && npm run test
+test-unit:
+	cd client && npm run test-unit
+coverage:
+	cd client && npm run coverage
