@@ -1,35 +1,38 @@
 name: CI
 
 on:
-  push:
-    branches: ["master"]
-  pull_request:
-  workflow_dispatch:
+    push:
+        branches: ["main"]
+    pull_request:
+    workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+    test:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-          cache-dependency-path: client/package-lock.json
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  cache: "npm"
+                  cache-dependency-path: client/package-lock.json
 
-      - name: "Install dependencies"
-        run: make install-ci
+            - name: "Install dependencies"
+              run: make install-ci
 
-      - name: "Build"
-        run: make build
+            - name: "Build"
+              run: make build
 
-      - name: "Run checks"
-        run: make check
+            - name: "Run checks"
+              run: make check
 
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: playwright-results
-          path: client/test-results
+            - name: "Run tests"
+              run: make test
+
+            - name: Upload test results
+              if: always()
+              uses: actions/upload-artifact@v2
+              with:
+                  name: playwright-results
+                  path: client/test-results
