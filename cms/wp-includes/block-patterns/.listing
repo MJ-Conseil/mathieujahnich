@@ -1,0 +1,9 @@
+drwxr-xr-x    2 130934     users               9 Aug 12 20:42 .
+drwxr-xr-x   25 130934     users             237 Aug 12 20:42 ..
+-rw-r--r--    1 130934     users            1001 Aug 12 20:42 query-grid-posts.php
+-rw-r--r--    1 130934     users            2016 Aug 12 20:42 query-large-title-posts.php
+-rw-r--r--    1 130934     users            1082 Aug 12 20:42 query-medium-posts.php
+-rw-r--r--    1 130934     users            2062 Aug 12 20:42 query-offset-posts.php
+-rw-r--r--    1 130934     users            1205 Aug 12 20:42 query-small-posts.php
+-rw-r--r--    1 130934     users             837 Aug 12 20:42 query-standard-posts.php
+-rw-r--r--    1 130934     users             843 Aug 12 20:42 social-links-shared-background-color.php

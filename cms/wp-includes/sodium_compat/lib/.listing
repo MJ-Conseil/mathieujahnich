@@ -1,0 +1,9 @@
+drwxr-xr-x    2 130934     users               9 Aug 12 20:42 .
+drwxr-xr-x    5 130934     users               9 May  4 16:38 ..
+-rw-r--r--    1 130934     users            4161 May  4 16:38 constants.php
+-rw-r--r--    1 130934     users            1345 May  4 16:38 namespaced.php
+-rw-r--r--    1 130934     users           41709 Aug 12 20:42 php72compat.php
+-rw-r--r--    1 130934     users            4597 Aug 12 20:42 php72compat_const.php
+-rw-r--r--    1 130934     users            7210 Aug 12 20:42 ristretto255.php
+-rw-r--r--    1 130934     users           24536 Aug 12 20:42 sodium_compat.php
+-rw-r--r--    1 130934     users            1287 Aug 12 20:42 stream-xchacha20.php
