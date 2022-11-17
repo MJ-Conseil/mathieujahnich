@@ -1,0 +1,17 @@
+drwx---r-x    2 130934     users              17 Oct 18 16:21 .
+drwxr-xr-x   11 130934     users              13 Oct 16 22:22 ..
+-rw----r--    1 130934     users              13 May  4 16:26 .htaccess
+-rw-r--r--    1 130934     users        54842101 Oct 18 15:59 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-plugins.zip
+-rw-r--r--    1 130934     users         1309576 Oct 18 15:59 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-plugins.zip.list.tmp
+-rw-r--r--    1 130934     users         9922714 Oct 18 15:59 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-themes.zip
+-rw-r--r--    1 130934     users          158085 Oct 18 15:59 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-themes.zip.list.tmp
+-rw-r--r--    1 130934     users              57 Oct 18 16:08 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-uploads-cachelist--1-info.tmp
+-rw-r--r--    1 130934     users          681270 Oct 18 16:08 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-uploads-cachelist--1-zfb.gz.tmp
+-rw-r--r--    1 130934     users            1479 Oct 18 16:08 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-uploads-cachelist--1-zfd.gz.tmp
+-rw-r--r--    1 130934     users       423159615 Oct 18 16:13 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-uploads.zip
+-rw-r--r--    1 130934     users       202485267 Oct 18 16:16 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-uploads2.zip.tmp
+-rw-------    1 130934     users       175865856 Oct 18 16:16 backup_2021-10-18-1557_Mathieu_Jahnich_8b261ec4fdb5-uploads2.zip.tmp.YGpVkE
+-rw----r--    1 130934     users             112 May  4 16:26 index.html
+-rw-r--r--    1 130934     users           67896 Oct 18 16:16 log.8b261ec4fdb5.txt
+-rw-r--r--    1 130934     users            9308 Oct 18 16:21 log.8f0da46429e3.txt
+-rw----r--    1 130934     users             124 May  4 16:26 web.config

@@ -1,0 +1,11 @@
+drwxr-xr-x    2 130934     users              11 Jan  9  2019 .
+drwxr-xr-x   13 130934     users             113 May  4 16:38 ..
+-rw-r--r--    1 130934     users           20282 Aug 12 20:42 handlers.js
+-rw-r--r--    1 130934     users           11893 Aug 12 20:42 handlers.min.js
+-rw-r--r--    1 130934     users           17987 Jul 29  2011 license.txt
+-rw-r--r--    1 130934     users          254084 Sep 22  2017 moxie.js
+-rw-r--r--    1 130934     users           87654 Aug 12 20:42 moxie.min.js
+-rw-r--r--    1 130934     users           60314 Sep  1  2017 plupload.js
+-rw-r--r--    1 130934     users           15612 Apr 15  2021 plupload.min.js
+-rw-r--r--    1 130934     users           16442 Aug 12 20:42 wp-plupload.js
+-rw-r--r--    1 130934     users            5979 Aug 12 20:42 wp-plupload.min.js

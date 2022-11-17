@@ -1,0 +1,13 @@
+drwxr-xr-x   11 130934     users              13 Oct 16 22:22 .
+drwxr-xr-x    5 130934     users              24 Oct 19 13:27 ..
+-rw-r--r--    1 130934     users            1188 Sep 10 17:37 advanced-cache.php
+drwxr-xr-x    6 130934     users               7 Oct 18 09:23 cache
+-rw-r--r--    1 130934     users              28 Jan  8  2012 index.php
+drwxr-xr-x    4 130934     users              64 Oct 21 09:42 languages
+drwxr-xr-x   14 130934     users              15 Oct 19 13:27 plugins
+drwxr-xr-x    5 130934     users               6 Oct 18 21:36 themes
+drwx---r-x    2 130934     users              17 Oct 18 16:21 updraft
+drwxr-xr-x    2 130934     users               2 Oct 21 09:42 upgrade
+drwxr-xr-x   35 130934     users              36 Oct 19 14:03 uploads
+drwxr-xr-x    2 130934     users               4 Oct 18 09:23 w3tc-config
+drwxr-xr-x    2 130934     users              12 Oct 21 17:45 wflogs

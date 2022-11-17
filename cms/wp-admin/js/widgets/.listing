@@ -1,0 +1,16 @@
+drwxr-xr-x    2 130934     users              16 Jan  9  2019 .
+drwxr-xr-x    3 130934     users              96 May  4 16:38 ..
+-rw-r--r--    1 130934     users           15765 Sep  9 09:40 custom-html-widgets.js
+-rw-r--r--    1 130934     users            5571 Sep  9 09:40 custom-html-widgets.min.js
+-rw-r--r--    1 130934     users            4284 May  4 16:38 media-audio-widget.js
+-rw-r--r--    1 130934     users            1447 May  4 16:38 media-audio-widget.min.js
+-rw-r--r--    1 130934     users           10354 May  4 16:38 media-gallery-widget.js
+-rw-r--r--    1 130934     users            3766 May  4 16:38 media-gallery-widget.min.js
+-rw-r--r--    1 130934     users            5468 May  4 16:38 media-image-widget.js
+-rw-r--r--    1 130934     users            2024 May  4 16:38 media-image-widget.min.js
+-rw-r--r--    1 130934     users            7020 May  4 16:38 media-video-widget.js
+-rw-r--r--    1 130934     users            2704 May  4 16:38 media-video-widget.min.js
+-rw-r--r--    1 130934     users           42851 Sep  9 09:40 media-widgets.js
+-rw-r--r--    1 130934     users           14253 Sep  9 09:40 media-widgets.min.js
+-rw-r--r--    1 130934     users           18047 Aug 12 20:42 text-widgets.js
+-rw-r--r--    1 130934     users            5854 Aug 12 20:42 text-widgets.min.js
