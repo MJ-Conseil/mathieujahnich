@@ -5,5 +5,5 @@ export const api = async (url: string) => {
 	if (request.ok) {
 		return await request.json();
 	}
-	throw Error('Unable to get posts');
+	throw Error('Unable to fetch data');
 };
