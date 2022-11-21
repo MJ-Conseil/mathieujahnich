@@ -1,28 +1,27 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { api } from '$lib/utils/api';
 
 	import type { Post } from 'src/definitions/post';
+	import { getPosts } from '$lib/repositories/post';
 
-    let posts: Post[] = [];
+	let posts: Post[] = [];
 
 	onMount(async () => {
-		const data = await api(`/posts`);
-		posts = data; 
+		try {
+			posts = await getPosts();
+		} catch (e) {
+			console.log(e);
+		}
 	});
-    
 </script>
 
 <h1 class="text-3xl font-bold underline">Hello world!</h1>
 <ul>
-    {#each posts as post}
-        <li>
-            <a href={`/post/${post.id}`}>
-                {post.title.rendered}
-            </a>
-        </li>
-    {/each}
+	{#each posts as post}
+		<li>
+			<a href={`/post/${post.slug}`}>
+				{post.title.rendered}
+			</a>
+		</li>
+	{/each}
 </ul>
-
-
-
