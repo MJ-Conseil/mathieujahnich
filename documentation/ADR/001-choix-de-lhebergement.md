@@ -29,17 +29,7 @@ La nouvelle version du site `mathieu-jahnich.fr` va avoir deux composantes appli
 
 Il n'est pas possible d'héberger une telle architecture ["client-serveur"](https://fr.wikipedia.org/wiki/Client-serveur) sur un serveur mutualisé. En effet, ce type d'hébergement ne donne pas la possibilité d'installer les outils nécessaires.
 
-### Nécessité de passer vers un serveur VPS (Virtual Private Server) ?
-
-*VPS ?* 
-
-Un VPS (Virtual Private Server) est équivalent à un serveur dédié (serveur physique dans un datacenter par exemple). La différence principale est qu'un serveur VPS est en fait une machine virtuelle tournant sur un serveur physique.
-
-Cela donne l'impression d'être sur un serveur dédié avec la flexibilité de celui-ci (possibilité d'installer ce que l'on souhaite quand l'on souhaite) sans avoir à louer un serveur dédié en entier.
-
-Avec la nouvelle version du site, nous aurions besoin d'avoir un serveur applicatif sur lequel tournera NodeJS pour SvelteKit ainsi que NGINX pour la partie Wordpress et le Reverse Proxy
-
-Un tel type d'architecture n'est pas possible avec un serveur mutualisé
+Pour plus d'information, concernant les besoins au niveau serveur voir cette autre ADR : https://github.com/MJ-Conseil/mathieujahnich/blob/main/documentation/ADR/002-architecture-server.md
 
 ### Comparaison des hébergeurs
 
