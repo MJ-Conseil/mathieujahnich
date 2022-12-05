@@ -1,6 +1,0 @@
-drwxr-xr-x    2 130934     users               6 May  4 16:38 .
-drwxr-xr-x    5 130934     users               8 Jan  9  2019 ..
--rw-r--r--    1 130934     users            3608 May  4 16:38 class-wp-rest-post-format-search-handler.php
--rw-r--r--    1 130934     users            5329 May  4 16:38 class-wp-rest-post-search-handler.php
--rw-r--r--    1 130934     users            2263 May  4 16:38 class-wp-rest-search-handler.php
--rw-r--r--    1 130934     users            3980 May  4 16:38 class-wp-rest-term-search-handler.php

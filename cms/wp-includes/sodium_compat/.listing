@@ -1,9 +1,0 @@
-drwxr-xr-x    5 130934     users               9 May  4 16:38 .
-drwxr-xr-x   25 130934     users             237 Aug 12 20:42 ..
--rw-r--r--    1 130934     users             860 Aug 12 20:42 LICENSE
--rw-r--r--    1 130934     users             890 May  4 16:38 autoload-php7.php
--rw-r--r--    1 130934     users            2731 Aug 12 20:42 autoload.php
--rw-r--r--    1 130934     users            1608 Aug 12 20:42 composer.json
-drwxr-xr-x    2 130934     users               9 Aug 12 20:42 lib
-drwxr-xr-x    3 130934     users               6 Jul 29  2019 namespaced
-drwxr-xr-x    5 130934     users              10 May  4 16:38 src

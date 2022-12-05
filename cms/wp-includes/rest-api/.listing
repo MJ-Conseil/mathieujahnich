@@ -1,8 +1,0 @@
-drwxr-xr-x    5 130934     users               8 Jan  9  2019 .
-drwxr-xr-x   25 130934     users             237 Aug 12 20:42 ..
--rw-r--r--    1 130934     users           25992 May  4 16:38 class-wp-rest-request.php
--rw-r--r--    1 130934     users            7355 May  4 16:38 class-wp-rest-response.php
--rw-r--r--    1 130934     users           50656 Aug 12 20:42 class-wp-rest-server.php
-drwxr-xr-x    2 130934     users              28 Aug 12 20:42 endpoints
-drwxr-xr-x    2 130934     users               7 Jan  9  2019 fields
-drwxr-xr-x    2 130934     users               6 May  4 16:38 search
