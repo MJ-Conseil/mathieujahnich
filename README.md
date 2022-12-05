@@ -1,38 +1,43 @@
-# create-svelte
+# mathieu-jahnich.fr - client
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+Ce site en en cours de développement est une nouvelle version du site actuel de Mathieu Jahnich dont la version actuelle est diponible à cette adresse https://mathieu-jahnich.fr
 
-If you're seeing this, you've probably already done this step. Congrats!
+L'équipe projet a été formée en novembre 2022 à la suite d'une investigation menée par Anne Faubry. Cette investigation avait pour objectif la création d'une nouvelle version du site internet de Mathieu Jahnich créé dans une démarche d'éco-conception de service numérique.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Cette démarche a été synthétisée dans le [guide d'éco-conception de service numérique](https://eco-conception.designersethiques.org/guide/fr/content/0-introduction.html) rédigé par le collectif [Designer Ethiques](https://designersethiques.org/)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Implémentation et périmètre métier
 
-## Developing
+Le site actuel mathieu-jahnich.fr est un site initialement concu avec la technologie [Wordpress](https://wordpress.com/fr/).
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Mathieu Jahnich souhaite que son site intègre le plus possible des bonnes pratiques d'éco-conception de service numérique. Cette nouvelle version du site doit respecter les normes d'accessibilité de service numérique définies par le [Référentiel général d'amélioration de l'accessibilité (RGAA)](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/).
 
-```bash
-npm run dev
+Dans cette optique, le choix technique effectué pour répondre à ces objectifs est de transofmer le Wordpress actuel en [CMS headless](https://www.lafabriquedunet.fr/blog/headless-cms/). 
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Une application client faite avec la technologie [SvelteKit](https://kit.svelte.dev/) a été rajoutée. Cette application consommera le contenu (articles de blog, images,...) mise à disposition par Wordpress via l'API REST.
 
-## Building
+## Qu'est-ce que ce répertoire contient ?
 
-To create a production version of your app:
+Ce répertoire GitHub contient l'application client construite avec SvelteKit de la future version du site web mathieu-jahnich.fr
 
-```bash
-npm run build
-```
 
-You can preview the production build with `npm run preview`.
+## Démarrage
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+#### Installation des dépendances SvelteKit et initialisation de la DB
+
+*Commande*: `npm install`
+Le client est accessible sur l'url http://localhost:5175
+
+
+## Déploiement
+
+TO DO
+
+
+
+
+## Licence
+
+AGPL 3.0
