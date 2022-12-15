@@ -2,7 +2,7 @@
 
 
 *Date* : 30/11/22
-*Status*: en discussion
+*Status*: approuvée
 
 ## Contexte
 
@@ -47,9 +47,9 @@ Lien : https://github.com/cnumr/best-practices/blob/main/chapters/BP_086_fr.md
 
 ### Infomaniak
 
+### Option serveur cloud non managé
+
 **Prix**
-
-
 | Dénomination | Prix|
 | -------- | -------- 
 | Serveur applicatif     | 29€HTVA/mois     |
@@ -57,6 +57,20 @@ Lien : https://github.com/cnumr/best-practices/blob/main/chapters/BP_086_fr.md
 
 
 Lien https://www.infomaniak.com/fr/hebergement/serveurs-dedies-et-cloud/serveur-cloud-non-manage
+
+### Option PaaS (Jelastic)
+
+
+Infomaniak propose aussi une solution PaaS "Eslatic Cloud" basé sur le logiciel Jelastic. 
+
+L'idée d'une solution PaaS est de pouvoir configurer un environement cloud sur lequel l'application sera déployée comme l'on souhaite.
+
+Au niveau tarfication, Infomaniak facture à l'usage de la ressource. Le calcul du prix se fait via une unité nommée "Cloudlet"
+
+> Le Cloudlet est l'unité de mesure qui détermine le montant facturé. Un Cloudlet correspond à 128 Mo de RAM et 400 MHz de CPU. 
+
+Plus d'infos sur la tarification ici : https://www.infomaniak.com/fr/hebergement/serveurs-dedies-et-cloud/jelastic-cloud
+
 
 **Charte environnementale**
 
@@ -180,3 +194,7 @@ Cela permettrait de se soulager de la gestion d'un serveur de type [VPS](https:/
 **Questions en suspens : **
 
 - Est-ce que Infomaniak permet d'avoir l'infra que l'on a besoin avec sa solution PaaS ?
+
+### Décision
+
+Pour la nouvelle version du site mathieu-jahnich.fr nous allons aller chez Infomaniak avec leur solution "Elastic Cloud"
