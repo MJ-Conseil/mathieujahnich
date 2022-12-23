@@ -1,8 +1,7 @@
 # Choix d'un nouvel hébergeur pour `mathieu-jahnich.fr` et `beta.mathieu-jahnich.fr`
 
-
-*Date* : 30/11/22
-*Status*: approuvée
+_Date_ : 30/11/22
+_Status_: approuvée
 
 ## Contexte
 
@@ -14,7 +13,6 @@ Cet hébergement mutualisé implique les **contraintes suivantes** :
 - ne permet pas d'accéder à la DB en dehors de l'infrastructure de PlanetHoster. L'accès se faisant uniquement via le PHPMyAdmin pré-installé sur l'interface d'adminisatrtion de PlanetHoster
 
 Cet hébergement mutualisé présente **un avantage** principal : son coût à savoir 109€ par an
-
 
 ### Une évolution des besoins en terme d'infrastructure
 
@@ -44,38 +42,33 @@ Lien : https://github.com/cnumr/best-practices/blob/main/chapters/BP_086_fr.md
 - localisation géographique des serveurs
 - est-ce qu'il est possible d'installer l'infra logicielle que l'on souhaite avoir
 
-
 ### Infomaniak
 
 ### Option serveur cloud non managé
 
 **Prix**
 | Dénomination | Prix|
-| -------- | -------- 
-| Serveur applicatif     | 29€HTVA/mois     |
-| DB managée   | 4.84 /mois    |
-
+| -------- | --------
+| Serveur applicatif | 29€HTVA/mois |
+| DB managée | 4.84 /mois |
 
 Lien https://www.infomaniak.com/fr/hebergement/serveurs-dedies-et-cloud/serveur-cloud-non-manage
 
 ### Option PaaS (Jelastic)
 
-
-Infomaniak propose aussi une solution PaaS "Eslatic Cloud" basé sur le logiciel Jelastic. 
+Infomaniak propose aussi une solution PaaS "Eslatic Cloud" basé sur le logiciel Jelastic.
 
 L'idée d'une solution PaaS est de pouvoir configurer un environement cloud sur lequel l'application sera déployée comme l'on souhaite.
 
 Au niveau tarfication, Infomaniak facture à l'usage de la ressource. Le calcul du prix se fait via une unité nommée "Cloudlet"
 
-> Le Cloudlet est l'unité de mesure qui détermine le montant facturé. Un Cloudlet correspond à 128 Mo de RAM et 400 MHz de CPU. 
+> Le Cloudlet est l'unité de mesure qui détermine le montant facturé. Un Cloudlet correspond à 128 Mo de RAM et 400 MHz de CPU.
 
 Plus d'infos sur la tarification ici : https://www.infomaniak.com/fr/hebergement/serveurs-dedies-et-cloud/jelastic-cloud
-
 
 **Charte environnementale**
 
 Lien : https://www.infomaniak.com/fr/ecologie
-
 
 En 2020, Infomaniak a généré 998.1 tCO2 eq. Pour atténuer leur impact environnemental, ils disent avoir financé des projets en Suisse et au Nicaragua qui absorberont 1996.2 tCO2 eq pour un montant total de CHF 67'437.-
 
@@ -105,15 +98,14 @@ A priori oui, mais quid de si on a besoin de décommissionner un serveur comment
 
 À la différence d'Infomaniak, Scalway facture à l'utilisation des ressources.
 
-Cela veut dire que plus une instance de serveur sera utilisée plus, elle coutera cher. 
+Cela veut dire que plus une instance de serveur sera utilisée plus, elle coutera cher.
 
 Le prix évolue donc en fonction du trafic
 
-| Dénomination | Prix|
-| -------- | -------- 
-| Serveur applicatif (Taille S)     | €0.22207/heure     |
-| Serveur DB managée  |€0.2595/heure  |
-
+| Dénomination                  | Prix           |
+| ----------------------------- | -------------- |
+| Serveur applicatif (Taille S) | €0.22207/heure |
+| Serveur DB managée            | €0.2595/heure  |
 
 **Charte environnementale**
 
@@ -121,7 +113,7 @@ Lien : https://www.scaleway.com/fr/leadership-environnemental/
 
 Julie à l'impression que ce document est plus une note d'intention et d'engagement plus qu'une explication formelle de quelles actions ils entreprennent pour être à la hauteur de ces engagements.
 
-Cependant, ils disent que : 
+Cependant, ils disent que :
 
 - ils s'engagent à maintenir leurs serveurs sur une durée de 10ans
 - ils s'engagent à avoir un [PUE](https://fr.wikipedia.org/wiki/Indicateur_d%27efficacit%C3%A9_%C3%A9nerg%C3%A9tique) inféreur à 1.15 pour tous les nouveaux datacenter construit depuis 2018 (comment savoir si on est dans un datacenter d'après 2018 ?)
@@ -145,10 +137,10 @@ Concrètement oui. Il est totalement possible d'avoir une instance serveur pour 
 
 **Prix**
 
-| Dénomination | Prix|
-| -------- | -------- 
-| Serveur applicatif    | €23,50 HTVA/mois  |
-| Serveur DB managée    | 0,068 € HT/heure |
+| Dénomination       | Prix             |
+| ------------------ | ---------------- |
+| Serveur applicatif | €23,50 HTVA/mois |
+| Serveur DB managée | 0,068 € HT/heure |
 
 **Charte environnementale**
 
@@ -167,17 +159,15 @@ Lien : https://corporate.ovhcloud.com/fr/sustainability/environment/
 - Mettre en place un programme de capture du carbone équivalent aux catégories Scope 1 et 2 d'ici à 2025, puis l’élargir aux catégories Scope 3 d'ici à 2030.
 - Permettre à nos clientes et clients d'obtenir des informations en temps réel sur l'impact énergétique de tous nos services cloud, d'ici 2025.
 
-
 **Localisation géographique des serveurs**
 
 Principalement en France (Gravelines, Strasbourg) et en Europe
-
 
 **Est-ce qu'il est possible d'installer l'infra logicielle que l'on souhaite avoir ?**
 
 Oui OVH propose des DB managées et des serveurs VPS
 
-### Rappel 
+### Rappel
 
 L'hébergement du site mathieu-jahnich.fr coûte actuelle 109€/an HTVA
 
