@@ -9,3 +9,5 @@ node_modules
 /coverage
 vite.config.ts.timestamp-*
 /.vite
+
+.vscode
