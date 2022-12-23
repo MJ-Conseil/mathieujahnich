@@ -1,7 +1,7 @@
 # Quelle infrastructure serveur choisir ?
 
-*Date* : 1/12/2022
-*Status* : en discussion
+_Date_ : 1/12/2022
+_Status_ : en discussion
 
 ## Comphrésension du besoin
 
@@ -31,12 +31,11 @@ La partie "client" sera construite avec SvelteKit qui est un framework Javascrip
 
 ##### Un reverse proxy
 
-
 L'idéal serait que le serveur et le client soit installé sur le même serveur. Cela éviterait que chaque appel http entre le client et le serveur "traverse internet" pour obtenir les informations.
 
 Pour plus d'infos sur comment fonctionne internet voir : https://www.cloudflare.com/fr-fr/learning/network-layer/how-does-the-internet-work/
 
-Une idée serait que en allant sur 
+Une idée serait que en allant sur
 
 https://mathieu-jahnich.fr permette d'accéder au client
 https://mathieu-jahnich.fr/cms permette d'accéder au wordpress
@@ -44,7 +43,6 @@ https://mathieu-jahnich.fr/cms permette d'accéder au wordpress
 Pour répondre à ces besoins l'on va avoir besoin d'un [reverse proxy](https://fr.wikipedia.org/wiki/Proxy_inverse)
 
 NGINX peut aussi jouer le rôle de reverse proxy
-
 
 #### Quel type d'hébergerment à t'on besoin d'avoir ?
 
@@ -66,7 +64,6 @@ Cependant, un VPS risque de demander beacoup de temps en terme de maintenance. E
 
 Cependant, si l'on utilise un VPS l'ont pourrait utiliser [docker](https://www.docker.com/) pour faciliter les installations des outils sur le serveur.
 
-
 **Du [PaaS](https://fr.wikipedia.org/wiki/Platform_as_a_service) alors ?**
 
 Passer par un service PaaS pourrait être l'idéal car cela nous soulagèreait de la partie installation et maintenance du serveur.
@@ -79,7 +76,7 @@ L'avantage avec le PaaS c'est que ces besoins n'ont pas besoin d'être pris en c
 
 **Un serveur dédié ?**
 
-Cette solution est exclue de facto car  nous ne pensons pas qu'il est nécessaire d'acheter ou de louer un nouveau serveur.
+Cette solution est exclue de facto car nous ne pensons pas qu'il est nécessaire d'acheter ou de louer un nouveau serveur.
 
 Cela reviendrait trop cher en terme de temps de maintenance et en terme de sous.
 
