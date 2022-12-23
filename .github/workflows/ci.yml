@@ -16,23 +16,23 @@ jobs:
               with:
                   node-version: 16
                   cache: "npm"
-                  cache-dependency-path: client/package-lock.json
+                  cache-dependency-path: package-lock.json
 
             - name: "Install dependencies"
-              run: make install-ci
+              run: npm ci
 
             - name: "Build"
-              run: make build
+              run: npm run build
 
             - name: "Run checks"
-              run: make check
+              run: npm run check
 
             - name: "Run tests"
-              run: make test
+              run: npm run test
 
             - name: Upload test results
               if: always()
               uses: actions/upload-artifact@v2
               with:
                   name: playwright-results
-                  path: client/test-results
+                  path: test-results
