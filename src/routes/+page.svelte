@@ -15,7 +15,7 @@
 	});
 </script>
 
-<h1 class="text-3xl font-ptsans text-blue-dark font-bold underline">Hello world!</h1>
+<h1>Hello world!</h1>
 <h1 class="text-3xl text-blue-dark font-bold underline">Hello world!</h1>
 <ul>
 	{#each posts as post}

@@ -31,3 +31,58 @@
 		font-style: italic;
 	}
 }
+
+@layer components {
+	/* Heading */
+
+	.mj-heading-base {
+		@apply font-ptsans font-bold;
+	}
+
+	h1,
+	.mj-h1 {
+		@apply mj-heading-base text-6xl  text-blue-dark;
+	}
+
+	.mj-h1--alt {
+		@apply .mj-h1 text-white;
+	}
+
+	h2,
+	.mj-h2 {
+		@apply mj-heading-base text-5xl  text-blue-dark;
+	}
+
+	.mj-h2--alt {
+		@apply .mj-h2 text-white;
+	}
+
+	h3,
+	.mj-h3 {
+		@apply mj-heading-base text-2xl  text-blue-dark;
+	}
+
+	.mj-h3--alt {
+		@apply .mj-h3 text-white;
+	}
+
+	.mj-subtitle {
+		@apply font-sans text-indigo text-2xl;
+	}
+
+	.mj-subtitle--alt {
+		@apply font-sans text-sand text-2xl;
+	}
+
+	/* Link */
+
+	[href],
+	a,
+	.mj-link {
+		@apply text-indigo underline;
+	}
+
+	.mj-link--alt {
+		@apply text-sand underline;
+	}
+}
