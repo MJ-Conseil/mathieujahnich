@@ -8,7 +8,8 @@ module.exports = {
 				dark: '#06154A'
 			},
 			sand: '#F0CB85',
-			indigo: '#291F9C'
+			indigo: '#291F9C',
+			white: '#ffffff'
 		},
 		fontFamily: {
 			ptsans: ['PT Sans', 'sans-serif'],
