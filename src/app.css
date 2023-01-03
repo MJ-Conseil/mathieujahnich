@@ -45,7 +45,8 @@
 	}
 
 	.mj-h1--alt {
-		@apply .mj-h1 text-white;
+		@apply mj-h1 text-white;
+
 	}
 
 	h2,
@@ -54,7 +55,7 @@
 	}
 
 	.mj-h2--alt {
-		@apply .mj-h2 text-white;
+		@apply mj-h2 text-white;
 	}
 
 	h3,
