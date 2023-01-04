@@ -4,7 +4,6 @@ about: Basic Issue Template
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 # Description du besoin
