@@ -2,12 +2,12 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 </script>
 
-<div class="clipped--bottom relative md:h-3/5 w-full bg-blue-dark pb-5">
-	<div class="relative md:p-0 p-2 pt-5 h-full">
+<div class="clipped--bottom  w-full md:p-4 pb-9 relative bg-blue-dark">
+	<div class="md:container md:py-4 md:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-		<header role="banner" class="grid grid-flow-row container gap-5 md:mx-auto">
+		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
 			<p class="text-sand font-bold">Mj Conseil</p>
-			<h1 class="mj-h1--alt leading-[60px]">
+			<h1 class="mj-h1--alt text-4xl text">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>
 			</h1>
@@ -17,17 +17,17 @@
 				définition de votre stratégie à la mise en place opérationnelle.
 			</p>
 		</header>
+	</div>
 
-		<div
-			aria-hidden="true"
-			class="md:flex absolute right-0 top-6  hidden items-center w-1/ h-2/3 justify-center  opacity-60 text-white "
-		>
-			<Icon width="auto" height="100%" name="mjConseil" />
-		</div>
+	<div
+		aria-hidden="true"
+		class="md:block md:absolute top-4 right-0   md:w-[190px] justify-center hidden opacity-80 text-white "
+	>
+		<Icon width="auto" height="100%" name="mjConseil" />
 	</div>
 </div>
 
-<main class="container md:mx-auto grid grid-flow-row" id="main">
+<main class="container md:p-0 p-4 md:0 md:mx-auto grid grid-flow-row" id="main">
 	<section class="mt-3">
 		<h2>Signes particuliers</h2>
 	</section>
