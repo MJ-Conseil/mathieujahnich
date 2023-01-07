@@ -2,10 +2,6 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 </script>
 
-<svelte:head>
-	<title>MJ conseil - Acceuil</title>
-</svelte:head>
-
 <div class="clipped--bottom  w-full p-4 md:pb-9 relative bg-blue-dark">
 	<div class="md:container md:py-4 md:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
@@ -54,3 +50,13 @@
 		</p>
 	</section>
 </main>
+
+<!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
+<footer role="contentinfo" class="mt-5">
+	<nav>
+		<ul>
+			<li><a href="#"> lien 1</a></li>
+			<li><a href="#"> lien 2</a></li>
+		</ul>
+	</nav>
+</footer>
