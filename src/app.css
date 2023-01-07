@@ -36,22 +36,21 @@
 	/* Heading */
 
 	.mj-heading-base {
-		@apply font-ptsans font-bold;
+		@apply font-ptsans font-normal;
 	}
 
 	h1,
 	.mj-h1 {
-		@apply mj-heading-base text-6xl  text-blue-dark;
+		@apply mj-heading-base text-6xl text-blue-dark;
 	}
 
 	.mj-h1--alt {
 		@apply mj-h1 text-white;
-
 	}
 
 	h2,
 	.mj-h2 {
-		@apply mj-heading-base text-5xl  text-blue-dark;
+		@apply mj-heading-base text-5xl text-blue-dark;
 	}
 
 	.mj-h2--alt {
@@ -60,7 +59,7 @@
 
 	h3,
 	.mj-h3 {
-		@apply mj-heading-base text-2xl  text-blue-dark;
+		@apply mj-heading-base text-2xl text-blue-dark;
 	}
 
 	.mj-h3--alt {
@@ -85,5 +84,30 @@
 
 	.mj-link--alt {
 		@apply text-sand underline;
+	}
+}
+
+/* Misc */
+
+/* Clipped class creates a diagonal border at the div bottom 
+
+
+To try see : https://bennettfeely.com/clippy/
+More infos about "clip-path" property : https://ishadeed.com/article/clip-path/
+
+Usage: 
+
+<div class="clipped--bottom">
+	<-- Content here !-->
+</div>
+*/
+
+.clipped--bottom {
+	clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+}
+
+@media (min-width: 768px) {
+	.clipped--bottom {
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 	}
 }

@@ -1,22 +1,33 @@
-<script lang="ts">
-	import Header from '$lib/components/mollecules/Header/Header.svelte';
+<script>
+	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 </script>
 
-<Header />
+<div class="clipped--bottom  w-full p-4 md:pb-9 relative bg-blue-dark">
+	<div class="md:container md:py-4 md:mx-auto">
+		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
+		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
+			<p class="text-sand font-bold">Mj Conseil</p>
+			<h1 class="mj-h1--alt lg:text-6xl text-4xl text">
+				Nous mettons la <span class="font-bold"> communication</span> au service de la
+				<span class="font-bold">transition écologique</span>
+			</h1>
 
-<div class="bg-blue-dark mt-3" id="main-content">
-	<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-	<header role="banner">
-		<h1 class="mj-h1--alt">Nous mettons la communication au service de la transition écologique</h1>
+			<p class="text-white">
+				Nous sommes un trio d’experts en RSE et communication capables de vous aider de la
+				définition de votre stratégie à la mise en place opérationnelle.
+			</p>
+		</header>
+	</div>
 
-		<p class="mt-3 text-white">
-			Nous sommes un trio d’experts en RSE et communication capables de vous aider de la définition
-			de votre stratégie à la mise en place opérationnelle.
-		</p>
-	</header>
+	<div
+		aria-hidden="true"
+		class="md:block md:absolute top-4 right-0 md:w-[190px] justify-center hidden opacity-80 text-white "
+	>
+		<Icon width="auto" height="100%" name="mjConseil" />
+	</div>
 </div>
 
-<main id="main">
+<main class="container md:p-0 p-4 md:0 md:mx-auto grid grid-flow-row" id="main">
 	<section class="mt-3">
 		<h2>Signes particuliers</h2>
 	</section>
@@ -49,4 +60,3 @@
 		</ul>
 	</nav>
 </footer>
-
