@@ -1,7 +1,7 @@
 <script lang="ts">
+	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
-	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 </script>
 
 <svelte:head>
@@ -34,22 +34,55 @@
 </div>
 
 <main class="container md:p-0 p-4 md:0 md:mx-auto grid grid-flow-row" id="main">
-	<section class="mt-3">
-		<h2>Signes particuliers</h2>
+	<section class="my-4">
+		<h2 class="mb-4 font-bold">Signes particuliers</h2>
 	</section>
 
-	<section class="mt-3">
-		<h2>Nos offres et services</h2>
-
-		<Circle size="2rem" />
+	<section class="my-4">
+		<h2 class="mb-4 font-bold">Nos offres et services</h2>
+		<div class="lg:flex lg:flex-row">
+			<article class="mt-4 lg:mr-8">
+				<div class="mb-4">
+					<Circle size="8.5rem" />
+				</div>
+				<h3 class="font-bold">Prendre de la hauteur</h3>
+				<p>
+					Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
+					de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
+					externes pour enrichir les stratégies RSE et communication.
+				</p>
+			</article>
+			<article class="mt-4 lg:mr-8">
+				<div class="mb-4">
+					<Circle size="8.5rem" />
+				</div>
+				<h3 class="font-bold">Trouver  le juste équilibre</h3>
+				<p>
+					Analyser les arguments écologiques des supports marketing et communication pour vérifier
+					leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
+					des filets de sécurité pour limiter les accusations de greenwashing.
+				</p>
+			</article>
+			<article class="mt-4 lg:mr-8">
+				<div class="mb-4">
+					<Circle size="8.5rem" />
+				</div>
+				<h3 class="font-bold">Donner  de l’élan</h3>
+				<p>
+					Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
+					fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
+					units, partenaires…), vers des pratiques plus responsables.
+				</p>
+			</article>
+		</div>
 	</section>
 
-	<section class="mt-3">
-		<h2>Formez-vous</h2>
+	<section class="my-4">
+		<h2 class="mb-4 font-bold">Formez-vous</h2>
 	</section>
 
-	<section class="mt-3">
-		<h2>A la une du blog</h2>
+	<section class="my-4">
+		<h2 class="mb-4 font-bold">A la une du blog</h2>
 
 		<p class="font-ptsans text-2xl">
 			Depuis 2005, j’interroge l’alignement de la communication et du marketing avec les enjeux de
