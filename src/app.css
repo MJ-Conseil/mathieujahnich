@@ -125,4 +125,10 @@ Usage:
 		@apply bg-sand;
 		border-radius: 50%;
 	}
+
+	/* Cercle */
+	.mj-circle-sand {
+		@apply bg-sand;
+		border-radius: 50%;
+	}
 }

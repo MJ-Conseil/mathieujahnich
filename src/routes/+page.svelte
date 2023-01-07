@@ -1,7 +1,12 @@
 <script lang="ts">
+<<<<<<< HEAD
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
+=======
+	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
+	import Header from '$lib/components/mollecules/Header/Header.svelte';
+>>>>>>> 0f4a463c (Add Circle)
 </script>
 
 <svelte:head>
@@ -80,4 +85,16 @@
 	</section>
 </main>
 
+<<<<<<< HEAD
 <Footer />
+=======
+<!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
+<footer role="contentinfo" class="mt-5">
+	<nav>
+		<ul>
+			<li><a href="#"> lien 1</a></li>
+			<li><a href="#"> lien 2</a></li>
+		</ul>
+	</nav>
+</footer>
+>>>>>>> 0f4a463c (Add Circle)
