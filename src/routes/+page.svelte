@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
+	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 </script>
 
 <svelte:head>
@@ -39,6 +40,8 @@
 
 	<section class="mt-3">
 		<h2>Nos offres et services</h2>
+
+		<Circle size="2rem" />
 	</section>
 
 	<section class="mt-3">
