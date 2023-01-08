@@ -80,13 +80,11 @@
 		@apply text-indigo;
 	}
 
-
 	[href],
 	a,
 	.mj-link {
-		@apply mj-link--base
+		@apply mj-link--base;
 	}
-
 
 	.mj-link--alt {
 		@apply text-sand;
