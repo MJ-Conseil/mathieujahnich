@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import { SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 </script>
 
 <svelte:head>
 	<title>MJ conseil - Acceuil</title>
 </svelte:head>
 
-<div class="clipped--bottom  w-full p-4 md:pb-9 relative bg-blue-dark">
+<div class="clipped--bottom flex-1  w-full p-4 md:pb-9 relative bg-blue-dark">
 	<div class="md:container md:py-4 md:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
@@ -56,76 +56,4 @@
 	</section>
 </main>
 
-<!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
-<footer role="contentinfo" class="bg-blue-dark container mx-auto grid mt-5 p-4 w-full">
-	<div class="lg:flex  justify-between ">
-		<p class="lg:block font-ptsans text-blue-light hidden w-1/6 text-xl">
-			<Icon name="mjConseilFull" width="180px" height="auto" />
-			Nous mettons la communication au service de la transition écologique
-		</p>
-
-		<div>
-			<h3 class="mj-h3--alt my-2">Offre conseil</h3>
-			<ul class="gap-3 flex flex-col">
-				<li><a class="mj-link--alt" href="/tata">Prendre de la hauteur</a></li>
-				<li>
-					<a class="mj-link--alt visited:underline" href="/toto">Trouver le juste équilibre</a>
-				</li>
-				<li><a class="mj-link--alt visited:underline" href="/tutu">Donner de l'élan</a></li>
-			</ul>
-		</div>
-
-		<div class="">
-			<h3 class="mj-h3--alt my-2">Contact</h3>
-			<ul class="gap-1 flex flex-col">
-				<li class="flex items-center text-white">
-					<span aria-hidden="true">
-						<Icon class="pr-1 text-sand" width="18px" height="auto" name="phone" />
-					</span>
-
-					<span class="sr-only">téléphone :</span>
-					+33 6 74 88 92 73
-				</li>
-				<li class="flex items-center text-white">
-					<span aria-hidden="true">
-						<Icon class="pr-1 text-sand" width="18px" height="auto" name="letter" />
-					</span>
-					<a class="text-white" href="mailto:conseil@mathieu-jahnich.fr">
-						<span class="sr-only">email :</span>
-						conseil@mathieu-jahnich.fr
-					</a>
-				</li>
-			</ul>
-
-			<ul class="mt-4 flex gap-2">
-				<li>
-					<a href={SOCIAL_NETWORK_LINKS.linkedin}>
-						<span aria-hidden="true">
-							<Icon name="linkedin" width="25px" height="auto" class="text-sand" /></span
-						>
-						<span class="sr-only">Linkedin</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-	<hr class="text-white my-4" />
-
-	<div class="lg:flex items-center justify-between">
-		<div class="text-white">
-			<p>© Copyright 2005 – 2022 | Tous droits réservés</p>
-		</div>
-
-		<nav class="lg:m-0 mt-4">
-			<ul>
-				<li class="text-white">
-					Conception et création : <a
-						class="text-white font-bold decoration-dotted"
-						href="https://www.fairness.coop">Fairness Scop</a
-					> et les Designers Ethiques
-				</li>
-			</ul>
-		</nav>
-	</div>
-</footer>
+<Footer />
