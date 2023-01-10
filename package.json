@@ -38,11 +38,9 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
 	},
-	"dependencies": {
-		"@axe-core/playwright": "^4.5.2"
-	},
 	"type": "module",
 	"dependencies": {
-		"wp-types": "^3.61.0"
+		"wp-types": "^3.61.0",
+		"@axe-core/playwright": "^4.5.2"
 	}
 }
