@@ -1,8 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import { test as base, expect, type APIRequestContext } from '@playwright/test';
-import type { Dataset } from '../../definitions/datasets.js';
-import { toDataset } from '../../lib/transformers/dataset.js';
-import { ADMIN_EMAIL, ADMIN_PASSWORD, TEST_EMAIL, TEST_PASSWORD } from './constants.js';
+import { test as base } from '@playwright/test';
 
 /**
  * These fixtures allow simplifying setup/teardown logic in tests,
