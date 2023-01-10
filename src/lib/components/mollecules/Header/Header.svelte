@@ -2,7 +2,7 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 </script>
 
-<nav class="flex justify-between text-white bg-blue-dark">
+<nav class="flex justify-between">
 	MJ conseil
 	<Icon height="2rem" width="2rem" name="burger" />
 

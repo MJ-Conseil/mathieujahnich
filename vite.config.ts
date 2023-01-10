@@ -4,9 +4,9 @@ import type { UserConfig } from 'vite';
 const config: UserConfig = {
 	plugins: [sveltekit()],
 	test: {
-		environment : "jsdom",
+		environment: 'jsdom',
 		globals: true
-	}	
+	}
 };
 
 export default config;
