@@ -126,6 +126,7 @@ Usage:
 	.clipped--bottom {
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 	}
+<<<<<<< HEAD
 
 	/* Cercle */
 	.mj-circle-sand {
@@ -139,3 +140,6 @@ Usage:
 		border-radius: 50%;
 	}
 }
+=======
+}
+>>>>>>> 46d7768e (WIP)

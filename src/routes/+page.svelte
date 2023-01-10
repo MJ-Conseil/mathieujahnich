@@ -88,11 +88,12 @@
 	<section class="my-4">
 		<h2 class="mb-8">A la une du blog</h2>
 
-		<p class="font-ptsans text-2xl">
-			Depuis 2005, j’interroge l’alignement de la communication et du marketing avec les enjeux de
-			transition écologique. Retrouvez ici mes analyses, des témoignages et des ressources. Ces
-			contenus étaient précédemment publiés sur le site Sircome.
-		</p>
+			<p class="font-ptsans text-2xl w-3/4">
+				Depuis 2005, j’interroge l’alignement de la communication et du marketing avec les enjeux de
+				transition écologique. Retrouvez ici mes analyses, des témoignages et des ressources. Ces
+				contenus étaient précédemment publiés sur le site Sircome.
+			</p>
+		</div>
 	</section>
 </main>
 

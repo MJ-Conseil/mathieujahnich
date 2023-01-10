@@ -10,7 +10,9 @@ module.exports = {
 			sand: '#F0CB85',
 			indigo: '#291F9C',
 			white: '#ffffff',
-			gray: '#F2F3F7'
+			gray: {
+				default: "#F2F3F7"
+			}
 		},
 		fontFamily: {
 			ptsans: ['PT Sans', 'sans-serif'],
