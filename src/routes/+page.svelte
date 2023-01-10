@@ -4,6 +4,7 @@
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import ParticularSign from '$lib/components/mollecules/ParticularSign/ParticularSign.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
+	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 </script>
 
 <svelte:head>
@@ -85,14 +86,25 @@
 		<h2 class="mb-8">Formez-vous</h2>
 	</section>
 
-	<section class="my-4">
-		<h2 class="mb-8">A la une du blog</h2>
+	<section class="clipped--bottom p-4 h-1/3 bg-gray-medium">
+		<div class="lg:container h-full  lg:mx-auto">
+			<h2>A la une du blog</h2>
 
-			<p class="font-ptsans text-2xl w-3/4">
+			<p class="font-ptsans text-xl lg:text-2xl md:w-3/4">
 				Depuis 2005, j’interroge l’alignement de la communication et du marketing avec les enjeux de
 				transition écologique. Retrouvez ici mes analyses, des témoignages et des ressources. Ces
 				contenus étaient précédemment publiés sur le site Sircome.
 			</p>
+
+			<div class="h-full gap-4 flex flex-col mt-2 items-center">
+				<PostCard/>
+
+				<PostCard/>
+				<PostCard/>
+				<PostCard/>
+				<PostCard/>
+				<PostCard/>
+			</div>
 		</div>
 	</section>
 </main>
