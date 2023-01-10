@@ -90,7 +90,7 @@
 		@apply text-sand;
 	}
 
-	/* General */
+	/* Paragraph */
 	p {
 		@apply leading-7;
 	}
