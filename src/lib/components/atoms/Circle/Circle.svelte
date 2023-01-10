@@ -5,7 +5,6 @@
 	export let size: Size = SIZE.regular;
 </script>
 
-<<<<<<< HEAD
 <div class={`bg-sand rounded-full mx-auto ${size}`} />
 
 <style>
@@ -14,6 +13,3 @@
 		width: 8.5rem;
 	}
 </style>
-=======
-<div class="bg-sand rounded-full" style=" width: {size}; height: {size}" />
->>>>>>> 95218574 (Add offers)
