@@ -50,7 +50,7 @@
 
 	h2,
 	.mj-h2 {
-		@apply mj-heading-base text-5xl text-blue-dark;
+		@apply mj-heading-base text-5xl text-blue-dark font-bold;
 	}
 
 	.mj-h2--alt {
@@ -59,7 +59,7 @@
 
 	h3,
 	.mj-h3 {
-		@apply mj-heading-base text-2xl text-blue-dark;
+		@apply mj-heading-base text-2xl text-blue-dark font-bold;
 	}
 
 	.mj-h3--alt {
