@@ -10,4 +10,11 @@ node_modules
 vite.config.ts.timestamp-*
 /.vite
 
+# IDE
+
 .vscode
+
+# playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
