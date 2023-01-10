@@ -89,10 +89,6 @@
 	.mj-link--alt {
 		@apply text-sand;
 	}
-
-	.mj-link--alt:visited {
-		text-decoration: underline;
-	}
 }
 
 /* Misc */
