@@ -66,6 +66,12 @@
 		@apply mj-h3 text-white;
 	}
 
+	h4,
+	.mj-h4 {
+		@apply mj-heading-base text-2xl text-blue-dark font-bold;
+	}
+
+
 	.mj-subtitle {
 		@apply font-sans text-indigo text-2xl;
 	}
@@ -95,10 +101,6 @@
 		@apply leading-7;
 	}
 
-	/* General */
-	p {
-		@apply leading-7;
-	}
 }
 
 /* Misc */
