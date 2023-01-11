@@ -3,7 +3,6 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
-
 </script>
 
 <svelte:head>
