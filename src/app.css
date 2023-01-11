@@ -94,6 +94,11 @@
 	p {
 		@apply leading-7;
 	}
+
+	/* General */
+	p {
+		@apply leading-7;
+	}
 }
 
 /* Misc */
