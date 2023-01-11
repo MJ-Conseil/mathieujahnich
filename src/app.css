@@ -59,7 +59,7 @@
 
 	h3,
 	.mj-h3 {
-		@apply mj-heading-base text-2xl text-blue-dark font-bold;
+		@apply mj-heading-base text-4xl text-blue-dark font-bold;
 	}
 
 	.mj-h3--alt {
@@ -88,6 +88,11 @@
 
 	.mj-link--alt {
 		@apply text-sand;
+	}
+
+	/* General */
+	p {
+		@apply leading-7;
 	}
 }
 

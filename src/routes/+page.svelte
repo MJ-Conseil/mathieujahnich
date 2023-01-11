@@ -42,10 +42,16 @@
 		<h2 class="mb-8">Nos offres et services</h2>
 		<div class="flex flex-col lg:flex-row gap-10">
 			<div>
-				<div class="mb-4">
+				<div class="mb-12 relative">
 					<Circle size="8.5rem" />
+					<div
+						aria-hidden="true"
+						class="absolute w-2/3 md:w-full mx-auto top-[-1rem] left-[1.5rem] md:left-[-1.5rem]"
+					>
+						<Icon height="15rem" width="18rem" name="heightSvg" class="mx-auto" fill="#1E2345" />
+					</div>
 				</div>
-				<h3>Prendre de la hauteur</h3>
+				<h3 class="mb-4">Prendre de la hauteur</h3>
 				<p>
 					Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
 					de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
@@ -53,10 +59,16 @@
 				</p>
 			</div>
 			<div>
-				<div class="mb-4">
+				<div class="mb-12 relative">
 					<Circle size="8.5rem" />
+					<div
+						aria-hidden="true"
+						class="absolute w-2/3 md:w-full mx-auto top-[-1rem] left-[1.5rem] md:left-[-1.5rem]"
+					>
+						<Icon height="15rem" width="18rem" name="balance" class="mx-auto" fill="#1E2345" />
+					</div>
 				</div>
-				<h3>Trouver  le juste équilibre</h3>
+				<h3 class="mb-4">Trouver le juste équilibre</h3>
 				<p>
 					Analyser les arguments écologiques des supports marketing et communication pour vérifier
 					leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
@@ -64,10 +76,16 @@
 				</p>
 			</div>
 			<div>
-				<div class="mb-4">
+				<div class="mb-12 relative">
 					<Circle size="8.5rem" />
+					<div
+						aria-hidden="true"
+						class="absolute w-2/3 md:w-full mx-auto top-[-1rem] left-[1.5rem] md:left-[-1.5rem]"
+					>
+						<Icon height="15rem" width="18rem" name="elan" class="mx-auto" fill="#1E2345" />
+					</div>
 				</div>
-				<h3>Donner  de l’élan</h3>
+				<h3 class="mb-4">Donner de l’élan</h3>
 				<p>
 					Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
 					fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
