@@ -36,7 +36,7 @@
 	/* Heading */
 
 	.mj-heading-base {
-		@apply font-ptsans font-normal;
+		@apply font-ptsans;
 	}
 
 	h1,
@@ -63,7 +63,7 @@
 	}
 
 	.mj-h3--alt {
-		@apply .mj-h3 text-white;
+		@apply mj-h3 text-white;
 	}
 
 	.mj-subtitle {
@@ -76,14 +76,22 @@
 
 	/* Link */
 
+	.mj-link--base {
+		@apply text-indigo;
+	}
+
 	[href],
 	a,
 	.mj-link {
-		@apply text-indigo underline;
+		@apply mj-link--base;
 	}
 
 	.mj-link--alt {
-		@apply text-sand underline;
+		@apply text-sand;
+	}
+
+	.mj-link--alt:visited {
+		text-decoration: underline;
 	}
 }
 

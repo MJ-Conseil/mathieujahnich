@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
+	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 </script>
 
 <svelte:head>
 	<title>MJ conseil - Acceuil</title>
 </svelte:head>
 
-<div class="clipped--bottom  w-full p-4 md:pb-9 relative bg-blue-dark">
+<div class="clipped--bottom flex-1  w-full p-4 md:pb-9 relative bg-blue-dark">
 	<div class="md:container md:py-4 md:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
@@ -54,3 +55,5 @@
 		</p>
 	</section>
 </main>
+
+<Footer />
