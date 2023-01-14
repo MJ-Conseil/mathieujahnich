@@ -11,7 +11,7 @@ module.exports = {
 			indigo: '#291F9C',
 			white: '#ffffff',
 			gray: {
-				default: "#F2F3F7"
+				DEFAULT: '#F2F3F7'
 			}
 		},
 		fontFamily: {

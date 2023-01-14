@@ -1,25 +1,37 @@
 <script lang="ts">
+	import type { WP_REST_API_Tag } from 'wp-types';
+	import { format } from 'date-fns';
+	import { fr } from 'date-fns/locale';
 
-    export let title : string
-
+	export let title: string;
+	export let pictureURL: string;
+	export let tag: WP_REST_API_Tag;
+	export let createdDate: Date;
 </script>
 
-<div class="w-[320px] h-[435px] rounded-sm shadow">
-    <div class="relative h-1/2">
-        <div class="h-full w-full ">
-            <img class="object-cover h-full w-full" src="https://via.placeholder.com/150" alt="logo organisation"/>
-        </div>
-        <div class="bg-blue-dark text-white absolute right-0 bottom-0 p-1 font-bold min-w-[60px] text-center">
-            tata
-        </div>
-    </div>
+<div class="w-full h-full  rounded-xl shadow-xl bg-white">
+	<div class="relative h-1/2">
+		<div class="h-full w-full ">
+			<img class="object-cover h-full w-full" src={pictureURL} alt="logo organisation" />
+		</div>
 
-    <div class="mt-2 p-4">
-        <p class="text-blue-dark text-xs"> 6 décembre 2022</p>
-        <p class="text-blue-dark mt-2 font-bold">
-            {title}
-        </p>
-        
-    </div>
+		{#if tag}
+			<div
+				class="bg-blue-dark text-white absolute right-0 bottom-0 p-1 font-bold min-w-[60px] text-center"
+			>
+				{tag.name}
+			</div>
+		{/if}
+	</div>
 
+	<div class="mt-2 p-4">
+		<p class="text-blue-dark text-xs">
+			{format(createdDate, 'dd LLLL yyy', {
+				locale: fr
+			})}
+		</p>
+		<p class="text-blue-dark mt-2 font-bold">
+			{title}
+		</p>
+	</div>
 </div>
