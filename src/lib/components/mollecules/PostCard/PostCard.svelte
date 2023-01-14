@@ -24,9 +24,9 @@
 	<div class="mt-2 p-4">
 		<p class="text-blue-dark text-xs">
 			{new Intl.DateTimeFormat('fr-FR', {
-				day : '2-digit',
+				day: '2-digit',
 				month: 'long',
-				year : 'numeric'
+				year: 'numeric'
 			}).format(createdDate)}
 		</p>
 		<p class="text-blue-dark mt-2 font-bold">
