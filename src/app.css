@@ -50,7 +50,7 @@
 
 	h2,
 	.mj-h2 {
-		@apply mj-heading-base text-5xl text-blue-dark;
+		@apply mj-heading-base text-5xl text-blue-dark font-bold;
 	}
 
 	.mj-h2--alt {
@@ -59,7 +59,7 @@
 
 	h3,
 	.mj-h3 {
-		@apply mj-heading-base text-2xl text-blue-dark;
+		@apply mj-heading-base text-4xl text-blue-dark font-bold;
 	}
 
 	.mj-h3--alt {
@@ -90,8 +90,9 @@
 		@apply text-sand;
 	}
 
-	.mj-link--alt:visited {
-		text-decoration: underline;
+	/* General */
+	p {
+		@apply leading-7;
 	}
 }
 
@@ -117,5 +118,11 @@ Usage:
 @media (min-width: 768px) {
 	.clipped--bottom {
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+	}
+
+	/* Cercle */
+	.mj-circle-sand {
+		@apply bg-sand;
+		border-radius: 50%;
 	}
 }
