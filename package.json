@@ -41,7 +41,6 @@
 	"type": "module",
 	"dependencies": {
 		"@axe-core/playwright": "^4.5.2",
-		"date-fns": "^2.29.3",
 		"wp-types": "^3.61.0"
 	}
 }

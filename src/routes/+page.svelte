@@ -88,9 +88,6 @@
 		</div>
 	</section>
 
-	<section class="my-4">
-		<h2 class="mb-8">Formez-vous</h2>
-	</section>
 
 	<section class="pb-8 md:p-8 p-4 bg-gray">
 		<div class="lg:container h-full  lg:mx-auto">

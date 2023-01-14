@@ -1,8 +1,5 @@
 <script lang="ts">
 	import type { WP_REST_API_Tag } from 'wp-types';
-	import { format } from 'date-fns';
-	import { fr } from 'date-fns/locale';
-
 	export let title: string;
 	export let pictureURL: string;
 	export let tag: WP_REST_API_Tag;
@@ -26,9 +23,11 @@
 
 	<div class="mt-2 p-4">
 		<p class="text-blue-dark text-xs">
-			{format(createdDate, 'dd LLLL yyy', {
-				locale: fr
-			})}
+			{new Intl.DateTimeFormat('fr-FR', {
+				day : '2-digit',
+				month: 'long',
+				year : 'numeric'
+			}).format(createdDate)}
 		</p>
 		<p class="text-blue-dark mt-2 font-bold">
 			{title}
