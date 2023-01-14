@@ -71,7 +71,6 @@
 		@apply mj-heading-base text-2xl text-blue-dark font-bold;
 	}
 
-
 	.mj-subtitle {
 		@apply font-sans text-indigo text-2xl;
 	}
@@ -100,7 +99,6 @@
 	p {
 		@apply leading-7;
 	}
-
 }
 
 /* Misc */
@@ -125,17 +123,5 @@ Usage:
 @media (min-width: 768px) {
 	.clipped--bottom {
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-	}
-
-	/* Cercle */
-	.mj-circle-sand {
-		@apply bg-sand;
-		border-radius: 50%;
-	}
-
-	/* Cercle */
-	.mj-circle-sand {
-		@apply bg-sand;
-		border-radius: 50%;
 	}
 }

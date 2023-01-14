@@ -1,11 +1,10 @@
+import { transformWordpressPostToPost } from '$lib/transformers.ts/posts';
 import { api } from '$lib/utils/api';
-import type { Post } from 'src/definitions/post';
+import type { Fetch, Post } from 'src/definitions';
+import type { WP_Post } from 'wp-types';
 
-export const getPosts = async (): Promise<Post[]> => {
-	return await api(`/posts`);
-};
+export const getPosts = async (fetch: Fetch): Promise<Post[]> => {
+	const result = await api<WP_Post[]>(`/posts?_embed&per_page=6`, fetch);
 
-export const getPostBySlug = async (slug: string): Promise<Post> => {
-	const request = await api(`/posts?slug=${slug}`);
-	return request[0];
+	return result.map(transformWordpressPostToPost);
 };
