@@ -33,7 +33,7 @@
 	</div>
 </div>
 
-<main class="container md:p-0 p-4 md:0 md:mx-auto grid grid-flow-row" id="main">
+<main class="container md:p-0 p-4 md:0 md:mx-auto" id="main">
 	<section class="my-4">
 		<h2 class="mb-8">Signes particuliers</h2>
 	</section>
@@ -42,21 +42,21 @@
 		<h2 class="mb-8">Nos offres et services</h2>
 		<div class="flex flex-col lg:flex-row gap-10">
 			<Offer
-				icon="heightSvg"
+				icon={'ladder'}
 				title="Prendre de la hauteur"
 				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
 			de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
 			externes pour enrichir les stratégies RSE et communication."
 			/>
 			<Offer
-				icon="balance"
+				icon="stones"
 				title="Trouver le juste équilibre"
 				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
 			leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
 			des filets de sécurité pour limiter les accusations de greenwashing."
 			/>
 			<Offer
-				icon="elan"
+				icon="plane"
 				title="Donner de l’élan"
 				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
 			fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
