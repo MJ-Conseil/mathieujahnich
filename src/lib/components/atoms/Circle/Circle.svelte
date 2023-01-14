@@ -12,4 +12,9 @@
 		height: 8.5rem;
 		width: 8.5rem;
 	}
+
+	.small {
+		height: 1rem;
+		width: 1rem;
+	}
 </style>

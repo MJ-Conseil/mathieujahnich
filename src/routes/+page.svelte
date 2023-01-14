@@ -1,6 +1,8 @@
 <script lang="ts">
+
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
+	import ParticularSign from '$lib/components/mollecules/ParticularSign/ParticularSign.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 </script>
 
@@ -36,6 +38,20 @@
 <main class="container md:p-0 p-4 md:0 md:mx-auto" id="main">
 	<section class="my-4">
 		<h2 class="mb-8">Signes particuliers</h2>
+		<div class="flex flex-col lg:flex-row gap-10">
+			<ParticularSign
+				title="A l’interface de la RSE et de la Com"
+				content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
+			/>
+			<ParticularSign
+				title="De la recherche à l’action"
+				content="Parce que nous nous positionnons en complément des agences de com et des  cabinets conseil nous vous proposons une vision qui va de la recherche à l’action"
+			/>
+			<ParticularSign
+				title="Écoute & qualité de services"
+				content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
+			/>
+		</div>
 	</section>
 
 	<section class="my-4">
