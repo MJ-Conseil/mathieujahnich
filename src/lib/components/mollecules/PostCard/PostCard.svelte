@@ -1,3 +1,9 @@
+<script lang="ts">
+
+    export let title : string
+
+</script>
+
 <div class="w-[320px] h-[435px] rounded-sm shadow">
     <div class="relative h-1/2">
         <div class="h-full w-full ">
@@ -11,7 +17,7 @@
     <div class="mt-2 p-4">
         <p class="text-blue-dark text-xs"> 6 décembre 2022</p>
         <p class="text-blue-dark mt-2 font-bold">
-            Thierry Libaert : questionner le pouvoir de la communication et le sens même de la fonction communication
+            {title}
         </p>
         
     </div>

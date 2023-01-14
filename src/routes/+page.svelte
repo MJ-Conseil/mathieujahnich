@@ -1,11 +1,14 @@
 <script lang="ts">
-
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import ParticularSign from '$lib/components/mollecules/ParticularSign/ParticularSign.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
 </script>
+
+
 
 <svelte:head>
 	<title>MJ conseil - Acceuil</title>
@@ -86,7 +89,7 @@
 		<h2 class="mb-8">Formez-vous</h2>
 	</section>
 
-	<section class="clipped--bottom p-4 h-1/3 bg-gray-medium">
+	<section class="clipped--bottom p-4  pb-8 bg-gray-medium">
 		<div class="lg:container h-full  lg:mx-auto">
 			<h2>A la une du blog</h2>
 
@@ -97,13 +100,10 @@
 			</p>
 
 			<div class="h-full gap-4 flex flex-col mt-2 items-center">
-				<PostCard/>
 
-				<PostCard/>
-				<PostCard/>
-				<PostCard/>
-				<PostCard/>
-				<PostCard/>
+				{#each data.posts as post}
+					<PostCard title={post.title}/>
+				{/each}
 			</div>
 		</div>
 	</section>

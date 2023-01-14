@@ -99,6 +99,7 @@
 	};
 
 	$: displayIcon = icons[name];
+
 </script>
 
 <svg
