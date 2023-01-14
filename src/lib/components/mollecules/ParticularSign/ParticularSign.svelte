@@ -7,6 +7,6 @@
 
 <div class="bg-gray mx-auto p-6 rounded-md md:w-1/3">
 	<Circle size="small" />
-	<h4 class="my-4">{title}</h4>
+	<h3 class="my-4 mj-h4">{title}</h3>
 	<p>{content}</p>
 </div>
