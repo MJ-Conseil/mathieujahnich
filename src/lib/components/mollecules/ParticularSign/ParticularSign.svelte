@@ -5,8 +5,11 @@
 	let className = $$props.class;
 </script>
 
-<div class="bg-gray mx-auto p-6 rounded-md md:w-1/3">
-	<Circle size="small" />
+<div class="bg-gray p-6 relative">
+	<div class=" absolute top-4 right-6">
+		<Circle size="small" />
+	</div>
+
 	<h3 class="my-4 mj-h4">{title}</h3>
 	<p>{content}</p>
 </div>

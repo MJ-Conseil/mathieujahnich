@@ -12,8 +12,7 @@
 	<title>MJ conseil - Acceuil</title>
 </svelte:head>
 
-
- <div class="clipped--bottom w-full h-3/6 p-4 relative bg-blue-dark">
+<div class="clipped--bottom w-full h-3/6 p-4 relative bg-blue-dark">
 	<div class="md:container md:pb-8 md:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
@@ -38,13 +37,11 @@
 	</div>
 </div>
 
-
-
 <main class="flex-1 md:p-0 md:0" id="main">
 	<section class="md:p-0 md:py-4 p-4">
 		<div class="lg:container h-full  lg:mx-auto">
 			<h2 class="mb-8">Signes particuliers</h2>
-			<div class="flex flex-col lg:flex-row gap-10">
+			<div class="md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3">
 				<ParticularSign
 					title="A l’interface de la RSE et de la Com"
 					content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
@@ -65,7 +62,7 @@
 	<section class="md:p-0 md:py-4 p-4">
 		<div class="lg:container h-full  lg:mx-auto">
 			<h2 class="mb-8">Nos offres et services</h2>
-			<div class="flex flex-col lg:flex-row gap-10">
+			<div class="md:gap-x-20 md:gap-y-10 grid gap-y-5 md:grid-cols-3">
 				<Offer
 					icon={'ladder'}
 					title="Prendre de la hauteur"
@@ -91,7 +88,6 @@
 		</div>
 	</section>
 
-
 	<section class="clipped--top md:pt-20 pt-10 pb-8 px-4 md:px-0 bg-gray">
 		<div class="lg:container h-full  lg:mx-auto">
 			<h2 class="mb-4">A la une du blog</h2>
@@ -102,7 +98,7 @@
 				contenus étaient précédemment publiés sur le site Sircome.
 			</p>
 
-			<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3  items-center">
+			<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3">
 				{#each data.posts as post}
 					<PostCard
 						createdDate={new Date()}
