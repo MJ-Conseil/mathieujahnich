@@ -1,6 +1,6 @@
 name: Playwright Tests
 env:
-  PUBLIC_API_URL: "https://mathieu-jahnich.fr"
+  PUBLIC_API_URL: 'https://mathieu-jahnich.fr'
 on:
   push:
     branches: [main, master]
