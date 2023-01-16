@@ -5,4 +5,5 @@ export type Post = {
 	title: string;
 	imageUrl: string;
 	tags: WP_REST_API_Tag[];
+	createdDate: Date
 };

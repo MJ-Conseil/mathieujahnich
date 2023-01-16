@@ -101,7 +101,7 @@
 			<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3">
 				{#each data.posts as post}
 					<PostCard
-						createdDate={new Date()}
+						createdDate={post.createdDate}
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tag={post.tags[0]}
