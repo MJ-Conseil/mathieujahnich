@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
-	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import type { IconNames } from 'src/definitions/Icon';
 	import CircledIcon from '../CircledIcon/CircledIcon.svelte';
 	export let title: string;
