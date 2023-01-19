@@ -4,7 +4,7 @@
 	export let content: string;
 </script>
 
-<div class="bg-gray p-6 relative rounded-lg">
+<div class="bg-gray p-6 relative rounded-xl">
 	<div class=" absolute top-4">
 		<Circle size="small" />
 	</div>
