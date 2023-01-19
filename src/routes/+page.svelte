@@ -37,11 +37,11 @@
 	</div>
 </div>
 
-<main class="flex-1 md:p-0 md:0" id="main">
+<main class="md:p-0 md:0" id="main">
 	<section class="md:p-0 md:py-4 p-4">
-		<div class="lg:container h-full  lg:mx-auto">
+		<div class="container h-full md:px-8">
 			<h2 class="mb-8">Signes particuliers</h2>
-			<div class="md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3">
+			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
 				<ParticularSign
 					title="A l’interface de la RSE et de la Com"
 					content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
@@ -55,14 +55,14 @@
 					content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
 				/>
 			</div>
-			<div class="lg:container h-full  lg:mx-auto" />
+			<div class="lg:container h-full" />
 		</div>
 	</section>
 
 	<section class="md:p-0 md:py-4 p-4">
-		<div class="lg:container h-full  lg:mx-auto">
+		<div class="container h-full md:px-8">
 			<h2 class="mb-8">Nos offres et services</h2>
-			<div class="md:gap-x-20 md:gap-y-10 grid gap-y-5 md:grid-cols-3">
+			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-3 md:p-8">
 				<Offer
 					icon={'ladder'}
 					title="Prendre de la hauteur"
@@ -89,7 +89,7 @@
 	</section>
 
 	<section class="clipped--top md:pt-20 pt-10 pb-8 px-4 md:px-0 bg-gray">
-		<div class="lg:container h-full  lg:mx-auto">
+		<div class="lg:container h-full">
 			<h2 class="mb-4">A la une du blog</h2>
 
 			<p class="font-ptsans text-xl md:my-12 my-8 lg:text-2xl">
