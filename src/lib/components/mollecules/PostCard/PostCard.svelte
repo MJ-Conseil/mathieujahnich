@@ -9,7 +9,11 @@
 <div class="w-full h-full  rounded-xl shadow-xl bg-white">
 	<div class="relative h-1/2">
 		<div class="h-full w-full ">
-			<img class="object-cover h-full w-full" src={pictureURL} alt="logo organisation" />
+			<img
+				class="object-cover h-full w-full rounded-t-xl"
+				src={pictureURL}
+				alt="logo organisation"
+			/>
 		</div>
 
 		{#if tag}
