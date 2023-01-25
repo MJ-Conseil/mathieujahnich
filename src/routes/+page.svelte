@@ -5,12 +5,15 @@
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
+	import Header from '$lib/components/mollecules/Header/Header.svelte';
 	export let data: PageData;
 </script>
 
 <svelte:head>
 	<title>MJ conseil - Acceuil</title>
 </svelte:head>
+
+<Header />
 
 <div class="clipped--bottom w-full h-3/6 p-4 relative bg-blue-dark">
 	<div class="md:container md:pb-8 md:mx-auto">

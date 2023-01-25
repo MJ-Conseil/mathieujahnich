@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
-	export let title : string
-	export let content: string
+	export let title: string;
+	export let content: string;
 </script>
 
 <div class="bg-gray p-6 relative">
