@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>MJ conseil - Acceuil</title>
+	<title>MJ Conseil - Acceuil</title>
 </svelte:head>
 
 <div class="clipped--bottom w-full h-3/6 md:p-0 md:py-4 p-4 relative bg-blue-dark">

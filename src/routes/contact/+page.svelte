@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>MJ conseil - Contact</title>
+	<title>MJ Conseil - Contact</title>
 </svelte:head>
 
 <div class="w-full px-4 py-8 relative bg-blue-dark">
