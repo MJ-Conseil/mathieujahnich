@@ -1,8 +1,17 @@
 <script>
 	import Header from '$lib/components/mollecules/Header/Header.svelte';
 	import '../app.css';
+
+	let modalShown = false;
 </script>
 
-<Header />
+<Header
+	on:click={() => {
+		modalShown = true;
+	}}
+	on:closeModal={() => (modalShown = false)}
+/>
 
-<slot />
+<div class="h-full w-full" inert={modalShown} class:overflow-hidden={modalShown}>
+	<slot />
+</div>

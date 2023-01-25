@@ -75,7 +75,7 @@
 				<p>© Copyright 2005 – 2022 | Tous droits réservés</p>
 			</div>
 
-			<nav class="lg:m-0 mt-4">
+			<nav aria-label="liens importants" class="lg:m-0 mt-4">
 				<ul>
 					<li class="text-white">
 						Conception et création : <a

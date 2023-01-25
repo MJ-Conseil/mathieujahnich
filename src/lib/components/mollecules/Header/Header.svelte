@@ -4,7 +4,7 @@
 	import MenuMobile from '../MenuMobile/MenuMobile.svelte';
 	import { URLAndNameMap } from '$lib/constants';
 
-	let isMenuOpen = false;
+	export let isMenuOpen = false;
 </script>
 
 <div class="bg-blue-dark text-white md:p-8 p-4">
@@ -29,12 +29,13 @@
 	<!-- Menu Mobile -->
 	<div class="flex md:hidden justify-between w-full">
 		<Icon height="35px" width="auto" name="mjConseilFull" />
-		<button on:click={() => (isMenuOpen = true)} aria-label="ouvrir le menu de navigation">
+		<button on:click on:click={() => (isMenuOpen = true)} aria-label="ouvrir le menu de navigation">
 			<Icon height="2rem" width="2rem" name="burger" />
 		</button>
 		<MenuMobile
 			on:click={() => (isMenuOpen = false)}
-			on:close={() => (isMenuOpen = false)}
+			on:closeModal={() => (isMenuOpen = false)}
+			on:closeModal
 			{isMenuOpen}
 		/>
 	</div>

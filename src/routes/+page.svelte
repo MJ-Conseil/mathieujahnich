@@ -5,7 +5,6 @@
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
-	import Header from '$lib/components/mollecules/Header/Header.svelte';
 	export let data: PageData;
 </script>
 
