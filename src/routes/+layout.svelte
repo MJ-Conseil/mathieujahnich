@@ -1,5 +1,6 @@
 <script>
 	import Header from '$lib/components/mollecules/Header/Header.svelte';
+	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import '../app.css';
 
 	let modalShown = false;
@@ -15,3 +16,4 @@
 <div class="h-full w-full" inert={modalShown} class:overflow-hidden={modalShown}>
 	<slot />
 </div>
+<Footer />

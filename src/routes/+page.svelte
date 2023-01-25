@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import ParticularSign from '$lib/components/mollecules/ParticularSign/ParticularSign.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
@@ -111,5 +110,3 @@
 		</div>
 	</section>
 </main>
-
-<Footer />
