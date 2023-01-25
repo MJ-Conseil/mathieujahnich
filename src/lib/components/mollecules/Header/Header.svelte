@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { page } from '$app/stores';
+	import MenuMobile from '../MenuMobile/MenuMobile.svelte';
+	import { URLAndNameMap } from '$lib/constants';
 
 	let isMenuOpen = false;
-
-	const URLAndNameMap: Record<string, string> = {
-		Acceuil: '/'
-	};
 </script>
 
 <div class="bg-blue-dark text-white md:p-8 p-4">
@@ -34,30 +32,10 @@
 		<button on:click={() => (isMenuOpen = true)} aria-label="ouvrir le menu de navigation">
 			<Icon height="2rem" width="2rem" name="burger" />
 		</button>
-
-		<div
-			role="alertdialog"
-			class:hidden={!isMenuOpen}
-			aria-expanded={!isMenuOpen}
-			on:keydown={e => console.log(e)}
-			class="h-full hidden w-full fixed z-10 left-0 top-0 bg-gray overflow-x-hidden overflow-y-hidden p-4"
-		>
-			<div class="w-full flex  justify-end">
-				<button
-					on:click={() => (isMenuOpen = false)}
-					aria-label="fermer le menu de navigation"
-					class="text-blue-dark"
-				>
-					<Icon name="close" />
-				</button>
-			</div>
-			<nav class="relative w-full">
-				<ul class="flex flex-col gap-5">
-					{#each Object.keys(URLAndNameMap) as key}
-						<li class="text-2xl"><a href={URLAndNameMap[key]}>{key}</a></li>
-					{/each}
-				</ul>
-			</nav>
-		</div>
+		<MenuMobile
+			on:click={() => (isMenuOpen = false)}
+			on:close={() => (isMenuOpen = false)}
+			{isMenuOpen}
+		/>
 	</div>
 </div>

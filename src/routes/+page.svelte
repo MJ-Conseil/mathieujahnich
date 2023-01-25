@@ -13,8 +13,6 @@
 	<title>MJ conseil - Acceuil</title>
 </svelte:head>
 
-<Header />
-
 <div class="clipped--bottom w-full h-3/6 p-4 relative bg-blue-dark">
 	<div class="md:container md:pb-8 md:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->

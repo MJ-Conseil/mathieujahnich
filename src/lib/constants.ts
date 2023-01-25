@@ -9,3 +9,7 @@ export const SIZE: Record<Size, Size> = {
 	regular: 'regular',
 	small: 'small'
 };
+
+export const URLAndNameMap: Record<string, string> = {
+	Acceuil: '/'
+};
