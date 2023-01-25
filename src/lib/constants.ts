@@ -13,3 +13,8 @@ export const SIZE: Record<Size, Size> = {
 export const URLAndNameMap: Record<string, string> = {
 	Acceuil: '/'
 };
+export const CONTACT_LINK: Record<string, string> = {
+	reservio: 'https://mathieu-jahnich.reservio.com/',
+	email: 'conseil@mathieu-jahnich.fr',
+	phone: '+33 6 74 88 92 73'
+};

@@ -1,5 +1,7 @@
 <script>
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
+
+	import { CONTACT_LINK } from '$lib/constants';
 </script>
 
 <svelte:head>
@@ -32,11 +34,8 @@
 						un premier échange de 30 minutes.
 					</p>
 					<div class="mt-6">
-						<a
-							class="mj-link--btn"
-							href="https://mathieu-jahnich.reservio.com/"
-							target="_blank"
-							rel="noreferrer">Prendre rendez-vous</a
+						<a class="mj-link--btn" href={CONTACT_LINK.reservio} target="_blank" rel="noreferrer"
+							>Prendre rendez-vous</a
 						>
 					</div>
 				</div>
@@ -44,11 +43,11 @@
 					<h3 class="mb-5">Contact</h3>
 					<p class="flex gap-x-3 items-center">
 						<Icon width="16px" height="100%" name="phone" />
-						<a href="tel:+33674889273">+33 6 74 88 92 73</a>
+						<a href={`tel:${CONTACT_LINK.phone}`}>{CONTACT_LINK.phone}</a>
 					</p>
 					<p class="flex gap-x-3 items-center">
 						<Icon width="16px" height="100%" name="envelop" />
-						<a href="mailto:conseil@mathieu-jahnich.fr">conseil@mathieu-jahnich.fr</a>
+						<a href={`mailto:${CONTACT_LINK.email}`}>{CONTACT_LINK.email}</a>
 					</p>
 				</div>
 			</div>
