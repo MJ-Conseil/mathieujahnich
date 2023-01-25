@@ -8,10 +8,14 @@
 <footer role="contentinfo" class="bg-blue-dark p-4 lg:p-0 lg:py-5 w-full">
 	<div class="container mx-auto">
 		<div class="lg:flex  justify-between ">
-			<p class="lg:block font-ptsans text-blue-light hidden w-1/6 text-xl">
-				<Icon name="mjConseilFull" width="180px" height="auto" />
-				Nous mettons la communication au service de la transition écologique
-			</p>
+			<div class="w-1/5">
+				<p class="lg:block font-ptsans text-blue-light hidden text-xl">
+					<Icon name="mjConseilFull" width="220px" height="auto" />
+				</p>
+				<p class="lg:block font-ptsans text-blue-light hidden text-xl my-4">
+					Nous mettons la communication au service de la transition écologique
+				</p>
+			</div>
 
 			<div>
 				<h3 class="mj-h3--alt my-2">Offre conseil</h3>
