@@ -103,6 +103,11 @@
 	p {
 		@apply leading-7 text-blue-dark;
 	}
+
+	/* List */
+	.mj-list--disc {
+		@apply list-disc pl-6 text-blue-dark;
+	}
 }
 
 /* Misc */
