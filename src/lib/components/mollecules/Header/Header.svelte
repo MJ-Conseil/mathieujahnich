@@ -10,7 +10,7 @@
 <div class="bg-blue-dark text-white md:p-8 p-4">
 	<!-- Menu Desktop -->
 	<div class="md:flex w-full items-center justify-between hidden">
-		<Icon height="60px" width="auto" name="mjConseilFull" />
+		<Icon height="auto" width="100px" name="mjConseilFull" />
 		<nav class="text-white flex-">
 			<ul class="flex justify-end gap-32 text-white">
 				{#each Object.keys(URLAndNameMap) as key}
