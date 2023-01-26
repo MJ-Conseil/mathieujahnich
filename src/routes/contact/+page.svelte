@@ -34,8 +34,12 @@
 						un premier échange de 30 minutes.
 					</p>
 					<div class="mt-6">
-						<a class="mj-link--btn" href={CONTACT_LINK.reservio} target="_blank" rel="noreferrer"
-							>Prendre rendez-vous</a
+						<a
+							class="mj-link--btn"
+							href={CONTACT_LINK.reservio}
+							target="_blank"
+							rel="noreferrer"
+							data-testid="reservio-link">Prendre rendez-vous</a
 						>
 					</div>
 				</div>
