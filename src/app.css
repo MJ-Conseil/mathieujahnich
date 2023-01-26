@@ -95,9 +95,13 @@
 		@apply text-sand;
 	}
 
+	.mj-link--btn {
+		@apply text-indigo bg-sand py-2.5 px-4 font-bold text-blue-dark rounded;
+	}
+
 	/* Paragraph */
 	p {
-		@apply leading-7;
+		@apply leading-7 text-blue-dark;
 	}
 }
 

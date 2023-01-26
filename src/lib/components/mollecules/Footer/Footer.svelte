@@ -1,13 +1,20 @@
 <script>
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
-	import { SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import { CONTACT_LINK, SOCIAL_NETWORK_LINKS } from '$lib/constants';
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
 <footer role="contentinfo" class="bg-blue-dark p-4 lg:p-0 lg:py-5 w-full">
+	<div class="container bg-white rounded-xl text-center p-5 mt-6 mb-9">
+		<h3 class="mj-h3 mb-3">Restons en contact</h3>
+		<p>Recevez nos dernières actualités et publications ou prenons rendez-vous.</p>
+		<div class="flex flex-col md:flex-row gap-5 align-center justify-center mt-5 mb-2">
+			<a class="mj-link--btn" href={CONTACT_LINK.reservio}>Prendre rendez-vous</a>
+		</div>
+	</div>
 	<div class="container mx-auto">
-		<div class="lg:flex  justify-between ">
+		<div class="lg:flex  justify-between">
 			<div class="w-1/5">
 				<p class="lg:block font-ptsans text-blue-light hidden text-xl">
 					<Icon name="mjConseilFull" width="220px" height="auto" />
@@ -36,16 +43,18 @@
 							<Icon class="pr-1 text-sand" width="18px" height="auto" name="phone" />
 						</span>
 
-						<span class="sr-only">téléphone :</span>
-						+33 6 74 88 92 73
+						<a class="text-white" href={`tel:${CONTACT_LINK.phone}`}>
+							<span class="sr-only">téléphone :</span>
+							{CONTACT_LINK.phone}
+						</a>
 					</li>
 					<li class="flex items-center text-white">
 						<span aria-hidden="true">
 							<Icon class="pr-1 text-sand" width="18px" height="auto" name="letter" />
 						</span>
-						<a class="text-white" href="mailto:conseil@mathieu-jahnich.fr">
+						<a class="text-white" href={`mailto:${CONTACT_LINK.email}`}>
 							<span class="sr-only">email :</span>
-							conseil@mathieu-jahnich.fr
+							{CONTACT_LINK.email}
 						</a>
 					</li>
 				</ul>

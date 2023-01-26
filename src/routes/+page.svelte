@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import ParticularSign from '$lib/components/mollecules/ParticularSign/ParticularSign.svelte';
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
@@ -9,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>MJ conseil - Acceuil</title>
+	<title>MJ Conseil - Acceuil</title>
 </svelte:head>
 
 <div class="clipped--bottom w-full h-3/6 md:p-0 md:py-4 p-4 relative bg-blue-dark">
@@ -111,5 +110,3 @@
 		</div>
 	</section>
 </main>
-
-<Footer />
