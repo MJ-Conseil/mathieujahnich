@@ -42,12 +42,22 @@
 				<div>
 					<h3 class="mb-5">Contact</h3>
 					<p class="flex gap-x-3 items-center">
-						<Icon width="16px" height="100%" name="phone" />
-						<a href={`tel:${CONTACT_LINK.phone}`}>{CONTACT_LINK.phone}</a>
+						<span aria-hidden="true">
+							<Icon width="16px" height="100%" name="phone" />
+						</span>
+						<a href={`tel:${CONTACT_LINK.phone}`}>
+							<span class="sr-only">téléphone :</span>
+							{CONTACT_LINK.phone}
+						</a>
 					</p>
 					<p class="flex gap-x-3 items-center">
-						<Icon width="16px" height="100%" name="envelop" />
-						<a href={`mailto:${CONTACT_LINK.email}`}>{CONTACT_LINK.email}</a>
+						<span aria-hidden="true">
+							<Icon width="16px" height="100%" name="envelop" />
+						</span>
+						<a href={`mailto:${CONTACT_LINK.email}`}>
+							<span class="sr-only">email :</span>
+							{CONTACT_LINK.email}
+						</a>
 					</p>
 				</div>
 			</div>
