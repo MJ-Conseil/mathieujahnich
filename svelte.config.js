@@ -8,7 +8,20 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		csp: {
+			directives: {
+				'default-src': ['self'],
+				'base-uri': ['self'],
+				'script-src': ['self'],
+				'manifest-src': ['self'],
+				'font-src': ['self'],
+				'img-src': [
+					'self',
+					'https://mathieu-jahnich.fr/' // the images come from the current on line website
+				]
+			}
+		}
 	}
 };
 
