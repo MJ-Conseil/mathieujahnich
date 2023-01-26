@@ -13,7 +13,8 @@
 	on:closeModal={() => (modalShown = false)}
 />
 
-<div class="h-full w-full" inert={modalShown} class:overflow-hidden={modalShown}>
+<div class="w-full h-full" inert={modalShown} class:overflow-hidden={modalShown}>
 	<slot />
+
+	<Footer />
 </div>
-<Footer />
