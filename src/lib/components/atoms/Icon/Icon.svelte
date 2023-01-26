@@ -5,6 +5,7 @@
 	export let height = '1rem';
 	export let focusable = false;
 	export let fill = 'none';
+	export let ariaHidden = true;
 
 	type Icon = {
 		boxWidth: number;
@@ -13,6 +14,11 @@
 	};
 
 	let icons: Record<IconNames, Icon> = {
+		close: {
+			boxWidth: 32,
+			boxHeight: 32,
+			svg: '<path d="M1 1L31 31M1 31L31 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
+		},
 		burger: {
 			boxHeight: 24,
 			boxWidth: 24,
@@ -102,6 +108,7 @@
 </script>
 
 <svg
+	aria-hidden={ariaHidden}
 	class={$$props.class}
 	focusable={focusable.toString()}
 	{width}

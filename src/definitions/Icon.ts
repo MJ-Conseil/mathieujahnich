@@ -8,4 +8,5 @@ export type IconNames =
 	| 'youtube'
 	| 'plane'
 	| 'stones'
-	| 'ladder';
+	| 'ladder'
+	| 'close';
