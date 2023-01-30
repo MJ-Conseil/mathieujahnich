@@ -4,6 +4,7 @@
 	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
+	import Container from '$lib/components/atoms/Container/Container.svelte';
 	export let data: PageData;
 </script>
 
@@ -12,7 +13,7 @@
 </svelte:head>
 
 <div class="clipped--bottom w-full h-3/6 md:p-0 md:py-4 p-4 relative bg-blue-dark">
-	<div class="container md:pb-8 md:px-8 md:mx-auto">
+	<Container>
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
 			<p class="text-sand font-bold">Mj Conseil</p>
@@ -26,7 +27,7 @@
 				définition de votre stratégie à la mise en place opérationnelle.
 			</p>
 		</header>
-	</div>
+	</Container>
 
 	<div
 		aria-hidden="true"
@@ -38,7 +39,7 @@
 
 <main class="md:p-0 md:0" id="main">
 	<section class="md:p-0 md:py-4 p-4">
-		<div class="container h-full md:px-8">
+		<Container>
 			<h2 class="mb-8">Signes particuliers</h2>
 			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
 				<ParticularSign
@@ -55,11 +56,11 @@
 				/>
 			</div>
 			<div class="lg:container h-full" />
-		</div>
+		</Container>
 	</section>
 
 	<section class="md:p-0 md:py-4 p-4">
-		<div class="container h-full md:px-8">
+		<Container>
 			<h2 class="mb-8">Nos offres et services</h2>
 			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 py-8">
 				<Offer
@@ -84,11 +85,11 @@
 			units, partenaires…), vers des pratiques plus responsables."
 				/>
 			</div>
-		</div>
+		</Container>
 	</section>
 
 	<section class="clipped--top md:pt-20 pt-10 pb-8 md:p-0 md:py-4 p-4 bg-gray">
-		<div class="container h-full md:px-8">
+		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 
 			<p class="font-ptsans text-xl md:my-12 my-8 lg:text-2xl">
@@ -107,6 +108,6 @@
 					/>
 				{/each}
 			</div>
-		</div>
+		</Container>
 	</section>
 </main>
