@@ -1,4 +1,5 @@
 <script>
+	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
@@ -8,10 +9,10 @@
 	<title>MJ Conseil - Offres de services : Prendre de la hauteur</title>
 </svelte:head>
 
-<div class="w-full px-4 py-8 relative bg-blue-dark">
-	<div class="container md:pb-8 md:px-8 md:mx-auto">
+<div class="w-full px-4 py-8 pb-14 relative bg-blue-dark">
+	<div class="container lg:pb-8 lg:px-8 lg:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-		<header role="banner" class="md:w-[40%] flex flex-col gap-4  break-words overflow-visible  ">
+		<header role="banner" class="lg:w-[40%] flex flex-col gap-4  break-words overflow-visible  ">
 			<p class="text-sand font-bold">Notre offre</p>
 			<h1 class="mj-h1--alt font-bold text">Prendre de la hauteur</h1>
 
@@ -22,6 +23,12 @@
 				parties-prenantes internes et externes.
 			</p>
 		</header>
+	</div>
+	<div
+		aria-hidden="true"
+		class="lg:block lg:absolute lg:-top-14 right-40 justify-center hidden text-white "
+	>
+		<Icon width="30rem" height="100%" name="ladder" fill="#ffffff" />
 	</div>
 </div>
 
@@ -89,6 +96,35 @@
 							'Accompagnement des forces de vente'
 						]}
 					/>
+				</div>
+			</div>
+		</div>
+		<div class="container h-full md:px-8">
+			<div class="bg-white rounded-xl relative m-5 p-6 my-10">
+				<div>
+					<div class=" absolute top-6 left-6">
+						<Circle size="small" />
+					</div>
+
+					<h3 class="my-6 mj-h4">Les livrables</h3>
+				</div>
+				<div class="lg:gap-x-20 lg:gap-y-10 grid lg:gap-y-5 lg:grid-cols-2 ">
+					<div>
+						<ul class="mj-list--disc">
+							<li>Stratégie RSE</li>
+							<li>Raison d’être</li>
+							<li>Recommandations stratégiques et opérationnelles</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="mj-list--disc">
+							<li>Rapport RSE</li>
+							<li>Plan d’action</li>
+							<li>Indicateurs</li>
+							<li>Kits d’animation interne</li>
+							<li>Eléments de langage</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
