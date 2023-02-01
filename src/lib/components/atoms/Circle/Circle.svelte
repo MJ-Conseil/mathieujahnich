@@ -13,6 +13,11 @@
 		width: 8.5rem;
 	}
 
+	.medium {
+		height: 4.5rem;
+		width: 4.5rem;
+	}
+
 	.small {
 		height: 1rem;
 		width: 1rem;

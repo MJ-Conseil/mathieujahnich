@@ -7,7 +7,8 @@ export const SOCIAL_NETWORK_LINKS: Record<string, string> = {
 
 export const SIZE: Record<Size, Size> = {
 	regular: 'regular',
-	small: 'small'
+	small: 'small',
+	medium: 'medium'
 };
 
 export const URLAndNameMap: Record<string, string> = {
