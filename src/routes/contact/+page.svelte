@@ -1,4 +1,5 @@
 <script>
+	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
 	import { CONTACT_LINK } from '$lib/constants';
@@ -24,7 +25,7 @@
 
 <main class="md:p-0 md:0" id="main">
 	<section class="md:p-0 md:py-12 p-4">
-		<div class="container h-full md:px-8">
+		<Container>
 			<h2 class="my-10">Parlons-nous</h2>
 			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-16 lg:grid-cols-2 mb-10">
 				<div class="md:w-1/2">
@@ -65,6 +66,6 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</Container>
 	</section>
 </main>
