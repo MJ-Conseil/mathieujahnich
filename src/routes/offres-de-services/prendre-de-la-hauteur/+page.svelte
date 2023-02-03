@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="bg-gray md:p-0 md:py-12 p-4">
+	<section class="bg-gray md:p-0 md:py-12 p-4 opacity-99">
 		<div class="container h-full md:px-8">
 			<h2 class="my-8">Nos méthodes</h2>
 			<div class="md:grid md:grid-cols-5 gap-4">
@@ -130,3 +130,9 @@
 		</div>
 	</section>
 </main>
+
+<style>
+	.opacity-99 {
+		opacity: 0.99 !important;
+	}
+</style>

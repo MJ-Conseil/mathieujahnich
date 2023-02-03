@@ -5,11 +5,11 @@
 	export let contents: string[];
 </script>
 
-<div class="bg-gray p-6 relative rounded-xl">
-	<div class="absolute top-2 z-0 test">
+<div class="p-6 relative rounded-xl">
+	<div class="absolute top-2 zi_-5">
 		<Circle size="medium" />
 	</div>
-	<div>
+	<div class="z-10">
 		<h3 class="my-6 ml-14 mj-h3 font-extralight top-4">{title}</h3>
 	</div>
 	<p>{paragraph}</p>
@@ -21,7 +21,7 @@
 </div>
 
 <style>
-	.test {
-		opacity: 0.99;
+	.zi_-5 {
+		z-index: -5 !important;
 	}
 </style>
