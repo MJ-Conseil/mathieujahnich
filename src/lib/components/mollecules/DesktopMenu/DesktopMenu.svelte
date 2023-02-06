@@ -19,7 +19,7 @@
 		activatedMenu = activeMenu;
 	};
 
-	const regex = new RegExp(`^${ROUTES['Offres de services']}`);	
+	const regex = new RegExp(`^${ROUTES['Offres de services']}`);
 
 	const handleKeyboardInterractions = (e: KeyboardEvent, activeMenu: string) => {
 		switch (e.key) {

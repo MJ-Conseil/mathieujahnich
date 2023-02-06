@@ -24,7 +24,10 @@
 					>
 				</li>
 				<li>
-					<a class="mj-link--alt visited:underline" href="/offres-de-services/trouver-le-juste-equilibre">Trouver le juste équilibre</a>
+					<a
+						class="mj-link--alt visited:underline"
+						href="/offres-de-services/trouver-le-juste-equilibre">Trouver le juste équilibre</a
+					>
 				</li>
 				<li><a class="mj-link--alt visited:underline" href="/tutu">Donner de l'élan</a></li>
 			</ul>
