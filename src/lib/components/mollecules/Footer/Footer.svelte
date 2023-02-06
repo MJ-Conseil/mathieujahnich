@@ -5,15 +5,7 @@
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
-<footer role="contentinfo" class="bg-blue-dark md:p-8 p-4">
-	<div class="bg-white rounded-xl text-center p-5 mb-8">
-		<h3 class="mj-h3 mb-3">Restons en contact</h3>
-		<p>Recevez nos dernières actualités et publications ou prenons rendez-vous.</p>
-		<div class="flex flex-col md:flex-row gap-5 align-center justify-center mt-5 mb-2">
-			<a class="mj-link--btn" href={CONTACT_LINK.reservio}>Prendre rendez-vous</a>
-		</div>
-	</div>
-
+<footer role="contentinfo" class="bg-blue-dark  md:p-8 p-4">
 	<div class="lg:flex  justify-between">
 		<div class="w-1/5">
 			<p class="lg:block font-ptsans text-blue-light hidden text-xl">
@@ -91,10 +83,10 @@
 		<nav aria-label="liens importants" class="lg:m-0 mt-4">
 			<ul>
 				<li class="text-white">
-					Conception et création : <a
+					Conception et création : Anne Faubry & <a
 						class="text-white font-bold decoration-dotted"
 						href="https://www.fairness.coop">Fairness Scop</a
-					> et les Designers Ethiques
+					>
 				</li>
 			</ul>
 		</nav>

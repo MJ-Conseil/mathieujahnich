@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>MJ Conseil - Acceuil</title>
+	<title>MJ Conseil - Accueil</title>
 </svelte:head>
 
 <div class="clipped--bottom w-full h-3/6 md:p-0 md:py-4 p-4 relative bg-blue-dark">
@@ -38,9 +38,9 @@
 </div>
 
 <main class="md:p-0 md:0" id="main">
-	<section class="md:p-0 md:py-4 p-4">
+	<section class="md:p-0 md:mt-8 md:py-4 p-4">
 		<Container>
-			<h2 class="mb-8">Signes particuliers</h2>
+			<h2>Signes particuliers</h2>
 			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
 				<ParticularSign
 					title="A l’interface de la RSE et de la Com"
@@ -88,7 +88,7 @@
 		</Container>
 	</section>
 
-	<section class="clipped--top md:pt-20 pt-10 pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="clipped--top md:pt-20 pt-10 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 

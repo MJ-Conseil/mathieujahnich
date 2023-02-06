@@ -36,7 +36,7 @@
 	/* Heading */
 
 	.mj-heading-base {
-		@apply font-ptsans;
+		@apply font-ptsans mb-14;
 	}
 
 	h1,
