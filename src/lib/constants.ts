@@ -12,7 +12,7 @@ export const SIZE: Record<Size, Size> = {
 };
 
 export const URLAndNameMap: Record<string, string> = {
-	Acceuil: '/'
+	Accueil: '/'
 };
 export const CONTACT_LINK: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
