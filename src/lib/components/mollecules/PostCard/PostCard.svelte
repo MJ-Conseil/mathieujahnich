@@ -6,7 +6,7 @@
 	export let createdDate: Date;
 </script>
 
-<div class="w-full h-full  rounded-xl shadow-xl bg-white">
+<div class="w-full h-full  rounded-xl bg-white">
 	<div class="relative h-1/2">
 		<div class="h-full w-full ">
 			<img
