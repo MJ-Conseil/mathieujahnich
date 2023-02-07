@@ -12,7 +12,7 @@
 	<title>MJ Conseil - Accueil</title>
 </svelte:head>
 
-<div class="clipped--bottom w-full h-3/6 md:p-0 md:py-4 p-4 relative bg-blue-dark">
+<div class="clipped--bottom w-full md:p-0 md:pt-4 md:pb-36 p-4 relative bg-blue-dark">
 	<Container>
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
@@ -59,10 +59,10 @@
 		</Container>
 	</section>
 
-	<section class="md:p-0 md:py-4 p-4">
+	<section class="md:p-0 md:pt-4 p-4">
 		<Container>
 			<h2 class="mb-8">Nos offres et services</h2>
-			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 py-8">
+			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 pt-8">
 				<Offer
 					icon={'ladder'}
 					title="Prendre de la hauteur"
@@ -89,7 +89,7 @@
 		</Container>
 	</section>
 
-	<section class="clipped--top md:pt-20 pt-10 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="clipped--top md:pt-80 pt-10 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 

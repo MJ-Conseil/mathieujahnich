@@ -126,21 +126,21 @@ Usage:
 */
 
 .clipped--bottom {
-	clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
 }
 
 @media (min-width: 768px) {
 	.clipped--bottom {
-		clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
 	}
 }
 
 .clipped--top {
-	clip-path: polygon(0 1%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 }
 
 @media (min-width: 768px) {
 	.clipped--top {
-		clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 	}
 }
