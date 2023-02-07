@@ -4,6 +4,7 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
+	import Accordion from '$lib/components/mollecules/Accordion/Accordion.svelte';
 </script>
 
 <svelte:head>
