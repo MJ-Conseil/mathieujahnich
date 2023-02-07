@@ -5,25 +5,33 @@
 	import { URLAndNameMap } from '$lib/constants';
 
 	export let isMenuOpen = false;
+
+	console.log($page.url.pathname);
 </script>
 
-<div class="bg-blue-dark text-white md:p-8 p-4">
+<div class="bg-blue-dark text-white md:px-16 md:py-8 p-4">
 	<!-- Menu Desktop -->
 	<div class="md:flex w-full items-center justify-between hidden">
-		<Icon height="auto" width="100px" name="mjConseilFull" />
-		<nav class="text-white flex-">
-			<ul class="flex justify-end gap-32 text-white">
-				{#each Object.keys(URLAndNameMap) as key}
-					<li class="text-xl">
-						<a
-							class:underline={$page.route.id === URLAndNameMap[key]}
-							class="text-white hover:underline underline-offset-[10px] decoration-sand "
-							href={URLAndNameMap[key]}>{key}</a
-						>
-					</li>
-				{/each}
-			</ul>
-		</nav>
+		<Icon height="auto" width="173px" name="mjConseilFull" />
+		<div>
+			<div class="mb-6 flex justify-end">
+				<a class="mj-link--btn" href="/contact">Contact</a>
+			</div>
+			<nav class="text-white flex-">
+				<ul class="flex justify-end gap-32 text-white">
+					{#each Object.keys(URLAndNameMap) as key}
+						<li class="text-xl">
+							<a
+								class="font-bold hover:underline underline-offset-[10px] decoration-sand"
+								class:text-sand={$page.route.id === URLAndNameMap[key]}
+								class:text-white={$page.route.id !== URLAndNameMap[key]}
+								href={URLAndNameMap[key]}>{key}</a
+							>
+						</li>
+					{/each}
+				</ul>
+			</nav>
+		</div>
 	</div>
 
 	<!-- Menu Mobile -->

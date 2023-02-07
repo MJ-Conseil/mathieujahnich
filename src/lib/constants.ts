@@ -12,7 +12,8 @@ export const SIZE: Record<Size, Size> = {
 };
 
 export const URLAndNameMap: Record<string, string> = {
-	Accueil: '/'
+	Accueil: '/',
+	'Offres de service': '/offres-de-services/prendre-de-la-hauteur'
 };
 export const CONTACT_LINK: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
