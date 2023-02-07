@@ -11,7 +11,10 @@ const config = {
 		adapter: adapter(),
 		csp: {
 			directives: {
-				'default-src': ['self'],
+				'default-src': [
+					'self',
+					'https://mathieu-jahnich.fr/' // we allow resources loading from this website
+				],
 				'base-uri': ['self'],
 				'script-src': ['self'],
 				'manifest-src': ['self'],
