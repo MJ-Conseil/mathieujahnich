@@ -69,6 +69,7 @@
 					offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
 			de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
 			externes pour enrichir les stratégies RSE et communication."
+					link="/offres-de-services/prendre-de-la-hauteur"
 				/>
 				<Offer
 					icon="stones"
