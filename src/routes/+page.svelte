@@ -31,9 +31,9 @@
 
 	<div
 		aria-hidden="true"
-		class="md:block md:absolute top-4 right-0 md:w-[190px] justify-center hidden opacity-80 text-white "
+		class="md:block md:absolute top-4 right-4 md:w-[200px] justify-center hidden opacity-80 text-white "
 	>
-		<Icon width="auto" height="100%" name="mjConseil" />
+		<Icon width="120%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
 	</div>
 </div>
 
