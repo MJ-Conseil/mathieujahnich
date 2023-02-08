@@ -19,7 +19,6 @@
 			type="button"
 			on:click={handleClickIsOpen}
 			name="display-card"
-			title="Afficher les détails de cette référence"
 			class="w-full"
 		>
 			<div class="flex items-center p-4 justify-between">
@@ -33,7 +32,7 @@
 		</button>
 	</h3>
 	{#if isOpen}
-		<div id={`sect-${id}`} class="mt-5" role="region" aria-labelledby={`accordion-${id}`}>
+		<div id={`sect-${id}`} class="mt-3 p-4" role="region" aria-labelledby={`accordion-${id}`}>
 			<slot name="panel-content" />
 		</div>
 	{/if}

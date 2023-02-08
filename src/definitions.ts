@@ -1,6 +1,12 @@
 export type Fetch = (request: Request) => Promise<Response>;
 import type { WP_REST_API_Tag } from 'wp-types';
 
+export type QueryOption = {
+	page?: number;
+	offset?: number;
+	per_page?: number;
+};
+
 export type Post = {
 	title: string;
 	imageUrl: string;
@@ -9,10 +15,18 @@ export type Post = {
 };
 
 export type ReferenceType = {
-	id: number,
-	count: number
-	description: number,
-	slug: number,
-	taxonomy: string
-	name: string
-}
+	id: number;
+	count: number;
+	description: number;
+	slug: number;
+	taxonomy: string;
+	name: string;
+};
+
+export type Reference = {
+	id: number;
+	date: Date;
+	title: string;
+	content: string;
+	referenceTypes: number[];
+};
