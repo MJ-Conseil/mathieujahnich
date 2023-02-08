@@ -10,4 +10,5 @@ export type IconNames =
 	| 'stones'
 	| 'ladder'
 	| 'close'
-	| 'envelop';
+	| 'envelop'
+	| 'caret'
