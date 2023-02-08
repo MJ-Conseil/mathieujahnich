@@ -5,6 +5,7 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
+
 	export let data: PageData;
 </script>
 

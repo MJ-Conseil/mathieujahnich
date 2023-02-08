@@ -7,3 +7,12 @@ export type Post = {
 	tags: WP_REST_API_Tag[];
 	createdDate: Date;
 };
+
+export type ReferenceType = {
+	id: number,
+	count: number
+	description: number,
+	slug: number,
+	taxonomy: string
+	name: string
+}

@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class="border border-blue-dark p-1  min-w-[50px] hover:bg-blue-dark hover:text-white  rounded-xl text-blue-dark"
+	class="border-2 font-bold border-blue-dark p-1  min-w-[50px] hover:bg-blue-dark hover:text-white  rounded-xl text-blue-dark"
 	on:click
 >
 	{name}
