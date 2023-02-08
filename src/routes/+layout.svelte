@@ -10,6 +10,9 @@
 	on:click={() => {
 		modalShown = true;
 	}}
+	on:clickLink={() => {
+		modalShown = false;
+	}}
 	on:closeModal={() => (modalShown = false)}
 />
 

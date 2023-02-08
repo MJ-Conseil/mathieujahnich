@@ -17,7 +17,7 @@ module.exports = {
 			gray: {
 				DEFAULT: '#F2F3F7',
 				light: '#D0D6EC'
-			},
+			}
 		},
 		fontFamily: {
 			ptsans: ['PT Sans', 'sans-serif'],
