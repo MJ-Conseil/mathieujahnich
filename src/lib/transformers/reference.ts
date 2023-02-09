@@ -6,6 +6,7 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 		id: reference.id,
 		title: reference.title.rendered,
 		date: new Date(reference.date),
-		referenceTypes: reference.reference_types
+		referenceTypes: reference.reference_types,
+		highlighted: reference.acf.mise_en_avant_reference || false
 	};
 };

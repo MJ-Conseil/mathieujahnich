@@ -5,6 +5,7 @@ export type QueryOption = {
 	page?: number;
 	offset?: number;
 	per_page?: number;
+	highlight?: 0 | 1;
 };
 
 export type Post = {
@@ -29,4 +30,5 @@ export type Reference = {
 	title: string;
 	content: string;
 	referenceTypes: number[];
+	highlighted: boolean;
 };

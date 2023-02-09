@@ -5,6 +5,7 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
+	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 
 	export let data: PageData;
 </script>
@@ -23,10 +24,10 @@
 				<span class="font-bold">transition écologique</span>
 			</h1>
 
-			<p class="text-white">
+			<Headline>
 				Nous sommes un trio d’experts en RSE et communication capables de vous aider de la
 				définition de votre stratégie à la mise en place opérationnelle.
-			</p>
+			</Headline>
 		</header>
 	</Container>
 

@@ -5,6 +5,7 @@
 	import { getReferences } from '$lib/repositories/reference';
 	import type { PageData } from './$types';
 	import type { Reference } from 'src/definitions';
+	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 
 	export let data: PageData;
 
@@ -46,16 +47,37 @@
 <header class="py-8 bg-blue-dark ">
 	<Container>
 		<h1 class="mj-h1--alt">Références</h1>
-		<p class="text-white">
+		<Headline>
 			Depuis plus de vingt ans, nous analysons les stratégies marketing et communication des
 			entreprises dans les domaines de l’environnement et de la RSE. Découvrez comment nous les
 			accompagnons vers des pratiques plus responsables, avec la posture « de la recherche à
 			l’action » qui nous caractérise.
-		</p>
+		</Headline>
 	</Container>
 </header>
 
 <main class="mt-8 mb-5">
+	<section>
+		<Container>
+			<h2>Références phares</h2>
+			<div>
+				{#each data.highlightedReferences as reference, index}
+					<Accordion id={`reference-${index}`}>
+						<div
+							title={`voir la référence ${reference.title}`}
+							slot="trigger-content"
+							class="break-words md:w-full w-3/4"
+						>
+							<span> {reference.title}</span>
+						</div>
+						<div class="text-xl" slot="panel-content">
+							{@html reference.content}
+						</div>
+					</Accordion>
+				{/each}
+			</div>
+		</Container>
+	</section>
 	<section>
 		<Container>
 			<h2>Toutes nos références</h2>
