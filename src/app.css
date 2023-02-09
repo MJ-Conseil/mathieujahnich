@@ -135,6 +135,12 @@ Usage:
 	}
 }
 
+@media (max-width: 550px) {
+	.clipped--bottom {
+		clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+	}
+}
+
 .clipped--top {
 	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 }
@@ -142,5 +148,11 @@ Usage:
 @media (min-width: 768px) {
 	.clipped--top {
 		clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+	}
+}
+
+@media (max-width: 550px) {
+	.clipped--top {
+		clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
 	}
 }

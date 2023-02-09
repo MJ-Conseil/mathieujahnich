@@ -12,7 +12,7 @@
 	<title>MJ Conseil - Accueil</title>
 </svelte:head>
 
-<div class="clipped--bottom w-full md:p-0 md:pt-4 md:pb-36 p-4 relative bg-blue-dark">
+<div class="clipped--bottom w-full md:p-0 md:pt-4 pb-36 md:pb-44 p-4 relative bg-blue-dark">
 	<Container>
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
@@ -89,7 +89,7 @@
 		</Container>
 	</section>
 
-	<section class="clipped--top md:pt-80 pt-10 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="clipped--top pt-40 md:pt-80 pt-10 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 
