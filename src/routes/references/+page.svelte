@@ -66,9 +66,15 @@
 						<div
 							title={`voir la référence ${reference.title}`}
 							slot="trigger-content"
-							class="break-words md:w-full w-3/4"
+							class="md:w-full flex gap-5"
 						>
-							<span> {reference.title}</span>
+							{#if reference.imageUrl}
+								<div class="w-1/6 flex items-center">
+									<img class="object-cover" src={reference.imageUrl} aria-hidden="true" alt="" />
+								</div>
+							{/if}
+
+							<span class=" break-all block pr-5"> {reference.title}</span>
 						</div>
 						<div class="text-xl" slot="panel-content">
 							{@html reference.content}
@@ -105,9 +111,15 @@
 						<div
 							title={`voir la référence ${reference.title}`}
 							slot="trigger-content"
-							class="break-words md:w-full w-3/4"
+							class="md:w-full flex gap-5"
 						>
-							<span> {reference.title}</span>
+							{#if reference.imageUrl}
+								<div class="w-1/6 flex items-center">
+									<img class="object-cover" src={reference.imageUrl} aria-hidden="true" alt="" />
+								</div>
+							{/if}
+
+							<span class=" break-all block pr-5"> {reference.title}</span>
 						</div>
 						<div class="text-xl" slot="panel-content">
 							{@html reference.content}

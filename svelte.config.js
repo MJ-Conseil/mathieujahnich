@@ -22,7 +22,8 @@ const config = {
 				'font-src': ['self'],
 				'img-src': [
 					'self',
-					'https://mathieu-jahnich.fr/' // the images come from the current on line website
+					'https://mathieu-jahnich.fr/', // the images come from the current on line website
+					'http://localhost:*'
 				]
 			}
 		}

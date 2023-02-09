@@ -31,4 +31,5 @@ export type Reference = {
 	content: string;
 	referenceTypes: number[];
 	highlighted: boolean;
+	imageUrl?: string
 };
