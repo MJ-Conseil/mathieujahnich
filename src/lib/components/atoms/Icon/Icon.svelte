@@ -106,6 +106,11 @@
 			boxHeight: 16,
 			boxWidth: 18,
 			svg: '<path d="M0 0V15.4286H18V0H0ZM2.19475 1.28571H15.8052L9 8.09096L2.19475 1.28571ZM1.28571 2.19475L6.34319 7.25223L1.28571 13.1535V2.19475ZM16.7143 2.19475V13.156L11.6568 7.25223L16.7143 2.19475ZM7.25474 8.16378L9 9.90904L10.7453 8.16378L15.868 14.1429H2.12946L7.25474 8.16378Z" fill="#06154A"/>'
+		},
+		caret: {
+			boxHeight: 14,
+			boxWidth: 24,
+			svg: '<path d="M2 1.96582L12 11.6711L22 1.96582" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
 		}
 	};
 
