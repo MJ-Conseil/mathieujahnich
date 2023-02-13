@@ -114,7 +114,7 @@
 
 						<h3 class="my-6 mj-h4">Les livrables</h3>
 					</div>
-					<div class="lg:gap-x-20 lg:gap-y-10 grid lg:gap-y-5 lg:grid-cols-2 ">
+					<div class="lg:gap-x-20 lg:gap-y-10 grid  lg:grid-cols-2 ">
 						<div>
 							<ul class="mj-list--disc">
 								<li>Stratégie RSE</li>

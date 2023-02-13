@@ -13,7 +13,7 @@ const config = {
 			directives: {
 				'default-src': [
 					'self',
-					'https://mathieu-jahnich.fr/', // we allow resources loading from this website
+					'https://mj-cms.jcloud-ver-jpe.ik-server.com/', // we allow resources loading from this website
 					'http://localhost:*'
 				],
 				'base-uri': ['self'],
@@ -22,7 +22,7 @@ const config = {
 				'font-src': ['self'],
 				'img-src': [
 					'self',
-					'https://mathieu-jahnich.fr/', // the images come from the current on line website
+					'https://mj-cms.jcloud-ver-jpe.ik-server.com/', // the images come from the current on line website
 					'http://localhost:*'
 				]
 			}

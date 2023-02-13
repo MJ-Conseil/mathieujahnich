@@ -12,7 +12,8 @@ export const api = async <T>(url: string, fetch: Fetch): Promise<T> => {
 const buildOptionRecord = (options: QueryOption): Record<string, string> => {
 	return Object.keys(options).reduce((prev, next) => {
 		const currentOption = options[next as keyof QueryOption];
-		if (currentOption) {
+
+		if (currentOption || currentOption === 0) {
 			return {
 				...prev,
 				[next]: currentOption.toString()

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
-	import Accordion from '$lib/components/mollecules/Accordion/Accordion.svelte';
 	import { getReferences } from '$lib/repositories/reference';
 	import type { PageData } from './$types';
 	import type { Reference } from 'src/definitions';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
+	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
 
 	export let data: PageData;
 
@@ -57,33 +57,24 @@
 </header>
 
 <main class="mt-8 mb-5">
-	<section>
-		<Container>
-			<h2>Références phares</h2>
-			<div>
-				{#each data.highlightedReferences as reference, index}
-					<Accordion id={`reference-${index}`}>
-						<div
-							title={`voir la référence ${reference.title}`}
-							slot="trigger-content"
-							class="md:w-full flex gap-5"
-						>
-							{#if reference.imageUrl}
-								<div class="w-1/6 flex items-center">
-									<img class="object-cover" src={reference.imageUrl} aria-hidden="true" alt="" />
-								</div>
-							{/if}
+	{#if data.highlightedReferences.length > 0}
+		<section>
+			<Container>
+				<h2>Références phares</h2>
+				<div>
+					{#each data.highlightedReferences as reference, index}
+						<ReferenceAccordion
+							id={index}
+							content={reference.content}
+							imageUrl={reference.imageUrl}
+							title={reference.title}
+						/>
+					{/each}
+				</div>
+			</Container>
+		</section>
+	{/if}
 
-							<span class=" break-all block pr-5"> {reference.title}</span>
-						</div>
-						<div class="text-xl" slot="panel-content">
-							{@html reference.content}
-						</div>
-					</Accordion>
-				{/each}
-			</div>
-		</Container>
-	</section>
 	<section>
 		<Container>
 			<h2>Toutes nos références</h2>
@@ -92,7 +83,7 @@
 				mots clés ci-dessous.
 			</p>
 
-			<div class="flex md:gap-5 mt-5 flex-wrap md:justify-start justify-between">
+			<div class="flex gap-2 md:gap-5 mt-5 flex-wrap ">
 				{#each data.referenceTypes as referenceType}
 					<Tag
 						active={selectedFilterIds.includes(referenceType.id)}
@@ -107,32 +98,21 @@
 					<p class="text-xl">Pas de résultat</p>
 				{/if}
 				{#each filteredReferences as reference, index}
-					<Accordion id={`reference-${index}`}>
-						<div
-							title={`voir la référence ${reference.title}`}
-							slot="trigger-content"
-							class="md:w-full flex gap-5"
-						>
-							{#if reference.imageUrl}
-								<div class="w-1/6 flex items-center">
-									<img class="object-cover" src={reference.imageUrl} aria-hidden="true" alt="" />
-								</div>
-							{/if}
-
-							<span class=" break-all block pr-5"> {reference.title}</span>
-						</div>
-						<div class="text-xl" slot="panel-content">
-							{@html reference.content}
-						</div>
-					</Accordion>
+					<ReferenceAccordion
+						id={index}
+						content={reference.content}
+						imageUrl={reference.imageUrl}
+						title={reference.title}
+					/>
 				{/each}
 			</div>
 
-			<div class="w-full mt-8 flex items-center justify-center">
-				<button on:click={handleLoadMoreReferences} class="bg-indigo text-white p-3"
-					>Afficher plus</button
-				>
-			</div>
+			{#if filteredReferences.length > 4}
+				<div class="w-full mt-8 flex items-center justify-center">
+					<button on:click={handleLoadMoreReferences} class="bg-indigo text-white p-3"
+						>Afficher plus</button
+					>
+				</div>{/if}
 		</Container>
 	</section>
 </main>

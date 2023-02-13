@@ -20,8 +20,10 @@
 
 <svelte:window bind:scrollY={offset} />
 
-<div class="my-2 py-2 px-3 border border-gray-light rounded-xl">
-	<h3 class="accordion-trigger__title text-xl md:text-2xl w-full m-0 p-0">
+<div class="my-2 py-2  px-3 border border-gray-light rounded-xl">
+	<h3
+		class="accordion-trigger__title text-xl md:text-2xl w-full m-0 p-0 min-h-[65px] flex items-center"
+	>
 		<button
 			aria-expanded={isOpen}
 			aria-controls={`sect-${id}`}
@@ -31,7 +33,7 @@
 			name="display-card"
 			class="w-full"
 		>
-			<div bind:this={panel} class="flex items-center md:p-2 justify-between">
+			<div bind:this={panel} class="flex items-center  justify-between">
 				<slot name="trigger-content" />
 				<span
 					class:rotate-180={isOpen}
@@ -47,3 +49,9 @@
 		</div>
 	{/if}
 </div>
+
+<style>
+	p {
+		text-align: distribute;
+	}
+</style>

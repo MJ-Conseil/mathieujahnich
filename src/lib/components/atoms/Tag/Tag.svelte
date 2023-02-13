@@ -7,7 +7,7 @@
 	class:bg-indigo={active}
 	class:text-white={active}
 	class:text-indigo={!active}
-	class="border-2 font-bold border-indigo p-1 active:bg-indigo min-w-[50px] hover:bg-indigohover:text-white  rounded-xl"
+	class="outline-2 outline font-bold outline-indigo  p-1 active:bg-indigo active:text-white min-w-[50px] hover:bg-indigo hover:text-white  rounded-xl"
 	on:click
 >
 	{name}

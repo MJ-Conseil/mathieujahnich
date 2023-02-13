@@ -2,7 +2,6 @@ import { getEmbeddedMedia } from '$lib/utils/media';
 import type { Reference } from 'src/definitions';
 
 export const transformWordpressReferenceToReference = (reference: any): Reference => {
-
 	const embededMedias = getEmbeddedMedia(reference);
 	return {
 		content: reference.content.rendered,
