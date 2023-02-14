@@ -1,4 +1,5 @@
 <script lang="ts">
+	import slugify from 'slugify';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import { getReferences } from '$lib/repositories/reference';
@@ -64,7 +65,7 @@
 				<div>
 					{#each data.highlightedReferences as reference, index}
 						<ReferenceAccordion
-							id={index}
+							id={slugify(reference.title)}
 							content={reference.content}
 							imageUrl={reference.imageUrl}
 							title={reference.title}
@@ -97,9 +98,9 @@
 				{#if filteredReferences.length === 0}
 					<p class="text-xl">Pas de résultat</p>
 				{/if}
-				{#each filteredReferences as reference, index}
+				{#each filteredReferences as reference}
 					<ReferenceAccordion
-						id={index}
+						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
 						title={reference.title}
