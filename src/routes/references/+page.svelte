@@ -62,8 +62,8 @@
 		<section>
 			<Container>
 				<h2>Références phares</h2>
-				<div>
-					{#each data.highlightedReferences as reference, index}
+				<div class="flex flex-col gap-5">
+					{#each data.highlightedReferences as reference}
 						<ReferenceAccordion
 							id={slugify(reference.title)}
 							content={reference.content}
@@ -94,7 +94,7 @@
 				{/each}
 			</div>
 
-			<div class="mt-8">
+			<div class="mt-8 flex flex-col gap-5">
 				{#if filteredReferences.length === 0}
 					<p class="text-xl">Pas de résultat</p>
 				{/if}

@@ -112,6 +112,11 @@
 			boxHeight: 14,
 			boxWidth: 24,
 			svg: '<path d="M2 1.96582L12 11.6711L22 1.96582" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+		},
+		checkMark: {
+			boxHeight: 10,
+			boxWidth: 13,
+			svg: '<path d="M1 3.25L5.5 7.75L12 1.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
 		}
 	};
 

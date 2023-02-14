@@ -16,7 +16,7 @@
 	on:closeModal={() => (modalShown = false)}
 />
 
-<div class="w-full h-full" inert={modalShown} class:overflow-hidden={modalShown}>
+<div class="w-full h-full" inert={modalShown ? true : null} class:overflow-hidden={modalShown}>
 	<slot />
 
 	<Footer />

@@ -11,4 +11,5 @@ export type IconNames =
 	| 'ladder'
 	| 'close'
 	| 'envelop'
-	| 'caret';
+	| 'caret'
+	| 'checkMark';

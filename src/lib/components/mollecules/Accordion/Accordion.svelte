@@ -5,20 +5,12 @@
 
 	let isOpen = false;
 
-	let offset = 0;
-
 	const handleClickIsOpen = () => {
 		isOpen = !isOpen;
 	};
 
 	let panel: HTMLElement;
-
-	$: if (isOpen == true && panel) {
-		offset = panel.offsetTop;
-	}
 </script>
-
-<svelte:window bind:scrollY={offset} />
 
 <div class="my-2 py-2  px-3 border border-gray-light rounded-xl">
 	<h3
@@ -33,14 +25,12 @@
 			name="display-card"
 			class="w-full"
 		>
-			<div bind:this={panel} class="flex items-center  justify-between">
+			<span bind:this={panel} class="flex items-center  justify-between">
 				<slot name="trigger-content" />
-				<span
-					class:rotate-180={isOpen}
-					class="rounded-full p-2 bg-sand text-blue-dark text-blue  items-end"
+				<span class:rotate-180={isOpen} class="rounded-full p-2 bg-sand text-indigo  items-end"
 					><Icon name="caret" /></span
 				>
-			</div>
+			</span>
 		</button>
 	</h3>
 	{#if isOpen}
