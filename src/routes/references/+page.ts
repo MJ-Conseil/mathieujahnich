@@ -1,6 +1,7 @@
 import { getReferences } from '$lib/repositories/reference';
 import { getRefereneTypes } from '$lib/repositories/referenceTypes';
 import type { PageLoad } from './$types';
+
 export const load: PageLoad = async ({ fetch }) => {
 	const [referenceTypes, references, highlightedReferences] = await Promise.all([
 		getRefereneTypes(fetch),

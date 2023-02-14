@@ -7,6 +7,15 @@ const config: UserConfig = {
 		environment: 'jsdom',
 		globals: true,
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	server: {
+		port: 5173,
+		strictPort: true
+	},
+
+	preview: {
+		port: 5173,
+		strictPort: true
 	}
 };
 
