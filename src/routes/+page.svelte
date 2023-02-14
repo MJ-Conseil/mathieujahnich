@@ -14,12 +14,12 @@
 	<title>MJ Conseil - Accueil</title>
 </svelte:head>
 
-<div class="clipped--bottom w-full md:p-0 md:pt-4 pb-36 md:pb-44 p-4 relative bg-blue-dark">
+<div class="clipped--bottom w-full h-1/2 md:p-0 md:py-4 relative bg-blue-dark">
 	<Container>
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
 			<p class="text-sand font-bold">Mj Conseil</p>
-			<h1 class="mj-h1--alt lg:text-6xl text-4xl text">
+			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>
 			</h1>
