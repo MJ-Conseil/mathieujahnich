@@ -5,6 +5,7 @@
 	export let height = '1rem';
 	export let focusable = false;
 	export let fill = 'none';
+	export let stroke = 'currentColor';
 	export let ariaHidden = true;
 
 	type Icon = {
@@ -123,7 +124,7 @@
 	focusable={focusable.toString()}
 	{width}
 	{height}
-	stroke="currentColor"
+	{stroke}
 	{fill}
 	viewBox={`0 0 ${displayIcon.boxWidth} ${displayIcon.boxHeight}`}>{@html displayIcon.svg}</svg
 >
