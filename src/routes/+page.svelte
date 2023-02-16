@@ -5,6 +5,8 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
+	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
+
 	export let data: PageData;
 </script>
 
@@ -12,20 +14,20 @@
 	<title>MJ Conseil - Accueil</title>
 </svelte:head>
 
-<div class="clipped--bottom w-full md:p-0 md:pt-4 pb-36 md:pb-44 p-4 relative bg-blue-dark">
+<div class="clipped--bottom w-full h-3/5 md:p-0 md:py-4 relative bg-blue-dark">
 	<Container>
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
 			<p class="text-sand font-bold">Mj Conseil</p>
-			<h1 class="mj-h1--alt lg:text-6xl text-4xl text">
+			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>
 			</h1>
 
-			<p class="text-white">
+			<Headline>
 				Nous sommes un trio d’experts en RSE et communication capables de vous aider de la
 				définition de votre stratégie à la mise en place opérationnelle.
-			</p>
+			</Headline>
 		</header>
 	</Container>
 
@@ -89,7 +91,7 @@
 		</Container>
 	</section>
 
-	<section class="clipped--top pt-40 md:pt-80 pt-10 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="clipped--top pt-20 md:pt-80 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 

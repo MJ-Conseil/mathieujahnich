@@ -12,7 +12,7 @@
 	<div class="md:flex w-full items-center justify-between hidden">
 		<Icon height="auto" width="100px" name="mjConseilFull" />
 		<nav class="text-white flex-">
-			<ul class="flex justify-end gap-32 text-white">
+			<ul class="flex justify-end gap-8 text-white">
 				{#each Object.keys(URLAndNameMap) as key}
 					<li class="text-xl">
 						<a
@@ -33,6 +33,8 @@
 			<Icon height="2rem" width="2rem" name="burger" />
 		</button>
 		<MenuMobile
+			on:clickLink={() => (isMenuOpen = false)}
+			on:clickLink
 			on:click={() => (isMenuOpen = false)}
 			on:closeModal={() => (isMenuOpen = false)}
 			on:closeModal

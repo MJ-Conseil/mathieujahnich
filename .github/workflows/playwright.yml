@@ -1,6 +1,6 @@
 name: Playwright Tests
 env:
-  PUBLIC_API_URL: 'https://mathieu-jahnich.fr'
+  PUBLIC_API_URL: 'https://mj-cms.jcloud-ver-jpe.ik-server.com'
 on:
   push:
     branches: [main, master]

@@ -12,3 +12,4 @@ export type IconNames =
 	| 'close'
 	| 'envelop'
 	| 'caret'
+	| 'checkMark';
