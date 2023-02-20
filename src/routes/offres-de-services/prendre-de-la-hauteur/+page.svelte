@@ -5,6 +5,7 @@
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
+	export let data: PageData;
 </script>
 
 <svelte:head>
