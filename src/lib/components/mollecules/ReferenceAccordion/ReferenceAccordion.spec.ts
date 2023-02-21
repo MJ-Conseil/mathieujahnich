@@ -1,7 +1,7 @@
 // NOTE: jest-dom adds handy assertions to Jest and it is recommended, but not required.
 import '@testing-library/jest-dom';
 
-import { render, fireEvent, screen, queryByRole } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 
 import ReferenceAccordion from './ReferenceAccordion.svelte';
 

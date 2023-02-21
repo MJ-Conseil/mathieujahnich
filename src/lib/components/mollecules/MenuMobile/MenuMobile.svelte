@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
-	import { URLAndNameMap } from '$lib/constants';
+	import { ROUTES } from '$lib/constants';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	const dispatch = createEventDispatcher<{ closeModal: boolean; clickLink: undefined }>();
@@ -98,13 +98,11 @@
 	</div>
 	<nav class="relative w-full">
 		<ul class="flex flex-col gap-5">
-			{#each Object.keys(URLAndNameMap) as key, index}
+			{#each Object.keys(ROUTES) as key, index}
 				<!-- svelte-ignore a11y-autofocus -- Here this we want legitimely set autofocus on the first link -->
 				<li class="text-2xl">
-					<a
-						on:click={() => dispatch('clickLink')}
-						autofocus={index === 0}
-						href={URLAndNameMap[key]}>{key}</a
+					<a on:click={() => dispatch('clickLink')} autofocus={index === 0} href={ROUTES[key]}
+						>{key}</a
 					>
 				</li>
 			{/each}

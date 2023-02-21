@@ -7,12 +7,13 @@
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
+	import { SITE_WEB_NAME } from '$lib/constants';
 
 	export let data: PageData;
 </script>
 
 <svelte:head>
-	<title>MJ Conseil - Accueil</title>
+	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 
 <div class="clipped--bottom w-full h-3/5 md:p-0 md:py-4 relative bg-blue-dark">

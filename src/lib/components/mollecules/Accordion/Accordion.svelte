@@ -8,8 +8,6 @@
 	const handleClickIsOpen = () => {
 		isOpen = !isOpen;
 	};
-
-	let panel: HTMLElement;
 </script>
 
 <div data-testid={id} class="py-2  px-3 border border-gray-light rounded-xl">
@@ -25,7 +23,7 @@
 			name="display-card"
 			class="w-full"
 		>
-			<span bind:this={panel} class="flex items-center  justify-between">
+			<span class="flex items-center  justify-between">
 				<slot name="trigger-content" />
 				<span class:rotate-180={isOpen} class="rounded-full p-2 bg-sand text-indigo  items-end"
 					><Icon name="caret" /></span

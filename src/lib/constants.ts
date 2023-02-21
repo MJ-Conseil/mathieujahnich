@@ -11,9 +11,13 @@ export const SIZE: Record<Size, Size> = {
 	medium: 'medium'
 };
 
-export const URLAndNameMap: Record<string, string> = {
-	Accueil: '/',
-	Références: '/references'
+export const SITE_WEB_NAME = 'MJ Conseil';
+
+export const ROUTES: Record<string, string> = {
+	Acceuil: '/',
+	Références: '/references',
+	'Offres de services': '/offres-de-services',
+	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur'
 };
 export const CONTACT_LINK: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
