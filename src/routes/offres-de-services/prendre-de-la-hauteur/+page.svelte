@@ -6,6 +6,7 @@
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
 	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
 	import slugify from 'slugify';
+	import Section from '$lib/components/mollecules/Section/Section.svelte';
 
 	export let data: PageData;
 </script>
@@ -38,130 +39,124 @@
 </div>
 
 <main class="md:p-0 md:0" id="main">
-	<section class="md:p-0 md:py-12 p-4">
-		<Container>
-			<div class="h-full md:px-8">
-				<h2 class="my-8">Votre besoin</h2>
-				<p>J’ai besoin de prendre de la hauteur et d’agir sur :</p>
-				<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2 my-6">
-					<Need
-						title="Ma stratégie RSE"
+	<Section>
+		<div class="h-full md:px-8">
+			<h2 class="my-8">Votre besoin</h2>
+			<p>J’ai besoin de prendre de la hauteur et d’agir sur :</p>
+			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2 my-6">
+				<Need title="Ma stratégie RSE">
+					<ul class="mj-list--disc">
+						<li>
+							Comment l’ajuster face à l’évolution du contexte et des attentes de mes parties
+							prenantes ?
+						</li>
+						<li>Quelles sont les nouvelles obligations légales et comment y répondre ?</li>
+
+						<li>
+							Comment mieux la structurer pour faciliter l’appropriation interne et la valorisation
+							externe ?
+						</li>
+						<li>Comment définir une raison d’être qui nous ressemble et l’incarner ?</li>
+					</ul>
+				</Need>
+
+				<Need title="Ma stratégie RSE">
+					<ul class="mj-list--disc">
+						<li>Comment (re)mobiliser mes collaboratrices et collaborateurs ?</li>
+						<li>Quelles sont les nouvelles obligations légales et comment y répondre ?</li>
+
+						<li>Comment mettre en cohérence les actions de communication et les messages ?</li>
+						<li>Comment mobiliser les forces de vente ?</li>
+					</ul>
+				</Need>
+			</div>
+		</div>
+	</Section>
+
+	<Section alt>
+		<div class="h-full md:px-8">
+			<h2 class="my-8">Nos méthodes</h2>
+			<div class="md:grid md:grid-cols-5 gap-4">
+				<div class="col-span-3">
+					<Method
+						title="Diagnostic"
+						paragraph="Recueillir et analyser les attentes et perceptions de vos parties prenantes (collaborateurs, clients, fournisseurs...). Evaluer votre politique RSE et votre politique de communication associée, votre environnement concurrentiel"
 						contents={[
-							'Comment l’ajuster face à l’évolution du contexte et des attentes de mes parties prenantes ?',
-							'Quelles sont les nouvelles obligations légales et comment y répondre ?',
-							'Comment mieux la structurer pour faciliter l’appropriation interne et la valorisation externe ?',
-							'Comment définir une raison d’être qui nous ressemble et l’incarner ? '
+							'Enquête par entretiens ou questionnaire',
+							'Cartographie des parties prenantes',
+							'Benchmark'
 						]}
 					/>
-					<Need
-						title="Ma communication RSE"
+				</div>
+				<div class="col-start-3 col-end-6">
+					<Method
+						title="Stratégie"
+						paragraph="Clarifier et prioriser vos enjeux environnementaux, sociaux et économiques, enrichir vos stratégies RSE et Marketing en cohérence avec le modèle d’affaire"
 						contents={[
-							'Comment (re)mobiliser mes collaboratrices et collaborateurs ?',
-							'Comment embarquer mes clients (B2B et B2C) et mes partenaires ?',
-							'Comment me différencier, être créatif et impactant ?',
-							'Comment mettre en cohérence les actions de communication et les messages ?',
-							'Comment mobiliser les forces de vente ?'
+							'Ateliers de co-construction',
+							'Séminaires de restitution',
+							'Matrice de matérialité'
+						]}
+					/>
+				</div>
+				<div class="col-span-3">
+					<Method
+						title="Mobilisation et communication"
+						paragraph="Traduire vos engagements dans tous vos métiers et vos actions de communication"
+						contents={[
+							'Argumentaire',
+							'Réseau d’ambassadrices et d’ambassadeurs',
+							'Accompagnement des forces de vente'
 						]}
 					/>
 				</div>
 			</div>
-		</Container>
-	</section>
-	<section class="bg-gray md:p-0 md:py-12 p-4 opacity-99">
-		<Container>
-			<div class="h-full md:px-8">
-				<h2 class="my-8">Nos méthodes</h2>
-				<div class="md:grid md:grid-cols-5 gap-4">
-					<div class="col-span-3">
-						<Method
-							title="Diagnostic"
-							paragraph="Recueillir et analyser les attentes et perceptions de vos parties prenantes (collaborateurs, clients, fournisseurs...). Evaluer votre politique RSE et votre politique de communication associée, votre environnement concurrentiel"
-							contents={[
-								'Enquête par entretiens ou questionnaire',
-								'Cartographie des parties prenantes',
-								'Benchmark'
-							]}
-						/>
-					</div>
-					<div class="col-start-3 col-end-6">
-						<Method
-							title="Stratégie"
-							paragraph="Clarifier et prioriser vos enjeux environnementaux, sociaux et économiques, enrichir vos stratégies RSE et Marketing en cohérence avec le modèle d’affaire"
-							contents={[
-								'Ateliers de co-construction',
-								'Séminaires de restitution',
-								'Matrice de matérialité'
-							]}
-						/>
-					</div>
-					<div class="col-span-3">
-						<Method
-							title="Mobilisation et communication"
-							paragraph="Traduire vos engagements dans tous vos métiers et vos actions de communication"
-							contents={[
-								'Argumentaire',
-								'Réseau d’ambassadrices et d’ambassadeurs',
-								'Accompagnement des forces de vente'
-							]}
-						/>
-					</div>
+		</div>
+	</Section>
+
+	<Section alt>
+		<div class="bg-white rounded-xl relative  p-6 my-10">
+			<div>
+				<div class=" absolute top-6 left-6">
+					<Circle size="small" />
+				</div>
+
+				<h3 class="my-6 mj-h4">Les livrables</h3>
+			</div>
+			<div class="lg:gap-x-20 lg:gap-y-10 grid  lg:grid-cols-2 ">
+				<div>
+					<ul class="mj-list--disc">
+						<li>Stratégie RSE</li>
+						<li>Raison d’être</li>
+						<li>Recommandations stratégiques et opérationnelles</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="mj-list--disc">
+						<li>Rapport RSE</li>
+						<li>Plan d’action</li>
+						<li>Indicateurs</li>
+						<li>Kits d’animation interne</li>
+						<li>Eléments de langage</li>
+					</ul>
 				</div>
 			</div>
-		</Container>
-		<Container>
-			<div class="h-full md:px-8">
-				<div class="bg-white rounded-xl relative m-5 p-6 my-10">
-					<div>
-						<div class=" absolute top-6 left-6">
-							<Circle size="small" />
-						</div>
+		</div>
+	</Section>
 
-						<h3 class="my-6 mj-h4">Les livrables</h3>
-					</div>
-					<div class="lg:gap-x-20 lg:gap-y-10 grid  lg:grid-cols-2 ">
-						<div>
-							<ul class="mj-list--disc">
-								<li>Stratégie RSE</li>
-								<li>Raison d’être</li>
-								<li>Recommandations stratégiques et opérationnelles</li>
-							</ul>
-						</div>
-						<div>
-							<ul class="mj-list--disc">
-								<li>Rapport RSE</li>
-								<li>Plan d’action</li>
-								<li>Indicateurs</li>
-								<li>Kits d’animation interne</li>
-								<li>Eléments de langage</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</Container>
-	</section>
-
-	<section>
-		<Container>
-			<h2>Missions récentes</h2>
-			<div class="mt-8 flex flex-col gap-5">
-				{#if data.references.length > 0}
-					{#each data.references as reference}
-						<ReferenceAccordion
-							id={slugify(reference.title)}
-							content={reference.content}
-							imageUrl={reference.imageUrl}
-							title={reference.title}
-						/>
-					{/each}
-				{/if}
-			</div>
-		</Container>
-	</section>
+	<Section>
+		<h2>Missions récentes</h2>
+		<div class="mt-8 flex flex-col gap-5">
+			{#if data.references.length > 0}
+				{#each data.references as reference}
+					<ReferenceAccordion
+						id={slugify(reference.title)}
+						content={reference.content}
+						imageUrl={reference.imageUrl}
+						title={reference.title}
+					/>
+				{/each}
+			{/if}
+		</div>
+	</Section>
 </main>
-
-<style>
-	.opacity-99 {
-		opacity: 0.99 !important;
-	}
-</style>

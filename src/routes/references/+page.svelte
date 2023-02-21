@@ -7,6 +7,7 @@
 	import type { Reference } from 'src/definitions';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
+	import Section from '$lib/components/mollecules/Section/Section.svelte';
 
 	export let data: PageData;
 
@@ -59,46 +60,10 @@
 
 <main class="mt-8 mb-12">
 	{#if data.highlightedReferences.length > 0}
-		<section>
-			<Container>
-				<h2>Références phares</h2>
-				<div class="flex flex-col gap-4">
-					{#each data.highlightedReferences as reference}
-						<ReferenceAccordion
-							id={slugify(reference.title)}
-							content={reference.content}
-							imageUrl={reference.imageUrl}
-							title={reference.title}
-						/>
-					{/each}
-				</div>
-			</Container>
-		</section>
-	{/if}
-
-	<section>
-		<Container>
-			<h2>Toutes nos références</h2>
-			<p class="text-xl mb-5">
-				Nous travaillons pour des secteurs variés. Vous pouvez filtrer nos références à l’aide des
-				mots clés ci-dessous.
-			</p>
-
-			<div class="flex gap-2 md:gap-5 mt-5 flex-wrap ">
-				{#each data.referenceTypes as referenceType}
-					<Tag
-						active={selectedFilterIds.includes(referenceType.id)}
-						on:click={() => handleClickReferenceType(referenceType.id)}
-						name={referenceType.name}
-					/>
-				{/each}
-			</div>
-
-			<div class="mt-8 flex flex-col gap-4">
-				{#if filteredReferences.length === 0}
-					<p class="text-xl">Pas de résultat</p>
-				{/if}
-				{#each filteredReferences as reference}
+		<Section>
+			<h2>Références phares</h2>
+			<div class="flex flex-col gap-4">
+				{#each data.highlightedReferences as reference}
 					<ReferenceAccordion
 						id={slugify(reference.title)}
 						content={reference.content}
@@ -107,13 +72,45 @@
 					/>
 				{/each}
 			</div>
+		</Section>
+	{/if}
 
-			{#if filteredReferences.length > 4}
-				<div class="w-full mt-8 flex items-center justify-center">
-					<button on:click={handleLoadMoreReferences} class="bg-indigo text-white p-3"
-						>Afficher plus</button
-					>
-				</div>{/if}
-		</Container>
-	</section>
+	<Section>
+		<h2>Toutes nos références</h2>
+		<p class="text-xl mb-5">
+			Nous travaillons pour des secteurs variés. Vous pouvez filtrer nos références à l’aide des
+			mots clés ci-dessous.
+		</p>
+
+		<div class="flex gap-2 md:gap-5 mt-5 flex-wrap ">
+			{#each data.referenceTypes as referenceType}
+				<Tag
+					active={selectedFilterIds.includes(referenceType.id)}
+					on:click={() => handleClickReferenceType(referenceType.id)}
+					name={referenceType.name}
+				/>
+			{/each}
+		</div>
+
+		<div class="mt-8 flex flex-col gap-4">
+			{#if filteredReferences.length === 0}
+				<p class="text-xl">Pas de résultat</p>
+			{/if}
+			{#each filteredReferences as reference}
+				<ReferenceAccordion
+					id={slugify(reference.title)}
+					content={reference.content}
+					imageUrl={reference.imageUrl}
+					title={reference.title}
+				/>
+			{/each}
+		</div>
+
+		{#if filteredReferences.length > 4}
+			<div class="w-full mt-8 flex items-center justify-center">
+				<button on:click={handleLoadMoreReferences} class="bg-indigo text-white p-3"
+					>Afficher plus</button
+				>
+			</div>{/if}
+	</Section>
 </main>

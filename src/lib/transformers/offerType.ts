@@ -1,8 +1,6 @@
 import type { OfferType } from 'src/definitions';
 
-export const transformWordpressOfferTypeToOfferType = (
-	offerType: any
-): OfferType => {
+export const transformWordpressOfferTypeToOfferType = (offerType: any): OfferType => {
 	return {
 		description: offerType.description,
 		id: offerType.id,

@@ -6,7 +6,7 @@ export type QueryOption = {
 	offset?: number;
 	per_page?: number;
 	highlight?: 0 | 1;
-	offerTypeId?: number
+	offerTypeId?: number;
 };
 
 export type Post = {
@@ -24,7 +24,6 @@ export type ReferenceType = {
 	taxonomy: string;
 	name: string;
 };
-
 
 export type OfferType = {
 	id: number;
