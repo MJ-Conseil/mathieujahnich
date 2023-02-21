@@ -3,8 +3,6 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
-	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
-	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
 
@@ -141,22 +139,6 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-	</Section>
-
-	<Section>
-		<h2>Missions récentes</h2>
-		<div class="mt-8 flex flex-col gap-5">
-			{#if data.references.length > 0}
-				{#each data.references as reference}
-					<ReferenceAccordion
-						id={slugify(reference.title)}
-						content={reference.content}
-						imageUrl={reference.imageUrl}
-						title={reference.title}
-					/>
-				{/each}
-			{/if}
 		</div>
 	</Section>
 </main>
