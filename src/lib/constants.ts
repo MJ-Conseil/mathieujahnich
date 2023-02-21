@@ -12,7 +12,7 @@ export const SIZE: Record<Size, Size> = {
 };
 
 export const URLAndNameMap: Record<string, string> = {
-	Acceuil: '/',
+	Accueil: '/',
 	Références: '/references'
 };
 export const CONTACT_LINK: Record<string, string> = {
