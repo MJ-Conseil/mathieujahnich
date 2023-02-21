@@ -33,6 +33,10 @@
 }
 
 @layer components {
+	/*
+		Blocs
+	*/
+
 	/* Heading */
 
 	.mj-heading-base {
