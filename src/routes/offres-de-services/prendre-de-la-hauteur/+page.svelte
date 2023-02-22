@@ -7,7 +7,9 @@
 	import type { PageData } from './$types';
 	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { SITE_WEB_NAME } from '$lib/constants';
+	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
+	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
+	import { SIZE } from '$lib/constants';
 
 	export let data: PageData;
 </script>
@@ -119,7 +121,7 @@
 		<div class="bg-white rounded-xl relative  p-6 my-10">
 			<div>
 				<div class=" absolute top-6 left-6">
-					<Circle size="small" />
+					<Circle size={SIZE.SMALL} />
 				</div>
 
 				<h3 class="my-6 mj-h4">Les livrables</h3>
@@ -158,6 +160,10 @@
 					/>
 				{/each}
 			{/if}
+		</div>
+
+		<div class="flex justify-end mt-8">
+			<ArrowLink href={ROUTES['Références']}>Voir plus de références</ArrowLink>
 		</div>
 	</Section>
 </main>
