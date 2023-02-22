@@ -12,7 +12,7 @@
 	let panel: HTMLElement;
 </script>
 
-<div class="my-2 py-2  px-3 border border-gray-light rounded-xl">
+<div data-testid={id} class="py-2  px-3 border border-gray-light rounded-xl">
 	<h3
 		class="accordion-trigger__title text-xl md:text-2xl w-full m-0 p-0 min-h-[65px] flex items-center"
 	>
