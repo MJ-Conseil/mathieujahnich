@@ -6,6 +6,7 @@
 	import type { PageData } from './$types';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
+	import Section from '$lib/components/mollecules/Section/Section.svelte';
 
 	export let data: PageData;
 </script>
@@ -40,56 +41,52 @@
 </div>
 
 <main class="md:p-0 md:0" id="main">
-	<section class="md:p-0 md:mt-8 md:py-4 p-4">
-		<Container>
-			<h2>Signes particuliers</h2>
-			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
-				<ParticularSign
-					title="A l’interface de la RSE et de la Com"
-					content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
-				/>
-				<ParticularSign
-					title="De la recherche à l’action"
-					content="Parce que nous nous positionnons en complément des agences de com et des  cabinets conseil nous vous proposons une vision qui va de la recherche à l’action"
-				/>
-				<ParticularSign
-					title="Écoute & qualité de services"
-					content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
-				/>
-			</div>
-			<div class="lg:container h-full" />
-		</Container>
-	</section>
+	<Section>
+		<h2>Signes particuliers</h2>
+		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
+			<ParticularSign
+				title="A l’interface de la RSE et de la Com"
+				content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
+			/>
+			<ParticularSign
+				title="De la recherche à l’action"
+				content="Parce que nous nous positionnons en complément des agences de com et des  cabinets conseil nous vous proposons une vision qui va de la recherche à l’action"
+			/>
+			<ParticularSign
+				title="Écoute & qualité de services"
+				content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
+			/>
+		</div>
+		<div class="lg:container h-full" />
+	</Section>
 
-	<section class="md:p-0 md:pt-4 p-4">
-		<Container>
-			<h2 class="mb-8">Nos offres et services</h2>
-			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 pt-8">
-				<Offer
-					icon={'ladder'}
-					title="Prendre de la hauteur"
-					offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
-			de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
-			externes pour enrichir les stratégies RSE et communication."
-					link="/offres-de-services/prendre-de-la-hauteur"
-				/>
-				<Offer
-					icon="stones"
-					title="Trouver le juste équilibre"
-					offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
-			leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
-			des filets de sécurité pour limiter les accusations de greenwashing."
-				/>
-				<Offer
-					icon="plane"
-					title="Donner de l’élan"
-					offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
-			fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
-			units, partenaires…), vers des pratiques plus responsables."
-				/>
-			</div>
-		</Container>
-	</section>
+	<Section>
+		<h2 class="mb-8">Nos offres et services</h2>
+		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 pt-8">
+			<Offer
+				icon={'ladder'}
+				title="Prendre de la hauteur"
+				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
+	de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
+	externes pour enrichir les stratégies RSE et communication."
+				link="/offres-de-services/prendre-de-la-hauteur"
+			/>
+			<Offer
+				icon="stones"
+				title="Trouver le juste équilibre"
+				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
+	leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
+	des filets de sécurité pour limiter les accusations de greenwashing."
+			/>
+			<Offer
+				icon="plane"
+				title="Donner de l’élan"
+				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
+	fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
+	units, partenaires…), vers des pratiques plus responsables."
+			/>
+		</div>
+	</Section>
 
 	<section class="clipped--top pt-20 md:pt-80 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>

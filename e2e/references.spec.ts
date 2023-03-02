@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 
 test.describe('reference page', () => {
 	test('should display and filter references', async ({ page }) => {
-
 		await page.goto('/references');
 
 		const referenceCount = await page.getByTestId(new RegExp('^reference-')).count();
