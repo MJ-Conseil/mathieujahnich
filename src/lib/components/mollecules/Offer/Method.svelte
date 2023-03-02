@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
+	import { SIZE } from '$lib/constants';
 	export let title: string;
 	export let paragraph: string;
 	export let contents: string[];
@@ -7,7 +8,7 @@
 
 <div class="p-6 relative rounded-xl">
 	<div class="absolute top-2 zi_-5">
-		<Circle size="medium" />
+		<Circle size={SIZE.MEDIUM} />
 	</div>
 	<div class="z-10">
 		<h3 class="my-6 ml-14 mj-h3 font-extralight top-4">{title}</h3>

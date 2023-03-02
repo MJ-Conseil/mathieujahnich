@@ -3,8 +3,15 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
+	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
+	import type { PageData } from './$types';
+	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { SITE_WEB_NAME } from '$lib/constants';
+	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
+	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
+	import { SIZE } from '$lib/constants';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -114,7 +121,7 @@
 		<div class="bg-white rounded-xl relative  p-6 my-10">
 			<div>
 				<div class=" absolute top-6 left-6">
-					<Circle size="small" />
+					<Circle size={SIZE.SMALL} />
 				</div>
 
 				<h3 class="my-6 mj-h4">Les livrables</h3>
@@ -137,6 +144,26 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+	</Section>
+
+	<Section>
+		<h2>Missions récentes</h2>
+		<div class="mt-8 flex flex-col gap-5">
+			{#if data.references.length > 0}
+				{#each data.references as reference}
+					<ReferenceAccordion
+						id={slugify(reference.title)}
+						content={reference.content}
+						imageUrl={reference.imageUrl}
+						title={reference.title}
+					/>
+				{/each}
+			{/if}
+		</div>
+
+		<div class="flex justify-end mt-8">
+			<ArrowLink href={ROUTES['Références']}>Voir plus de références</ArrowLink>
 		</div>
 	</Section>
 </main>

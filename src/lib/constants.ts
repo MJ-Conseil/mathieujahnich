@@ -1,14 +1,6 @@
-import type { Size } from 'src/definitions/size';
-
 export const SOCIAL_NETWORK_LINKS: Record<string, string> = {
 	linkedin: 'https://www.linkedin.com/company/mjconseil/',
 	youtube: 'https://www.youtube.com/playlist?list=PLS3PLG72rJqGFGtMIgJRaDqx0NAzLMMhM'
-};
-
-export const SIZE: Record<Size, Size> = {
-	regular: 'regular',
-	small: 'small',
-	medium: 'medium'
 };
 
 export const SITE_WEB_NAME = 'MJ Conseil';
@@ -24,3 +16,10 @@ export const CONTACT_LINK: Record<string, string> = {
 	email: 'conseil@mathieu-jahnich.fr',
 	phone: '+33 6 74 88 92 73'
 };
+
+export enum SIZE {
+	SMALL = 'small',
+	LARGE = 'large',
+	REGULAR = 'regular',
+	MEDIUM = 'medium'
+}

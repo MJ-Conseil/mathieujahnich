@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-
+	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
 	export let id: string;
 
 	let isOpen = false;
@@ -10,7 +9,7 @@
 	};
 </script>
 
-<div data-testid={id} class="py-2  px-3 border border-gray-light rounded-xl">
+<div data-testid={id} class="py-2 px-3 border border-gray-light rounded-xl">
 	<h3
 		class="accordion-trigger__title text-xl md:text-2xl w-full m-0 p-0 min-h-[65px] flex items-center"
 	>
@@ -25,9 +24,7 @@
 		>
 			<span class="flex items-center  justify-between">
 				<slot name="trigger-content" />
-				<span class:rotate-180={isOpen} class="rounded-full p-2 bg-sand text-indigo  items-end"
-					><Icon name="caret" /></span
-				>
+				<ArrowInCircle iconRotation={isOpen ? 180 : 0} />
 			</span>
 		</button>
 	</h3>
