@@ -8,6 +8,7 @@
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
+	import { SITE_WEB_NAME } from '$lib/constants';
 
 	export let data: PageData;
 
@@ -43,7 +44,7 @@
 </script>
 
 <svelte:head>
-	<title>MJ Conseil - Références</title>
+	<title>{SITE_WEB_NAME} - Références</title>
 </svelte:head>
 
 <header class="py-8 bg-blue-dark ">
@@ -96,9 +97,9 @@
 			{#if filteredReferences.length === 0}
 				<p class="text-xl">Pas de résultat</p>
 			{/if}
-			{#each filteredReferences as reference}
+			{#each filteredReferences as reference, i}
 				<ReferenceAccordion
-					id={slugify(reference.title)}
+					id={slugify(reference.title + i)}
 					content={reference.content}
 					imageUrl={reference.imageUrl}
 					title={reference.title}
@@ -109,8 +110,8 @@
 		{#if filteredReferences.length > 4}
 			<div class="w-full mt-8 flex items-center justify-center">
 				<button on:click={handleLoadMoreReferences} class="bg-indigo text-white p-3"
-					>Afficher plus</button
-				>
+					>Afficher plus
+				</button>
 			</div>{/if}
 	</Section>
 </main>

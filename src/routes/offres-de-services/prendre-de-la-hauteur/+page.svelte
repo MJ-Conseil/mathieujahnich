@@ -4,10 +4,11 @@
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
+	import { SITE_WEB_NAME } from '$lib/constants';
 </script>
 
 <svelte:head>
-	<title>MJ Conseil - Offres de services : Prendre de la hauteur</title>
+	<title>{SITE_WEB_NAME} - Offres de services : Prendre de la hauteur</title>
 </svelte:head>
 
 <div class="w-full px-4 py-8 pb-14 relative bg-blue-dark">

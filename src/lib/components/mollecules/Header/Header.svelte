@@ -2,7 +2,7 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { page } from '$app/stores';
 	import MenuMobile from '../MenuMobile/MenuMobile.svelte';
-	import { URLAndNameMap } from '$lib/constants';
+	import DesktopMenu from '../DesktopMenu/DesktopMenu.svelte';
 
 	export let isMenuOpen = false;
 </script>
@@ -11,19 +11,8 @@
 	<!-- Menu Desktop -->
 	<div class="md:flex w-full items-center justify-between hidden">
 		<Icon height="auto" width="100px" name="mjConseilFull" />
-		<nav class="text-white flex-">
-			<ul class="flex justify-end gap-8 text-white">
-				{#each Object.keys(URLAndNameMap) as key}
-					<li class="text-xl">
-						<a
-							class:underline={$page.route.id === URLAndNameMap[key]}
-							class="text-white hover:underline underline-offset-[10px] decoration-sand "
-							href={URLAndNameMap[key]}>{key}</a
-						>
-					</li>
-				{/each}
-			</ul>
-		</nav>
+
+		<DesktopMenu activeRoute={$page.route.id} />
 	</div>
 
 	<!-- Menu Mobile -->

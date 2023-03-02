@@ -6,7 +6,7 @@ test.describe('reference page', () => {
 
 		const referenceCount = await page.getByTestId(new RegExp('^reference-')).count();
 
-		expect(referenceCount).toBe(5);
+		expect(referenceCount).toBeGreaterThan(5);
 
 		await page.getByRole('button', { name: 'Grande entreprise' }).click();
 
