@@ -2,7 +2,8 @@
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { SIZE } from '$lib/constants';
-	import type { IconNames } from 'src/definitions/Icon';
+	import type { IconNames } from 'src/definitions';
+
 	export let iconName: IconNames;
 </script>
 

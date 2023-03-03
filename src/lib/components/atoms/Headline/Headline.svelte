@@ -1,3 +1,3 @@
-<p class="text-white md:w-3/4 text-xl md:text-2xl">
+<p class="text-white md:w-1/2  font-ptsans text-lg md:text-xl">
 	<slot />
 </p>

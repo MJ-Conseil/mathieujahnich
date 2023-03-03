@@ -105,7 +105,7 @@
 						createdDate={post.createdDate}
 						title={post.title}
 						pictureURL={post.imageUrl}
-						tag={post.tags[0]}
+						tagName={post.tags[0]?.name}
 					/>
 				{/each}
 			</div>
