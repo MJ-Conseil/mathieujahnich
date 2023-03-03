@@ -6,7 +6,9 @@ module.exports = {
 		container: {
 			center: true
 		},
+
 		colors: {
+			red: '#ff6d91',
 			blue: {
 				light: '#F2F3F7',
 				dark: '#06154A'

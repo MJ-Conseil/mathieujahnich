@@ -1,12 +1,14 @@
 <script lang="ts">
-	import type { WP_REST_API_Tag } from 'wp-types';
+	import slugify from 'slugify';
+
 	export let title: string;
 	export let pictureURL: string;
-	export let tag: WP_REST_API_Tag;
+	export let tagName: string = '';
 	export let createdDate: Date;
+	export let testId = '';
 </script>
 
-<div class="w-full h-full  rounded-xl bg-white">
+<div data-testId={testId} class="w-full h-full border-2 border-gray  rounded-xl bg-white">
 	<div class="relative h-1/2">
 		<div class="h-full w-full ">
 			<img
@@ -16,11 +18,11 @@
 			/>
 		</div>
 
-		{#if tag}
+		{#if tagName}
 			<div
-				class="bg-blue-dark text-white absolute right-0 bottom-0 p-1 font-bold min-w-[60px] text-center"
+				class="bg-blue-dark text-white absolute right-0 bottom-0 p-4 font-bold min-w-[60px] text-center"
 			>
-				{tag.name}
+				{tagName}
 			</div>
 		{/if}
 	</div>
@@ -33,7 +35,7 @@
 				year: 'numeric'
 			}).format(createdDate)}
 		</p>
-		<p class="text-blue-dark mt-2 font-bold">
+		<p class="text-blue-dark mt-2  font-bold">
 			{title}
 		</p>
 	</div>
