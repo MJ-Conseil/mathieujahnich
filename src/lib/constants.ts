@@ -8,6 +8,7 @@ export const SITE_WEB_NAME = 'MJ Conseil';
 export const ROUTES: Record<string, string> = {
 	Acceuil: '/',
 	Références: '/references',
+	Blog: '/blog',
 	'Offres de services': '/offres-de-services',
 	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur'
 };

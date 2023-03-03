@@ -43,3 +43,25 @@ export type Reference = {
 	highlighted: boolean;
 	imageUrl?: string;
 };
+
+export type IconNames =
+	| 'burger'
+	| 'mjConseil'
+	| 'phone'
+	| 'letter'
+	| 'linkedin'
+	| 'mjConseilFull'
+	| 'youtube'
+	| 'plane'
+	| 'stones'
+	| 'ladder'
+	| 'close'
+	| 'envelop'
+	| 'caret'
+	| 'checkMark';
+
+export type PostGroupedByCategories = {
+	categoryId: number;
+	categoryName: string;
+	posts: Post[];
+};

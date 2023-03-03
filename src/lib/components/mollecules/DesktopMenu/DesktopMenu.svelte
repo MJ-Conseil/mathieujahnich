@@ -102,6 +102,17 @@
 				aria-current={activeRoute === ROUTES.Références ? 'page' : null}>Références</a
 			>
 		</li>
+
+		<li class="text-xl">
+			<a
+				class:text-white={activeRoute !== ROUTES.Blog}
+				class:underline={activeRoute == ROUTES.Blog}
+				class:text-sand={activeRoute == ROUTES.Blog}
+				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				href={ROUTES.Blog}
+				aria-current={activeRoute === ROUTES.Blog ? 'page' : null}>Blog</a
+			>
+		</li>
 	</ul>
 </nav>
 

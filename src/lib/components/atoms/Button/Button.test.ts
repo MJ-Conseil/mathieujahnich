@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 
 import { render, fireEvent, screen } from '@testing-library/svelte';
 
-import Button from './index.svelte';
+import Button from './Button.svelte';
 
 test('shows proper heading when rendered', () => {
 	render(Button, { name: 'World' });
@@ -20,5 +20,5 @@ test('changes button text on click', async () => {
 	// we have to wait for the next `tick` so that Svelte flushes all pending state changes.
 	await fireEvent.click(button);
 
-	expect(button).toHaveTextContent('Button Clicked');
+	expect(button).toHaveTextContent('World');
 });

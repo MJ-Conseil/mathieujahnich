@@ -1,8 +1,7 @@
 <script lang="ts">
-	import type { WP_REST_API_Tag } from 'wp-types';
 	export let title: string;
 	export let pictureURL: string;
-	export let tag: WP_REST_API_Tag;
+	export let tagName: string = '';
 	export let createdDate: Date;
 </script>
 
@@ -16,11 +15,11 @@
 			/>
 		</div>
 
-		{#if tag}
+		{#if tagName}
 			<div
-				class="bg-blue-dark text-white absolute right-0 bottom-0 p-1 font-bold min-w-[60px] text-center"
+				class="bg-blue-dark text-white absolute right-0 bottom-0 p-2 font-bold min-w-[60px] text-center"
 			>
-				{tag.name}
+				{tagName}
 			</div>
 		{/if}
 	</div>
