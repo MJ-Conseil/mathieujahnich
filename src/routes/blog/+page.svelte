@@ -27,21 +27,12 @@
 
 	export let data: PageData;
 
-	const categoriesFromURL = $page.url.searchParams.get('categories')
-		? JSON.parse($page.url.searchParams.get('categories') || '[]')
-		: [];
-
 	$: posts = data.posts;
 	$: postGrouppedByCategories = data.postGrouppedByCategories;
 
-	let searchParams = {
-		categories: categoriesFromURL,
-		page: 1
-	} as Options;
+	$: searchParams = data.searchParams;
 
 	let categoryPageRecord: Record<number, number> = {};
-
-	let selectedCategory: string;
 
 	const handleFilterByCategory = async (id: number) => {
 		let categoryIds = searchParams.categories || [];
@@ -118,8 +109,12 @@
 		);
 	};
 
-	const handleSearch = async (e: CustomEvent<string>) => {
-		posts = await getPosts(fetch, {});
+	const handleSearch = async (e: CustomEvent<Options>) => {
+		posts = await getPosts(fetch, e.detail);
+
+		searchParams = e.detail;
+
+		patchQueryString(searchParams);
 	};
 </script>
 
@@ -147,7 +142,8 @@
 				categories={data.categories}
 				buttonLabel={'Recherchez'}
 				label="Recherchez un article précis :"
-				on:selectCategory={(e) => (selectedCategory = e.detail)}
+				on:search={handleSearch}
+				value={searchParams.search}
 			/>
 		</div>
 	</Container>
@@ -159,25 +155,28 @@
 		<p>Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
 		<div class="flex justify-between mt-12  gap-3 flex-wrap">
 			{#each data.categories as category}
-				{@const categoryIds = searchParams.categories || []}
 				<Tag
-					active={categoryIds.includes(category.id)}
+					active={searchParams.categories ? searchParams.categories.includes(category.id) : false}
 					on:click={() => handleFilterByCategory(category.id)}
 					name={category.name}
 				/>
 			{/each}
 		</div>
 		<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
-			{#each posts as post}
-				<PostCard
-					createdDate={post.createdDate}
-					title={post.title}
-					pictureURL={post.imageUrl}
-					tagName={post.tags && post.tags.length > 0 ? post.tags[0].name : ''}
-				/>
-			{/each}
+			{#if posts.length > 0}
+				{#each posts as post}
+					<PostCard
+						createdDate={post.createdDate}
+						title={post.title}
+						pictureURL={post.imageUrl}
+						tagName={post.tags && post.tags.length > 0 ? post.tags[0].name : ''}
+					/>
+				{/each}
+			{:else}
+				<p>Pas de résultat trouvé</p>
+			{/if}
 		</div>
-		<div class="w-full mt-8 flex items-center justify-center">
+		<div class="w-full mt-12 flex items-center justify-center">
 			<Button on:click={handleLoadMorePosts} name="Afficher plus d'articles" type="primary" />
 		</div>
 	</Section>
@@ -199,7 +198,7 @@
 				{/each}
 			</div>
 
-			<div class="w-full mt-8 flex items-center justify-center">
+			<div class="w-full mt-12 flex items-center justify-center">
 				<Button
 					on:click={() => handleLoadMorePostFormCategory(postGrouppedByCategory.categoryId)}
 					name={`Afficher plus d'articles pour  ${postGrouppedByCategory.categoryName.toLowerCase()}`}

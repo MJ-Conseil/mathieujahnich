@@ -3,8 +3,6 @@ import type { Fetch, QueryOption } from 'src/definitions';
 
 export const api = async <T>(url: string, fetch: Fetch): Promise<T> => {
 	const request = await fetch(new Request(`${API_URL}/wp-json/wp/v2${url}`));
-
-	console.log(url);
 	if (request.ok) {
 		return await request.json();
 	}
