@@ -34,5 +34,9 @@ export const load: PageLoad = async ({ fetch: serverFetch, url }) => {
 
 	const postGrouppedByCategories = groupPostByCategories(posts, categories);
 
-	return { categories, postGrouppedByCategories, posts: postFromAllCategories, searchParams: options };
+	return {
+		postGrouppedByCategories,
+		posts: postFromAllCategories,
+		searchParams: options
+	};
 };

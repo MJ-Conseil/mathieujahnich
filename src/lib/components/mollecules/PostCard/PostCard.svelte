@@ -1,11 +1,14 @@
 <script lang="ts">
+	import slugify from 'slugify';
+
 	export let title: string;
 	export let pictureURL: string;
 	export let tagName: string = '';
 	export let createdDate: Date;
+	export let testId = '';
 </script>
 
-<div class="w-full h-full  rounded-xl bg-white">
+<div data-testId={testId} class="w-full h-full rounded-xl bg-white">
 	<div class="relative h-1/2">
 		<div class="h-full w-full ">
 			<img

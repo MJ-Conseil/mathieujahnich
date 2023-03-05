@@ -10,6 +10,7 @@
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
 	import { getPosts, type Options } from '$lib/repositories/post';
+	import slugify from 'slugify';
 	import type { PostGroupedByCategories } from 'src/definitions';
 	import type { PageData } from './$types';
 
@@ -28,7 +29,14 @@
 	export let data: PageData;
 
 	$: posts = data.posts;
-	$: postGrouppedByCategories = data.postGrouppedByCategories;
+
+	$: postGrouppedByCategories = data.postGrouppedByCategories.reduce((prev, next) => {
+		if (next.posts.length > 0) {
+			return [...prev, next];
+		}
+
+		return prev;
+	}, [] as PostGroupedByCategories[]);
 
 	$: searchParams = data.searchParams;
 
@@ -60,16 +68,12 @@
 	const handleLoadMorePosts = async () => {
 		const currentPage = (searchParams.page || 1) + 1;
 
-		let categoryIds = searchParams.categories || [];
-		const newPosts = await getPosts(fetch, {
-			categories: categoryIds.length > 0 ? categoryIds : undefined,
-			page: currentPage
-		});
-
 		searchParams = {
 			...searchParams,
 			page: currentPage
 		};
+
+		const newPosts = await getPosts(fetch, searchParams);
 
 		posts = [...posts, ...newPosts];
 
@@ -139,7 +143,12 @@
 
 		<div class="mt-8">
 			<Search
-				categories={data.categories}
+				categories={postGrouppedByCategories.map((item) => {
+					return {
+						id: item.categoryId,
+						name: item.categoryName
+					};
+				})}
 				buttonLabel={'Recherchez'}
 				label="Recherchez un article précis :"
 				on:search={handleSearch}
@@ -153,12 +162,14 @@
 	<Section alt>
 		<h2>Les derniers posts</h2>
 		<p>Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
-		<div class="flex justify-between mt-12  gap-3 flex-wrap">
-			{#each data.categories as category}
+		<div class="flex  mt-12  gap-3 flex-wrap">
+			{#each postGrouppedByCategories as postGrouppedByCategory}
 				<Tag
-					active={searchParams.categories ? searchParams.categories.includes(category.id) : false}
-					on:click={() => handleFilterByCategory(category.id)}
-					name={category.name}
+					active={searchParams.categories
+						? searchParams.categories.includes(postGrouppedByCategory.categoryId)
+						: false}
+					on:click={() => handleFilterByCategory(postGrouppedByCategory.categoryId)}
+					name={postGrouppedByCategory.categoryName}
 				/>
 			{/each}
 		</div>
@@ -166,6 +177,7 @@
 			{#if posts.length > 0}
 				{#each posts as post}
 					<PostCard
+						testId={`toutes-references-${slugify(post.title)}`}
 						createdDate={post.createdDate}
 						title={post.title}
 						pictureURL={post.imageUrl}

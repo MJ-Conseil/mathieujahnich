@@ -6,7 +6,7 @@
 
 	export let label: string;
 	export let buttonLabel: string;
-	export let categories: WP_REST_API_Category[];
+	export let categories: Pick<WP_REST_API_Category, 'id' | 'name'>[];
 	export let value = '';
 
 	let searchOptions: Options = {
@@ -52,24 +52,38 @@
 	};
 </script>
 
-<form>
-	<div>
-		<label class="block text-white font-bold font-ptsans text-xl mb-4" for={id}>{label}</label>
+<form role="search">
+	<label class="block text-white font-bold font-ptsans text-xl mb-4" for={id}>{label}</label>
 
-		<div class="w-1/2 h-10 flex rounded-md ">
-			<input on:input={handleOnInput} class="w-2/3 h-full p-2" on:change {id} {value} type="text" />
-			<label class="sr-only" for="filter-by-category"
-				>Rechercher un sujet pour une catégorie spécifique</label
-			>
-			<select on:change={handleSelectCategory} id="filter-by-category" class="flex-1 px-5">
-				<option value={null}>Sujet</option>
-				{#each categories as category}
-					<option value={category.id}>{category.name}</option>
-				{/each}
-			</select>
-			<button on:click={handleSearch} type="button" class="bg-sand px-5 font-bold text-indigo">
-				{buttonLabel}
-			</button>
-		</div>
+	<div class="lg:w-2/3 w-full md:h-10 md:flex rounded-md ">
+		<input
+			on:input={handleOnInput}
+			class="lg:w-2/3 w-full h-full p-2"
+			on:change
+			required
+			{id}
+			{value}
+			type="text"
+		/>
+		<label class="sr-only" for="filter-by-category"
+			>Rechercher un sujet pour une catégorie spécifique</label
+		>
+		<select
+			on:change={handleSelectCategory}
+			id="filter-by-category"
+			class="md:w-1/3 md:h-full w-full h-10 px-5"
+		>
+			<option value={null}>Sujet</option>
+			{#each categories as category}
+				<option value={category.id}>{category.name}</option>
+			{/each}
+		</select>
+		<button
+			on:click={handleSearch}
+			type="submit"
+			class="bg-sand px-5 md:w-1/3 font-bold md:h-full h-10 w-full text-indigo"
+		>
+			{buttonLabel}
+		</button>
 	</div>
 </form>

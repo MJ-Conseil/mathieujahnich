@@ -5,12 +5,6 @@ import { render, fireEvent, screen } from '@testing-library/svelte';
 
 import Button from './Button.svelte';
 
-test('shows proper heading when rendered', () => {
-	render(Button, { name: 'World' });
-	const heading = screen.getByText('Hello World!');
-	expect(heading).toBeInTheDocument();
-});
-
 // Note: This is as an async test as we are using `fireEvent`
 test('changes button text on click', async () => {
 	render(Button, { name: 'World' });

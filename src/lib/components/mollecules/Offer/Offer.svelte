@@ -1,5 +1,6 @@
 <script lang="ts">
-	import type { IconNames } from 'src/definitions/Icon';
+	import type { IconNames } from 'src/definitions';
+
 	import CircledIcon from '../CircledIcon/CircledIcon.svelte';
 	export let title: string;
 	export let offer: string;
