@@ -1,48 +1,88 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import Button from '$lib/components/atoms/Button/Button.svelte';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
+	import Search from '$lib/components/mollecules/Search/Search.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
-	import { getPosts } from '$lib/repositories/post';
+	import { getPosts, type Options } from '$lib/repositories/post';
 	import type { PostGroupedByCategories } from 'src/definitions';
 	import type { PageData } from './$types';
 
+	const patchQueryString = async (options: Options) => {
+		Object.entries(options).forEach(([key, value]) => {
+			if (value) {
+				$page.url.searchParams.set(key, JSON.stringify(value));
+			} else {
+				$page.url.searchParams.delete(key);
+			}
+		});
+
+		await goto($page.url.toString(), { noScroll: true, replaceState: false });
+	};
+
 	export let data: PageData;
+
+	const categoriesFromURL = $page.url.searchParams.get('categories')
+		? JSON.parse($page.url.searchParams.get('categories') || '[]')
+		: [];
 
 	$: posts = data.posts;
 	$: postGrouppedByCategories = data.postGrouppedByCategories;
 
-	let currentPage = 1;
-
-	let categoryIds: number[] = [];
+	let searchParams = {
+		categories: categoriesFromURL,
+		page: 1
+	} as Options;
 
 	let categoryPageRecord: Record<number, number> = {};
 
+	let selectedCategory: string;
+
 	const handleFilterByCategory = async (id: number) => {
-		currentPage = 0;
+		let categoryIds = searchParams.categories || [];
+
+		searchParams = {
+			...searchParams,
+			page: 1
+		};
+
 		if (categoryIds.includes(id)) {
 			categoryIds = categoryIds.filter((item) => item !== id);
 		} else {
 			categoryIds = [...categoryIds, id];
 		}
 
-		posts = await getPosts(fetch, {
-			categories: categoryIds.length > 0 ? categoryIds : undefined,
-			page: currentPage
-		});
+		searchParams = {
+			...searchParams,
+			categories: categoryIds.length > 0 ? categoryIds : undefined
+		};
+
+		posts = await getPosts(fetch, searchParams);
+		patchQueryString(searchParams);
 	};
 
 	const handleLoadMorePosts = async () => {
-		currentPage = currentPage + 1;
+		const currentPage = (searchParams.page || 1) + 1;
+
+		let categoryIds = searchParams.categories || [];
 		const newPosts = await getPosts(fetch, {
 			categories: categoryIds.length > 0 ? categoryIds : undefined,
 			page: currentPage
 		});
 
+		searchParams = {
+			...searchParams,
+			page: currentPage
+		};
+
 		posts = [...posts, ...newPosts];
+
+		patchQueryString(searchParams);
 	};
 
 	const handleLoadMorePostFormCategory = async (categoryId: number) => {
@@ -77,26 +117,41 @@
 			item.categoryId == categoryId ? forgedMatchningPostCategory : item
 		);
 	};
+
+	const handleSearch = async (e: CustomEvent<string>) => {
+		posts = await getPosts(fetch, {});
+	};
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - Références</title>
+	<title>{SITE_WEB_NAME} - Blog</title>
 </svelte:head>
 
-<header class="py-8 bg-blue-dark ">
+<div class="py-8 bg-blue-dark ">
 	<Container>
-		<h1 class="mj-h1--alt">
-			<span class="text-sand text-4xl block mb-3">Vers une communication et un marketing</span>
-			Plus responsables
-		</h1>
-		<Headline>
-			Depuis 2005, je partage mes analyses, des témoignages et des ressources sur un blog pour aider
-			les actrices et les acteurs de la filière marketing et communication à mieux saisir les enjeux
-			de soutenabilité et à s’engager vers des pratiques plus responsables. Ces contenus étaient
-			précédemment publiés sur le site Sircome.fr.
-		</Headline>
+		<header>
+			<h1 class="mj-h1--alt">
+				<span class="text-sand text-4xl block mb-3">Vers une communication et un marketing</span>
+				Plus responsables
+			</h1>
+			<Headline>
+				Depuis 2005, je partage mes analyses, des témoignages et des ressources sur un blog pour
+				aider les actrices et les acteurs de la filière marketing et communication à mieux saisir
+				les enjeux de soutenabilité et à s’engager vers des pratiques plus responsables. <br /> Ces contenus
+				étaient précédemment publiés sur le site Sircome.fr.
+			</Headline>
+		</header>
+
+		<div class="mt-8">
+			<Search
+				categories={data.categories}
+				buttonLabel={'Recherchez'}
+				label="Recherchez un article précis :"
+				on:selectCategory={(e) => (selectedCategory = e.detail)}
+			/>
+		</div>
 	</Container>
-</header>
+</div>
 
 <main>
 	<Section alt>
@@ -104,6 +159,7 @@
 		<p>Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
 		<div class="flex justify-between mt-12  gap-3 flex-wrap">
 			{#each data.categories as category}
+				{@const categoryIds = searchParams.categories || []}
 				<Tag
 					active={categoryIds.includes(category.id)}
 					on:click={() => handleFilterByCategory(category.id)}

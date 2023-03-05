@@ -17,8 +17,6 @@
 		}
 
 		activatedMenu = activeMenu;
-
-		console.log(activatedMenu);
 	};
 
 	const regex = new RegExp(`^${ROUTES['Offres de services']}`);
