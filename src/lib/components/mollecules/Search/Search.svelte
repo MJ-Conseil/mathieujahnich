@@ -2,17 +2,20 @@
 	import type { Options } from '$lib/repositories/post';
 	import slugify from 'slugify';
 	import { createEventDispatcher } from 'svelte';
-	import type { WP_REST_API_Category } from 'wp-types';
 
 	export let label: string;
 	export let buttonLabel: string;
-	export let categories: Pick<WP_REST_API_Category, 'id' | 'name'>[];
+	export let categories: { id: number; name: string }[];
 	export let value = '';
+	export let alt = false;
+
+	let input: HTMLInputElement;
 
 	let searchOptions: Options = {
-		per_page: 6,
 		search: undefined
 	};
+
+	let inputTouched = false;
 
 	$: id = slugify(label);
 
@@ -45,24 +48,41 @@
 			...searchOptions,
 			search: target.value || ''
 		};
+
+		inputTouched = true;
 	};
 
 	const handleSearch = () => {
-		dispatch('search', searchOptions);
+		if (!input.validity.valueMissing) {
+			dispatch('search', searchOptions);
+		}
 	};
 </script>
 
-<form role="search">
-	<label class="block text-white font-bold font-ptsans text-xl mb-4" for={id}>{label}</label>
+<form on:submit={handleSearch} role="search">
+	<label
+		class:text-white={!alt}
+		class:text-blue-dark={alt}
+		class="block font-bold font-ptsans text-xl mb-4"
+		for={id}>{label}</label
+	>
+
+	{#if input && input.validity.valueMissing && inputTouched}
+		<span class="text-red border-red font-bold" id={`${id}-error-desc`}>Ce champs est requis</span>
+	{/if}
 
 	<div class="lg:w-2/3 w-full md:h-10 md:flex rounded-md ">
 		<input
+			aria-describedby={input && input.validity.valueMissing && inputTouched
+				? `${id}-error-desc`
+				: null}
 			on:input={handleOnInput}
+			bind:this={input}
 			class="lg:w-2/3 w-full h-full p-2"
 			on:change
 			required
 			{id}
-			{value}
+			bind:value
 			type="text"
 		/>
 		<label class="sr-only" for="filter-by-category"
@@ -79,8 +99,8 @@
 			{/each}
 		</select>
 		<button
+			type="button"
 			on:click={handleSearch}
-			type="submit"
 			class="bg-sand px-5 md:w-1/3 font-bold md:h-full h-10 w-full text-indigo"
 		>
 			{buttonLabel}

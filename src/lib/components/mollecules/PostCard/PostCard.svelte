@@ -8,7 +8,7 @@
 	export let testId = '';
 </script>
 
-<div data-testId={testId} class="w-full h-full rounded-xl bg-white">
+<div data-testId={testId} class="w-full h-full border-2 border-gray  rounded-xl bg-white">
 	<div class="relative h-1/2">
 		<div class="h-full w-full ">
 			<img

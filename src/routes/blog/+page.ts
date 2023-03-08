@@ -4,20 +4,11 @@ import { groupPostByCategories } from '$lib/utils/post';
 
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ fetch: serverFetch, url }) => {
-	let options: Options = {
-		page: undefined,
+export const load: PageLoad = async ({ fetch: serverFetch }) => {
+	const options: Options = {
 		per_page: 6,
-		categories: undefined
+		search: ''
 	};
-	url.searchParams.forEach((value, key) => {
-		if (key in options) {
-			options = {
-				...options,
-				[key]: JSON.parse(value)
-			};
-		}
-	});
 
 	const categories = await getCategories(serverFetch);
 
