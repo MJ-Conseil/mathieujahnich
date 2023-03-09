@@ -19,7 +19,7 @@
 		activatedMenu = activeMenu;
 	};
 
-	const regex = new RegExp(`^${ROUTES['Offres de services']}`);
+	const regex = new RegExp(`^${ROUTES['Offres de services']}`);	
 
 	const handleKeyboardInterractions = (e: KeyboardEvent, activeMenu: string) => {
 		switch (e.key) {
@@ -84,6 +84,15 @@
 							href={ROUTES['Prendre de la hauteur']}
 							aria-current={activeRoute === ROUTES['Prendre de la hauteur'] ? 'page' : null}
 							>Prendre de la hauteur</a
+						>
+					</li>
+					<li>
+						<a
+							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							on:click={() => (activatedMenu = '')}
+							href={ROUTES['Trouver le juste équilibre']}
+							aria-current={activeRoute === ROUTES['trouver-le-juste-equilibre'] ? 'page' : null}
+							>Trouver le juste équilibre</a
 						>
 					</li>
 				</ul>

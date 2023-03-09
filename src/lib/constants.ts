@@ -10,7 +10,8 @@ export const ROUTES: Record<string, string> = {
 	Références: '/references',
 	Blog: '/blog',
 	'Offres de services': '/offres-de-services',
-	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur'
+	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur',
+	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre'
 };
 export const CONTACT_LINK: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',

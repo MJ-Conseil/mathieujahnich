@@ -23,13 +23,12 @@
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 		<header role="banner" class="lg:w-[40%] flex flex-col gap-4  break-words overflow-visible  ">
 			<p class="text-sand font-bold">Notre offre</p>
-			<h1 class="mj-h1--alt font-bold text">Prendre de la hauteur</h1>
+			<h1 class="mj-h1--alt font-bold text">Trouver le juste équilibre</h1>
 
 			<p class="text-white">
-				Enrichir et optimiser les stratégies RSE et la communication des entreprises à travers
-				l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude de
-				l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes des
-				parties-prenantes internes et externes.
+				Analyser les arguments écologiques des supports marketing et communication pour vérifier
+				leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place des
+				filets de sécurité pour limiter les accusations de greenwashing.
 			</p>
 		</header>
 	</div>
@@ -37,7 +36,7 @@
 		aria-hidden="true"
 		class="lg:block lg:absolute lg:-top-14 right-40 justify-center hidden text-white "
 	>
-		<Icon width="30rem" height="100%" name="ladder" fill="#ffffff" />
+		<Icon width="30rem" height="100%" name="stones" fill="#ffffff" />
 	</div>
 </div>
 
@@ -45,31 +44,23 @@
 	<Section>
 		<div class="h-full md:px-8">
 			<h2 class="my-8">Votre besoin</h2>
-			<p>J’ai besoin de prendre de la hauteur et d’agir sur :</p>
+			<p>J’ai besoin de trouver le juste équilibre sur :</p>
 			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2 my-6">
-				<Need title="Ma stratégie RSE">
+				<Need title="Mes allégations en tant que marque">
 					<ul class="mj-list--disc">
+						<li>Quels messages prioriser dans notre communication ?</li>
+						<li>Comment briefer l’agence pour qu’elle les incarne correctement ?</li>
 						<li>
-							Comment l’ajuster face à l’évolution du contexte et des attentes de mes parties
-							prenantes ?
+							Comment communiquer sur mes engagements sans me faire accuser de greenwashing ? sans
+							me faire critiquer par les ONG ?
 						</li>
-						<li>Quelles sont les nouvelles obligations légales et comment y répondre ?</li>
-
-						<li>
-							Comment mieux la structurer pour faciliter l’appropriation interne et la valorisation
-							externe ?
-						</li>
-						<li>Comment définir une raison d’être qui nous ressemble et l’incarner ?</li>
 					</ul>
 				</Need>
 
-				<Need title="Ma communication RSE">
+				<Need title="Mes propositions en tant qu’agence">
 					<ul class="mj-list--disc">
-						<li>Comment (re)mobiliser mes collaboratrices et collaborateurs ?</li>
-						<li>Quelles sont les nouvelles obligations légales et comment y répondre ?</li>
-
-						<li>Comment mettre en cohérence les actions de communication et les messages ?</li>
-						<li>Comment mobiliser les forces de vente ?</li>
+						<li>Comment traiter le brief client ?</li>
+						<li>Comment valider les propositions créatives par rapport aux attentes du client ?</li>
 					</ul>
 				</Need>
 			</div>
@@ -78,33 +69,30 @@
 
 	<Section alt>
 		<div class="h-full md:px-8">
-			<h2 class="my-8">Nos méthodes</h2>
+			<h2 class="my-8">Nos méthodes et les livrables</h2>
 			<div class="md:grid md:grid-cols-5 gap-4">
 				<div class="col-span-3">
+					Analyser vos messages, participer au brief de l’agence Challenger le client, épauler votre
+					équipe conseil et créa Des recos pour éviter le greenwashing
 					<Method
-						title="Diagnostic"
-						paragraph="Recueillir et analyser les attentes et perceptions de vos parties prenantes (collaborateurs, clients, fournisseurs...). Evaluer votre politique RSE et votre politique de communication associée, votre environnement concurrentiel"
-						contents={[
-							'Enquête par entretiens ou questionnaire',
-							'Cartographie des parties prenantes',
-							'Benchmark'
-						]}
+						title=""
+						paragraph="Valoriser les atouts écologiques d’un produit ou service pour augmenter les ventes, communiquer les engagements pour se différencier de la concurrence, mettre en lumière les équipes pour les fidéliser… "
+						contents={[]}
 					/>
 				</div>
 				<div class="col-start-3 col-end-6">
 					<Method
-						title="Stratégie"
-						paragraph="Clarifier et prioriser vos enjeux environnementaux, sociaux et économiques, enrichir vos stratégies RSE et Marketing en cohérence avec le modèle d’affaire"
+						title=""
+						paragraph="J’accompagne les entreprises à trouver le juste équilibre en communication :"
 						contents={[
-							'Ateliers de co-construction',
-							'Séminaires de restitution',
-							'Matrice de matérialité'
+							'Analyser les arguments écologiques des supports marketing et communication pour vérifier leur cohérence avec la stratégie RSE et avec les règles déontologiques.',
+							'Identifier les risques et mettre en place des filets de sécurité : éléments de preuve, tiers de confiance, posture de responsabilité, argumentaires…'
 						]}
 					/>
 				</div>
 				<div class="col-span-3">
 					<Method
-						title="Mobilisation et communication"
+						title=""
 						paragraph="Traduire vos engagements dans tous vos métiers et vos actions de communication"
 						contents={[
 							'Argumentaire',
@@ -114,10 +102,29 @@
 					/>
 				</div>
 			</div>
+			<div class="md:grid md:grid-cols-5 gap-4">
+				<div class="col-start-3 col-end-6">
+					<Method
+						title=""
+						paragraph="Analyser vos messages, participer au brief de l’agence"
+						contents={[]}
+					/>
+				</div>
+				<div class="col-span-3">
+					<Method
+						title=""
+						paragraph="Challenger le client, épauler votre équipe conseil et créa"
+						contents={[]}
+					/>
+				</div>
+				<div class="col-start-3 col-end-6">
+					<Method title="" paragraph="Des recos pour éviter le greenwashing" contents={[]} />
+				</div>
+			</div>
 		</div>
 	</Section>
 
-	<Section alt>
+	<!-- <Section alt>
 		<div class="bg-white rounded-xl relative  p-6 my-10">
 			<div>
 				<div class=" absolute top-6 left-6">
@@ -145,7 +152,7 @@
 				</div>
 			</div>
 		</div>
-	</Section>
+	</Section> -->
 
 	<Section>
 		<h2>Missions récentes</h2>
