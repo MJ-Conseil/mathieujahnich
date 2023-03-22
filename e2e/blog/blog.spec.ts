@@ -5,7 +5,7 @@ test.describe('blog page', () => {
 		await page.goto('/blog');
 		const allReferences = await page.getByTestId(new RegExp('^toutes-references-')).count();
 		expect(allReferences).toBeLessThanOrEqual(6);
-		await page.locator('#TEMOIGNAGES').click();
+		await page.locator('#Temoignages').click();
 		await page.url.toString().match(new RegExp('^categories=\\['));
 	});
 });
