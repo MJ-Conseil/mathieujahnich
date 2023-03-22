@@ -24,7 +24,7 @@ export const CONTACT_HOSTING: Record<string, string> = {
 	address: 'Rue Eugène-Marziano 25, 1227 Genève, Suisse',
 	phone: '+41 22 820 35 40',
 	website: 'https://www.infomaniak.com/fr'
-}
+};
 
 export enum SIZE {
 	SMALL = 'small',

@@ -12,6 +12,6 @@ test.describe('reference page', () => {
 
 		const filteredReferencesCount = await page.getByTestId(new RegExp('^reference-')).count();
 
-		expect(filteredReferencesCount).toBeLessThan(5);
+		expect(filteredReferencesCount).toBeLessThan(referenceCount);
 	});
 });
