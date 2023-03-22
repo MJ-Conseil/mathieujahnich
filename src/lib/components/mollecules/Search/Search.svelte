@@ -67,7 +67,13 @@
 	};
 </script>
 
-<form on:submit={handleSearch} role="search">
+<form
+	on:submit={(e) => {
+		e.preventDefault();
+		handleSearch();
+	}}
+	role="search"
+>
 	<label
 		class:text-white={!alt}
 		class:text-blue-dark={alt}
@@ -113,7 +119,7 @@
 
 		<button
 			type="button"
-			on:mousedown={handleSearch}
+			on:click={handleSearch}
 			class="bg-sand px-5 md:w-1/3 font-bold md:h-full h-10 w-full md:rounded-r-lg text-indigo"
 		>
 			{buttonLabel}
