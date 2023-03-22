@@ -88,7 +88,7 @@
 					};
 				})}
 				buttonLabel={'Rechercher'}
-				label="Recherchez un article précis :"
+				label="Rechercher un article précis :"
 				value={searchParams.search}
 				on:search={handleSearch}
 			/>

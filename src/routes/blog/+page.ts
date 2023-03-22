@@ -5,8 +5,6 @@ import { groupPostByCategories } from '$lib/utils/post';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch: serverFetch }) => {
-
-
 	const categories = await getCategories(serverFetch);
 
 	const options: Options = {
@@ -14,14 +12,13 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 		search: ''
 	};
 
-
 	const postFromAllCategories = await getPosts(serverFetch, options);
 
 	// we only to display posts form "green whashing" (id : 18) and "coups de coeur" (id:19) on the page
 
 	const categoriesIdsToDisplay = [18, 19];
 
-	const categoriesToDisplay = categories.filter(item => categoriesIdsToDisplay.includes(item.id))
+	const categoriesToDisplay = categories.filter((item) => categoriesIdsToDisplay.includes(item.id));
 
 	const postPromises = categoriesToDisplay.map((item) =>
 		getPosts(serverFetch, {
