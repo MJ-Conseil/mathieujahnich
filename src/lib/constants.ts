@@ -14,8 +14,17 @@ export const ROUTES: Record<string, string> = {
 export const CONTACT_LINK: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
 	email: 'conseil@mathieu-jahnich.fr',
-	phone: '+33 6 74 88 92 73'
+	phone: '+33 6 74 88 92 73',
+	address: '31 rue A. Barbier 77300 Fontainebleau',
+	website: 'https://mathieu-jahnich.fr/'
 };
+export const CONTACT_HOSTING: Record<string, string> = {
+	name: 'Infomaniak',
+	corporateName: 'INFOMANIAK NETWORK SA',
+	address: 'Rue Eugène-Marziano 25, 1227 Genève, Suisse',
+	phone: '+41 22 820 35 40',
+	website: 'https://www.infomaniak.com/fr'
+}
 
 export enum SIZE {
 	SMALL = 'small',

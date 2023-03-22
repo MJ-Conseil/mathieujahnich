@@ -84,7 +84,13 @@
 		</div>
 
 		<nav aria-label="liens importants" class="lg:m-0 mt-4">
-			<ul>
+			<ul class="lg:flex lg:gap-2">
+				<li class="text-white">
+					<a class="text-white font-bold decoration-dotted" href="/informations-legales"
+						>Informations légales</a
+					>
+				</li>
+				<li class="text-white">|</li>
 				<li class="text-white">
 					Conception et création : Anne Faubry & <a
 						class="text-white font-bold decoration-dotted"
