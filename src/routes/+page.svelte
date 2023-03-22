@@ -7,7 +7,7 @@
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { SITE_WEB_NAME } from '$lib/constants';
+	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 
 	export let data: PageData;
 </script>
@@ -106,6 +106,7 @@
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.tags[0]?.name}
+						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}
 			</div>

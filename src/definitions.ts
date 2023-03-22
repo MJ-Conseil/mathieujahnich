@@ -14,6 +14,9 @@ export type Post = {
 	imageUrl: string;
 	tags: WP_REST_API_Tag[];
 	createdDate: Date;
+	slug: string;
+	content: string;
+	author: string;
 };
 
 export type ReferenceType = {

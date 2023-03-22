@@ -170,6 +170,7 @@
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.tags && post.tags.length > 0 ? post.tags[0].name : ''}
+						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}
 			{:else}
@@ -194,6 +195,7 @@
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={postGrouppedByCategory.categoryName.toLocaleLowerCase()}
+						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}
 			</div>

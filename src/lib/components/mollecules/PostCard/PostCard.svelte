@@ -1,14 +1,18 @@
 <script lang="ts">
-	import slugify from 'slugify';
+	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	export let title: string;
 	export let pictureURL: string;
 	export let tagName: string = '';
 	export let createdDate: Date;
 	export let testId = '';
+	export let href: string;
 </script>
 
-<div data-testId={testId} class="w-full h-full border-2 border-gray  rounded-xl bg-white">
+<div
+	data-testId={testId}
+	class="w-full h-full border-2 border-gray flex flex-col  rounded-xl bg-white"
+>
 	<div class="relative h-1/2">
 		<div class="h-full w-full ">
 			<img
@@ -27,16 +31,22 @@
 		{/if}
 	</div>
 
-	<div class="mt-2 p-4">
-		<p class="text-blue-dark text-xs">
-			{new Intl.DateTimeFormat('fr-FR', {
-				day: '2-digit',
-				month: 'long',
-				year: 'numeric'
-			}).format(createdDate)}
-		</p>
-		<p class="text-blue-dark mt-2  font-bold">
-			{title}
-		</p>
+	<div class="mt-2 p-4 flex-1 flex flex-col">
+		<div class=" flex-1">
+			<p class="text-blue-dark text-xs">
+				{new Intl.DateTimeFormat('fr-FR', {
+					day: '2-digit',
+					month: 'long',
+					year: 'numeric'
+				}).format(createdDate)}
+			</p>
+			<p class="text-blue-dark mt-2  font-bold">
+				{title}
+			</p>
+		</div>
+
+		<div class="h-1/3 flex justify-end">
+			<ArrowLink {href}>Lire l' article</ArrowLink>
+		</div>
 	</div>
 </div>

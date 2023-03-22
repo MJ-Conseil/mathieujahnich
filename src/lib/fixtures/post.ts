@@ -5,6 +5,9 @@ export const buildFakePost = (post: Partial<Post> = {}): Post => {
 		createdDate: post.createdDate || new Date(),
 		imageUrl: post.imageUrl || '',
 		tags: post.tags || [],
-		title: post.title || 'mon titre'
+		title: post.title || 'mon titre',
+		author: post.author || '',
+		content: post.content || '',
+		slug: post.slug || '',
 	};
 };

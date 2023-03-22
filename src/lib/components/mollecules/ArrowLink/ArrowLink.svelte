@@ -6,6 +6,8 @@
 </script>
 
 <a class="text-indigo font-ptsans text-lg font-bold flex items-center gap-2" {href}>
-	<slot />
+	<span class="hover:decoration-sand hover:underline underline-offset-8  decoration-2">
+		<slot />
+	</span>
 	<ArrowInCircle size={SIZE.SMALL} iconRotation={90} />
 </a>

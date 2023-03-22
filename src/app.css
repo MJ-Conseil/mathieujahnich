@@ -108,6 +108,34 @@
 	.mj-list--disc {
 		@apply list-disc pl-6 text-blue-dark;
 	}
+
+	/* Blog  */
+
+	.blog-wrapper p {
+		@apply text-xl my-3 text-justify;
+	}
+
+	.blog-wrapper ul {
+		@apply list-disc;
+	}
+
+	.blog-wrapper ol {
+		@apply list-decimal;
+	}
+
+	.blog-wrapper ul,
+	.blog-wrapper ol {
+		@apply my-5 ml-5;
+	}
+
+	.blog-wrapper ul li,
+	.blog-wrapper ol li {
+		@apply text-xl my-2;
+	}
+
+	.blog-wrapper h3 {
+		@apply my-10;
+	}
 }
 
 /* Misc */
