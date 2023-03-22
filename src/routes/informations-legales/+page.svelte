@@ -44,8 +44,12 @@
 					<ul>
 						<li class="py-2">Version actuelle</li>
 						<li class="py-2">Site réalisé par</li>
-						<li class="py-2" />
-						<li class="py-2" />
+						<li class="py-2">Fairness Scop Arl</li>
+						<li class="py-2">
+							<a href="https://fairness.coop/" target="_blank" rel="noreferrer"
+								>https://fairness.coop/</a
+							>
+						</li>
 						<li class="py-2">Sur la base d’un design réalisé par</li>
 						<li class="py-2">Cyanne – Tiphaine Pellé</li>
 						<li class="py-2">
