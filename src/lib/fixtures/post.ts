@@ -9,5 +9,6 @@ export const buildFakePost = (post: Partial<Post> = {}): Post => {
 		author: post.author || '',
 		content: post.content || '',
 		slug: post.slug || '',
+		categories: post.categories || []
 	};
 };
