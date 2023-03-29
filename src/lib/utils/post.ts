@@ -1,4 +1,4 @@
-import type { Post, PostGroupedByCategories } from 'src/definitions';
+import type { Post, PostGroupedByCategories, PostWithCategory } from 'src/definitions';
 import type { WP_REST_API_Category } from 'wp-types';
 
 export const groupPostByCategories = (
@@ -12,4 +12,15 @@ export const groupPostByCategories = (
 			posts: posts[index]
 		};
 	});
+};
+export const addCategoryToPost = (
+	post: Post,
+	categories: Pick<WP_REST_API_Category, 'id' | 'name'>[]
+): PostWithCategory => {
+	const category = categories.find((item) => post.categories.includes(item.id));
+	return {
+		...post,
+		categoryId: category?.id,
+		categoryName: category?.name
+	};
 };
