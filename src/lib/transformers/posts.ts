@@ -3,6 +3,7 @@ import type { Post } from 'src/definitions';
 
 export const transformWordpressPostToPost = (post: any): Post => {
 	const media = getEmbeddedMedia(post);
+
 	return {
 		imageUrl: media && media.length > 0 ? media[0].source_url : '',
 		title: post.title.rendered,
@@ -10,6 +11,7 @@ export const transformWordpressPostToPost = (post: any): Post => {
 		createdDate: new Date(post.date),
 		slug: post.slug,
 		content: post.content.rendered,
-		author: getEmbeddedAuthor(post)[0].name
+		author: getEmbeddedAuthor(post)[0].name,
+		categories: post.categories
 	};
 };

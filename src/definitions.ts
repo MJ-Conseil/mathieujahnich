@@ -17,6 +17,7 @@ export type Post = {
 	slug: string;
 	content: string;
 	author: string;
+	categories: number[];
 };
 
 export type ReferenceType = {
@@ -68,3 +69,8 @@ export type PostGroupedByCategories = {
 	categoryName: string;
 	posts: Post[];
 };
+
+export type PostWithCategory = {
+	categoryId?: number;
+	categoryName?: string;
+} & Post;
