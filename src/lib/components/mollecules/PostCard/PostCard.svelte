@@ -20,7 +20,7 @@
 
 		{#if tagName}
 			<div
-				class="bg-blue-dark text-white absolute right-0 bottom-0 p-4 font-bold min-w-[60px] text-center"
+				class="bg-blue-dark text-white absolute right-0 bottom-0 px-4 py-2 font-bold min-w-[60px] text-center"
 			>
 				{tagName}
 			</div>

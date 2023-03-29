@@ -1,6 +1,6 @@
 import { getCategories } from '$lib/repositories/categories';
 import { getPosts, type Options } from '$lib/repositories/post';
-import { groupPostByCategories } from '$lib/utils/post';
+import { addCategoryToPost, groupPostByCategories } from '$lib/utils/post';
 
 import type { PageLoad } from './$types';
 
@@ -13,6 +13,10 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 	};
 
 	const postFromAllCategories = await getPosts(serverFetch, options);
+
+	const postsWithCategory = postFromAllCategories.map((item) =>
+		addCategoryToPost(item, categories)
+	);
 
 	// we only to display posts form "green whashing" (id : 18) and "coups de coeur" (id:19) on the page
 
@@ -33,7 +37,7 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 
 	return {
 		postGrouppedByCategories,
-		posts: postFromAllCategories,
+		posts: postsWithCategory,
 		categories,
 		searchParams: options
 	};
