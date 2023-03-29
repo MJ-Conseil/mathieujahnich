@@ -14,6 +14,7 @@ export type Post = {
 	imageUrl: string;
 	tags: WP_REST_API_Tag[];
 	createdDate: Date;
+	categories: number[];
 };
 
 export type ReferenceType = {
@@ -65,3 +66,8 @@ export type PostGroupedByCategories = {
 	categoryName: string;
 	posts: Post[];
 };
+
+export type PostWithCategory = {
+	categoryId?: number;
+	categoryName?: string;
+} & Post;
