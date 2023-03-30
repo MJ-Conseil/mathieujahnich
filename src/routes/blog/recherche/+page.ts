@@ -1,5 +1,6 @@
 import { getCategories } from '$lib/repositories/categories';
 import { getPosts, type Options } from '$lib/repositories/post';
+import { addCategoryToPost } from '$lib/utils/post';
 
 import type { PageLoad } from './$types';
 
@@ -21,9 +22,13 @@ export const load: PageLoad = async ({ fetch: serverFetch, url }) => {
 	const categories = await getCategories(serverFetch);
 	const posts = await getPosts(serverFetch, options);
 
+	const postsWithCategory = posts.map((item) =>
+		addCategoryToPost(item, categories)
+	);
+
 	return {
 		categories,
 		searchParams: options,
-		posts
+		posts: postsWithCategory
 	};
 };
