@@ -49,6 +49,9 @@
 		{/if}
 	</Section>
 	<Section>
+		<div class="w-full bg-white mb-10 flex justify-center">
+			<img alt={`image de ${data.post.title}`} src={data.post.imageUrl} />
+		</div>
 		{@html data.post.content}
 	</Section>
 </main>
