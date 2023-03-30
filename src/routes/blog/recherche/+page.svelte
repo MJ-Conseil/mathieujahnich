@@ -72,7 +72,7 @@
 	<title>{SITE_WEB_NAME} - Blog</title>
 </svelte:head>
 
-<div class="py-8 bg-gray">
+<div class="py-12 bg-gray">
 	<Container>
 		<header>
 			<h1 class="mj-h1">Résultats de recherche</h1>
@@ -121,7 +121,6 @@
 					title={post.title}
 					pictureURL={post.imageUrl}
 					href={`${ROUTES.Blog}/${post.slug}`}
-					tagName={post.categoryName}
 				/>
 			{/each}
 		</div>
