@@ -120,7 +120,7 @@
 		<button
 			type="button"
 			on:click={handleSearch}
-			class="bg-sand px-5 md:w-1/4 font-bold md:h-full h-10 w-full md:rounded-r-lg text-indigo"
+			class="bg-sand hover:bg-sand-dark px-5 md:w-1/4 font-bold md:h-full h-10 w-full md:rounded-r-lg text-indigo"
 		>
 			{buttonLabel}
 		</button>

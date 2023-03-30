@@ -78,16 +78,22 @@
 
 	<hr class="text-white my-4" />
 
-	<div class="lg:flex items-center justify-between">
-		<div class="text-white">
-			<p>© Copyright 2005 – 2022 | Tous droits réservés</p>
+	<div class="md:flex items-center justify-between">
+		<div>
+			<p class="text-white">© Copyright 2005 – 2023 | Tous droits réservés</p>
 		</div>
 
-		<nav aria-label="liens importants" class="lg:m-0 mt-4">
-			<ul>
+		<nav aria-label="liens importants" class="md:m-0 mt-4">
+			<ul class="md:flex md:gap-2">
+				<li class="text-sand">
+					<a class="text-sand font-bold decoration-dotted" href="/informations-legales"
+						>Informations légales</a
+					>
+				</li>
+				<li class="text-white">|</li>
 				<li class="text-white">
 					Conception et création : Anne Faubry & <a
-						class="text-white font-bold decoration-dotted"
+						class="text-sand font-bold decoration-dotted"
 						href="https://www.fairness.coop">Fairness Scop</a
 					>
 				</li>
