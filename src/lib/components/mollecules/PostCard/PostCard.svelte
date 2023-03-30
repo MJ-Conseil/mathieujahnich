@@ -46,7 +46,7 @@
 		</div>
 
 		<div class="h-1/3 flex justify-end">
-			<ArrowLink {href}>Lire l' article</ArrowLink>
+			<ArrowLink {href}>Lire l'article</ArrowLink>
 		</div>
 	</div>
 </div>

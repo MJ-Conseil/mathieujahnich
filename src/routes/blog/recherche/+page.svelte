@@ -120,8 +120,8 @@
 					createdDate={post.createdDate}
 					title={post.title}
 					pictureURL={post.imageUrl}
-					tagName={post.tags[0]?.name}
 					href={`${ROUTES.Blog}/${post.slug}`}
+					tagName={post.categoryName}
 				/>
 			{/each}
 		</div>
