@@ -1,4 +1,4 @@
-import { getEmbeddedMedia } from '$lib/utils/media';
+import { getEmbeddedAuthor, getEmbeddedMedia } from '$lib/utils/media';
 import type { Post } from 'src/definitions';
 
 export const transformWordpressPostToPost = (post: any): Post => {
@@ -9,6 +9,9 @@ export const transformWordpressPostToPost = (post: any): Post => {
 		title: post.title.rendered,
 		tags: post.tags,
 		createdDate: new Date(post.date),
+		slug: post.slug,
+		content: post.content.rendered,
+		author: getEmbeddedAuthor(post)[0].name,
 		categories: post.categories
 	};
 };

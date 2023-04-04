@@ -8,6 +8,7 @@ export type Options = {
 	per_page?: number;
 	page?: number;
 	search?: string;
+	slug?: string;
 };
 
 const createQueryUrl = (options: Options): string => {

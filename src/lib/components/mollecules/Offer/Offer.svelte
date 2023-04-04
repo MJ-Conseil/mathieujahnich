@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { IconNames } from 'src/definitions';
+	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	import CircledIcon from '../CircledIcon/CircledIcon.svelte';
 	export let title: string;
@@ -16,9 +17,7 @@
 	</p>
 	{#if link}
 		<div class="mt-6">
-			<a class="text-blue-dark font-bold" href={link}
-				>Lire la suite <span class="px-2 py-1 rounded-full bg-sand text-blue">></span></a
-			>
+			<ArrowLink href={link}>Lire la suite</ArrowLink>
 		</div>
 	{/if}
 </div>

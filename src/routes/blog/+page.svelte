@@ -170,6 +170,7 @@
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}
+						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}
 			{:else}
@@ -189,7 +190,12 @@
 
 			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
 				{#each postGrouppedByCategory.posts as post}
-					<PostCard createdDate={post.createdDate} title={post.title} pictureURL={post.imageUrl} />
+					<PostCard
+						createdDate={post.createdDate}
+						title={post.title}
+						pictureURL={post.imageUrl}
+						href={`${ROUTES.Blog}/${post.slug}`}
+					/>
 				{/each}
 			</div>
 

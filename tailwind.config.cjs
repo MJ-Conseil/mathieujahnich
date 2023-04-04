@@ -15,7 +15,7 @@ module.exports = {
 			},
 			sand: {
 				DEFAULT: '#F3C461',
-				dark: "#F2AA12"
+				dark: '#F2AA12',
 
 			},
 			indigo: '#291F9C',

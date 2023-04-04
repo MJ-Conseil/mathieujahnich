@@ -120,6 +120,7 @@
 					createdDate={post.createdDate}
 					title={post.title}
 					pictureURL={post.imageUrl}
+					href={`${ROUTES.Blog}/${post.slug}`}
 					tagName={post.categoryName}
 				/>
 			{/each}
