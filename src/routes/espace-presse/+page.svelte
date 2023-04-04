@@ -1,10 +1,13 @@
 <script lang="ts">
+	import Button from '$lib/components/atoms/Button/Button.svelte';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
+	import { getMediaResources } from '$lib/repositories/mediaResources';
+	import type { MediaResourcesByTypes } from 'src/definitions';
 
 	import type { PageData } from './$types';
 
@@ -12,38 +15,40 @@
 
 	$: mediaResources = data.mediaResources;
 
-	// const handleLoadMorePostFormCategory = async (categoryId: number) => {
-	// 	const newPage = (categoryPageRecord[categoryId] || 1) + 1;
+	let mediaResourceTypePageRecord: Record<number, number> = {};
 
-	// 	categoryPageRecord = {
-	// 		...categoryPageRecord,
-	// 		[categoryId]: newPage
-	// 	};
+	const handleLoadMorePostFormCategory = async (mediaResourceTypeId: number) => {
+		const newPage = (mediaResourceTypePageRecord[mediaResourceTypeId] || 1) + 1;
 
-	// 	const matchingPostCategory = postGrouppedByCategories.find(
-	// 		(item) => item.categoryId === categoryId
-	// 	);
+		mediaResourceTypePageRecord = {
+			...mediaResourceTypePageRecord,
+			[mediaResourceTypeId]: newPage
+		};
 
-	// 	if (!matchingPostCategory) {
-	// 		return;
-	// 	}
+		const matchingPostCategory = mediaResources.find(
+			(item) => item.mediaResourceTypeId === mediaResourceTypeId
+		);
 
-	// 	const newPosts = await getPosts(fetch, {
-	// 		categories: [categoryId],
-	// 		per_page: 3,
-	// 		page: newPage
-	// 	});
+		if (!matchingPostCategory) {
+			return;
+		}
 
-	// 	const forgedMatchningPostCategory: PostGroupedByCategories = {
-	// 		categoryId: matchingPostCategory.categoryId,
-	// 		categoryName: matchingPostCategory.categoryName,
-	// 		posts: [...matchingPostCategory.posts, ...newPosts]
-	// 	};
+		const newPosts = await getMediaResources(fetch, {
+			media_resource_type: [mediaResourceTypeId],
+			per_page: 3,
+			page: newPage
+		});
 
-	// 	postGrouppedByCategories = postGrouppedByCategories.map((item) =>
-	// 		item.categoryId == categoryId ? forgedMatchningPostCategory : item
-	// 	);
-	// };
+		const forgedMatchningPostCategory: MediaResourcesByTypes = {
+			mediaResourceTypeId: matchingPostCategory.mediaResourceTypeId,
+			mediaResourceTypeName: matchingPostCategory.mediaResourceTypeName,
+			resource: [...matchingPostCategory.resource, ...newPosts]
+		};
+
+		mediaResources = mediaResources.map((item) =>
+			item.mediaResourceTypeId == mediaResourceTypeId ? forgedMatchningPostCategory : item
+		);
+	};
 </script>
 
 <svelte:head>
@@ -81,18 +86,18 @@
 							createdDate={mediaResource.date}
 							title={mediaResource.title}
 							pictureURL={mediaResource.imageUrl}
-							href={''}
+							excerpt={mediaResource.content}
 						/>
 					{/each}
 				</div>
 
-				<!-- <div class="w-full mt-8 mb-12 flex items-center justify-center">
-            <Button
-                on:click={() => handleLoadMorePostFormCategory(postGrouppedByCategory.categoryId)}
-                name={`Afficher plus d'articles pour  ${postGrouppedByCategory.categoryName.toLowerCase()}`}
-                type="primary"
-            />
-        </div> -->
+				<div class="w-full mt-8 mb-12 flex items-center justify-center">
+					<Button
+						on:click={() => handleLoadMorePostFormCategory(mediaResourceItem.mediaResourceTypeId)}
+						name={`Afficher plus d'articles pour  ${mediaResourceItem.mediaResourceTypeName.toLowerCase()}`}
+						type="primary"
+					/>
+				</div>
 			</Section>
 		{/if}
 	{/each}

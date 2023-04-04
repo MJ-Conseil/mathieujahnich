@@ -6,7 +6,8 @@
 	export let tagName: string = '';
 	export let createdDate: Date;
 	export let testId = '';
-	export let href: string;
+	export let href: string = '';
+	export let excerpt: string = '';
 </script>
 
 <div
@@ -43,10 +44,18 @@
 			<p class="text-blue-dark mt-2  font-bold">
 				{title}
 			</p>
+
+			{#if excerpt}
+				<p class="text-blue-dark mt-2">
+					{@html excerpt}
+				</p>
+			{/if}
 		</div>
 
-		<div class="h-1/3 flex justify-end">
-			<ArrowLink {href}>Lire l'article</ArrowLink>
-		</div>
+		{#if href}
+			<div class="h-1/3 flex justify-end">
+				<ArrowLink {href}>Lire l'article</ArrowLink>
+			</div>
+		{/if}
 	</div>
 </div>

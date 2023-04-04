@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Options } from '$lib/repositories/post';
 	import slugify from 'slugify';
+	import type { QueryOption } from 'src/definitions';
 	import { createEventDispatcher } from 'svelte';
 
 	export let label: string;
@@ -11,7 +11,7 @@
 
 	let input: HTMLInputElement;
 
-	let searchOptions: Options = {
+	let searchOptions: QueryOption = {
 		search: undefined
 	};
 
@@ -20,7 +20,7 @@
 	$: id = slugify(label);
 
 	const dispatch = createEventDispatcher<{
-		search: Options;
+		search: QueryOption;
 	}>();
 
 	const handleSelectCategory = (e: Event) => {

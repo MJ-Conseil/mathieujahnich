@@ -5,8 +5,6 @@
 	import DesktopMenu from '../DesktopMenu/DesktopMenu.svelte';
 
 	export let isMenuOpen = false;
-
-	console.log($page.url.pathname);
 </script>
 
 <div class="bg-blue-dark text-white md:px-16 md:py-8 p-4">

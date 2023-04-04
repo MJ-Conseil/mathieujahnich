@@ -92,6 +92,17 @@
 
 		<li class="text-xl">
 			<a
+				class:text-white={activeRoute !== ROUTES['Espace Presse']}
+				class:underline={activeRoute == ROUTES['Espace Presse']}
+				class:text-sand={activeRoute == ROUTES['Espace Presse']}
+				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				href={ROUTES['Espace Presse']}
+				aria-current={activeRoute === ROUTES['Espace Presse'] ? 'page' : null}>Espace Presse</a
+			>
+		</li>
+
+		<li class="text-xl">
+			<a
 				class:text-white={activeRoute !== ROUTES.Références}
 				class:underline={activeRoute == ROUTES.Références}
 				class:text-sand={activeRoute == ROUTES.Références}

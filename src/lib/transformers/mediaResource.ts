@@ -10,6 +10,7 @@ export const transformWordpressMediaResourceToMediaResource = (resource: any): M
 		date: new Date(resource.date),
 		mediaResourcesTypes: resource.media_resource_type,
 		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : '',
-		title: resource.title.rendered
+		title: resource.title.rendered,
+		slug: resource.slug
 	};
 };

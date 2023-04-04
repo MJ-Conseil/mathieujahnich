@@ -10,6 +10,7 @@ export type QueryOption = {
 	categories?: number[];
 	search?: string;
 	media_resource_type?: number[];
+	slug?: string;
 };
 
 export type Post = {
@@ -45,6 +46,7 @@ export type MediaResource = {
 	mediaResourcesTypes: number[];
 	imageUrl: string;
 	title: string;
+	slug: string;
 };
 
 export type Reference = {

@@ -1,6 +1,6 @@
-import type { Options } from '$lib/repositories/post';
+import type { QueryOption } from 'src/definitions';
 
-export const patchQueryString = (options: Options) => {
+export const patchQueryString = (options: QueryOption) => {
 	const params = new URLSearchParams();
 	Object.entries(options).forEach(([key, value]) => {
 		if (value) {
