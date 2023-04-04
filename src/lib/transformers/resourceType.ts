@@ -1,6 +1,6 @@
-import type { OfferType } from 'src/definitions';
+import type { ResourceType } from 'src/definitions';
 
-export const transformWordpressOfferTypeToOfferType = (offerType: any): OfferType => {
+export const transformWordpressGenericResourceToResource = (offerType: any): ResourceType => {
 	return {
 		description: offerType.description,
 		id: offerType.id,

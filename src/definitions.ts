@@ -7,6 +7,9 @@ export type QueryOption = {
 	per_page?: number;
 	highlight?: 0 | 1;
 	offerTypeId?: number;
+	categories?: number[];
+	search?: string;
+	media_resource_type?: number[];
 };
 
 export type Post = {
@@ -20,7 +23,7 @@ export type Post = {
 	categories: number[];
 };
 
-export type ReferenceType = {
+export type ResourceType = {
 	id: number;
 	count: number;
 	description: number;
@@ -29,13 +32,19 @@ export type ReferenceType = {
 	name: string;
 };
 
-export type OfferType = {
+export type ReferenceType = ResourceType;
+
+export type MediaResourceType = ResourceType;
+
+export type OfferType = ResourceType;
+
+export type MediaResource = {
 	id: number;
-	count: number;
-	description: number;
-	slug: string;
-	taxonomy: string;
-	name: string;
+	content: string;
+	date: Date;
+	mediaResourcesTypes: number[];
+	imageUrl: string;
+	title: string;
 };
 
 export type Reference = {
@@ -68,6 +77,12 @@ export type PostGroupedByCategories = {
 	categoryId: number;
 	categoryName: string;
 	posts: Post[];
+};
+
+export type MediaResourcesByTypes = {
+	mediaResourceTypeId: number;
+	mediaResourceTypeName: string;
+	resource: MediaResource[];
 };
 
 export type PostWithCategory = {

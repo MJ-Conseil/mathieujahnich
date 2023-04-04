@@ -1,13 +1,14 @@
 import { getCategories } from '$lib/repositories/categories';
-import { getPosts, type Options } from '$lib/repositories/post';
+import { getPosts } from '$lib/repositories/post';
 import { addCategoryToPost, groupPostByCategories } from '$lib/utils/post';
+import type { QueryOption } from 'src/definitions';
 
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch: serverFetch }) => {
 	const categories = await getCategories(serverFetch);
 
-	const options: Options = {
+	const options: QueryOption = {
 		per_page: 6,
 		search: ''
 	};
