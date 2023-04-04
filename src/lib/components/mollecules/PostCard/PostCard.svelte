@@ -31,7 +31,7 @@
 		{/if}
 	</div>
 
-	<div class="mt-2 p-4 flex-1 flex flex-col">
+	<div class="mt-2  p-4 flex-1 flex flex-col">
 		<div class=" flex-1">
 			<p class="text-blue-dark text-xs">
 				{new Intl.DateTimeFormat('fr-FR', {
@@ -45,7 +45,7 @@
 			</p>
 		</div>
 
-		<div class="h-1/3 flex justify-end">
+		<div class="h-1/3 pb-5 flex items-end justify-end">
 			<ArrowLink {href}>Lire l'article</ArrowLink>
 		</div>
 	</div>

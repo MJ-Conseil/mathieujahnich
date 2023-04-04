@@ -134,7 +134,24 @@
 	}
 
 	.blog-wrapper h3 {
-		@apply my-10;
+		@apply mb-8 mt-12 break-words;
+	}
+
+	.blog-wrapper h4 {
+		@apply mb-4 mt-8;
+	}
+
+	.blog-wrapper a:hover {
+		@apply underline;
+	}
+
+	.blog-wrapper p {
+		@apply leading-7 text-blue-dark;
+	}
+
+	.blog-wrapper p img {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
