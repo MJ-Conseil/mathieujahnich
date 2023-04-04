@@ -14,7 +14,7 @@
 				<img class="object-cover max-h-20" src={imageUrl} aria-hidden="true" alt="" />
 			</div>
 		{/if}
-		<p class="break-all md:max-w-none max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
+		<p class="break-all md:max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
 			<span class=" "> {title}</span>
 		</p>
 	</span>

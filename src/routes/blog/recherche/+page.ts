@@ -22,9 +22,7 @@ export const load: PageLoad = async ({ fetch: serverFetch, url }) => {
 	const categories = await getCategories(serverFetch);
 	const posts = await getPosts(serverFetch, options);
 
-	const postsWithCategory = posts.map((item) =>
-		addCategoryToPost(item, categories)
-	);
+	const postsWithCategory = posts.map((item) => addCategoryToPost(item, categories));
 
 	return {
 		categories,

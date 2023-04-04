@@ -111,7 +111,7 @@
 	const handleSearch = async (e: CustomEvent<Options>) => {
 		const searchParams = {
 			...e.detail,
-			per_page: 50
+			per_page: 9
 		};
 		const queryString = patchQueryString(searchParams);
 		await goto(`/blog/recherche?${queryString}`);
@@ -127,7 +127,7 @@
 		<header>
 			<h1 class="mj-h1--alt">
 				<span class="text-sand text-4xl block mb-3">Vers une communication et un marketing</span>
-				Plus responsables
+				plus responsables
 			</h1>
 			<Headline>
 				Depuis 2005, je partage mes analyses, des témoignages et des ressources sur un blog pour
@@ -202,7 +202,7 @@
 			<div class="w-full mt-8 mb-12 flex items-center justify-center">
 				<Button
 					on:click={() => handleLoadMorePostFormCategory(postGrouppedByCategory.categoryId)}
-					name={`Afficher plus d'articles pour  ${postGrouppedByCategory.categoryName.toLowerCase()}`}
+					name={`Afficher plus d'articles "${postGrouppedByCategory.categoryName.toLowerCase()}"`}
 					type="primary"
 				/>
 			</div>
