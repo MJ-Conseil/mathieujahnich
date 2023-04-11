@@ -74,3 +74,9 @@ export type PostWithCategory = {
 	categoryId?: number;
 	categoryName?: string;
 } & Post;
+
+export type EmailCampain = {
+	content: string;
+	name: string;
+	id: number;
+};

@@ -21,7 +21,8 @@ module.exports = {
 			white: '#ffffff',
 			gray: {
 				DEFAULT: '#F2F3F7',
-				light: '#D0D6EC'
+				light: '#D0D6EC',
+				dark: '#FAFBFE'
 			}
 		},
 		fontFamily: {

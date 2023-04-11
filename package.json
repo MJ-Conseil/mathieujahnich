@@ -41,6 +41,7 @@
 	"type": "module",
 	"dependencies": {
 		"@axe-core/playwright": "^4.5.2",
+		"@sendinblue/client": "^3.3.1",
 		"dialog-polyfill": "^0.5.6",
 		"slugify": "^1.6.5",
 		"wp-types": "^3.61.0"
