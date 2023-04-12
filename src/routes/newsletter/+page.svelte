@@ -2,14 +2,14 @@
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Input from '$lib/components/atoms/Input/Input.svelte';
+	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
+	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
 	import type { ActionData, PageData } from './$types';
 
 	export let form: ActionData;
 	export let data: PageData;
-
-	$: console.log(data.campaigns);
 </script>
 
 <svelte:head>
@@ -77,10 +77,41 @@
 			/>
 			<label for="cgu"
 				>J'accepte de recevoir des e-mails de Mathieu Jahnich et confirme avoir pris connaissance de
-				la politique de confidentialité et des mentions légales.</label
+				la politique de confidentialité et des <a href="/informations-legales">mentions légales.</a
+				></label
 			>
 
-			<button class="bg-indigo mt-5 font-ptsans  rounded text-white p-3 block">S'abonner</button>
+			<p class="my-5">
+				Vous pouvez vous désinscrire à tout moment en cliquant sur le lien présent dans nos emails.
+			</p>
+
+			<button type="submit" class="bg-indigo mt-5 font-ptsans  rounded text-white py-3 px-6 block"
+				>S'abonner</button
+			>
 		</form>
+	</Section>
+
+	<Section alt>
+		<h2>Les numéros précédents</h2>
+
+		<div class="h-full md:gap-x-10 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-2">
+			{#each data.newsletters as newsletter}
+				<PostCard
+					createdDate={new Intl.DateTimeFormat('fr-FR', {
+						month: 'long',
+						year: 'numeric'
+					}).format(newsletter.date)}
+					title={newsletter.title}
+					pictureURL={newsletter.imageUrl}
+					imageCover={false}
+					tagName={newsletter.newsLetterNumber ? `n° ${newsletter.newsLetterNumber}` : ''}
+					excerpt={newsletter.excerpt}
+				>
+					<ArrowLink href={newsletter.previewUrl ? newsletter.previewUrl : ''}
+						>Lire la suite</ArrowLink
+					>
+				</PostCard>
+			{/each}
+		</div>
 	</Section>
 </main>

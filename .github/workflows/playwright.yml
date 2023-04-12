@@ -1,6 +1,7 @@
 name: Playwright Tests
 env:
-  PUBLIC_API_URL: 'https://mj-cms.jcloud-ver-jpe.ik-server.com'
+  PUBLIC_API_URL: "https://mj-cms.jcloud-ver-jpe.ik-server.com"
+  SENDINBLUE_API_KEY: "<change-me>" # Keep this variable empty.
 on:
   push:
     branches: [main, master]

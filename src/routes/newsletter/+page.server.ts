@@ -2,7 +2,6 @@ import { fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import * as SibApiV3Sdk from '@sendinblue/client';
 import { SENDINBLUE_API_KEY } from '$env/static/private';
-import { transformRawEmailCampaignToEmailCampaign } from '$lib/transformers/emailCampaigns';
 
 export const actions = {
 	default: async ({ request }) => {
@@ -46,31 +45,3 @@ export const actions = {
 		}
 	}
 } satisfies Actions;
-
-export const load: PageServerLoad = async () => {
-	const apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
-	apiInstance.setApiKey(SibApiV3Sdk.EmailCampaignsApiApiKeys.apiKey, SENDINBLUE_API_KEY);
-	const type = 'classic';
-	const status = 'sent';
-	const limit = 5;
-	const offset = 0;
-
-	try {
-		const results = await apiInstance.getEmailCampaigns(
-			type,
-			status,
-			undefined,
-			undefined,
-			undefined,
-			limit,
-			offset
-		);
-		const campaigns = results.body.campaigns
-			?.filter((item) => item.name.match(new RegExp('^News')))
-			.map(transformRawEmailCampaignToEmailCampaign);
-
-		return { campaigns };
-	} catch (error) {
-		console.log(error);
-	}
-};

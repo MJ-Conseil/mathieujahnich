@@ -7,17 +7,18 @@
 	export let error = '';
 </script>
 
-<label class="block font-ptsans my-2 font-bold text-blue-dark" for={id}> {label}</label>
+<label class="block font-ptsans my-2 mt-4 font-bold text-blue-dark" for={id}> {label}</label>
 <input
 	{id}
 	{name}
 	class:text-red={error}
 	class:border-red={error}
-	class="bg-gray-dark w-full h-8 rounded border-2 border-gray-light"
+	class="bg-gray-dark w-full h-8 px-2 py-1 rounded border-2 border-gray-light"
+	aria-describedby={error ? `error-message-${name}` : undefined}
 	{required}
 	{type}
 />
 
 {#if error}
-	<p class="text-red">{error}</p>
+	<p id={`error-message-${name}`} class="text-red">{error}</p>
 {/if}

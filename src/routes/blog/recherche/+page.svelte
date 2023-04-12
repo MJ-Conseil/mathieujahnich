@@ -118,7 +118,11 @@
 			{#if posts.length > 0}
 				{#each posts as post}
 					<PostCard
-						createdDate={post.createdDate}
+						createdDate={new Intl.DateTimeFormat('fr-FR', {
+							day: '2-digit',
+							month: 'long',
+							year: 'numeric'
+						}).format(post.createdDate)}
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}

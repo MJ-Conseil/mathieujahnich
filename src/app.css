@@ -115,11 +115,13 @@
 		@apply text-xl my-3 text-justify;
 	}
 
-	.blog-wrapper ul {
+	.blog-wrapper ul,
+	.html-wrapper ul {
 		@apply list-disc;
 	}
 
-	.blog-wrapper ol {
+	.blog-wrapper ol,
+	.html-wrapper ol {
 		@apply list-decimal;
 	}
 

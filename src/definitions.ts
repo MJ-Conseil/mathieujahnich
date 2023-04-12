@@ -75,8 +75,12 @@ export type PostWithCategory = {
 	categoryName?: string;
 } & Post;
 
-export type EmailCampain = {
-	content: string;
-	name: string;
+export type Newsletter = {
+	date: Date;
+	imageUrl?: string;
+	excerpt: string;
+	title: string;
 	id: number;
+	previewUrl?: string;
+	newsLetterNumber?: number;
 };
