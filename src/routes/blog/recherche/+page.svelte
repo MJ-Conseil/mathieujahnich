@@ -21,7 +21,7 @@
 	const handleSearch = async (e: CustomEvent<QueryOption>) => {
 		const searchParams = {
 			...e.detail,
-			per_page: 20
+			per_page: 9
 		};
 		const queryString = patchQueryString(searchParams);
 
@@ -73,7 +73,7 @@
 	<title>{SITE_WEB_NAME} - Blog</title>
 </svelte:head>
 
-<div class="py-8 bg-gray">
+<div class="py-12 bg-gray">
 	<Container>
 		<header>
 			<h1 class="mj-h1">Résultats de recherche</h1>
@@ -100,7 +100,7 @@
 <main>
 	<Section>
 		<h2>
-			{`${posts.length} resultat${posts.length > 1 ? 's' : ''} trouvé${
+			{`${posts.length} résultat${posts.length > 1 ? 's' : ''} trouvé${
 				posts.length > 1 ? 's' : ''
 			} ${searchParams.search ? `pour "${searchParams.search}"` : ''}`}
 		</h2>
@@ -115,16 +115,20 @@
 			{/each}
 		</div>
 
-		<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
-			{#each data.posts as post}
-				<PostCard
-					createdDate={post.createdDate}
-					title={post.title}
-					pictureURL={post.imageUrl}
-					href={`${ROUTES.Blog}/${post.slug}`}
-					tagName={post.categoryName}
-				/>
-			{/each}
+		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+			{#if posts.length > 0}
+				{#each posts as post}
+					<PostCard
+						createdDate={post.createdDate}
+						title={post.title}
+						pictureURL={post.imageUrl}
+						tagName={post.categoryName}
+						href={`${ROUTES.Blog}/${post.slug}`}
+					/>
+				{/each}
+			{:else}
+				<p>Pas de résultat trouvé</p>
+			{/if}
 		</div>
 
 		{#if posts.length > 0}

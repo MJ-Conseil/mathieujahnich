@@ -5,7 +5,7 @@
 	export let iconRotation: 90 | 180 | 0 = 0;
 	export let size: SIZE = SIZE.REGULAR;
 
-	let iconWidthAndHeight = size === SIZE.SMALL ? '10px' : '1rem';
+	let iconWidthAndHeight = size === SIZE.SMALL ? '14px' : '1rem';
 </script>
 
 <span

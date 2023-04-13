@@ -62,7 +62,6 @@ test.describe('accessibilty - pages without required authentication', () => {
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
-
 	test('espace presse page should not have any automatically detectable accessibility issues', async ({
 		page,
 		makeAxeBuilder

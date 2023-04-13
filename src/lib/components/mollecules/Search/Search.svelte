@@ -108,11 +108,11 @@
 			<select
 				on:change={handleSelectCategory}
 				id="filter-by-category"
-				class="md:w-1/3 md:h-full w-full h-10 px-5"
+				class="md:w-1/3 md:h-full w-full h-10 px-5 cursor-pointer"
 			>
-				<option value={null}>Toutes les catégories</option>
+				<option class="cursor-pointer" value={null}>Toutes les catégories</option>
 				{#each categories as category}
-					<option value={category.id}>{category.name}</option>
+					<option class="cursor-pointer" value={category.id}>{category.name}</option>
 				{/each}
 			</select>
 		{/if}
