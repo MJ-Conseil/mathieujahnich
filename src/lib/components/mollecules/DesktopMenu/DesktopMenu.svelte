@@ -17,8 +17,6 @@
 		}
 
 		activatedMenu = activeMenu;
-
-		console.log(activatedMenu);
 	};
 
 	const regex = new RegExp(`^${ROUTES['Offres de services']}`);
@@ -42,12 +40,12 @@
 	<ul class="flex justify-end gap-8 ">
 		<li class="text-xl">
 			<a
-				class:text-white={activeRoute !== ROUTES.Acceuil}
-				class:underline={activeRoute == ROUTES.Acceuil}
-				class:text-sand={activeRoute == ROUTES.Acceuil}
-				aria-current={activeRoute === ROUTES.Acceuil ? 'page' : null}
+				class:text-white={activeRoute !== ROUTES.Accueil}
+				class:underline={activeRoute == ROUTES.Accueil}
+				class:text-sand={activeRoute == ROUTES.Accueil}
+				aria-current={activeRoute === ROUTES.Accueil ? 'page' : null}
 				class="hover:underline underline-offset-[10px] decoration-sand "
-				href={ROUTES.Acceuil}>Acceuil</a
+				href={ROUTES.Accueil}>Accueil</a
 			>
 		</li>
 
@@ -76,7 +74,7 @@
 				<ul
 					id="prendre-de-la-hauteur-menu"
 					data-testid="prendre-de-la-hauteur-menu"
-					class="bg-dark-blue mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
+					class=" bg-blue-dark mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e, "prendre-de-la-hauteur-menu'")}
 				>
 					<li>
@@ -100,6 +98,17 @@
 				class="text-white hover:underline underline-offset-[10px] decoration-sand "
 				href={ROUTES.Références}
 				aria-current={activeRoute === ROUTES.Références ? 'page' : null}>Références</a
+			>
+		</li>
+
+		<li class="text-xl">
+			<a
+				class:text-white={activeRoute !== ROUTES.Blog}
+				class:underline={activeRoute == ROUTES.Blog}
+				class:text-sand={activeRoute == ROUTES.Blog}
+				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				href={ROUTES.Blog}
+				aria-current={activeRoute === ROUTES.Blog ? 'page' : null}>Blog</a
 			>
 		</li>
 	</ul>

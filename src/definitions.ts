@@ -14,6 +14,10 @@ export type Post = {
 	imageUrl: string;
 	tags: WP_REST_API_Tag[];
 	createdDate: Date;
+	slug: string;
+	content: string;
+	author: string;
+	categories: number[];
 };
 
 export type ReferenceType = {
@@ -43,3 +47,30 @@ export type Reference = {
 	highlighted: boolean;
 	imageUrl?: string;
 };
+
+export type IconNames =
+	| 'burger'
+	| 'mjConseil'
+	| 'phone'
+	| 'letter'
+	| 'linkedin'
+	| 'mjConseilFull'
+	| 'youtube'
+	| 'plane'
+	| 'stones'
+	| 'ladder'
+	| 'close'
+	| 'envelop'
+	| 'caret'
+	| 'checkMark';
+
+export type PostGroupedByCategories = {
+	categoryId: number;
+	categoryName: string;
+	posts: Post[];
+};
+
+export type PostWithCategory = {
+	categoryId?: number;
+	categoryName?: string;
+} & Post;

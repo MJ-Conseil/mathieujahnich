@@ -5,17 +5,18 @@
 	import DesktopMenu from '../DesktopMenu/DesktopMenu.svelte';
 
 	export let isMenuOpen = false;
-
-	console.log($page.url.pathname);
 </script>
 
 <div class="bg-blue-dark text-white md:px-16 md:py-8 p-4">
 	<!-- Menu Desktop -->
-	<div class="md:flex w-full items-center justify-between hidden">
-		<Icon height="auto" width="100px" name="mjConseilFull" />
+	<nav class="md:flex w-full items-center justify-between hidden">
+		<a class="text-white" href="/">
+			<Icon height="auto" width="100px" name="mjConseilFull" />
+			<span class="sr-only">Vers la page d'accueil</span>
+		</a>
 
 		<DesktopMenu activeRoute={$page.route.id} />
-	</div>
+	</nav>
 
 	<!-- Menu Mobile -->
 	<div class="flex md:hidden justify-between w-full">

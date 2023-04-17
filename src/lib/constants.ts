@@ -6,8 +6,9 @@ export const SOCIAL_NETWORK_LINKS: Record<string, string> = {
 export const SITE_WEB_NAME = 'MJ Conseil';
 
 export const ROUTES: Record<string, string> = {
-	Acceuil: '/',
+	Accueil: '/',
 	Références: '/references',
+	Blog: '/blog',
 	'Offres de services': '/offres-de-services',
 	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur'
 };
