@@ -11,7 +11,8 @@ export const ROUTES: Record<string, string> = {
 	Blog: '/blog',
 	'Offres de services': '/offres-de-services',
 	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur',
-	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre'
+	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
+	"Donner de l'élan": '/offres-de-services/donner-de-l-elan'
 };
 export const CONTACT_LINK: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',

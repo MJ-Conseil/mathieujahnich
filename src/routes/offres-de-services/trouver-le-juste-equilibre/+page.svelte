@@ -31,7 +31,7 @@
 					<i>Le « crash-test » de vos campagnes RSE</i>
 				</p>
 
-				<p class="text-white lg:w-[80%] xl:w-[60%]">
+				<p class="text-white lg:text-lg lg:w-[80%]">
 					Analyser les allégations environnementales et sociales des supports marketing et
 					communication pour vérifier leur cohérence avec la stratégie RSE et avec les règles
 					déontologiques, mettre en place des filets de sécurité pour limiter les critiques
@@ -39,7 +39,7 @@
 				</p>
 			</header>
 			<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
-				<Icon width="279px" height="450px" name="stones" fill="#ffffff" />
+				<Icon width="279px" height="450px" name="stonesService" fill="#ffffff" />
 			</div>
 		</div>
 	</Container>
@@ -49,7 +49,7 @@
 	<Section>
 		<div class="h-full md:px-8">
 			<h2 class="my-8 text-3xl lg:text-4xl">Votre besoin</h2>
-			<p>
+			<p class="lg:text-lg">
 				Valoriser les atouts environnementaux, sociaux ou sociétaux d’un produit ou service,
 				communiquer les engagements, mettre en lumière les équipes… c’est indispensable. Mais
 				comment le faire sans être critiqué, sans abîmer la confiance des publics ? Vous avez besoin
@@ -58,24 +58,22 @@
 			<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2 my-6">
 				<Need title="Vos allégations en tant que marque">
 					<ul class="mj-list--disc">
-						<li class="mb-2 lg:mb-4">Quels messages prioriser dans votre communication ?</li>
-						<li class="mb-2 lg:mb-4">
+						<li class="mb-2">Quels messages prioriser dans votre communication ?</li>
+						<li class="mb-2">
 							Comment communiquer sur nos engagements en limitant les risques de réputation ?
 						</li>
-						<li class="mb-2 lg:mb-4">
-							Comment briefer l’agence pour qu’elle les traduise correctement ?
-						</li>
-						<li class="mb-2 lg:mb-4">Comment collaborer avec les influenceurs ?</li>
+						<li class="mb-2">Comment briefer l’agence pour qu’elle les traduise correctement ?</li>
+						<li class="mb-2">Comment collaborer avec les influenceurs ?</li>
 					</ul>
 				</Need>
 
 				<Need title="Vos propositions en tant qu’agence">
 					<ul class="mj-list--disc">
-						<li class="mb-2 lg:mb-4">Comment traiter le brief client ?</li>
-						<li class="mb-2 lg:mb-4">
+						<li class="mb-2">Comment traiter le brief client ?</li>
+						<li class="mb-2">
 							Comment valider les propositions créatives par rapport aux attentes du client ?
 						</li>
-						<li class="mb-2 lg:mb-4">Comment amener le client à se poser d’autres questions ?</li>
+						<li class="mb-2">Comment amener le client à se poser d’autres questions ?</li>
 					</ul>
 				</Need>
 			</div>
@@ -93,18 +91,18 @@
 			<h2 class="my-8 text-3xl lg:text-4xl">Nos méthodes et les résultats</h2>
 			<Method title="Analyse et recommandations">
 				<ul class="mj-list--disc">
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						<strong>Identifier les allégations qui pourraient prêter à confusion</strong>, être
 						mal-interprétées ou susciter des réactions négatives (greenwashing, stéréotypes)
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Sélectionner les <strong>éléments de preuve à avancer</strong> et/ou des pistes de
 						<strong>reformulation</strong>
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Décrypter le <strong>cadre déontologique et réglementaire</strong> et le contexte social
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						<strong>Clarifier les atouts</strong> d’un produit/service
 					</li>
 				</ul>
@@ -112,35 +110,35 @@
 
 			<Method title="Tous types de supports">
 				<ul class="mj-list--disc">
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Campagne de publicité, contenus web, vidéo, PLV, packaging, dossier de presse, réseaux
 						sociaux, fiche produit, argumentaire de vente, éléments de langage DG, outils de
 						communication interne…
 					</li>
-					<li class="mb-2 lg:mb-4">Analyse des contenus textuels et visuels</li>
-					<li class="mb-2 lg:mb-4">Niveau groupe, business units, marchés, produits…</li>
+					<li class="mb-2 lg:text-lg">Analyse des contenus textuels et visuels</li>
+					<li class="mb-2 lg:text-lg">Niveau groupe, business units, marchés, produits…</li>
 				</ul>
 			</Method>
 
 			<Method title="Modalités">
+				<p class="mb-2 lg:text-lg">
+					Nous ajustons les modalités de notre intervention à vos besoins et au caractère d’urgence
+					de votre demande.
+				</p>
 				<ul class="mj-list--disc">
-					<p>
-						Nous ajustons les modalités de notre intervention à vos besoins et au caractère
-						d’urgence de votre demande.
-					</p>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Analyse plusieurs semaines <strong>avant votre campagne</strong> : messages clés, posture
 						de communication, brief agence…
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Analyse en <strong>cas d’urgence</strong>, quelques jours avant la publication ou la
 						remise au client : communiqué de presse, nouveau site web, idée créative, story board…
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Nous adoptons une <strong>posture critique</strong> (“sans filtre”)
 						<strong>et constructive</strong>
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Nous facturons <strong>à l’heure</strong> : vous ne payez que le temps effectif d’analyse
 					</li>
 				</ul>
@@ -148,13 +146,13 @@
 
 			<Method title="Résultats">
 				<ul class="mj-list--disc">
-					<li class="mb-2 lg:mb-4">Améliorer immédiatement vos éléments de communication</li>
-					<li class="mb-2 lg:mb-4">Sécuriser vos prises de parole et vous redonner confiance</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">Améliorer immédiatement vos éléments de communication</li>
+					<li class="mb-2 lg:text-lg">Sécuriser vos prises de parole et vous redonner confiance</li>
+					<li class="mb-2 lg:text-lg">
 						Susciter des discussions (entre les équipes RSE, R&D, innovation, com, marketing,
 						juridique…) et faire progresser certains sujets en interne
 					</li>
-					<li class="mb-2 lg:mb-4">
+					<li class="mb-2 lg:text-lg">
 						Identifier des pistes d’amélioration à plus long terme, sur la posture de communication,
 						la stratégie RSE, votre offre, la stratégie d’entreprise…
 					</li>

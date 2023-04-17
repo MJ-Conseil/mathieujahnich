@@ -73,9 +73,9 @@
 						<a
 							class="text-white hover:underline underline-offset-[10px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
-							href={ROUTES['Prendre de la hauteur']}
-							aria-current={activeRoute === ROUTES['Prendre de la hauteur'] ? 'page' : null}
-							>Prendre de la hauteur</a
+							href={ROUTES[`Donner de l'élan`]}
+							aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
+							>Donner de l'élan</a
 						>
 					</li>
 					<li>
@@ -85,6 +85,15 @@
 							href={ROUTES['Trouver le juste équilibre']}
 							aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
 							>Trouver le juste équilibre</a
+						>
+					</li>
+					<li>
+						<a
+							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							on:click={() => handleClickMenuButton()}
+							href={ROUTES['Prendre de la hauteur']}
+							aria-current={activeRoute === ROUTES['Prendre de la hauteur'] ? 'page' : null}
+							>Prendre de la hauteur</a
 						>
 					</li>
 				</ul>
