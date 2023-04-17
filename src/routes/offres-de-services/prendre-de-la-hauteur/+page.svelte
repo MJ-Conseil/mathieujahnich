@@ -7,6 +7,7 @@
 	import type { PageData } from './$types';
 	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
+	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import { SIZE } from '$lib/constants';
@@ -19,26 +20,26 @@
 </svelte:head>
 
 <div class="w-full px-4 py-8 pb-14 relative bg-blue-dark">
-	<div class="container lg:pb-8 lg:px-8 lg:mx-auto">
-		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-		<header role="banner" class="lg:w-[40%] flex flex-col gap-4  break-words overflow-visible  ">
-			<p class="text-sand font-bold">Notre offre</p>
-			<h1 class="mj-h1--alt font-bold text">Prendre de la hauteur</h1>
+	<Container>
+		<div class="lg:pb-8 lg:px-8 flex justify-between align-start">
+			<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
+			<header role="banner" class="flex-1 break-words overflow-visible">
+				<p class="text-sand font-bold mb-2">Notre offre</p>
+				<h1 class="mj-h1--alt font-bold text mb-8">Faire monter en compétences</h1>
+				<p class="text-white text-2xl mb-6"><i>Former pour transformer</i></p>
 
-			<p class="text-white">
-				Enrichir et optimiser les stratégies RSE et la communication des entreprises à travers
-				l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude de
-				l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes des
-				parties-prenantes internes et externes.
-			</p>
-		</header>
-	</div>
-	<div
-		aria-hidden="true"
-		class="lg:block lg:absolute lg:-top-14 right-40 justify-center hidden text-white "
-	>
-		<Icon width="30rem" height="100%" name="ladder" fill="#ffffff" />
-	</div>
+				<p class="text-white lg:w-[60%] ">
+					Enrichir et optimiser les stratégies RSE et la communication des entreprises à travers
+					l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude
+					de l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes
+					des parties-prenantes internes et externes.
+				</p>
+			</header>
+			<div aria-hidden="true" class="lg:block hidden text-white mt-[-80px]">
+				<Icon width="279px" height="450px" name="ladder" fill="#ffffff" />
+			</div>
+		</div>
+	</Container>
 </div>
 
 <main class="md:p-0 md:0" id="main">
