@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '$lib/components/atoms/Button/Button.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
@@ -49,7 +50,7 @@
 			</div>
 		{/if}
 	</Section>
-	<Section>
+	<Section narrow>
 		<div class="w-full bg-white mb-10 flex justify-center">
 			<img alt={`image de ${data.post.title}`} src={data.post.imageUrl} />
 		</div>

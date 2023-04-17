@@ -11,6 +11,7 @@
 
 	import { patchQueryString } from '$lib/utils/url';
 	import type { QueryOption } from 'src/definitions';
+
 	import type { PageData } from './$types';
 
 	export let data: PageData;

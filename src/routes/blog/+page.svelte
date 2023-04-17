@@ -31,7 +31,7 @@
 	let categoryPageRecord: Record<number, number> = {};
 
 	const handleFilterByCategory = async (id: number) => {
-		let categoryIds = searchParams.categories || [];
+		let categoryIds = (searchParams.categories || []) as number[];
 
 		searchParams = {
 			...searchParams,
