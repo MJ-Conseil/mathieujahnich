@@ -25,7 +25,7 @@
 			<header role="banner" class="flex-1 break-words overflow-visible">
 				<p class="text-sand font-bold mb-2">Notre offre</p>
 				<h1 class="mj-h1--alt font-bold text text-4xl lg:text-6xl mb-4 lg:mb-8">
-					Donner de l’élan
+					{`Donner de l’élan`}
 				</h1>
 				<p class="text-white text-xl lg:text-2xl mb-4 lg:mb-6">
 					<i>60 années d’expérience cumulées</i>
@@ -102,8 +102,8 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2 class="my-8 text-3xl lg:text-4xl">Nos prestations</h2>
-			<Method title="Diagnostic ">
+			<h2 class="my-8 text-3xl lg:text-4xl">Nos méthodes et les livrables</h2>
+			<Method title="Diagnostic">
 				<p class="mb-2 lg:text-lg">
 					Recueillir et analyser les
 					<strong>attentes et perceptions de vos parties prenantes</strong>

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
@@ -25,7 +24,7 @@
 			<header role="banner" class="flex-1 break-words overflow-visible">
 				<p class="text-sand font-bold mb-2">Notre offre</p>
 				<h1 class="mj-h1--alt font-bold text text-4xl lg:text-6xl mb-4 lg:mb-8">
-					Faire monter en compétences
+					{`Faire monter en compétences`}
 				</h1>
 				<p class="text-white text-xl lg:text-2xl mb-4 lg:mb-6"><i>Former pour transformer</i></p>
 
