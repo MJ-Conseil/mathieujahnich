@@ -121,6 +121,11 @@
 			boxHeight: 10,
 			boxWidth: 13,
 			svg: '<path d="M1 3.25L5.5 7.75L12 1.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
+		},
+		curve: {
+			boxHeight: 1133,
+			boxWidth: 767,
+			svg: `<path d="M333.287 4C465.728 3.99924 762.593 92.8116 762.593 271.494C762.593 541.619 260.82 356.631 56.4128 541.619C-181.475 756.906 452.748 988.547 711.617 1129.16" stroke="#F3C461" stroke-width="8" stroke-linecap="round" stroke-dasharray="0.2 16"/>`
 		}
 	};
 

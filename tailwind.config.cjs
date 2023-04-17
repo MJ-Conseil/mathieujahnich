@@ -30,5 +30,10 @@ module.exports = {
 		},
 		extend: {}
 	},
+	variants: {
+		extend: {
+			justifyContent: ['odd']
+		}
+	},
 	plugins: []
 };

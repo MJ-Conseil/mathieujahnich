@@ -62,7 +62,8 @@ export type IconNames =
 	| 'close'
 	| 'envelop'
 	| 'caret'
-	| 'checkMark';
+	| 'checkMark'
+	| 'curve';
 
 export type PostGroupedByCategories = {
 	categoryId: number;
