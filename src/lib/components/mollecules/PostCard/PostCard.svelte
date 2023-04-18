@@ -5,11 +5,11 @@
 	export let createdDate: string;
 
 	export let pictureURL = '';
-	export let tagName = '';
 	export let testId = '';
 	export let href = '';
 	export let imageCover = true;
 	export let excerpt = '';
+	export let tagName: string = '';
 </script>
 
 <div

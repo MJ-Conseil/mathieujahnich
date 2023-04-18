@@ -122,6 +122,10 @@
 
 	.blog-wrapper ol,
 	.html-wrapper ol {
+		@apply list-disc;
+	}
+
+	.blog-wrapper ol {
 		@apply list-decimal;
 	}
 
