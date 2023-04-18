@@ -39,7 +39,7 @@
 				</p>
 			</header>
 			<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
-				<Icon width="240px" height="450px" name="planeService" fill="#ffffff" />
+				<Icon width="240px" height="450px" name="planeYellow" fill="#ffffff" />
 			</div>
 		</div>
 	</Container>
@@ -161,23 +161,25 @@
 		</div>
 	</Section>
 
-	<Section>
-		<h2>Missions récentes</h2>
-		<div class="mt-8 flex flex-col gap-5">
-			{#if data.references.length > 0}
-				{#each data.references as reference}
-					<ReferenceAccordion
-						id={slugify(reference.title)}
-						content={reference.content}
-						imageUrl={reference.imageUrl}
-						title={reference.title}
-					/>
-				{/each}
-			{/if}
-		</div>
+	{#if data.references.length > 0}
+		<Section>
+			<h2>Missions récentes</h2>
+			<div class="mt-8 flex flex-col gap-5">
+				{#if data.references.length > 0}
+					{#each data.references as reference}
+						<ReferenceAccordion
+							id={slugify(reference.title)}
+							content={reference.content}
+							imageUrl={reference.imageUrl}
+							title={reference.title}
+						/>
+					{/each}
+				{/if}
+			</div>
 
-		<div class="flex justify-end mt-8">
-			<ArrowLink href={ROUTES['Références']}>Voir plus de références</ArrowLink>
-		</div>
-	</Section>
+			<div class="flex justify-end mt-8">
+				<ArrowLink href={ROUTES['Références']}>Voir plus de références</ArrowLink>
+			</div>
+		</Section>
+	{/if}
 </main>

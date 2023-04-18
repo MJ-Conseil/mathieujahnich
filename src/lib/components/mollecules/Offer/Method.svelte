@@ -2,8 +2,6 @@
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import { SIZE } from '$lib/constants';
 	export let title: string;
-	// export let paragraph: string;
-	// export let contents: string[];
 </script>
 
 <div class="flex even:justify-end mb-6 lg:mb-10">
@@ -18,18 +16,6 @@
 		</div>
 		<h3 class="text-2xl lg:text-3xl font-extralight mb-6 lg:pl-6">{title}</h3>
 		<slot />
-		<!-- <div class="absolute top-2 zi_-5">
-            <Circle size={SIZE.MEDIUM} />
-        </div>
-        <div class="z-10">
-            <h3 class="my-6 ml-14 mj-h3 font-extralight top-4">{title}</h3>
-        </div>
-        <p>{paragraph}</p>
-        <ul class="mj-list--disc">
-            {#each contents as content}
-                <li>{content}</li>
-            {/each}
-        </ul> -->
 	</article>
 </div>
 
