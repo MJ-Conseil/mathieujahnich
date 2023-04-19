@@ -4,7 +4,7 @@
 	export let title: string;
 </script>
 
-<div class="flex even:justify-end mb-6 lg:mb-10">
+<div class="flex even:justify-end mb-6 lg:mb-10 font-ptsans">
 	<article
 		class="p-6 lg:p-10 relative rounded-xl bg-white w-full lg:w-[710px] overflow-hidden box-shadow"
 	>
@@ -15,7 +15,9 @@
 			<Circle size={SIZE.MEDIUM} />
 		</div>
 		<h3 class="text-2xl lg:text-3xl font-extralight mb-6 lg:pl-6">{title}</h3>
-		<slot />
+		<div class="lg:text-[1.2rem]">
+			<slot />
+		</div>
 	</article>
 </div>
 
