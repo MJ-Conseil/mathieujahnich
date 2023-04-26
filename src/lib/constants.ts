@@ -28,6 +28,7 @@ export const CONTACT_HOSTING: Record<string, string> = {
 };
 
 export enum SIZE {
+	EXTRASMALL = 'extra-small',
 	SMALL = 'small',
 	LARGE = 'large',
 	REGULAR = 'regular',
