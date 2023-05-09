@@ -5,26 +5,20 @@
 
 	export let activeRoute: string | null = null;
 
-	let activatedMenu = '';
+	let activatedMenu = false;
 
 	let button: HTMLElement;
 
-	const handleClickMenuButton = (activeMenu: string) => {
-		if (activatedMenu === activeMenu) {
-			activatedMenu = '';
-
-			return;
-		}
-
-		activatedMenu = activeMenu;
+	const handleClickMenuButton = () => {
+		activatedMenu = !activatedMenu;
 	};
 
 	const regex = new RegExp(`^${ROUTES['Offres de services']}`);
 
-	const handleKeyboardInterractions = (e: KeyboardEvent, activeMenu: string) => {
+	const handleKeyboardInterractions = (e: KeyboardEvent) => {
 		switch (e.key) {
 			case 'Escape':
-				handleClickMenuButton('');
+				handleClickMenuButton();
 
 				if (button) {
 					button.focus();
@@ -57,34 +51,53 @@
 			<button
 				class="flex items-center"
 				aria-haspopup="true"
-				aria-expanded={activatedMenu == 'prendre-de-la-hauteur-menu'}
+				aria-expanded={activatedMenu}
 				aria-controls="prendre-de-la-hauteur-menu"
-				on:click={() => handleClickMenuButton('prendre-de-la-hauteur-menu')}
+				on:click={() => handleClickMenuButton()}
 				bind:this={button}
 			>
 				Offres de services
-				<span
-					aria-hidden="true"
-					class:rotate-180={activatedMenu === 'prendre-de-la-hauteur-menu'}
-					class="ml-2"><Icon name="caret" /></span
+				<span aria-hidden="true" class:rotate-180={activatedMenu} class="ml-2"
+					><Icon name="caret" /></span
 				>
 			</button>
 
-			{#if activatedMenu === 'prendre-de-la-hauteur-menu'}
+			{#if activatedMenu}
 				<ul
 					id="prendre-de-la-hauteur-menu"
 					data-testid="prendre-de-la-hauteur-menu"
 					class=" bg-blue-dark mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
-					on:keydown={(e) => handleKeyboardInterractions(e, "prendre-de-la-hauteur-menu'")}
+					on:keydown={(e) => handleKeyboardInterractions(e)}
 				>
 					<li>
 						<a
 							class="text-white hover:underline underline-offset-[10px] decoration-sand"
-							on:click={() => (activatedMenu = '')}
+							on:click={() => handleClickMenuButton()}
+							href={ROUTES[`Donner de l'élan`]}
+							aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
+						>
+							Donner de l'élan
+						</a>
+					</li>
+					<li>
+						<a
+							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							on:click={() => handleClickMenuButton()}
+							href={ROUTES['Trouver le juste équilibre']}
+							aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
+						>
+							Trouver le juste équilibre
+						</a>
+					</li>
+					<li>
+						<a
+							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Prendre de la hauteur']}
 							aria-current={activeRoute === ROUTES['Prendre de la hauteur'] ? 'page' : null}
-							>Prendre de la hauteur</a
 						>
+							Prendre de la hauteur
+						</a>
 					</li>
 				</ul>
 			{/if}

@@ -57,12 +57,16 @@ export type IconNames =
 	| 'mjConseilFull'
 	| 'youtube'
 	| 'plane'
+	| 'planeYellow'
 	| 'stones'
+	| 'stonesYellow'
 	| 'ladder'
+	| 'ladderYellow'
 	| 'close'
 	| 'envelop'
 	| 'caret'
-	| 'checkMark';
+	| 'checkMark'
+	| 'curve';
 
 export type PostGroupedByCategories = {
 	categoryId: number;

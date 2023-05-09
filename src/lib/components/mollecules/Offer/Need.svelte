@@ -4,12 +4,12 @@
 	export let title: string;
 </script>
 
-<div class="bg-gray p-6 relative rounded-xl">
-	<div class=" absolute top-4">
+<div class="bg-gray p-6 relative rounded-xl font-ptsans lg:text-[1.2rem]">
+	<div class=" absolute top-6">
 		<Circle size={SIZE.SMALL} />
 	</div>
 
-	<h3 class="my-6 mj-h4">{title}</h3>
+	<h3 class="my-8 mj-h4">{title}</h3>
 
 	<slot />
 </div>
