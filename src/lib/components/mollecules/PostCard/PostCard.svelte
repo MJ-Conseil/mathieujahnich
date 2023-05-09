@@ -2,12 +2,14 @@
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	export let title: string;
-	export let pictureURL: string;
-	export let tagName: string = '';
-	export let createdDate: Date;
+	export let createdDate: string;
+
+	export let pictureURL = '';
 	export let testId = '';
-	export let href: string = '';
-	export let excerpt: string = '';
+	export let href = '';
+	export let imageCover = true;
+	export let excerpt = '';
+	export let tagName = '';
 </script>
 
 <div
@@ -15,13 +17,17 @@
 	class="w-full h-full border-2 border-gray flex flex-col  rounded-xl bg-white"
 >
 	<div class="relative h-1/2">
-		<div class="h-full w-full ">
-			<img
-				class="object-cover h-full w-full rounded-t-xl"
-				src={pictureURL}
-				alt="logo organisation"
-			/>
-		</div>
+		{#if pictureURL}
+			<div class="h-full w-full ">
+				<img
+					class="h-full w-full rounded-t-xl"
+					class:object-cover={imageCover}
+					class:object-contain={!imageCover}
+					src={pictureURL}
+					alt="logo organisation"
+				/>
+			</div>
+		{/if}
 
 		{#if tagName}
 			<div
@@ -35,27 +41,25 @@
 	<div class="mt-2 p-4 flex-1 flex flex-col">
 		<div class=" flex-1">
 			<p class="text-blue-dark text-xs">
-				{new Intl.DateTimeFormat('fr-FR', {
-					day: '2-digit',
-					month: 'long',
-					year: 'numeric'
-				}).format(createdDate)}
+				{createdDate}
 			</p>
-			<p class="text-blue-dark mt-2  font-bold">
+			<h3 class="text-blue-dark mt-2 text-xl mb-0  font-bold">
 				{title}
-			</p>
+			</h3>
 
 			{#if excerpt}
-				<p class="text-blue-dark mt-2">
+				<div class="html-wrapper text-blue-dark p-4 text-md">
 					{@html excerpt}
-				</p>
+				</div>
 			{/if}
 		</div>
 
-		{#if href}
-			<div class="h-1/3 flex justify-end">
-				<ArrowLink {href}>Lire l'article</ArrowLink>
-			</div>
-		{/if}
+		<div class="h-1/3 pb-5 flex items-end justify-end">
+			<slot>
+				{#if href}
+					<ArrowLink {href}>Lire l'article</ArrowLink>
+				{/if}
+			</slot>
+		</div>
 	</div>
 </div>

@@ -36,6 +36,6 @@
 		<div class="w-full bg-white mb-10 flex justify-center">
 			<img alt={`image de ${data.mediaResource.title}`} src={data.mediaResource.imageUrl} />
 		</div>
-		{@html data.mediaResource.content}
+		{@html data.mediaResource.associatedContent}
 	</Section>
 </main>

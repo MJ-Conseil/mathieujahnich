@@ -14,13 +14,13 @@ test.describe('prendre-de-la-hauteur page', () => {
 		const headingContents = await Promise.all(headings.map((item) => item.textContent()));
 
 		const expectedHeadings = [
-			'Prendre de la hauteur',
+			'Faire monter en compétences',
 			'Votre besoin',
-			'Nos méthodes',
-			'Diagnostic',
-			'Stratégie',
-			'Mobilisation et communication',
-			'Missions récentes'
+			'Nos prestations',
+			'Des formats adaptés à vos publics',
+			'Des contenus sur-mesure',
+			'Co-construction d’outils pratiques',
+			'Des formations certifiées Qualiopi'
 		];
 
 		// check if page headings contains at least the heading specified above

@@ -5,11 +5,13 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { SITE_WEB_NAME } from '$lib/constants';
+	import { CONTACT_LINKS, SITE_WEB_NAME } from '$lib/constants';
 	import { getMediaResources } from '$lib/repositories/mediaResources';
 	import type { MediaResourcesByTypes } from 'src/definitions';
+	import picture from '$lib/assets/pictures/mj-interview.jpg';
 
 	import type { PageData } from './$types';
+	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
 	export let data: PageData;
 
@@ -73,6 +75,43 @@
 </div>
 
 <main>
+	<Section>
+		<h2 class="sr-only">Contactez-moi</h2>
+
+		<div class="flex text-blue-dark">
+			<img src={picture} alt="Mathieu Jahnich durant une interview" />
+
+			<div class="ml-8">
+				<div class="mb-24">
+					<p>
+						J’invite les journalistes à me contacter directement pour discuter de manière informelle
+						dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une interview.
+					</p>
+
+					<ul class="flex gap-5 mt-5">
+						<li class="flex gap-2">
+							<Icon width="25px" height="25px" name="target" /> Dossier
+						</li>
+						<li class="flex gap-2">
+							<Icon width="25px" height="25px" name="target" />
+							Reportage
+						</li>
+						<li class="flex gap-2">
+							<Icon width="25px" height="25px" name="target" />
+							Interview
+						</li>
+					</ul>
+				</div>
+
+				<a
+					href={`mailto:${CONTACT_LINKS.email}`}
+					class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold  rounded  text-indigo"
+				>
+					Nous contacter
+				</a>
+			</div>
+		</div>
+	</Section>
 	{#each mediaResources as mediaResourceItem, index}
 		{#if mediaResourceItem.resource.length > 0}
 			{@const isOdd = index % 2 != 0}
@@ -83,10 +122,17 @@
 				<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
 					{#each mediaResourceItem.resource as mediaResource}
 						<PostCard
-							createdDate={mediaResource.date}
+							createdDate={new Intl.DateTimeFormat('fr-FR', {
+								day: '2-digit',
+								month: 'long',
+								year: 'numeric'
+							}).format(mediaResource.date)}
 							title={mediaResource.title}
 							pictureURL={mediaResource.imageUrl}
 							excerpt={mediaResource.content}
+							href={mediaResource.associatedContent
+								? `/espace-presse/${mediaResource.slug}`
+								: undefined}
 						/>
 					{/each}
 				</div>

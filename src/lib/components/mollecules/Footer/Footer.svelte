@@ -1,6 +1,8 @@
 <script>
+	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import { CONTACT_LINK, SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import { CONTACT_LINKS, SIZE, SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
@@ -38,18 +40,18 @@
 						<Icon class="pr-1 text-sand" width="18px" height="auto" name="phone" />
 					</span>
 
-					<a class="text-white" href={`tel:${CONTACT_LINK.phone}`}>
+					<a class="text-white" href={`tel:${CONTACT_LINKS.phone}`}>
 						<span class="sr-only">téléphone :</span>
-						{CONTACT_LINK.phone}
+						{CONTACT_LINKS.phone}
 					</a>
 				</li>
 				<li class="flex items-center text-white">
 					<span aria-hidden="true">
 						<Icon class="pr-1 text-sand" width="18px" height="auto" name="letter" />
 					</span>
-					<a class="text-white" href={`mailto:${CONTACT_LINK.email}`}>
+					<a class="text-white" href={`mailto:${CONTACT_LINKS.email}`}>
 						<span class="sr-only">email :</span>
-						{CONTACT_LINK.email}
+						{CONTACT_LINKS.email}
 					</a>
 				</li>
 			</ul>
@@ -73,6 +75,12 @@
 					</a>
 				</li>
 			</ul>
+
+			<div class="mt-5">
+				<ArrowLink arrowSize={SIZE.EXTRASMALL} alt href="/newsletter"
+					>S'inscrire à la newsletter</ArrowLink
+				>
+			</div>
 		</div>
 	</div>
 

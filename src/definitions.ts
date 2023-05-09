@@ -47,6 +47,7 @@ export type MediaResource = {
 	imageUrl: string;
 	title: string;
 	slug: string;
+	associatedContent?: string
 };
 
 export type Reference = {
@@ -68,12 +69,17 @@ export type IconNames =
 	| 'mjConseilFull'
 	| 'youtube'
 	| 'plane'
+	| 'planeYellow'
 	| 'stones'
+	| 'stonesYellow'
 	| 'ladder'
+	| 'ladderYellow'
 	| 'close'
 	| 'envelop'
 	| 'caret'
-	| 'checkMark';
+	| 'checkMark'
+	| 'curve'
+	| 'target';
 
 export type PostGroupedByCategories = {
 	categoryId: number;
@@ -91,3 +97,13 @@ export type PostWithCategory = {
 	categoryId?: number;
 	categoryName?: string;
 } & Post;
+
+export type Newsletter = {
+	date: Date;
+	imageUrl?: string;
+	excerpt: string;
+	title: string;
+	id: number;
+	previewUrl?: string;
+	newsLetterNumber?: number;
+};

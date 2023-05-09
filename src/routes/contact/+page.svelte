@@ -2,7 +2,7 @@
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
-	import { CONTACT_LINK } from '$lib/constants';
+	import { CONTACT_LINKS } from '$lib/constants';
 </script>
 
 <svelte:head>
@@ -37,7 +37,7 @@
 					<div class="mt-6">
 						<a
 							class="mj-link--btn"
-							href={CONTACT_LINK.reservio}
+							href={CONTACT_LINKS.reservio}
 							target="_blank"
 							rel="noreferrer"
 							data-testid="reservio-link">Prendre rendez-vous</a
@@ -50,18 +50,18 @@
 						<span aria-hidden="true">
 							<Icon width="16px" height="100%" name="phone" />
 						</span>
-						<a href={`tel:${CONTACT_LINK.phone}`}>
+						<a href={`tel:${CONTACT_LINKS.phone}`}>
 							<span class="sr-only">téléphone :</span>
-							{CONTACT_LINK.phone}
+							{CONTACT_LINKS.phone}
 						</a>
 					</p>
 					<p class="flex gap-x-3 items-center">
 						<span aria-hidden="true">
 							<Icon width="16px" height="100%" name="envelop" />
 						</span>
-						<a href={`mailto:${CONTACT_LINK.email}`}>
+						<a href={`mailto:${CONTACT_LINKS.email}`}>
 							<span class="sr-only">email :</span>
-							{CONTACT_LINK.email}
+							{CONTACT_LINKS.email}
 						</a>
 					</p>
 				</div>

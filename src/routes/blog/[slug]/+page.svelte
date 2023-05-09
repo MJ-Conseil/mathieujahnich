@@ -65,7 +65,11 @@
 				<PostCard
 					href={`${ROUTES.Blog}/${post.slug}`}
 					title={post.title}
-					createdDate={post.createdDate}
+					createdDate={new Intl.DateTimeFormat('fr-FR', {
+						day: '2-digit',
+						month: 'long',
+						year: 'numeric'
+					}).format(post.createdDate)}
 					pictureURL={post.imageUrl}
 				/>
 			{/each}

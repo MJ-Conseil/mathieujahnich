@@ -34,9 +34,3 @@
 		</div>
 	{/if}
 </div>
-
-<style>
-	p {
-		text-align: distribute;
-	}
-</style>
