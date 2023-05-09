@@ -1,6 +1,8 @@
 <script>
+	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import { CONTACT_LINK, SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import { CONTACT_LINK, SIZE, SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
@@ -73,6 +75,12 @@
 					</a>
 				</li>
 			</ul>
+
+			<div class="mt-5">
+				<ArrowLink arrowSize={SIZE.EXTRASMALL} alt href="/newsletter"
+					>S'inscrire à la newsletter</ArrowLink
+				>
+			</div>
 		</div>
 	</div>
 

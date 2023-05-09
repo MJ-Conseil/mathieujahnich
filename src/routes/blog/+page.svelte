@@ -166,7 +166,11 @@
 				{#each posts as post}
 					<PostCard
 						testId={`toutes-references-${slugify(post.title)}`}
-						createdDate={post.createdDate}
+						createdDate={new Intl.DateTimeFormat('fr-FR', {
+							day: '2-digit',
+							month: 'long',
+							year: 'numeric'
+						}).format(post.createdDate)}
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}
@@ -191,7 +195,11 @@
 			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
 				{#each postGrouppedByCategory.posts as post}
 					<PostCard
-						createdDate={post.createdDate}
+						createdDate={new Intl.DateTimeFormat('fr-FR', {
+							day: '2-digit',
+							month: 'long',
+							year: 'numeric'
+						}).format(post.createdDate)}
 						title={post.title}
 						pictureURL={post.imageUrl}
 						href={`${ROUTES.Blog}/${post.slug}`}

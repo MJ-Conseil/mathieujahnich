@@ -102,7 +102,11 @@
 			<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3">
 				{#each data.posts as post}
 					<PostCard
-						createdDate={post.createdDate}
+						createdDate={new Intl.DateTimeFormat('fr-FR', {
+							day: '2-digit',
+							month: 'long',
+							year: 'numeric'
+						}).format(post.createdDate)}
 						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.tags[0]?.name}

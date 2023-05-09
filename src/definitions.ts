@@ -78,3 +78,13 @@ export type PostWithCategory = {
 	categoryId?: number;
 	categoryName?: string;
 } & Post;
+
+export type Newsletter = {
+	date: Date;
+	imageUrl?: string;
+	excerpt: string;
+	title: string;
+	id: number;
+	previewUrl?: string;
+	newsLetterNumber?: number;
+};
