@@ -38,6 +38,7 @@
 				class:underline={activeRoute == ROUTES.Accueil}
 				class:text-sand={activeRoute == ROUTES.Accueil}
 				aria-current={activeRoute === ROUTES.Accueil ? 'page' : null}
+				title="Vers la page d'accueil"
 				class="hover:underline underline-offset-[10px] decoration-sand "
 				href={ROUTES.Accueil}>Accueil</a
 			>
@@ -101,6 +102,17 @@
 					</li>
 				</ul>
 			{/if}
+		</li>
+
+		<li class="text-xl">
+			<a
+				class:text-white={activeRoute !== ROUTES['Espace Presse']}
+				class:underline={activeRoute == ROUTES['Espace Presse']}
+				class:text-sand={activeRoute == ROUTES['Espace Presse']}
+				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				href={ROUTES['Espace Presse']}
+				aria-current={activeRoute === ROUTES['Espace Presse'] ? 'page' : null}>Espace Presse</a
+			>
 		</li>
 
 		<li class="text-xl">

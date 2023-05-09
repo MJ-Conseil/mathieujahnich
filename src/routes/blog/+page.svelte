@@ -8,10 +8,10 @@
 	import Search from '$lib/components/mollecules/Search/Search.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
-	import { getPosts, type Options } from '$lib/repositories/post';
+	import { getPosts } from '$lib/repositories/post';
 	import { patchQueryString } from '$lib/utils/url';
 	import slugify from 'slugify';
-	import type { PostGroupedByCategories } from 'src/definitions';
+	import type { PostGroupedByCategories, QueryOption } from 'src/definitions';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -31,7 +31,7 @@
 	let categoryPageRecord: Record<number, number> = {};
 
 	const handleFilterByCategory = async (id: number) => {
-		let categoryIds = searchParams.categories || [];
+		let categoryIds = (searchParams.categories || []) as number[];
 
 		searchParams = {
 			...searchParams,
@@ -108,7 +108,7 @@
 		);
 	};
 
-	const handleSearch = async (e: CustomEvent<Options>) => {
+	const handleSearch = async (e: CustomEvent<QueryOption>) => {
 		const searchParams = {
 			...e.detail,
 			per_page: 9

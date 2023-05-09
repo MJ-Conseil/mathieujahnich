@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { CONTACT_HOSTING, CONTACT_LINK, SITE_WEB_NAME } from '$lib/constants';
+	import { CONTACT_HOSTING, CONTACT_LINKS, SITE_WEB_NAME } from '$lib/constants';
 </script>
 
 <svelte:head>
@@ -25,16 +25,16 @@
 					<ul>
 						<li class="py-2">Raison sociale : MJ Conseil</li>
 						<li class="py-2">
-							Tél: <a href={`tel:${CONTACT_LINK.phone}`}>
-								{CONTACT_LINK.phone}
+							Tél: <a href={`tel:${CONTACT_LINKS.phone}`}>
+								{CONTACT_LINKS.phone}
 							</a>
 						</li>
 						<li class="py-2">
-							Email : <a href={`mailto:${CONTACT_LINK.email}`}>
-								{CONTACT_LINK.email}
+							Email : <a href={`mailto:${CONTACT_LINKS.email}`}>
+								{CONTACT_LINKS.email}
 							</a>
 						</li>
-						<li class="py-2">Adresse : {CONTACT_LINK.address}</li>
+						<li class="py-2">Adresse : {CONTACT_LINKS.address}</li>
 						<li class="py-2">Siret : 894 917 996 00015</li>
 						<li class="py-2">Directeur de rédaction et de publication : Mathieu JAHNICH</li>
 					</ul>
@@ -82,9 +82,9 @@
 			<h2 class="my-8">Conditions d’utilisation</h2>
 			<p class="my-3">
 				Le site accessible par l’url suivant : <a
-					href={CONTACT_LINK.website}
+					href={CONTACT_LINKS.website}
 					target="_blank"
-					rel="noreferrer">{CONTACT_LINK.website}</a
+					rel="noreferrer">{CONTACT_LINKS.website}</a
 				> est exploité dans le respect de la législation française. L’utilisation de ce site est régie
 				par les présentes conditions générales. En utilisant le site, vous reconnaissez avoir pris connaissance
 				de ces conditions et les avoir acceptées.
@@ -150,7 +150,7 @@
 			</p>
 			<p class="my-3">
 				Pour toute demande d’autorisation ou d’information, veuillez nous contacter par email :
-				<a href={`mailto:${CONTACT_LINK.email}`}>{CONTACT_LINK.email}</a>
+				<a href={`mailto:${CONTACT_LINKS.email}`}>{CONTACT_LINKS.email}</a>
 			</p>
 			<p class="my-3">
 				Par ailleurs, la mise en forme de ce site a nécessité le recours à des sources externes dont
@@ -182,9 +182,9 @@
 			<h2 class="my-8">Droit applicable</h2>
 			<p class="my-3">
 				Tout litige en relation avec l’utilisation du site <a
-					href={CONTACT_LINK.website}
+					href={CONTACT_LINKS.website}
 					target="_blank"
-					rel="noreferrer">{CONTACT_LINK.website}</a
+					rel="noreferrer">{CONTACT_LINKS.website}</a
 				> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux
 				compétents.
 			</p>

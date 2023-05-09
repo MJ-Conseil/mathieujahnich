@@ -9,12 +9,13 @@ export const ROUTES: Record<string, string> = {
 	Accueil: '/',
 	Références: '/references',
 	Blog: '/blog',
+	'Espace Presse': '/espace-presse',
 	'Offres de services': '/offres-de-services',
 	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur',
 	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
 	"Donner de l'élan": '/offres-de-services/donner-de-l-elan'
 };
-export const CONTACT_LINK: Record<string, string> = {
+export const CONTACT_LINKS: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
 	email: 'conseil@mathieu-jahnich.fr',
 	phone: '+33 6 74 88 92 73',

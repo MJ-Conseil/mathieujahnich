@@ -61,4 +61,14 @@ test.describe('accessibilty - pages without required authentication', () => {
 		const accessibilityScanResults = await makeAxeBuilder().analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
+
+	test('espace presse page should not have any automatically detectable accessibility issues', async ({
+		page,
+		makeAxeBuilder
+	}) => {
+		await page.goto('/espace-presse');
+
+		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		expect(accessibilityScanResults.violations).toEqual([]);
+	});
 });
