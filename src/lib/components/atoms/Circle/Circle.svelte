@@ -7,6 +7,10 @@
 <div class={`bg-sand rounded-full mx-auto ${size}`} />
 
 <style>
+	.large {
+		height: 15rem;
+		width: 15rem;
+	}
 	.regular {
 		height: 8.5rem;
 		width: 8.5rem;

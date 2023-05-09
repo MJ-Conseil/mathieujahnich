@@ -24,7 +24,7 @@
 					class:object-cover={imageCover}
 					class:object-contain={!imageCover}
 					src={pictureURL}
-					alt="logo organisation"
+					alt={title}
 				/>
 			</div>
 		{/if}
