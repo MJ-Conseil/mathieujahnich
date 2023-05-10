@@ -8,9 +8,11 @@
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { SITE_WEB_NAME } from '$lib/constants';
+	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 
 	export let data: PageData;
+
+	$: console.log(data.references);
 
 	let filteredReferences: Reference[] = data.references;
 	let selectedFilterIds: number[] = [];
@@ -70,6 +72,7 @@
 						content={reference.content}
 						imageUrl={reference.imageUrl}
 						title={reference.title}
+						href={reference.associatedContent ? `${ROUTES.Références}/${reference.slug}` : ''}
 					/>
 				{/each}
 			</div>
@@ -103,6 +106,7 @@
 					content={reference.content}
 					imageUrl={reference.imageUrl}
 					title={reference.title}
+					href={reference.associatedContent ? `${ROUTES.Références}/${reference.slug}` : ''}
 				/>
 			{/each}
 		</div>

@@ -18,5 +18,5 @@ test('shows panel if button has been clicked', async () => {
 	await triggerButton.click();
 
 	const panel = getByRole('region');
-	expect(panel.textContent).toBe('Hello World');
+	expect(panel.textContent).toBe('Hello World ');
 });
