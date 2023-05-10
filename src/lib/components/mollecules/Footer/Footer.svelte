@@ -1,8 +1,6 @@
 <script>
-	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import { CONTACT_LINKS, SIZE, SOCIAL_NETWORK_LINKS } from '$lib/constants';
-	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
+	import { CONTACT_LINKS, ROUTES, SOCIAL_NETWORK_LINKS } from '$lib/constants';
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
@@ -17,22 +15,51 @@
 			</p>
 		</div>
 
-		<div>
-			<h3 class="mj-h3--alt my-2">Offre conseil</h3>
-			<ul class="gap-3 flex flex-col">
-				<li>
-					<a class="mj-link--alt" href="/offres-de-services/prendre-de-la-hauteur"
-						>Prendre de la hauteur</a
-					>
-				</li>
-				<li>
-					<a class="mj-link--alt visited:underline" href="/toto">Trouver le juste équilibre</a>
-				</li>
-				<li><a class="mj-link--alt visited:underline" href="/tutu">Donner de l'élan</a></li>
-			</ul>
-		</div>
+		<nav aria-label="site-map">
+			<h3 class="mj-h3--alt my-2">MJ Conseil</h3>
 
-		<div class="">
+			<ul class="flex flex-col gap-2">
+				<li>
+					<a class="mj-link--alt" href={ROUTES.Accueil}>Accueil</a>
+				</li>
+				<li class="text-white">
+					Offre de services:
+					<ul class="gap-3 flex flex-col pl-8 mt-2">
+						<li>
+							<a class="mj-link--alt" href="/offres-de-services/prendre-de-la-hauteur"
+								>Prendre de la hauteur</a
+							>
+						</li>
+						<li>
+							<a class="mj-link--alt visited:underline" href="/toto">Trouver le juste équilibre</a>
+						</li>
+						<li><a class="mj-link--alt visited:underline" href="/tutu">Donner de l'élan</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="mj-link--alt" href={ROUTES.Références}>Références</a>
+				</li>
+			</ul>
+		</nav>
+
+		<nav aria-labelledby="resources-links">
+			<h3 id="resources-links" class="mj-h3--alt my-2">Ressources</h3>
+
+			<ul class="flex flex-col gap-2">
+				<li>
+					<a class="mj-link--alt" href={ROUTES.Blog}>Blog</a>
+				</li>
+				<li>
+					<a class="mj-link--alt" href={ROUTES['Espace Presse']}>Espace Presse</a>
+				</li>
+
+				<li>
+					<a class="mj-link--alt" href={ROUTES['Newsletter']}>Newsletter</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div>
 			<h3 class="mj-h3--alt my-2">Contact</h3>
 			<ul class="gap-1 flex flex-col">
 				<li class="flex items-center text-white">
@@ -56,11 +83,21 @@
 				</li>
 			</ul>
 
-			<ul class="mt-4 flex items-center gap-2">
+			<div class="mt-5">
+				<a
+					href={ROUTES['newsletter']}
+					class="bg-sand flex items-center gap-2 px-16 py-2 hover:bg-sand-dark font-bold  rounded  text-indigo"
+				>
+					<Icon width="24px" height="22px" name="letterFull" />
+					S'inscrire à la newsletter
+				</a>
+			</div>
+
+			<ul class="mt-8 flex items-center gap-2">
 				<li>
 					<a href={SOCIAL_NETWORK_LINKS.linkedin}>
 						<span aria-hidden="true">
-							<Icon name="linkedin" width="20px" height="auto" class="text-sand" /></span
+							<Icon name="linkedin" width="30px" height="auto" class="text-sand" /></span
 						>
 						<span class="sr-only">Linkedin</span>
 					</a>
@@ -69,18 +106,12 @@
 				<li>
 					<a href={SOCIAL_NETWORK_LINKS.youtube}>
 						<span aria-hidden="true">
-							<Icon name="youtube" width="auto" height="18px" class="text-sand" /></span
+							<Icon name="youtube" width="auto" height="25px" class="text-sand" /></span
 						>
 						<span class="sr-only">Youtube</span>
 					</a>
 				</li>
 			</ul>
-
-			<div class="mt-5">
-				<ArrowLink arrowSize={SIZE.EXTRASMALL} alt href="/newsletter"
-					>S'inscrire à la newsletter</ArrowLink
-				>
-			</div>
 		</div>
 	</div>
 
@@ -88,7 +119,7 @@
 
 	<div class="md:flex items-center justify-between">
 		<div>
-			<p class="text-white">© Copyright 2005 – 2023 | Tous droits réservés</p>
+			<p class="text-white">© Copyright 2005 – {new Date().getFullYear()} | Tous droits réservés</p>
 		</div>
 
 		<nav aria-label="liens importants" class="md:m-0 mt-4">
@@ -98,12 +129,14 @@
 						>Informations légales</a
 					>
 				</li>
-				<li class="text-white">|</li>
+				<li class="text-white hidden md:block">|</li>
 				<li class="text-white">
-					Conception et création : Anne Faubry & <a
+					Conception et création : Anne Faubry , <a
 						class="text-sand font-bold decoration-dotted"
 						href="https://www.fairness.coop">Fairness Scop</a
-					>
+					>,
+
+					<a class="text-sand font-bold decoration-dotted" href="https://www.cyanne.fr/">CYANNE</a>
 				</li>
 			</ul>
 		</nav>
