@@ -8,10 +8,11 @@
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME, SIZE } from '$lib/constants';
-	import groupPicture from '$lib/assets/pictures/mj-group-picture.png';
-	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import logoQualiopi from '$lib/assets/pictures/LogoQualiopi.jpg';
 	import logoMasterClass from '$lib/assets/pictures/Logo-MASTERCLASS-carre-200x200.jpg';
+	import groupPicture from '$lib/assets/images/mj-group-picture.png';
+	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
+
 	export let data: PageData;
 </script>
 
