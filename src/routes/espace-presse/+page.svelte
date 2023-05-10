@@ -79,7 +79,7 @@
 		<h2 class="sr-only">Contactez-moi</h2>
 
 		<div class="flex text-blue-dark">
-			<img src={picture} alt="Mathieu Jahnich durant une interview" />
+			<img class="object-contain" src={picture} alt="Mathieu Jahnich durant une interview" />
 
 			<div class="ml-8">
 				<div class="mb-24">

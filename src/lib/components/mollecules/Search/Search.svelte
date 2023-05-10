@@ -85,14 +85,14 @@
 		<span class="text-red border-red font-bold" id={`${id}-error-desc`}>Ce champs est requis</span>
 	{/if}
 
-	<div class="lg:w-2/3 w-full md:h-10 md:flex rounded-l ">
+	<div class="lg:w-2/3 w-full md:h-10 md:flex md:rounded-l ">
 		<input
 			aria-describedby={input && input.validity.valueMissing && inputTouched
 				? `${id}-error-desc`
 				: null}
 			on:input={handleOnInput}
 			bind:this={input}
-			class="lg:w-2/3 w-full h-full p-2 rounded-l-lg"
+			class="lg:w-2/3 w-full h-full p-2 md:rounded-l-lg"
 			on:change
 			on:keydown={handleKeyDown}
 			required
