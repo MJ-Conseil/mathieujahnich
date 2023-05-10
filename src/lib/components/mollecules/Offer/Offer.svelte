@@ -7,6 +7,8 @@
 	export let offer: string;
 	export let icon: IconNames;
 	export let link: string = '';
+
+	$: console.log({ link });
 </script>
 
 <div class="h-full w-full relative">

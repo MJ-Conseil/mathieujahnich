@@ -8,6 +8,8 @@
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME, SIZE } from '$lib/constants';
+	import logoQualiopi from '$lib/assets/pictures/LogoQualiopi.jpg';
+	import logoMasterClass from '$lib/assets/pictures/Logo-MASTERCLASS-carre-200x200.jpg';
 	import groupPicture from '$lib/assets/images/mj-group-picture.png';
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 
@@ -17,15 +19,11 @@
 <svelte:head>
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
-
-<div class="clipped--bottom w-full   md:pt-4 md:pb-96 pb-48 relative bg-blue-dark">
+<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
+<header role="banner" class="clipped--bottom w-full   md:pt-4 md:pb-96 pb-48 relative bg-blue-dark">
 	<Container>
-		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-		<header
-			role="banner"
-			class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  "
-		>
-			<p class="text-sand font-bold">Mj Conseil</p>
+		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
+			<p class="text-sand font-bold">MJ Conseil</p>
 			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>
@@ -35,7 +33,7 @@
 				Nous sommes un trio d’experts en RSE et communication capables de vous aider de la
 				définition de votre stratégie à la mise en place opérationnelle.
 			</Headline>
-		</header>
+		</div>
 	</Container>
 
 	<div class="flex  justify-center ">
@@ -58,7 +56,7 @@
 	>
 		<Icon width="120%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
 	</div>
-</div>
+</header>
 
 <main class="md:p-0 md:0" id="main">
 	<Section>
@@ -89,7 +87,7 @@
 				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
 	de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
 	externes pour enrichir les stratégies RSE et communication."
-				link="/offres-de-services/prendre-de-la-hauteur"
+				link={ROUTES['Prendre de la hauteur']}
 			/>
 			<Offer
 				icon="stones"
@@ -97,6 +95,7 @@
 				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
 	leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
 	des filets de sécurité pour limiter les accusations de greenwashing."
+				link={ROUTES['Trouver le juste équilibre']}
 			/>
 			<Offer
 				icon="plane"
@@ -104,11 +103,12 @@
 				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
 	fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
 	units, partenaires…), vers des pratiques plus responsables."
+				link={ROUTES["Donner de l'élan"]}
 			/>
 		</div>
 	</Section>
 
-	<section class="clipped--top pt-20 md:pt-80 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="clipped--top pt-[11rem] md:pt-80 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 
@@ -133,6 +133,43 @@
 					/>
 				{/each}
 			</div>
+
+			<div class="mt-8 flex  justify-center w-ful">
+				<a
+					href={ROUTES['Blog']}
+					class="bg-sand 2 px-16 py-5 hover:bg-sand-dark font-bold  rounded  text-indigo"
+				>
+					Découvrir tous les articles
+				</a>
+			</div>
 		</Container>
 	</section>
+
+	<Section>
+		<h2>Formez-vous</h2>
+
+		<div class="md:flex items-center flex-row  gap-8 border-[3px] p-5 border-gray rounded-lg">
+			<div class="hidden md:block">
+				<img src={logoMasterClass} alt="formation Master Class de MJ Conseil" />
+				<img class="h-[60px] w-auto" src={logoQualiopi} alt="certification qualiopi" />
+			</div>
+
+			<div>
+				<h3>Des formations en communication responsable certifiées Qualiopi</h3>
+				<p>
+					Formations à la communication responsable conçues et animées avec Thierry Libaert. Des
+					séances courtes, 100% à distance, qui donnent l’envie et les moyens d’agir. Satisfaction
+					globale des participant·es : 8,4/10.
+				</p>
+
+				<a
+					href={'https://master-class-communication-responsable.fr/'}
+					class="bg-sand px-12 p-5 flex items-center gap-2  md:w-[324px] mt-5 hover:bg-sand-dark font-bold  rounded  text-indigo"
+				>
+					Découvrir les formations
+					<Icon width="30px" height="auto" name="external" />
+				</a>
+			</div>
+		</div>
+	</Section>
 </main>

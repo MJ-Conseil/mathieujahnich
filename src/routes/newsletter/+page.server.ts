@@ -1,5 +1,5 @@
 import { fail } from '@sveltejs/kit';
-import type { Actions, PageServerLoad } from './$types';
+import type { Actions } from './$types';
 import * as SibApiV3Sdk from '@sendinblue/client';
 import { SENDINBLUE_API_KEY } from '$env/static/private';
 

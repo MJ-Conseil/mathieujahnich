@@ -9,9 +9,9 @@ test('shows proper heading when rendered', () => {
 	render(Footer);
 	const headings = screen.getAllByRole('heading');
 
-	expect(headings.length).toBe(2);
-	expect(headings[0]).toHaveTextContent('Offre conseil');
-	expect(headings[1]).toHaveTextContent('Contact');
+	expect(headings.length).toBe(3);
+	expect(headings[0]).toHaveTextContent('MJ Conseil');
+	expect(headings[1]).toHaveTextContent('Ressources');
 });
 
 test('shows proper catch phrase when rendered', () => {

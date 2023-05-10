@@ -47,7 +47,7 @@ export type MediaResource = {
 	imageUrl: string;
 	title: string;
 	slug: string;
-	associatedContent?: string
+	associatedContent?: string;
 };
 
 export type Reference = {
@@ -65,6 +65,7 @@ export type IconNames =
 	| 'mjConseil'
 	| 'phone'
 	| 'letter'
+	| 'letterFull'
 	| 'linkedin'
 	| 'mjConseilFull'
 	| 'youtube'
@@ -79,7 +80,8 @@ export type IconNames =
 	| 'caret'
 	| 'checkMark'
 	| 'curve'
-	| 'target';
+	| 'target'
+	| 'external';
 
 export type PostGroupedByCategories = {
 	categoryId: number;
