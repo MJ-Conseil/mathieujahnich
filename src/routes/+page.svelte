@@ -7,7 +7,9 @@
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
+	import { ROUTES, SITE_WEB_NAME, SIZE } from '$lib/constants';
+	import groupPicture from '$lib/assets/images/mj-group-picture.png';
+	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 
 	export let data: PageData;
 </script>
@@ -16,10 +18,13 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 
-<div class="clipped--bottom w-full h-3/5 md:p-0 md:py-4 relative bg-blue-dark">
+<div class="clipped--bottom w-full   md:pt-4 md:pb-96 pb-48 relative bg-blue-dark">
 	<Container>
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-		<header role="banner" class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible  ">
+		<header
+			role="banner"
+			class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  "
+		>
 			<p class="text-sand font-bold">Mj Conseil</p>
 			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
@@ -32,6 +37,20 @@
 			</Headline>
 		</header>
 	</Container>
+
+	<div class="flex  justify-center ">
+		<div class="relative md:w-1/2 w-4/5 ">
+			<img src={groupPicture} alt="trio d'experts en communication" />
+
+			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden md:block">
+				<Circle size={SIZE.LARGE} />
+			</div>
+
+			<div class="-z-10 absolute bottom-[-15px] right-[-30px] md:hidden">
+				<Circle size={SIZE.REGULAR} />
+			</div>
+		</div>
+	</div>
 
 	<div
 		aria-hidden="true"
