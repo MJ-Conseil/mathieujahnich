@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Accordion from '../Accordion/Accordion.svelte';
+	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	export let id: number | string = '';
 	export let title: string;
 	export let content: string;
 	export let imageUrl = '';
+	export let href = '';
 </script>
 
 <Accordion id={`reference-${id}`}>
@@ -15,10 +17,16 @@
 			</div>
 		{/if}
 		<p class="break-all md:max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
-			<span class=" "> {title}</span>
+			<span>{title}</span>
 		</p>
 	</span>
 	<div class="[&>p]:mb-4 [&>p]:text-justify text-xl accordion-content" slot="panel-content">
 		{@html content}
+
+		{#if href}
+			<div class="flex  justify-end">
+				<ArrowLink {href}>Voir l'étude de cas</ArrowLink>
+			</div>
+		{/if}
 	</div>
 </Accordion>

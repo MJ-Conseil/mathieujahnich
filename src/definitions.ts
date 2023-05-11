@@ -54,10 +54,12 @@ export type Reference = {
 	id: number;
 	date: Date;
 	title: string;
+	slug: string;
 	content: string;
 	referenceTypes: number[];
 	highlighted: boolean;
 	imageUrl?: string;
+	associatedContent?: string;
 };
 
 export type IconNames =

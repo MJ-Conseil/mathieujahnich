@@ -10,6 +10,9 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 		date: new Date(reference.date),
 		referenceTypes: reference.reference_types,
 		highlighted: reference.acf.mise_en_avant_reference || false,
-		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : undefined
+		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : undefined,
+		associatedContent: reference?.acf?.associated_content,
+		slug: reference.slug
+
 	};
 };
