@@ -91,12 +91,17 @@
 		@apply mj-link--base;
 	}
 
+	.mj-link--alt:hover,
+	.mj-link:hover {
+		@apply underline underline-offset-2
+	}
+
 	.mj-link--alt {
 		@apply text-sand;
 	}
 
 	.mj-link--btn {
-		@apply text-indigo bg-sand py-2.5 px-4 font-bold text-blue-dark rounded;
+		@apply text-indigo bg-sand py-2.5 px-4 font-bold rounded;
 	}
 
 	/* Paragraph */

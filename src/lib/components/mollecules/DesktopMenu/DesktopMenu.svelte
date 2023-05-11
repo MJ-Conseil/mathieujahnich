@@ -67,7 +67,7 @@
 				<ul
 					id="prendre-de-la-hauteur-menu"
 					data-testid="prendre-de-la-hauteur-menu"
-					class=" bg-blue-dark mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
+					class="bg-blue-xlight mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e)}
 				>
 					<li>

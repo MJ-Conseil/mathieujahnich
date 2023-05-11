@@ -118,17 +118,17 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 		</div>
 	</Section>
 
-	<section class="clipped--top pt-[11rem] md:pt-80 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="clipped--top pt-[15rem] md:pt-96 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 
-			<p class="font-ptsans text-xl md:my-12 my-8 lg:text-2xl">
-				Depuis 2005, j’interroge l’alignement de la communication et du marketing avec les enjeux de
-				transition écologique. Retrouvez ici mes analyses, des témoignages et des ressources. Ces
-				contenus étaient précédemment publiés sur le site Sircome.
+			<p class="font-ptsans text-xl md:my-12 my-8 ">
+				Depuis 2005, nous interrogeons l’alignement de la communication et du marketing avec les
+				enjeux de transition écologique. Retrouvez ici nos analyses, des témoignages et des
+				ressources.
 			</p>
 
-			<div class="h-full md:gap-x-20 md:gap-y-10 grid gap-y-5  md:grid-cols-3">
+			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
 				{#each data.posts as post}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {

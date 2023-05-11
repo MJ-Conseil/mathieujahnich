@@ -7,9 +7,9 @@
 	export let isMenuOpen = false;
 </script>
 
-<div class="bg-blue-dark text-white md:px-16 md:py-8 p-4">
+<div class="bg-blue-dark relative font-ptsans text-white md:px-16 md:py-8 p-4">
 	<!-- Menu Desktop -->
-	<nav class="md:flex w-full items-center justify-between hidden">
+	<nav class="md:flex w-full  top-0 items-center justify-between hidden">
 		<a class="text-white" title="Vers la page d'accueil" href="/">
 			<Icon height="auto" width="100px" name="mjConseilFull" />
 			<span class="sr-only">Accueil</span>
