@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 
