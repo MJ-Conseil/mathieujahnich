@@ -26,7 +26,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 		page,
 		makeAxeBuilder
 	}) => {
-		await page.goto('/offres-de-services/prendre-de-la-hauteur');
+		await page.goto('/offres-de-services/faire-monter-en-competence');
 
 		const accessibilityScanResults = await makeAxeBuilder().analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);

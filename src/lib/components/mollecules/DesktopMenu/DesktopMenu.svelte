@@ -53,7 +53,7 @@
 				class="flex items-center"
 				aria-haspopup="true"
 				aria-expanded={activatedMenu}
-				aria-controls="prendre-de-la-hauteur-menu"
+				aria-controls="faire-monter-en-competence-menu"
 				on:click={() => handleClickMenuButton()}
 				bind:this={button}
 			>
@@ -65,8 +65,8 @@
 
 			{#if activatedMenu}
 				<ul
-					id="prendre-de-la-hauteur-menu"
-					data-testid="prendre-de-la-hauteur-menu"
+					id="faire-monter-en-competence-menu"
+					data-testid="faire-monter-en-competence-menu"
 					class="bg-blue-xlight mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e)}
 				>

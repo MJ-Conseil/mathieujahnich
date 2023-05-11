@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('prendre-de-la-hauteur page', () => {
+test.describe('faire-monter-en-competence page', () => {
 	test('should display few references on the page', async ({ page }) => {
-		await page.goto('/offres-de-services/prendre-de-la-hauteur');
+		await page.goto('/offres-de-services/faire-monter-en-competence');
 		const referenceCount = await page.getByTestId(new RegExp('^reference-')).count();
 		expect(referenceCount).toBeGreaterThan(1);
 	});
 
 	test('should have at least required headings ', async ({ page }) => {
-		await page.goto('/offres-de-services/prendre-de-la-hauteur');
+		await page.goto('/offres-de-services/faire-monter-en-competence');
 		const headings = await page.getByRole('heading').all();
 
 		const headingContents = await Promise.all(headings.map((item) => item.textContent()));
@@ -31,7 +31,7 @@ test.describe('prendre-de-la-hauteur page', () => {
 	test('users should go on reference page using `voir plus de référence link` ', async ({
 		page
 	}) => {
-		await page.goto('/offres-de-services/prendre-de-la-hauteur');
+		await page.goto('/offres-de-services/faire-monter-en-competence');
 
 		await page.getByRole('link', { name: 'Voir plus de références' }).click();
 

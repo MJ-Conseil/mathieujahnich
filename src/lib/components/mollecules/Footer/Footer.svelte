@@ -26,7 +26,7 @@
 					Offre de services:
 					<ul class="gap-3 flex flex-col pl-8 mt-2">
 						<li>
-							<a class="mj-link--alt" href="/offres-de-services/prendre-de-la-hauteur"
+							<a class="mj-link--alt" href="/offres-de-services/faire-monter-en-competence"
 								>Prendre de la hauteur</a
 							>
 						</li>
