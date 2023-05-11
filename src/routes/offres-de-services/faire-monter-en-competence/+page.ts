@@ -5,7 +5,7 @@ import type { PageLoad } from './$types';
 export const load: PageLoad = async ({ fetch }) => {
 	const offerTypes = await getOfferTypes(fetch);
 
-	const offerType = offerTypes.find((item) => item.slug === 'prendre-de-la-hauteur');
+	const offerType = offerTypes.find((item) => item.slug === 'faire-monter-en-competence');
 
 	if (!offerType) {
 		return { references: [] };

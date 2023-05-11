@@ -12,6 +12,7 @@
 	import logoMasterClass from '$lib/assets/pictures/Logo-MASTERCLASS-carre-200x200.jpg';
 	import groupPicture from '$lib/assets/images/mj-group-picture.png';
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
+	import CircledIcon from '$lib/components/mollecules/CircledIcon/CircledIcon.svelte';
 
 	export let data: PageData;
 </script>
@@ -82,29 +83,38 @@
 		<h2 class="mb-8">Nos offres et services</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 pt-8">
 			<Offer
-				icon={'ladder'}
-				title="Prendre de la hauteur"
+				title="Donner de l’élan"
+				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
+fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
+units, partenaires…), vers des pratiques plus responsables."
+				link={ROUTES["Donner de l'élan"]}
+			>
+				<CircledIcon iconName="plane" />
+			</Offer>
+
+			<Offer
+				title="Trouver le juste équilibre"
+				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
+leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
+des filets de sécurité pour limiter les accusations de greenwashing."
+				link={ROUTES['Trouver le juste équilibre']}
+			>
+				<CircledIcon iconName="stones" />
+			</Offer>
+			<Offer
+				title="Faire monter en compétences"
 				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
 	de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
 	externes pour enrichir les stratégies RSE et communication."
-				link={ROUTES['Prendre de la hauteur']}
-			/>
-			<Offer
-				icon="stones"
-				title="Trouver le juste équilibre"
-				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
-	leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
-	des filets de sécurité pour limiter les accusations de greenwashing."
-				link={ROUTES['Trouver le juste équilibre']}
-			/>
-			<Offer
-				icon="plane"
-				title="Donner de l’élan"
-				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
-	fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
-	units, partenaires…), vers des pratiques plus responsables."
-				link={ROUTES["Donner de l'élan"]}
-			/>
+				link={ROUTES['Faire Monter en compétences']}
+			>
+				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
+					<Circle size={SIZE.REGULAR} />
+					<div class="absolute top-[-6px] left-[9%]  md:left-[27%] lg:top-[30px] lg:left-[30%]">
+						<Icon height="150px" width="150px" name="ladder" fill="currentColor" />
+					</div>
+				</div>
+			</Offer>
 		</div>
 	</Section>
 
