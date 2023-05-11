@@ -15,7 +15,7 @@ test('can see menu items only when the button has been pressed', async () => {
 
 	await fireEvent.click(button);
 
-	const menu = await getByTestId('prendre-de-la-hauteur-menu');
+	const menu = await getByTestId('faire-monter-en-competence-menu');
 	expect(menu).not.toBe(null);
 });
 
@@ -28,9 +28,9 @@ test('button has focus if escape key has been pressed', async () => {
 
 	await fireEvent.click(button);
 
-	const menu = await getByTestId('prendre-de-la-hauteur-menu');
+	const menu = await getByTestId('faire-monter-en-competence-menu');
 
 	await fireEvent.keyDown(menu, { key: 'Escape' });
 
-	expect(await queryByTestId('prendre-de-la-hauteur-menu')).toBe(null);
+	expect(await queryByTestId('faire-monter-en-competence-menu')).toBe(null);
 });

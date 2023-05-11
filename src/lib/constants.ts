@@ -10,8 +10,7 @@ export const ROUTES: Record<string, string> = {
 	Références: '/references',
 	Blog: '/blog',
 	'Espace Presse': '/espace-presse',
-	'Offres de services': '/offres-de-services',
-	'Prendre de la hauteur': '/offres-de-services/prendre-de-la-hauteur',
+	'Faire Monter en compétences': '/offres-de-services/faire-monter-en-competence',
 	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
 	"Donner de l'élan": '/offres-de-services/donner-de-l-elan',
 	Newsletter: '/newsletter'

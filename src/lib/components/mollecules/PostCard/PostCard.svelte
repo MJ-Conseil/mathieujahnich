@@ -54,7 +54,7 @@
 			{/if}
 		</div>
 
-		<div class="h-1/3 pb-5 flex items-end justify-end">
+		<div class="pb-8 flex items-end justify-end">
 			<slot>
 				{#if href}
 					<ArrowLink {href}>Lire l'article</ArrowLink>

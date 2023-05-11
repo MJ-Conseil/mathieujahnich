@@ -30,7 +30,7 @@
 	};
 </script>
 
-<nav aria-label={SITE_WEB_NAME}>
+<nav class="p-2" aria-label={SITE_WEB_NAME}>
 	<ul class="flex justify-end gap-8 ">
 		<li class="text-xl">
 			<a
@@ -39,7 +39,7 @@
 				class:text-sand={activeRoute == ROUTES.Accueil}
 				aria-current={activeRoute === ROUTES.Accueil ? 'page' : null}
 				title="Vers la page d'accueil"
-				class="hover:underline underline-offset-[10px] decoration-sand "
+				class="hover:underline py-3  underline-offset-[10px] decoration-sand "
 				href={ROUTES.Accueil}>Accueil</a
 			>
 		</li>
@@ -53,7 +53,7 @@
 				class="flex items-center"
 				aria-haspopup="true"
 				aria-expanded={activatedMenu}
-				aria-controls="prendre-de-la-hauteur-menu"
+				aria-controls="faire-monter-en-competence-menu"
 				on:click={() => handleClickMenuButton()}
 				bind:this={button}
 			>
@@ -65,14 +65,14 @@
 
 			{#if activatedMenu}
 				<ul
-					id="prendre-de-la-hauteur-menu"
-					data-testid="prendre-de-la-hauteur-menu"
-					class=" bg-blue-dark mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
+					id="faire-monter-en-competence-menu"
+					data-testid="faire-monter-en-competence-menu"
+					class="bg-blue-xlight mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e)}
 				>
 					<li>
 						<a
-							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							class="text-white py-3  hover:underline underline-offset-[10px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES[`Donner de l'élan`]}
 							aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
@@ -82,7 +82,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							class="text-white py-3  hover:underline underline-offset-[10px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Trouver le juste équilibre']}
 							aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
@@ -92,12 +92,12 @@
 					</li>
 					<li>
 						<a
-							class="text-white hover:underline underline-offset-[10px] decoration-sand"
+							class="text-white py-3 hover:underline underline-offset-[10px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
-							href={ROUTES['Prendre de la hauteur']}
-							aria-current={activeRoute === ROUTES['Prendre de la hauteur'] ? 'page' : null}
+							href={ROUTES['Faire Monter en compétences']}
+							aria-current={activeRoute === ROUTES['Faire Monter en compétences'] ? 'page' : null}
 						>
-							Prendre de la hauteur
+							Faire monter en compétences
 						</a>
 					</li>
 				</ul>
@@ -109,7 +109,7 @@
 				class:text-white={activeRoute !== ROUTES['Espace Presse']}
 				class:underline={activeRoute == ROUTES['Espace Presse']}
 				class:text-sand={activeRoute == ROUTES['Espace Presse']}
-				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				class="text-white py-5 hover:underline underline-offset-[10px] decoration-sand "
 				href={ROUTES['Espace Presse']}
 				aria-current={activeRoute === ROUTES['Espace Presse'] ? 'page' : null}>Espace Presse</a
 			>
