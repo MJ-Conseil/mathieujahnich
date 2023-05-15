@@ -85,7 +85,7 @@
 
 			<div class="mt-5">
 				<a
-					href={ROUTES['newsletter']}
+					href={ROUTES['wsletter']}
 					class="bg-sand flex items-center gap-2 px-16 py-2 hover:bg-sand-dark font-bold  rounded  text-indigo"
 				>
 					<Icon width="24px" height="22px" name="letterFull" />

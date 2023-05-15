@@ -89,7 +89,12 @@ fonctions marketing, pub, com et toutes leurs interfaces (autres directions, bus
 units, partenaires…), vers des pratiques plus responsables."
 				link={ROUTES["Donner de l'élan"]}
 			>
-				<CircledIcon iconName="plane" />
+				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
+					<Circle size={SIZE.REGULAR} />
+					<div class="absolute left-[25px]  md:left-[80px]  top-[40px]">
+						<Icon height="150px" width="150px" name="plane" fill="currentColor" />
+					</div>
+				</div>
 			</Offer>
 
 			<Offer
@@ -99,18 +104,23 @@ leur cohérence avec la stratégie RSE et avec les règles déontologiques, mett
 des filets de sécurité pour limiter les accusations de greenwashing."
 				link={ROUTES['Trouver le juste équilibre']}
 			>
-				<CircledIcon iconName="stones" />
+				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
+					<Circle size={SIZE.REGULAR} />
+					<div class="absolute left-[40px]  md:left-[80px]  top-[30px]">
+						<Icon height="150px" width="150px" name="stones" fill="currentColor" />
+					</div>
+				</div>
 			</Offer>
 			<Offer
 				title="Faire monter en compétences"
 				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
 	de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
 	externes pour enrichir les stratégies RSE et communication."
-				link={ROUTES['Faire Monter en compétences']}
+				link={ROUTES['Faire monter en compétences']}
 			>
 				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
 					<Circle size={SIZE.REGULAR} />
-					<div class="absolute top-[-6px] left-[9%]  md:left-[27%] lg:top-[30px] lg:left-[30%]">
+					<div class="absolute left-[40px]  md:left-[80px]  top-[30px]">
 						<Icon height="150px" width="150px" name="ladder" fill="currentColor" />
 					</div>
 				</div>
