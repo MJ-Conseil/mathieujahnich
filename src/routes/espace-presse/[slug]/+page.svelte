@@ -11,7 +11,7 @@
 	<title>{SITE_WEB_NAME} - {data.mediaResource.title}</title>
 </svelte:head>
 
-<main class="blog-wrapper">
+<main class="blog-wrapper" id="main-content">
 	<Section alt>
 		<nav aria-label="fil d'ariane" class="mb-8">
 			<ul class="flex list-none p-0 m-0">

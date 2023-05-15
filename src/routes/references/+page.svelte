@@ -61,7 +61,7 @@
 	</Container>
 </header>
 
-<main class="mt-8 mb-12">
+<main class="mt-8 mb-12" id="main-content">
 	{#if data.highlightedReferences.length > 0}
 		<Section>
 			<h2>Références phares</h2>

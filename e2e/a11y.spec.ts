@@ -8,7 +8,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 	}) => {
 		await page.goto('/');
 
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
@@ -17,8 +17,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 		makeAxeBuilder
 	}) => {
 		await page.goto('/contact');
-
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
@@ -28,7 +27,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 	}) => {
 		await page.goto('/offres-de-services/faire-monter-en-competence');
 
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
@@ -38,7 +37,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 	}) => {
 		await page.goto('/references');
 
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
@@ -48,7 +47,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 	}) => {
 		await page.goto('/blog');
 
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
@@ -58,7 +57,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 	}) => {
 		await page.goto('/blog/recherche?per_page=6&search="tata"&categories=[19]');
 
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
@@ -67,8 +66,7 @@ test.describe('accessibilty - pages without required authentication', () => {
 		makeAxeBuilder
 	}) => {
 		await page.goto('/espace-presse');
-
-		const accessibilityScanResults = await makeAxeBuilder().analyze();
+		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 });

@@ -41,7 +41,7 @@
 	</Container>
 </div>
 
-<main class="md:p-0 md:0" id="main">
+<main id="main-content" class="md:p-0 md:0">
 	<Section>
 		<div class="h-full md:px-8">
 			<h2 class="mb-4 text-3xl lg:text-4xl">Votre besoin</h2>

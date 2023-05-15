@@ -31,7 +31,7 @@
 	</Container>
 </div>
 
-<main>
+<main id="main-content">
 	<Section>
 		<h2>Inscription à la newsletter de Mathieu Jahnich</h2>
 		<p>

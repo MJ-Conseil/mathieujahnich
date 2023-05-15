@@ -74,7 +74,7 @@
 	</Container>
 </div>
 
-<main>
+<main id="main-content">
 	<Section>
 		<h2 class="sr-only">Contactez-moi</h2>
 

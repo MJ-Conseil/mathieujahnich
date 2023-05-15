@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
@@ -13,7 +14,7 @@
 	<title>{SITE_WEB_NAME} - {data.post.title}</title>
 </svelte:head>
 
-<main class="blog-wrapper">
+<main class="blog-wrapper" id="main-content">
 	<Section alt>
 		<nav aria-label="fil d'ariane" class="mb-8">
 			<ul class="md:flex list-none p-0 m-0">
