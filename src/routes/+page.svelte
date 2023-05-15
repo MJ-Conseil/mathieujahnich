@@ -12,7 +12,6 @@
 	import logoMasterClass from '$lib/assets/pictures/Logo-MASTERCLASS-carre-200x200.jpg';
 	import groupPicture from '$lib/assets/images/mj-group-picture.png';
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
-	import CircledIcon from '$lib/components/mollecules/CircledIcon/CircledIcon.svelte';
 
 	export let data: PageData;
 </script>
@@ -31,7 +30,7 @@
 			</h1>
 
 			<Headline>
-				Nous sommes un trio d’experts en RSE et communication capables de vous aider de la
+				Nous sommes un trio d’expertes en RSE et communication capables de vous aider de la
 				définition de votre stratégie à la mise en place opérationnelle.
 			</Headline>
 		</div>

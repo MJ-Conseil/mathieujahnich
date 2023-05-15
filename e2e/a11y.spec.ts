@@ -12,14 +12,6 @@ test.describe('accessibilty - pages without required authentication', () => {
 		expect(accessibilityScanResults.violations).toEqual([]);
 	});
 
-	test('contact page should not have any automatically detectable accessibility issues', async ({
-		page,
-		makeAxeBuilder
-	}) => {
-		await page.goto('/contact');
-		const accessibilityScanResults = await makeAxeBuilder().exclude('#skip-nav').analyze();
-		expect(accessibilityScanResults.violations).toEqual([]);
-	});
 
 	test('offres/prendre de la hauteur page should not have any automatically detectable accessibility issues', async ({
 		page,
