@@ -184,4 +184,46 @@
 			</div>
 		</Section>
 	{/if}
+
+	<Section alt={data.references.length > 0}>
+		<div
+			class="bg-blue-dark font-ptsans rounded-xl text-white flex md:flex-row flex-col gap-8  md:gap-32 p-8"
+		>
+			<div class="md:w-1/3">
+				<h3 class="text-white">Les autres volets de notre offre</h3>
+				<p class=" text-white text-2xl">
+					J’aide les entreprises et les organisations à répondre aux attentes sociétales et à
+					relever les défis de la transition écologique et solidaire grâce à une communication plus
+					responsable.
+				</p>
+			</div>
+
+			<div class="flex md:flex-row justify-center flex-col gap-10">
+				<div class="flex flex-col gap-5  items-center">
+					<Icon width="60%" height="auto" name="stones" />
+
+					<p class="text-sand text-center text-2xl">Trouver le juste équilibre</p>
+					<a
+						href={ROUTES['Trouver le juste équilibre']}
+						aria-label="Voir l'offre Trouver le juste équilibre"
+						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand-dark hover:text-white hover:boder-sand-dark "
+					>
+						Voir l'offre
+					</a>
+				</div>
+				<div class="flex items-center flex-col gap-5 ">
+					<Icon width="54%" height="auto" name="plane" />
+
+					<p class="text-sand text-center justify-center  text-2xl">Donner de l'élan</p>
+					<a
+						href={ROUTES["Donner de l'élan"]}
+						aria-label="Voir l'offre Donner de l'élan"
+						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand-dark hover:text-white hover:boder-sand-dark "
+					>
+						Voir l'offre
+					</a>
+				</div>
+			</div>
+		</div>
+	</Section>
 </main>

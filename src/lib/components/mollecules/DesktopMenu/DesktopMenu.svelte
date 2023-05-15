@@ -93,8 +93,8 @@
 						<a
 							class="text-white py-3 hover:underline underline-offset-[10px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
-							href={ROUTES['Faire Monter en compétences']}
-							aria-current={activeRoute === ROUTES['Faire Monter en compétences'] ? 'page' : null}
+							href={ROUTES['Faire monter en compétences']}
+							aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}
 						>
 							Faire monter en compétences
 						</a>

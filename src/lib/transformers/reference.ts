@@ -13,6 +13,5 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : undefined,
 		associatedContent: reference?.acf?.associated_content,
 		slug: reference.slug
-
 	};
 };

@@ -93,7 +93,7 @@
 
 	.mj-link--alt:hover,
 	.mj-link:hover {
-		@apply underline underline-offset-2
+		@apply underline underline-offset-2;
 	}
 
 	.mj-link--alt {

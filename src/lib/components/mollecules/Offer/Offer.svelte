@@ -6,10 +6,10 @@
 	export let link: string = '';
 </script>
 
-<div class="h-full w-full relative">
+<div class="h-full w-full flex flex-col justify-evenly relative">
 	<slot />
 	<h3 class="mb-4">{title}</h3>
-	<p>
+	<p class="min-h-[150px]">
 		{offer}
 	</p>
 	{#if link}
