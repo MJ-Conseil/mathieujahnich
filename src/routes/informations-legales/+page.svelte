@@ -16,7 +16,7 @@
 	</div>
 </div>
 
-<main class="md:p-0 md:0" id="main">
+<main class="md:p-0 md:0" id="main-content">
 	<Section>
 		<div class="h-full md:px-8">
 			<div class="md:grid md:grid-cols-3 md:gap-7">

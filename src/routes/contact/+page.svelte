@@ -23,7 +23,7 @@
 	</div>
 </div>
 
-<main class="md:p-0 md:0" id="main">
+<main class="md:p-0 md:0" id="main-content">
 	<section class="md:p-0 md:py-12 p-4">
 		<Container>
 			<h2 class="my-10">Parlons-nous</h2>
