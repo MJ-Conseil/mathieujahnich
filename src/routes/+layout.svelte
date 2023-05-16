@@ -7,6 +7,7 @@
 	let modalShown = false;
 </script>
 
+<SkipLink />
 <Header
 	on:click={() => {
 		modalShown = true;
@@ -17,7 +18,7 @@
 	on:closeModal={() => (modalShown = false)}
 />
 
-<div class="w-full h-full" inert={modalShown ? true : null} class:overflow-hidden={modalShown}>
+<div class="relative" inert={modalShown ? true : null} class:overflow-hidden={modalShown}>
 	<slot />
 
 	<Footer />

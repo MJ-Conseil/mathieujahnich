@@ -3,21 +3,17 @@ import { getPosts } from '$lib/repositories/post.js';
 import type { ServerLoadEvent } from '@sveltejs/kit';
 
 export async function GET(event: ServerLoadEvent) {
-  const origin = event.url.origin;
-  const posts = await getPosts(fetch, { per_page: 40 });
+	const origin = event.url.origin;
+	const posts = await getPosts(fetch, { per_page: 40 });
 
-  const postUrls = posts.map((item) => new URL(`${origin}${ROUTES.Blog}/${item.slug}`));
-  const routesURL = Object.entries(ROUTES).map((value) => new URL(`${origin}${[value[1]]}`));
+	const postUrls = posts.map((item) => new URL(`${origin}${ROUTES.Blog}/${item.slug}`));
+	const routesURL = Object.entries(ROUTES).map((value) => new URL(`${origin}${[value[1]]}`));
 
-  const URLS = [
-    ...postUrls,
-    ...routesURL
-  ]
+	const URLS = [...postUrls, ...routesURL];
 
-
-  // gérnéré dynamiquement les urls des pages du site
-  return new Response(
-    `
+	// gérnéré dynamiquement les urls des pages du site
+	return new Response(
+		`
       <?xml version="1.0" encoding="UTF-8" ?>
       <urlset
         xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
@@ -33,20 +29,18 @@ export async function GET(event: ServerLoadEvent) {
       <priority>1.0</priority>
       </url>
 
-      ${URLS
-        .map((item) => {
-          return `<url>
+      ${URLS.map((item) => {
+				return `<url>
         <loc>${item.toString()}</loc>
         <changefreq>yearly</changefreq>
         </url>`;
-        })
-        .join('')}
+			}).join('')}
       </urlset>`.trim(),
-    {
-      headers: {
-        'Content-Type': 'application/xml',
-        'Cache-Control': 'max-age=0, s-maxage=3600'
-      }
-    }
-  );
+		{
+			headers: {
+				'Content-Type': 'application/xml',
+				'Cache-Control': 'max-age=0, s-maxage=3600'
+			}
+		}
+	);
 }
