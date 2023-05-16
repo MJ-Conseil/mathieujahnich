@@ -20,7 +20,7 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-<header role="banner" class=" bg-blue-dark">
+<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 md:pb-96 pb-48 relative">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
 			<p class="text-sand font-bold">MJ Conseil</p>
@@ -58,65 +58,137 @@
 	</div>
 </header>
 
-<main>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, est! Repellat vero, voluptatum
-		at officia iste maxime?
-	</p>
-	<p>
-		Sapiente sit cumque aperiam quia eveniet in quibusdam quo, dicta sint laboriosam assumenda ipsum
-		beatae id deleniti?
-	</p>
-	<p>
-		Ab quis quasi ullam aliquam. Illo inventore neque, laborum fugiat esse quo iure magni deleniti
-		consequatur ullam!
-	</p>
-	<p>
-		Maiores iusto nobis possimus debitis veritatis explicabo quas ullam ab doloribus. In
-		necessitatibus doloremque consequuntur rem reprehenderit.
-	</p>
-	<p>
-		Dolores praesentium beatae itaque nemo magnam possimus quia natus atque placeat suscipit facere
-		quaerat, esse alias repudiandae.
-	</p>
-	<p>
-		Necessitatibus, dignissimos sunt eveniet nulla temporibus quasi esse magnam commodi officia
-		nobis, quaerat nesciunt, ex unde facere?
-	</p>
-	<p>
-		Dicta ipsum culpa veritatis nisi reiciendis, quidem consequatur, vel dignissimos quos rem illo
-		amet eos deleniti voluptas?
-	</p>
-	<p>
-		Placeat natus maxime sed eos? Nostrum velit veritatis nemo esse. Rerum fuga totam, possimus
-		aliquam dolore repudiandae.
-	</p>
-	<p>
-		Dolorum repellendus eius, quo rem dicta consectetur minus perspiciatis veniam officia corporis
-		vero, maiores culpa, architecto illum!
-	</p>
-	<p>
-		Doloribus sit fuga autem! Quibusdam nam possimus ipsa, sit atque aut cum asperiores eveniet
-		corporis voluptate libero!
-	</p>
-	<p>
-		Autem labore odit alias nihil exercitationem maiores, harum a dignissimos ipsam voluptatem
-		distinctio blanditiis! Hic, quia doloribus?
-	</p>
-	<p>
-		Vitae blanditiis, corrupti earum esse incidunt facilis impedit minima quam, laudantium dicta
-		repudiandae error illum delectus perferendis.
-	</p>
-	<p>
-		Recusandae voluptatem laudantium dolorum est sapiente. Neque, maxime reprehenderit. Magnam
-		quibusdam voluptate quos omnis sint enim alias!
-	</p>
-	<p>
-		Exercitationem architecto dolores laborum odit hic ut quisquam aliquam atque illo, fugiat,
-		voluptatibus amet recusandae adipisci nesciunt!
-	</p>
-	<p>
-		Blanditiis assumenda natus tempore laboriosam iure similique repudiandae illo, soluta
-		dignissimos qui, corporis dolore perferendis minima necessitatibus!
-	</p>
+<main class="md:p-0 md:0" id="main">
+	<Section>
+		<h2>Signes particuliers</h2>
+		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
+			<ParticularSign
+				title="A l’interface de la RSE et de la Com"
+				content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
+			/>
+			<ParticularSign
+				title="De la recherche à l’action"
+				content="Parce que nous nous positionnons en complément des agences de com et des  cabinets conseil nous vous proposons une vision qui va de la recherche à l’action"
+			/>
+			<ParticularSign
+				title="Écoute & qualité de services"
+				content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
+			/>
+		</div>
+		<div class="lg:container h-full" />
+	</Section>
+
+	<Section>
+		<h2 class="mb-8">Nos offres et services</h2>
+		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 pt-8">
+			<Offer
+				title="Donner de l’élan"
+				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
+fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
+units, partenaires…), vers des pratiques plus responsables."
+				link={ROUTES["Donner de l'élan"]}
+			>
+				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
+					<Circle size={SIZE.REGULAR} />
+					<div class="absolute left-[25px]  md:left-[80px]  top-[40px]">
+						<Icon height="150px" width="150px" name="plane" fill="currentColor" />
+					</div>
+				</div>
+			</Offer>
+
+			<Offer
+				title="Trouver le juste équilibre"
+				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
+leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
+des filets de sécurité pour limiter les accusations de greenwashing."
+				link={ROUTES['Trouver le juste équilibre']}
+			>
+				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
+					<Circle size={SIZE.REGULAR} />
+					<div class="absolute left-[40px]  md:left-[80px]  top-[30px]">
+						<Icon height="150px" width="150px" name="stones" fill="currentColor" />
+					</div>
+				</div>
+			</Offer>
+			<Offer
+				title="Faire monter en compétences"
+				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
+	de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
+	externes pour enrichir les stratégies RSE et communication."
+				link={ROUTES['Faire monter en compétences']}
+			>
+				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
+					<Circle size={SIZE.REGULAR} />
+					<div class="absolute left-[40px]  md:left-[80px]  top-[30px]">
+						<Icon height="150px" width="150px" name="ladder" fill="currentColor" />
+					</div>
+				</div>
+			</Offer>
+		</div>
+	</Section>
+
+	<section class="clipped--top pt-[15rem] md:pt-96 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+		<Container>
+			<h2 class="mb-4">A la une du blog</h2>
+
+			<p class="font-ptsans text-xl md:my-12 my-8 ">
+				Depuis 2005, nous interrogeons l’alignement de la communication et du marketing avec les
+				enjeux de transition écologique. Retrouvez ici nos analyses, des témoignages et des
+				ressources.
+			</p>
+
+			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+				{#each data.posts as post}
+					<PostCard
+						createdDate={new Intl.DateTimeFormat('fr-FR', {
+							day: '2-digit',
+							month: 'long',
+							year: 'numeric'
+						}).format(post.createdDate)}
+						title={post.title}
+						pictureURL={post.imageUrl}
+						tagName={post.tags[0]?.name}
+						href={`${ROUTES.Blog}/${post.slug}`}
+					/>
+				{/each}
+			</div>
+
+			<div class="mt-8 flex  justify-center w-ful">
+				<a
+					href={ROUTES['Blog']}
+					class="bg-sand 2 px-16 py-5 hover:bg-sand-dark font-bold  rounded  text-indigo"
+				>
+					Découvrir tous les articles
+				</a>
+			</div>
+		</Container>
+	</section>
+
+	<Section>
+		<h2>Formez-vous</h2>
+
+		<div class="md:flex items-center flex-row  gap-8 border-[3px] p-5 border-gray rounded-lg">
+			<div class="hidden md:block">
+				<img src={logoMasterClass} alt="formation Master Class de MJ Conseil" />
+				<img class="h-[60px] w-auto" src={logoQualiopi} alt="certification qualiopi" />
+			</div>
+
+			<div>
+				<h3>Des formations en communication responsable certifiées Qualiopi</h3>
+				<p>
+					Formations à la communication responsable conçues et animées avec Thierry Libaert. Des
+					séances courtes, 100% à distance, qui donnent l’envie et les moyens d’agir. Satisfaction
+					globale des participant·es : 8,4/10.
+				</p>
+
+				<a
+					href={'https://master-class-communication-responsable.fr/'}
+					class="bg-sand px-12 p-5 flex items-center gap-2  md:w-[324px] mt-5 hover:bg-sand-dark font-bold  rounded  text-indigo"
+				>
+					Découvrir les formations
+					<Icon width="30px" height="auto" name="external" />
+				</a>
+			</div>
+		</div>
+	</Section>
 </main>
