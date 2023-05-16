@@ -7,7 +7,7 @@
 	export let isMenuOpen = false;
 </script>
 
-<div class="bg-blue-dark relative font-ptsans text-white md:px-16 md:py-8 p-4">
+<div class="bg-blue-dark sticky top-0 font-ptsans text-white md:px-16 md:py-8 p-4 z-50">
 	<!-- Menu Desktop -->
 	<nav
 		class="md:flex w-full  top-0 items-center justify-between hidden"
