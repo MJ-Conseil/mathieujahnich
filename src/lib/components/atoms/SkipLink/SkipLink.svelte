@@ -8,6 +8,7 @@
 <style>
 	.skip {
 		position: relative;
+		display: block;
 		top: 0;
 		width: 0px;
 		height: 0px;

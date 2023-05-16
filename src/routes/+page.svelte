@@ -20,7 +20,7 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-<header role="banner" class="clipped--bottom w-full   md:pt-4 md:pb-96 pb-48 relative bg-blue-dark">
+<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 md:pb-96 pb-48 relative">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
 			<p class="text-sand font-bold">MJ Conseil</p>

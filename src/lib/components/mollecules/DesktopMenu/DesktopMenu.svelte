@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
-	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
+	import { ROUTES } from '$lib/constants';
 
 	export let activeRoute: string | null = null;
 
@@ -29,7 +29,7 @@
 	};
 </script>
 
-<nav class="p-2" aria-label={SITE_WEB_NAME}>
+<div class="p-2">
 	<ul class="flex justify-end gap-8 ">
 		<li class="text-xl">
 			<a
@@ -136,7 +136,7 @@
 			>
 		</li>
 	</ul>
-</nav>
+</div>
 
 <style>
 	a:active {
