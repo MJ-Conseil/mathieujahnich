@@ -20,7 +20,7 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 md:pb-96 pb-48 relative">
+<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 lg:pb-[20rem] pb-32  relative">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
 			<p class="text-sand font-bold">MJ Conseil</p>
@@ -40,7 +40,7 @@
 		<div class="relative md:w-1/2 w-4/5 ">
 			<img src={groupPicture} alt="trio d'experts en communication" />
 
-			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden md:block">
+			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden lg:block">
 				<Circle size={SIZE.LARGE} />
 			</div>
 
@@ -127,7 +127,7 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 		</div>
 	</Section>
 
-	<section class="clipped--top pt-[15rem] md:pt-96 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section class="pt-[6rem] md:pt-[8rem] lg:pt-96 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 
