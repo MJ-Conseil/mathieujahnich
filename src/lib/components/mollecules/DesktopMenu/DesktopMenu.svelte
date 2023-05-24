@@ -2,6 +2,8 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { ROUTES } from '$lib/constants';
 
+	import { clickOutside } from '$lib/directives/clickoutside';
+
 	export let activeRoute: string | null = null;
 
 	let activatedMenu = false;
@@ -68,6 +70,7 @@
 					data-testid="faire-monter-en-competence-menu"
 					class="bg-blue-xlight mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e)}
+					use:clickOutside={{ callback: () => (activatedMenu = false) }}
 				>
 					<li>
 						<a
