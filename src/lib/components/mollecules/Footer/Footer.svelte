@@ -5,9 +5,9 @@
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
 <footer role="contentinfo" class="bg-blue-dark  md:p-8 p-4">
-	<div class="lg:flex  justify-between">
-		<div class="w-1/5">
-			<p class="lg:block font-ptsans text-blue-light hidden text-xl">
+	<div class="md:flex md:justify-around  justify-between">
+		<div class="hidden lg:block lg:w-1/5">
+			<p class="md:block font-ptsans text-blue-light hidden text-xl">
 				<Icon name="mjConseilFull" width="220px" height="auto" />
 			</p>
 			<p class="lg:block font-ptsans text-blue-light hidden text-xl my-4">
@@ -93,11 +93,16 @@
 				</a>
 			</div>
 
-			<ul class="mt-8 flex items-center gap-2">
+			<ul class="mt-8 flex items-center gap-5">
 				<li>
 					<a href={SOCIAL_NETWORK_LINKS.linkedin}>
 						<span aria-hidden="true">
-							<Icon name="linkedin" width="30px" height="auto" class="text-sand" /></span
+							<Icon
+								name="linkedin"
+								width="30px"
+								height="auto"
+								class="text-sand  hover:text-sand-dark "
+							/></span
 						>
 						<span class="sr-only">Linkedin</span>
 					</a>
@@ -106,7 +111,12 @@
 				<li>
 					<a href={SOCIAL_NETWORK_LINKS.youtube}>
 						<span aria-hidden="true">
-							<Icon name="youtube" width="auto" height="25px" class="text-sand" /></span
+							<Icon
+								name="youtube"
+								width="auto"
+								height="25px"
+								class="text-sand hover:text-sand-dark"
+							/></span
 						>
 						<span class="sr-only">Youtube</span>
 					</a>
@@ -115,7 +125,7 @@
 		</div>
 	</div>
 
-	<hr class="text-white my-4" />
+	<hr class="text-white my-7" />
 
 	<div class="md:flex items-center justify-between">
 		<div>
@@ -131,9 +141,15 @@
 				</li>
 				<li class="text-white hidden md:block">|</li>
 				<li class="text-white">
-					Conception et création : Anne Faubry , <a
+					Conception et création : <a
+						href="https://www.linkedin.com/in/anne-faubry-3b2b8390/"
 						class="text-sand font-bold decoration-dotted"
-						href="https://www.fairness.coop">Fairness Scop</a
+					>
+						Anne Faubry
+					</a>
+					,
+					<a class="text-sand font-bold decoration-dotted" href="https://www.fairness.coop"
+						>Fairness Scop</a
 					>,
 
 					<a class="text-sand font-bold decoration-dotted" href="https://www.cyanne.fr/">Cyanne</a>

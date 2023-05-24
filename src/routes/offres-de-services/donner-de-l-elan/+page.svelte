@@ -199,7 +199,7 @@
 					<a
 						href={ROUTES['Faire monter en compétences']}
 						aria-label="Voir l'offre Faire monter en compétences "
-						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand-dark hover:text-white hover:boder-sand-dark "
+						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 					>
 						Voir l'offre
 					</a>
@@ -211,7 +211,7 @@
 					<a
 						href={ROUTES['Trouver le juste équilibre']}
 						aria-label="Voir l'offre Trouver le juste équilibre"
-						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand-dark hover:text-white hover:boder-sand-dark "
+						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 					>
 						Voir l'offre
 					</a>

@@ -2,6 +2,8 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { ROUTES } from '$lib/constants';
 
+	import { clickOutside } from '$lib/directives/clickoutside';
+
 	export let activeRoute: string | null = null;
 
 	let activatedMenu = false;
@@ -38,7 +40,7 @@
 				class:text-sand={activeRoute == ROUTES.Accueil}
 				aria-current={activeRoute === ROUTES.Accueil ? 'page' : null}
 				title="Vers la page d'accueil"
-				class="hover:underline py-3  underline-offset-[10px] decoration-sand "
+				class="hover:underline py-3  underline-offset-[8px] decoration-sand "
 				href={ROUTES.Accueil}>Accueil</a
 			>
 		</li>
@@ -46,7 +48,7 @@
 		<li
 			class:underline={activeRoute ? activeRoute.match(regex) : null}
 			class:text-sand={activeRoute ? activeRoute.match(regex) : null}
-			class="text-xl relative hover:underline underline-offset-[10px] decoration-sand"
+			class="text-xl relative hover:underline underline-offset-[8px] decoration-sand"
 		>
 			<button
 				class="flex items-center"
@@ -68,10 +70,11 @@
 					data-testid="faire-monter-en-competence-menu"
 					class="bg-blue-xlight mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e)}
+					use:clickOutside={{ callback: () => (activatedMenu = false) }}
 				>
 					<li>
 						<a
-							class="text-white py-3  hover:underline underline-offset-[10px] decoration-sand"
+							class="text-white py-3  hover:underline underline-offset-[8px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES[`Donner de l'élan`]}
 							aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
@@ -81,7 +84,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white py-3  hover:underline underline-offset-[10px] decoration-sand"
+							class="text-white py-3  hover:underline underline-offset-[8px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Trouver le juste équilibre']}
 							aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
@@ -91,7 +94,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white py-3 hover:underline underline-offset-[10px] decoration-sand"
+							class="text-white py-3 hover:underline underline-offset-[8px] decoration-sand"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Faire monter en compétences']}
 							aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}
@@ -108,7 +111,7 @@
 				class:text-white={activeRoute !== ROUTES['Espace Presse']}
 				class:underline={activeRoute == ROUTES['Espace Presse']}
 				class:text-sand={activeRoute == ROUTES['Espace Presse']}
-				class="text-white py-5 hover:underline underline-offset-[10px] decoration-sand "
+				class="text-white py-5 hover:underline underline-offset-[8px] decoration-sand "
 				href={ROUTES['Espace Presse']}
 				aria-current={activeRoute === ROUTES['Espace Presse'] ? 'page' : null}>Espace Presse</a
 			>
@@ -119,7 +122,7 @@
 				class:text-white={activeRoute !== ROUTES.Références}
 				class:underline={activeRoute == ROUTES.Références}
 				class:text-sand={activeRoute == ROUTES.Références}
-				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				class="text-white hover:underline underline-offset-[8px] decoration-sand "
 				href={ROUTES.Références}
 				aria-current={activeRoute === ROUTES.Références ? 'page' : null}>Références</a
 			>
@@ -130,7 +133,7 @@
 				class:text-white={activeRoute !== ROUTES.Blog}
 				class:underline={activeRoute == ROUTES.Blog}
 				class:text-sand={activeRoute == ROUTES.Blog}
-				class="text-white hover:underline underline-offset-[10px] decoration-sand "
+				class="text-white hover:underline underline-offset-[8px] decoration-sand "
 				href={ROUTES.Blog}
 				aria-current={activeRoute === ROUTES.Blog ? 'page' : null}>Blog</a
 			>

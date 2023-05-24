@@ -203,7 +203,7 @@
 					<a
 						href={ROUTES['Faire Monter en compétences']}
 						aria-label="Voir l'offre Faire Monter en compétences"
-						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand-dark hover:text-white hover:boder-sand-dark "
+						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 					>
 						Voir l'offre
 					</a>
@@ -215,7 +215,7 @@
 					<a
 						href={ROUTES["Donner de l'élan"]}
 						aria-label="Voir l'offre Donner de l'élan"
-						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand-dark hover:text-white hover:boder-sand-dark "
+						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 					>
 						Voir l'offre
 					</a>
