@@ -20,10 +20,10 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 lg:pb-[20rem] pb-32  relative">
+<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 lg:pb-[15rem] pb-32  relative">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
-			<p class="text-sand font-bold">MJ Conseil</p>
+			<p class="text-sand text-xl font-bold">MJ Conseil</p>
 			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>
@@ -40,7 +40,7 @@
 		<div class="relative md:w-1/2 w-4/5 ">
 			<img src={groupPicture} alt="trio d'experts en communication" />
 
-			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden lg:block">
+			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden md:block">
 				<Circle size={SIZE.LARGE} />
 			</div>
 
@@ -80,7 +80,7 @@
 
 	<Section>
 		<h2 class="mb-8">Nos offres et services</h2>
-		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-12 lg:grid-cols-3 pt-8">
+		<div class="md:gap-x-20 md:gap-y-10 grid gap-y-12 md:grid-cols-3 pt-8">
 			<Offer
 				title="Donner de l’élan"
 				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
@@ -127,7 +127,9 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 		</div>
 	</Section>
 
-	<section class="pt-[6rem] md:pt-[8rem] lg:pt-96 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<section
+		class="clipped--top pt-[6rem] md:pt-[8rem] lg:pt-64 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray"
+	>
 		<Container>
 			<h2 class="mb-4">A la une du blog</h2>
 

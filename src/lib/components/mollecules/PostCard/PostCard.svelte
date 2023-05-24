@@ -40,7 +40,7 @@
 
 	<div class="mt-2 p-4 flex-1 flex flex-col">
 		<div class=" flex-1">
-			<p class="text-blue-dark text-xs">
+			<p class="text-blue-dark text-sm">
 				{createdDate}
 			</p>
 			<h3 class="text-blue-dark mt-2 text-xl mb-0  font-bold">

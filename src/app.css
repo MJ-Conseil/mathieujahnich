@@ -59,7 +59,7 @@
 
 	h3,
 	.mj-h3 {
-		@apply mj-heading-base text-4xl text-blue-dark font-bold;
+		@apply mj-heading-base text-3xl text-blue-dark font-bold;
 	}
 
 	.mj-h3--alt {
@@ -193,16 +193,22 @@ Usage:
 
 @media (min-width: 1024px) {
 	.clipped--bottom {
-		clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 73.5%, 0% 100%);
 	}
 }
 
 .clipped--top {
-	clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
 }
 
 @media (min-width: 768px) {
 	.clipped--top {
-		clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+	}
+}
+
+@media (min-width: 1024px) {
+	.clipped--top {
+		clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
 	}
 }

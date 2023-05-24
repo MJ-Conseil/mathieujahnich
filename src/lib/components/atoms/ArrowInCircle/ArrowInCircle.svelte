@@ -14,10 +14,10 @@
 			break;
 
 		case SIZE.SMALL:
-			iconWidthAndHeight = '14px';
+			iconWidthAndHeight = '12px';
 
 		default:
-			iconWidthAndHeight = '1rem';
+			iconWidthAndHeight = '12px';
 			break;
 	}
 </script>
@@ -26,8 +26,6 @@
 	aria-hidden={ariaHidden}
 	class:-rotate-90={iconRotation === 90}
 	class:-rotate-180={iconRotation === 180}
-	class:p-1={size === SIZE.EXTRASMALL}
-	class:p-2={size !== SIZE.EXTRASMALL}
-	class={`rounded-full p-2 bg-sand text-indigo flex items-center justify-center `}
+	class={`rounded-full p-1 bg-sand text-indigo flex items-center justify-center `}
 	><Icon width={iconWidthAndHeight} height={iconWidthAndHeight} name="caret" /></span
 >
