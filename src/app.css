@@ -209,6 +209,6 @@ Usage:
 
 @media (min-width: 1024px) {
 	.clipped--top {
-		clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
 	}
 }

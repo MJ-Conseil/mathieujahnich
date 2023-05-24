@@ -12,6 +12,7 @@
 	import logoMasterClass from '$lib/assets/pictures/Logo-MASTERCLASS-carre-200x200.jpg';
 	import groupPicture from '$lib/assets/images/mj-group-picture.png';
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
+	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 
 	export let data: PageData;
 </script>
@@ -156,12 +157,7 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 			</div>
 
 			<div class="mt-8 flex  justify-center w-ful">
-				<a
-					href={ROUTES['Blog']}
-					class="bg-sand 2 px-16 py-5 hover:bg-sand-dark font-bold  rounded  text-indigo"
-				>
-					Découvrir tous les articles
-				</a>
+				<ButtonLink href={ROUTES['Blog']}>Découvrir tous les articles</ButtonLink>
 			</div>
 		</Container>
 	</section>
@@ -185,7 +181,7 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 
 				<a
 					href={'https://master-class-communication-responsable.fr/'}
-					class="bg-sand px-12 p-5 flex items-center gap-2  md:w-[324px] mt-5 hover:bg-sand-dark font-bold  rounded  text-indigo"
+					class="bg-sand px-12 p-2 flex items-center gap-2  md:w-[324px] mt-5 hover:bg-sand-dark font-bold  rounded  text-blue-dark"
 				>
 					Découvrir les formations
 					<Icon width="30px" height="auto" name="external" />
