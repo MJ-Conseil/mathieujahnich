@@ -54,7 +54,7 @@
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - Espace Presse</title>
+	<title>{SITE_WEB_NAME} - Espace presse</title>
 </svelte:head>
 
 <div class="py-8 bg-blue-dark ">

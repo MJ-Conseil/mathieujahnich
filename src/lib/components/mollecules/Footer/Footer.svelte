@@ -50,7 +50,7 @@
 					<a class="mj-link--alt" href={ROUTES.Blog}>Blog</a>
 				</li>
 				<li>
-					<a class="mj-link--alt" href={ROUTES['Espace Presse']}>Espace Presse</a>
+					<a class="mj-link--alt" href={ROUTES['Espace presse']}>Espace presse</a>
 				</li>
 
 				<li>
