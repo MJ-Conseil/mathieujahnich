@@ -55,7 +55,7 @@
 		aria-hidden="true"
 		class="md:block md:absolute top-4 right-4 md:w-[200px] justify-center hidden opacity-80 text-white "
 	>
-		<Icon width="120%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
+		<Icon width="100%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
 	</div>
 </header>
 
@@ -64,16 +64,16 @@
 		<h2>Signes particuliers</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
 			<ParticularSign
-				title="A l’interface de la RSE et de la Com"
-				content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
+				title="Notre trio"
+				content="Nous collaborons toutes les trois depuis de nombreuses années. Nous mettons nos expertises complémentaires en RSE et en communication, notre complicité et notre bienveillance au service de la transformation de votre organisation."
 			/>
 			<ParticularSign
-				title="De la recherche à l’action"
-				content="Parce que nous nous positionnons en complément des agences de com et des  cabinets conseil nous vous proposons une vision qui va de la recherche à l’action"
+				title="Notre engagement"
+				content="Nous concevons notre activité de conseil comme un levier pour mettre la filière marketing et communication au service de la transformation des modèles économiques et de la transition écologique et solidaire. Nous cherchons à faire « bouger les lignes ». "
 			/>
 			<ParticularSign
-				title="Écoute & qualité de services"
-				content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
+				title="Notre écoute"
+				content="Parce que tout projet commence par l’écoute de vos enjeux, de vos inquiétudes et de vos freins, nous vous aidons à identifier vos besoins réels et vos marges de progrès. Notre rôle est à la fois de vous soutenir et de vous « challenger ». "
 			/>
 		</div>
 		<div class="lg:container h-full" />
