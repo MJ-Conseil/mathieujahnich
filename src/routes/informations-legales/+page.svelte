@@ -22,56 +22,64 @@
 			<div class="md:grid md:grid-cols-3 md:gap-7">
 				<div>
 					<h2>Editeur du site</h2>
-					<ul>
-						<li class="py-2">Raison sociale : MJ Conseil</li>
-						<li class="py-2">
-							Tél: <a href={`tel:${CONTACT_LINKS.phone}`}>
-								{CONTACT_LINKS.phone}
-							</a>
-						</li>
-						<li class="py-2">
-							Email : <a href={`mailto:${CONTACT_LINKS.email}`}>
-								{CONTACT_LINKS.email}
-							</a>
-						</li>
-						<li class="py-2">Adresse : {CONTACT_LINKS.address}</li>
-						<li class="py-2">Siret : 894 917 996 00015</li>
-						<li class="py-2">Directeur de rédaction et de publication : Mathieu JAHNICH</li>
-					</ul>
+
+					<p class="py-2">Raison sociale : MJ Conseil</p>
+					<p class="py-2">
+						Tél: <a href={`tel:${CONTACT_LINKS.phone}`}>
+							{CONTACT_LINKS.phone}
+						</a>
+					</p>
+					<p class="py-2">
+						Email : <a href={`mailto:${CONTACT_LINKS.email}`}>
+							{CONTACT_LINKS.email}
+						</a>
+					</p>
+					<p class="py-2">Adresse : {CONTACT_LINKS.address}</p>
+					<p class="py-2">Siret : 894 917 996 00015</p>
+					<p class="py-2">Directeur de rédaction et de publication : Mathieu JAHNICH</p>
 				</div>
 				<div>
 					<h2>Créateur du site</h2>
-					<ul>
-						<li class="py-2">Version actuelle</li>
-						<li class="py-2">Site réalisé par</li>
-						<li class="py-2">Fairness Scop Arl</li>
-						<li class="py-2">
-							<a href="https://fairness.coop/" target="_blank" rel="noreferrer"
-								>https://fairness.coop/</a
-							>
-						</li>
-						<li class="py-2">Sur la base d’un design réalisé par</li>
-						<li class="py-2">Cyanne – Tiphaine Pellé</li>
-						<li class="py-2">
-							<a href="https://www.cyanne.fr/" target="_blank" rel="noreferrer"
-								>https://www.cyanne.fr/</a
-							>
-						</li>
-					</ul>
+
+					<p class="py-2">Version actuelle</p>
+					<p class="py-2">Site réalisé par</p>
+					<p class="py-2">Fairness Scop Arl</p>
+					<p class="py-2">
+						<a href="https://fairness.coop/" target="_blank" rel="noreferrer"
+							>https://fairness.coop</a
+						>
+					</p>
+
+					<p class="py-2">Et un design d'</p>
+
+					<p class="py-2">
+						<a
+							href="https://www.linkedin.com/in/anne-faubry-3b2b8390/"
+							target="_blank"
+							rel="noreferrer">Anne Faubry</a
+						>
+					</p>
+
+					<p class="py-2">Sur la base d’un design initialement réalisé par</p>
+					<p class="py-2">Cyanne – Tiphaine Pellé</p>
+					<p class="py-2">
+						<a href="https://www.cyanne.fr/" target="_blank" rel="noreferrer"
+							>https://www.cyanne.fr/</a
+						>
+					</p>
 				</div>
 				<div>
 					<h2>Hébergement</h2>
-					<ul>
-						<li class="py-2">L’hébergement est assuré par {CONTACT_HOSTING.name}</li>
-						<li class="py-2">Raison sociale : {CONTACT_HOSTING.corporateName}</li>
-						<li class="py-2">Adresse : {CONTACT_HOSTING.address}</li>
-						<li class="py-2">Téléphone : {CONTACT_HOSTING.phone}</li>
-						<li class="py-2">
-							Site web : <a href={CONTACT_HOSTING.website} target="_blank" rel="noreferrer"
-								>{CONTACT_HOSTING.website}</a
-							>
-						</li>
-					</ul>
+
+					<p class="py-2">L’hébergement est assuré par {CONTACT_HOSTING.name}</p>
+					<p class="py-2">Raison sociale : {CONTACT_HOSTING.corporateName}</p>
+					<p class="py-2">Adresse : {CONTACT_HOSTING.address}</p>
+					<p class="py-2">Téléphone : {CONTACT_HOSTING.phone}</p>
+					<p class="py-2">
+						Site web : <a href={CONTACT_HOSTING.website} target="_blank" rel="noreferrer"
+							>{CONTACT_HOSTING.website}</a
+						>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -143,12 +151,6 @@
 				appartenant à d’autres sociétés partenaires ou auteurs.
 			</p>
 			<p class="my-3">
-				Tout le contenu du présent site, incluant, de façon non limitative, les graphismes, images,
-				textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la
-				propriété exclusive de la société MJ Conseil à l’exception des marques, logos ou contenus
-				appartenant à d’autres sociétés partenaires ou auteurs.
-			</p>
-			<p class="my-3">
 				Pour toute demande d’autorisation ou d’information, veuillez nous contacter par email :
 				<a href={`mailto:${CONTACT_LINKS.email}`}>{CONTACT_LINKS.email}</a>
 			</p>
@@ -164,15 +166,12 @@
 		<div class="h-full md:px-44">
 			<h2 class="my-8">Confidentialité</h2>
 			<p class="my-3">
-				Vos données personnelles sont confidentielles et ne seront en aucun cas communiquées à des
-				tiers hormis pour la bonne exécution de la prestation. Les internautes disposent d’un droit
-				d’accès, de rectification, de modification et de suppression concernant les données qui les
-				concernent personnellement.
+				Nous ne collectons aucune donnée personelle durant la navigation. Nous n'utilisons pas
+				Google Analytics ou autre type de système de suivi d'audience.
 			</p>
 			<p class="my-3">
-				Vos données personnelles » écrire « Les seules données personnelles collectées sont celles
-				saisies dans le formulaire de contact. Elles sont confidentielles et en aucun cas
-				communiquées à des tiers…
+				Les seules données personnelles collectées sont celles saisies dans le formulaire de
+				contact. Elles sont confidentielles et en aucun cas communiquées à des tiers…
 			</p>
 		</div>
 	</Section>

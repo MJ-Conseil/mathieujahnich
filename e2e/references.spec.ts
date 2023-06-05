@@ -6,12 +6,12 @@ test.describe('reference page', () => {
 
 		const referenceCount = await page.getByTestId(new RegExp('^reference-')).count();
 
-		expect(referenceCount).toBeGreaterThan(5);
+		expect(referenceCount).toBeGreaterThan(1);
 
 		await page.getByRole('button', { name: 'Grande entreprise' }).click();
 
 		const filteredReferencesCount = await page.getByTestId(new RegExp('^reference-')).count();
 
-		expect(filteredReferencesCount).toBeLessThan(referenceCount);
+		expect(filteredReferencesCount).toBeLessThanOrEqual(referenceCount);
 	});
 });

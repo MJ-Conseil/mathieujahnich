@@ -47,7 +47,10 @@ export type MediaResource = {
 	imageUrl: string;
 	title: string;
 	slug: string;
-	associatedContent?: string;
+	associatedContent?: {
+		externalResourceName: string;
+		externalResourceURl: string;
+	};
 };
 
 export type Reference = {
@@ -108,6 +111,9 @@ export type Newsletter = {
 	excerpt: string;
 	title: string;
 	id: number;
-	previewUrl?: string;
+	sendInBlueData?: {
+		url: string;
+		urlLabel: string;
+	};
 	newsLetterNumber?: number;
 };

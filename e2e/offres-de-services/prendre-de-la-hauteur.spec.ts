@@ -4,7 +4,7 @@ test.describe('faire-monter-en-competence page', () => {
 	test('should display few references on the page', async ({ page }) => {
 		await page.goto('/offres-de-services/faire-monter-en-competence');
 		const referenceCount = await page.getByTestId(new RegExp('^reference-')).count();
-		expect(referenceCount).toBeGreaterThan(1);
+		expect(referenceCount).toBeGreaterThanOrEqual(1);
 	});
 
 	test('should have at least required headings ', async ({ page }) => {

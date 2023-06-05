@@ -164,6 +164,10 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+	.html-wrapper p {
+		padding: 0;
+	}
 }
 
 /* Misc */

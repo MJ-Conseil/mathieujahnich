@@ -26,14 +26,18 @@
 					Offre de services:
 					<ul class="gap-3 flex flex-col pl-8 mt-2">
 						<li>
-							<a class="mj-link--alt" href="/offres-de-services/faire-monter-en-competence"
-								>Prendre de la hauteur</a
+							<a class="mj-link--alt visited:underline" href={ROUTES['Faire monter en compétences']}
+								>Faire monter en compétences</a
 							>
 						</li>
 						<li>
-							<a class="mj-link--alt visited:underline" href="/toto">Trouver le juste équilibre</a>
+							<a class="mj-link--alt visited:underline" href={ROUTES["Trouver le juste équilibre'"]}
+								>Trouver le juste équilibre'</a
+							>
 						</li>
-						<li><a class="mj-link--alt visited:underline" href="/tutu">Donner de l'élan</a></li>
+						<li>
+							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
+						</li>
 					</ul>
 				</li>
 				<li>
@@ -146,8 +150,7 @@
 						class="text-sand font-bold decoration-dotted"
 					>
 						Anne Faubry
-					</a>
-					,
+					</a>,
 					<a class="text-sand font-bold decoration-dotted" href="https://www.fairness.coop"
 						>Fairness Scop</a
 					>,
