@@ -47,7 +47,7 @@
 				class="flex items-center"
 				aria-haspopup="true"
 				aria-expanded={activatedMenu}
-				aria-controls="faire-monter-en-competence-menu"
+				aria-controls={activatedMenu ? 'faire-monter-en-competence-menu' : undefined}
 				on:click={() => handleClickMenuButton()}
 				bind:this={button}
 			>

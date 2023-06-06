@@ -18,7 +18,7 @@ export const ROUTES: Record<string, string> = {
 export const CONTACT_LINKS: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
 	email: 'conseil@mathieu-jahnich.fr',
-	phone: '+33 6 74 88 92 73',
+	phone: '+33674889273',
 	address: '31 rue A. Barbier 77300 Fontainebleau',
 	website: 'https://mathieu-jahnich.fr/'
 };
