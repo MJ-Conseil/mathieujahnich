@@ -4,6 +4,13 @@ import type { MediaResource } from 'src/definitions';
 export const transformWordpressMediaResourceToMediaResource = (resource: any): MediaResource => {
 	const embededMedias = getEmbeddedMedia(resource);
 
+	const associatedContent = resource.acf?.intitule_du_lien
+		? {
+				externalResourceName: resource.acf?.intitule_du_lien,
+				externalResourceURl: resource.acf.url_ressource_media
+		  }
+		: undefined;
+
 	return {
 		id: resource.id,
 		content: resource.content.rendered,
@@ -12,6 +19,6 @@ export const transformWordpressMediaResourceToMediaResource = (resource: any): M
 		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : '',
 		title: resource.title.rendered,
 		slug: resource.slug,
-		associatedContent: resource?.acf?.associated_content
+		associatedContent
 	};
 };

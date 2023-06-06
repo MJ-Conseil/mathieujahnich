@@ -20,7 +20,7 @@
 					<span aria-hidden="true">></span>
 				</li>
 				<li class="pl-2">
-					<a class="hover:underline" href={ROUTES['Espace Presse']}>Espace Presse</a>
+					<a class="hover:underline" href={ROUTES['Espace presse']}>Espace presse</a>
 					<span aria-hidden="true">></span>
 				</li>
 				<li class="pl-2">

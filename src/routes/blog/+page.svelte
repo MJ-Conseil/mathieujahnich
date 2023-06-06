@@ -130,10 +130,10 @@
 				plus responsables
 			</h1>
 			<Headline>
-				Depuis 2005, je partage mes analyses, des témoignages et des ressources sur un blog pour
-				aider les actrices et les acteurs de la filière marketing et communication à mieux saisir
-				les enjeux de soutenabilité et à s’engager vers des pratiques plus responsables. <br /> Ces contenus
-				étaient précédemment publiés sur le site Sircome.fr.
+				Depuis 2005, Mathieu Jahnich partage ses analyses, des témoignages, des ressources et des
+				actualités sur un blog pour aider les actrices et les acteurs de la filière marketing et
+				communication à mieux saisir les enjeux de soutenabilité et à s’engager vers des pratiques
+				plus responsables.
 			</Headline>
 		</header>
 

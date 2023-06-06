@@ -18,9 +18,11 @@
 >
 	<div class="relative h-1/2">
 		{#if pictureURL}
-			<div class="h-full w-full ">
+			<div class="h-full w-full flex items-center justify-center ">
 				<img
-					class="h-full w-full rounded-t-xl"
+					class:rounded-t-xl={imageCover}
+					class:h-full={imageCover}
+					class:w-full={imageCover}
 					class:object-cover={imageCover}
 					class:object-contain={!imageCover}
 					src={pictureURL}
@@ -43,18 +45,18 @@
 			<p class="text-blue-dark text-sm">
 				{createdDate}
 			</p>
-			<h3 class="text-blue-dark mt-2 text-xl mb-0  font-bold">
+			<h3 class="text-blue-dark mt-2 text-xl mb-0  pb-4 font-bold">
 				{title}
 			</h3>
 
 			{#if excerpt}
-				<div class="html-wrapper text-blue-dark p-4 text-md">
+				<div class="text-blue-dark text-md">
 					{@html excerpt}
 				</div>
 			{/if}
 		</div>
 
-		<div class="pb-8 flex items-end justify-end">
+		<div class="pt-8 flex items-end justify-end">
 			<slot>
 				{#if href}
 					<ArrowLink {href}>Lire l'article</ArrowLink>

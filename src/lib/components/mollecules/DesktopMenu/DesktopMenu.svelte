@@ -3,6 +3,7 @@
 	import { ROUTES } from '$lib/constants';
 
 	import { clickOutside } from '$lib/directives/clickoutside';
+	import DesktopMenuItem from '../DesktopMenuItem/DesktopMenuItem.svelte';
 
 	export let activeRoute: string | null = null;
 
@@ -33,17 +34,9 @@
 
 <div class="p-2">
 	<ul class="flex justify-end gap-8 ">
-		<li class="text-xl">
-			<a
-				class:text-white={activeRoute !== ROUTES.Accueil}
-				class:underline={activeRoute == ROUTES.Accueil}
-				class:text-sand={activeRoute == ROUTES.Accueil}
-				aria-current={activeRoute === ROUTES.Accueil ? 'page' : null}
-				title="Vers la page d'accueil"
-				class="hover:underline py-3  underline-offset-[8px] decoration-sand "
-				href={ROUTES.Accueil}>Accueil</a
-			>
-		</li>
+		<DesktopMenuItem isActive={activeRoute === ROUTES['Accueil']} href={ROUTES['Accueil']}
+			>Accueil
+		</DesktopMenuItem>
 
 		<li
 			class:underline={activeRoute ? activeRoute.match(regex) : null}
@@ -106,38 +99,14 @@
 			{/if}
 		</li>
 
-		<li class="text-xl">
-			<a
-				class:text-white={activeRoute !== ROUTES['Espace Presse']}
-				class:underline={activeRoute == ROUTES['Espace Presse']}
-				class:text-sand={activeRoute == ROUTES['Espace Presse']}
-				class="text-white py-5 hover:underline underline-offset-[8px] decoration-sand "
-				href={ROUTES['Espace Presse']}
-				aria-current={activeRoute === ROUTES['Espace Presse'] ? 'page' : null}>Espace Presse</a
-			>
-		</li>
-
-		<li class="text-xl">
-			<a
-				class:text-white={activeRoute !== ROUTES.Références}
-				class:underline={activeRoute == ROUTES.Références}
-				class:text-sand={activeRoute == ROUTES.Références}
-				class="text-white hover:underline underline-offset-[8px] decoration-sand "
-				href={ROUTES.Références}
-				aria-current={activeRoute === ROUTES.Références ? 'page' : null}>Références</a
-			>
-		</li>
-
-		<li class="text-xl">
-			<a
-				class:text-white={activeRoute !== ROUTES.Blog}
-				class:underline={activeRoute == ROUTES.Blog}
-				class:text-sand={activeRoute == ROUTES.Blog}
-				class="text-white hover:underline underline-offset-[8px] decoration-sand "
-				href={ROUTES.Blog}
-				aria-current={activeRoute === ROUTES.Blog ? 'page' : null}>Blog</a
-			>
-		</li>
+		<DesktopMenuItem
+			isActive={activeRoute === ROUTES['Espace presse']}
+			href={ROUTES['Espace presse']}
+			>Espace presse
+		</DesktopMenuItem>
+		<DesktopMenuItem isActive={activeRoute === ROUTES.Blog} href={ROUTES.Blog}
+			>Blog
+		</DesktopMenuItem>
 	</ul>
 </div>
 

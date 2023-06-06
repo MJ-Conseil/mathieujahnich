@@ -23,8 +23,8 @@
 			<h1 class="mj-h1--alt">Newsletter</h1>
 			<Headline>
 				Nous vous proposons une sélection de contenus originaux pas plus d’une fois par mois,
-				reliant les enjeux de soutenabilité aux pratiques marketing et communication. Mon objectif
-				est de nourrir votre réflexion et d’éclairer votre champ d’actions. Mon ambition est de
+				reliant les enjeux de soutenabilité aux pratiques marketing et communication. Notre objectif
+				est de nourrir votre réflexion et d’éclairer votre champ d’actions. Notre ambition est de
 				contribuer à (ré)concilier communication et transition. Au plaisir de lire vos commentaires.
 			</Headline>
 		</header>
@@ -33,9 +33,9 @@
 
 <main id="main-content">
 	<Section>
-		<h2>Inscription à la newsletter de Mathieu Jahnich</h2>
+		<h2>Inscription à la newsletter de MJ Conseil</h2>
 		<p>
-			Inscrivez-vous à ma newsletter afin de retrouver une sélection mensuelle de contenus
+			Inscrivez-vous à notre newsletter afin de retrouver une sélection mensuelle de contenus
 			originaux, reliant les enjeux de soutenabilité aux pratiques marketing et communication.
 		</p>
 
@@ -76,8 +76,8 @@
 				type="checkbox"
 			/>
 			<label for="cgu"
-				>J'accepte de recevoir des e-mails de Mathieu Jahnich et confirme avoir pris connaissance de
-				la politique de confidentialité et des <a href="/informations-legales">mentions légales.</a
+				>J'accepte de recevoir des e-mails de MJ Conseil et confirme avoir pris connaissance de la
+				politique de confidentialité et des <a href="/informations-legales">mentions légales.</a
 				></label
 			>
 
@@ -103,13 +103,14 @@
 					}).format(newsletter.date)}
 					title={newsletter.title}
 					pictureURL={newsletter.imageUrl}
-					imageCover={false}
 					tagName={newsletter.newsLetterNumber ? `n° ${newsletter.newsLetterNumber}` : ''}
 					excerpt={newsletter.excerpt}
 				>
-					<ArrowLink href={newsletter.previewUrl ? newsletter.previewUrl : ''}
-						>Lire la suite</ArrowLink
-					>
+					{#if newsletter.sendInBlueData}
+						<ArrowLink href={newsletter.sendInBlueData.url}
+							>{newsletter.sendInBlueData.urlLabel}</ArrowLink
+						>
+					{/if}
 				</PostCard>
 			{/each}
 		</div>

@@ -12,6 +12,7 @@
 
 	import type { PageData } from './$types';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
+	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 
 	export let data: PageData;
 
@@ -54,21 +55,20 @@
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - Espace Presse</title>
+	<title>{SITE_WEB_NAME} - Espace presse</title>
 </svelte:head>
 
 <div class="py-8 bg-blue-dark ">
 	<Container>
 		<header>
 			<h1 class="mj-h1--alt">
-				<span class="text-sand text-4xl block mb-3">Vers une communication et un marketing</span>
-				Plus responsables
+				<span class="text-sand text-4xl block mb-3">Radio, presse, télévision, web…</span>
+				Espace Presse
 			</h1>
 			<Headline>
-				Depuis 2005, je partage mes analyses, des témoignages et des ressources sur un blog pour
-				aider les actrices et les acteurs de la filière marketing et communication à mieux saisir
-				les enjeux de soutenabilité et à s’engager vers des pratiques plus responsables. <br /> Ces contenus
-				étaient précédemment publiés sur le site Sircome.fr.
+				Mathieu Jahnich intervient régulièrement dans les médias généralistes ou spécialisés pour
+				décrypter l’impact de la transition écologique sur les fonctions marketing et communication
+				des entreprises.
 			</Headline>
 		</header>
 	</Container>
@@ -128,12 +128,19 @@
 								year: 'numeric'
 							}).format(mediaResource.date)}
 							title={mediaResource.title}
+							imageCover={false}
 							pictureURL={mediaResource.imageUrl}
 							excerpt={mediaResource.content}
 							href={mediaResource.associatedContent
 								? `/espace-presse/${mediaResource.slug}`
 								: undefined}
-						/>
+						>
+							{#if mediaResource.associatedContent}
+								<ArrowLink href={mediaResource.associatedContent?.externalResourceURl}
+									>{mediaResource.associatedContent?.externalResourceName}</ArrowLink
+								>
+							{/if}
+						</PostCard>
 					{/each}
 				</div>
 

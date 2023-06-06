@@ -55,7 +55,7 @@
 		aria-hidden="true"
 		class="md:block md:absolute top-4 right-4 md:w-[200px] justify-center hidden opacity-80 text-white "
 	>
-		<Icon width="120%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
+		<Icon width="100%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
 	</div>
 </header>
 
@@ -64,16 +64,16 @@
 		<h2>Signes particuliers</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
 			<ParticularSign
-				title="A l’interface de la RSE et de la Com"
-				content="Réconcilier les deux en co-construction Vu l’évolution grâce à nos +60 ans d’expérience"
+				title="Notre trio"
+				content="Nous collaborons toutes les trois depuis de nombreuses années. Nous mettons nos expertises complémentaires en RSE et en communication, notre complicité et notre bienveillance au service de la transformation de votre organisation."
 			/>
 			<ParticularSign
-				title="De la recherche à l’action"
-				content="Parce que nous nous positionnons en complément des agences de com et des  cabinets conseil nous vous proposons une vision qui va de la recherche à l’action"
+				title="Notre engagement"
+				content="Nous concevons notre activité de conseil comme un levier pour mettre la filière marketing et communication au service de la transformation des modèles économiques et de la transition écologique et solidaire. Nous cherchons à faire « bouger les lignes ». "
 			/>
 			<ParticularSign
-				title="Écoute & qualité de services"
-				content="Parce que tout projet commence par l’écoute de nos clients (disponibilité), de vos inquiétudes, de vos freins nous vous aidons à identifier vos besoins réels et challenger vos marges de projet."
+				title="Notre écoute"
+				content="Parce que tout projet commence par l’écoute de vos enjeux, de vos inquiétudes et de vos freins, nous vous aidons à identifier vos besoins réels et vos marges de progrès. Notre rôle est à la fois de vous soutenir et de vous « challenger ». "
 			/>
 		</div>
 		<div class="lg:container h-full" />
@@ -84,9 +84,7 @@
 		<div class="md:gap-x-20 md:gap-y-10 grid gap-y-12 md:grid-cols-3 pt-8">
 			<Offer
 				title="Donner de l’élan"
-				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
-fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business
-units, partenaires…), vers des pratiques plus responsables."
+				offer="Dynamiser les stratégies RSE et la communication des entreprises à travers l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude de l’environnement concurrentiel, le recueil des attentes des parties-prenantes."
 				link={ROUTES["Donner de l'élan"]}
 			>
 				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
@@ -99,9 +97,7 @@ units, partenaires…), vers des pratiques plus responsables."
 
 			<Offer
 				title="Trouver le juste équilibre"
-				offer="Analyser les arguments écologiques des supports marketing et communication pour vérifier
-leur cohérence avec la stratégie RSE et avec les règles déontologiques, mettre en place
-des filets de sécurité pour limiter les accusations de greenwashing."
+				offer="Analyser les allégations environnementales et sociales des supports marketing et communication en regard du cadre déontologique et réglementaire et mettre en place des filets de sécurité pour limiter les critiques (greenwashing, stéréotypes…)."
 				link={ROUTES['Trouver le juste équilibre']}
 			>
 				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
@@ -113,9 +109,7 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 			</Offer>
 			<Offer
 				title="Faire monter en compétences"
-				offer="Étudier les principaux enjeux environnementaux et sociaux et l’environnement concurrentiel
-	de l’organisation, recueillir et analyser les attentes des parties-prenantes internes et
-	externes pour enrichir les stratégies RSE et communication."
+				offer="Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les fonctions marketing, pub, com et toutes leurs interfaces (autres directions, business units, partenaires…), vers des pratiques plus responsables."
 				link={ROUTES['Faire monter en compétences']}
 			>
 				<div aria-hidden="true" class="relative text-blue-dark h-[200px]">
@@ -132,8 +126,7 @@ des filets de sécurité pour limiter les accusations de greenwashing."
 		class="clipped--top pt-[6rem] md:pt-[8rem] lg:pt-64 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray"
 	>
 		<Container>
-			<h2 class="mb-4">A la une du blog</h2>
-
+			<h2 class="mb-4">À la une du blog</h2>
 			<p class="font-ptsans text-xl md:my-12 my-8 ">
 				Depuis 2005, nous interrogeons l’alignement de la communication et du marketing avec les
 				enjeux de transition écologique. Retrouvez ici nos analyses, des témoignages et des

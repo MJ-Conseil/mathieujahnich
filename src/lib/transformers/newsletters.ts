@@ -12,6 +12,9 @@ export const transformRawNewsletterToNewsletter = (rawNewsletter: any): Newslett
 		date: new Date(rawNewsletter.date),
 		imageUrl: media && media.length > 0 ? media[0].source_url : '',
 		newsLetterNumber: newsLetterNumber ? parseInt(newsLetterNumber) : undefined,
-		previewUrl: rawNewsletter.acf?.newsletter_sendinblue
+		sendInBlueData: {
+			url: rawNewsletter.acf?.newsletter_sendinblue_url,
+			urlLabel: rawNewsletter.acf?.intitule_du_lien_sendinblue
+		}
 	};
 };
