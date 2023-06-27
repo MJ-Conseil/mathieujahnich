@@ -100,6 +100,16 @@
 		</li>
 
 		<DesktopMenuItem
+			isActive={activeRoute === ROUTES['Qui sommes nous ?']}
+			href={ROUTES['Qui sommes nous ?']}
+			>Qui sommes nous ?
+		</DesktopMenuItem>
+
+		<DesktopMenuItem isActive={activeRoute === ROUTES['Références']} href={ROUTES['Références']}
+			>Références</DesktopMenuItem
+		>
+
+		<DesktopMenuItem
 			isActive={activeRoute === ROUTES['Espace presse']}
 			href={ROUTES['Espace presse']}
 			>Espace presse

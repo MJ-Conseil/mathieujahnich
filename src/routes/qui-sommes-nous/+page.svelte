@@ -6,7 +6,12 @@
 	import aureliePicture from '$lib/assets/pictures/MJConseil-aurelie-wastin.jpg';
 	import mathieuPicture from '$lib/assets/pictures/MJConseil-mathieu-jahnich.jpg';
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
+	import { SITE_WEB_NAME } from '$lib/constants';
 </script>
+
+<svelte:head>
+	<title>{SITE_WEB_NAME} - Qui sommes nous ?</title>
+</svelte:head>
 
 <header class="py-8 bg-blue-dark ">
 	<Container>

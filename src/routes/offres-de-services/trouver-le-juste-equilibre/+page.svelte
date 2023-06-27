@@ -200,7 +200,7 @@
 					<p class="text-sand text-center text-2xl">Faire Monter en compétences</p>
 					<a
 						href={ROUTES['Faire Monter en compétences']}
-						aria-label="Voir l'offre Faire Monter en compétences"
+						aria-label="Voir l'offre Faire monter en compétences"
 						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 					>
 						Voir l'offre
