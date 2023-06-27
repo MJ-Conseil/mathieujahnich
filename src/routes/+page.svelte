@@ -114,32 +114,4 @@
 			</div>
 		</Container>
 	</section>
-
-	<Section>
-		<h2>Formez-vous</h2>
-
-		<div class="md:flex items-center flex-row  gap-8 border-[3px] p-5 border-gray rounded-lg">
-			<div class="hidden md:block">
-				<img src={logoMasterClass} alt="formation Master Class de MJ Conseil" />
-				<img class="h-[60px] w-auto" src={logoQualiopi} alt="certification qualiopi" />
-			</div>
-
-			<div>
-				<h3>Des formations en communication responsable certifiées Qualiopi</h3>
-				<p>
-					Formations à la communication responsable conçues et animées avec Thierry Libaert. Des
-					séances courtes, 100% à distance, qui donnent l’envie et les moyens d’agir. Satisfaction
-					globale des participant·es : 8,4/10.
-				</p>
-
-				<a
-					href={'https://master-class-communication-responsable.fr/'}
-					class="bg-sand px-12 p-2 flex items-center gap-2  md:w-[324px] mt-5 hover:bg-sand-dark font-bold  rounded  text-blue-dark"
-				>
-					Découvrir les formations
-					<Icon width="30px" height="auto" name="external" />
-				</a>
-			</div>
-		</div>
-	</Section>
 </main>
