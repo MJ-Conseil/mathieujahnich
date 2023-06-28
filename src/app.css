@@ -117,7 +117,7 @@
 	/* Blog  */
 
 	.blog-wrapper p {
-		@apply text-xl my-3 text-justify;
+		@apply text-xl my-3;
 	}
 
 	.blog-wrapper ul,

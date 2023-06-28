@@ -13,12 +13,13 @@ export const ROUTES: Record<string, string> = {
 	'Faire monter en compétences': '/offres-de-services/faire-monter-en-competence',
 	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
 	"Donner de l'élan": '/offres-de-services/donner-de-l-elan',
-	Newsletter: '/newsletter'
+	Newsletter: '/newsletter',
+	'Qui sommes nous ?': '/qui-sommes-nous'
 };
 export const CONTACT_LINKS: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',
 	email: 'conseil@mathieu-jahnich.fr',
-	phone: '+33674889273',
+	phone: '+33 6 74 88 92 73',
 	address: '31 rue A. Barbier 77300 Fontainebleau',
 	website: 'https://mathieu-jahnich.fr/'
 };

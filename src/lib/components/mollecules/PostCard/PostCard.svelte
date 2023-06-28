@@ -46,7 +46,7 @@
 				{createdDate}
 			</p>
 			<h3 class="text-blue-dark mt-2 text-xl mb-0  pb-4 font-bold">
-				{title}
+				{@html title}
 			</h3>
 
 			{#if excerpt}

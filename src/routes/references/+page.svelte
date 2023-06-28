@@ -12,8 +12,6 @@
 
 	export let data: PageData;
 
-	$: console.log(data.references);
-
 	let filteredReferences: Reference[] = data.references;
 	let selectedFilterIds: number[] = [];
 

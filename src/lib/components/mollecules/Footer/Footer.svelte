@@ -23,20 +23,20 @@
 					<a class="mj-link--alt" href={ROUTES.Accueil}>Accueil</a>
 				</li>
 				<li class="text-white">
-					Offre de services:
+					Offre de services :
 					<ul class="gap-3 flex flex-col pl-8 mt-2">
+						<li>
+							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
+						</li>
+						<li>
+							<a class="mj-link--alt visited:underline" href={ROUTES['Trouver le juste équilibre']}
+								>Trouver le juste équilibre</a
+							>
+						</li>
 						<li>
 							<a class="mj-link--alt visited:underline" href={ROUTES['Faire monter en compétences']}
 								>Faire monter en compétences</a
 							>
-						</li>
-						<li>
-							<a class="mj-link--alt visited:underline" href={ROUTES["Trouver le juste équilibre'"]}
-								>Trouver le juste équilibre'</a
-							>
-						</li>
-						<li>
-							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
 						</li>
 					</ul>
 				</li>
@@ -71,7 +71,7 @@
 						<Icon class="pr-1 text-sand" width="18px" height="auto" name="phone" />
 					</span>
 
-					<a class="text-white" href={`tel:${CONTACT_LINKS.phone}`}>
+					<a class="text-white" href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}>
 						<span class="sr-only">téléphone :</span>
 						{CONTACT_LINKS.phone}
 					</a>
