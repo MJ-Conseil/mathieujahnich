@@ -186,6 +186,7 @@ Usage:
 */
 
 .clipped--bottom {
+	margin-top: -1px;
 	clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
 }
 
@@ -197,7 +198,7 @@ Usage:
 
 @media (min-width: 1024px) {
 	.clipped--bottom {
-		clip-path: polygon(0 0, 100% 0, 100% 73.5%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 77%, 0% 100%);
 	}
 }
 
