@@ -95,7 +95,7 @@
 			aria-label="fermer le menu de navigation"
 			class="text-blue-dark"
 		>
-			<Icon name="close" />
+			<Icon width="20px" height="20px" name="close" />
 		</button>
 	</div>
 	<nav class="relative w-full">

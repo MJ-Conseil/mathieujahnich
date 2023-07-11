@@ -59,7 +59,7 @@
 		<div class="pt-8 flex items-end justify-end">
 			<slot>
 				{#if href}
-					<ArrowLink {href}>Lire l'article</ArrowLink>
+					<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>
 				{/if}
 			</slot>
 		</div>
