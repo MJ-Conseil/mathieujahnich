@@ -6,9 +6,9 @@
 	import type { PageData } from './$types';
 	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
+	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 
 	export let data: PageData;
 </script>
@@ -17,32 +17,31 @@
 	<title>{SITE_WEB_NAME} - Offres de services : Prendre de la hauteur</title>
 </svelte:head>
 
-<div class="w-full px-4 py-8 pb-14 md:pb-6 relative bg-blue-dark">
-	<Container>
-		<div class="lg:px-8 flex justify-between align-start">
-			<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-			<header role="banner" class="flex-1">
-				<p class="text-sand font-bold lg:text-2xl mb-2">Notre offre</p>
-				<h1 class="mj-h1--alt font-bold text text-4xl lg:text-6xl mb-4 lg:mb-8">
-					{`Trouver le juste équilibre`}
-				</h1>
-				<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
-					<i>Le « crash-test » de vos campagnes RSE</i>
-				</p>
+<PageHeader>
+	<div class="flex items-start space-between">
+		<div>
+			<p class="text-sand font-bold text-2xl mb-2">Notre offre</p>
+			<h1 class="mj-h1--alt">
+				{`Trouver le juste équilibre`}
+			</h1>
 
-				<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">
-					Analyser les allégations environnementales et sociales des supports marketing et
-					communication pour vérifier leur cohérence avec la stratégie RSE et avec les règles
-					déontologiques, mettre en place des filets de sécurité pour limiter les critiques
-					(greenwashing et tous les autres “washing”, stéréotypes…).
-				</p>
-			</header>
-			<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
-				<Icon width="279px" height="450px" name="stonesYellow" fill="#ffffff" />
-			</div>
+			<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
+				<i>Le « crash-test » de vos campagnes RSE</i>
+			</p>
+
+			<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">
+				Analyser les allégations environnementales et sociales des supports marketing et
+				communication pour vérifier leur cohérence avec la stratégie RSE et avec les règles
+				déontologiques, mettre en place des filets de sécurité pour limiter les critiques
+				(greenwashing et tous les autres “washing”, stéréotypes…).
+			</p>
 		</div>
-	</Container>
-</div>
+
+		<div aria-hidden="true" class="hidden lg:block text-white mt-[-100px] mb-[20px]">
+			<Icon width="279px" height="450px" name="stonesYellow" fill="#ffffff" />
+		</div>
+	</div>
+</PageHeader>
 
 <main class="md:p-0 md:0" id="main-content">
 	<Section>

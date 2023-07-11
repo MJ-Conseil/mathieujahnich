@@ -9,6 +9,7 @@
 	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
+	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 
 	export let data: PageData;
 
@@ -47,17 +48,15 @@
 	<title>{SITE_WEB_NAME} - Références</title>
 </svelte:head>
 
-<header class="py-8 bg-blue-dark ">
-	<Container>
-		<h1 class="mj-h1--alt">Références</h1>
-		<Headline>
-			Depuis plus de vingt ans, nous analysons les stratégies marketing et communication des
-			entreprises dans les domaines de l’environnement et de la RSE. Découvrez comment nous les
-			accompagnons vers des pratiques plus responsables, avec la posture « de la recherche à
-			l’action » qui nous caractérise.
-		</Headline>
-	</Container>
-</header>
+<PageHeader>
+	<h1 class="mj-h1--alt">Références</h1>
+	<Headline>
+		Depuis plus de vingt ans, nous analysons les stratégies marketing et communication des
+		entreprises dans les domaines de l’environnement et de la RSE. Découvrez comment nous les
+		accompagnons vers des pratiques plus responsables, avec la posture « de la recherche à l’action
+		» qui nous caractérise.
+	</Headline>
+</PageHeader>
 
 <main class="mt-8 mb-12" id="main-content">
 	{#if data.highlightedReferences.length > 0}

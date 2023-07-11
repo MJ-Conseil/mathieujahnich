@@ -8,7 +8,7 @@
 </script>
 
 <Section {alt}>
-	<h2 class="mb-8">Nos offres de services</h2>
+	<h2>Nos offres de services</h2>
 	<div class="md:gap-x-20 md:gap-y-10 grid gap-y-12 md:grid-cols-3 pt-8">
 		<Offer
 			offerName="Donner de l’élan"

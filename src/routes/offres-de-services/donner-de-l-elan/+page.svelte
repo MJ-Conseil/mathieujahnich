@@ -6,9 +6,9 @@
 	import type { PageData } from './$types';
 	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
+	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 
 	export let data: PageData;
 </script>
@@ -17,32 +17,31 @@
 	<title>{SITE_WEB_NAME} - Offres de services : Prendre de la hauteur</title>
 </svelte:head>
 
-<div class="w-full px-4 py-8 pb-14 md:pb-6 relative bg-blue-dark">
-	<Container>
-		<div class="lg:px-8 flex justify-between align-start">
-			<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-			<header role="banner" class="flex-1">
-				<p class="text-sand font-bold text-2xl mb-2">Notre offre</p>
-				<h1 class="mj-h1--alt font-bold text text-4xl lg:text-6xl mb-4 lg:mb-8">
-					{`Donner de l’élan`}
-				</h1>
-				<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
-					<i>60 années d’expérience cumulées</i>
-				</p>
+<PageHeader>
+	<div class="flex items-start space-between">
+		<div>
+			<p class="text-sand font-bold text-2xl mb-2">Notre offre</p>
+			<h1 class="mj-h1--alt">
+				{`Donner de l’élan`}
+			</h1>
 
-				<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">
-					Enrichir et (re)dynamiser les stratégies RSE et la communication des entreprises à travers
-					l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude
-					de l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes
-					des parties-prenantes internes et externes.
-				</p>
-			</header>
-			<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
-				<Icon width="240px" height="450px" name="planeYellow" fill="#ffffff" />
-			</div>
+			<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
+				<i>60 années d’expérience cumulées</i>
+			</p>
+
+			<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">
+				Enrichir et (re)dynamiser les stratégies RSE et la communication des entreprises à travers
+				l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude de
+				l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes des
+				parties-prenantes internes et externes.
+			</p>
 		</div>
-	</Container>
-</div>
+
+		<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
+			<Icon width="240px" height="450px" name="planeYellow" fill="#ffffff" />
+		</div>
+	</div>
+</PageHeader>
 
 <main id="main-content" class="md:p-0 md:0">
 	<Section>
