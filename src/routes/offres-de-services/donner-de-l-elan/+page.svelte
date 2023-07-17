@@ -45,8 +45,8 @@
 
 <main id="main-content" class="md:p-0 md:0">
 	<Section>
-		<div class="h-full md:px-8">
-			<h2 class="mb-4 text-3xl lg:text-4xl">Votre besoin</h2>
+		<div class="h-full">
+			<h2>Votre besoin</h2>
 			<p class="lg:text-[1.4rem] lg:leading-9 font-ptsans">
 				Les enjeux environnementaux et sociaux sont complexes, les attentes des parties prenantes
 				sont plurielles, les traductions dans le positionnement marketing, dans l’offre et dans les
@@ -89,14 +89,14 @@
 	</Section>
 
 	<Section alt>
-		<div class="md:px-8 relative">
+		<div class="relative pt-1">
 			<div
 				aria-hidden="true"
-				class="absolute h-full w-11/12 left-0 flex justify-center items-center hidden lg:flex"
+				class="md:absolute hidden h-full w-11/12 left-0 justify-center items-center lg:flex"
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2 class="mb-10 text-3xl lg:text-4xl">Nos méthodes et les livrables</h2>
+			<h2>Nos méthodes et les livrables</h2>
 			<Method title="Diagnostic">
 				<p class="mb-2">
 					Recueillir et analyser les
@@ -179,7 +179,7 @@
 
 	<Section alt={data.references.length > 0}>
 		<div
-			class="bg-blue-dark font-ptsans rounded-xl text-white flex md:flex-row flex-col gap-8  md:gap-32 p-8"
+			class="bg-blue-dark font-ptsans rounded-xl text-white flex md:flex-row flex-col gap-8  md:gap-32 md:py-8 px-8"
 		>
 			<div class="md:w-1/3">
 				<h3 class="text-white">Nos autres offres</h3>
