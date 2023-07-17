@@ -1,15 +1,13 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import ParticularSign from '$lib/components/mollecules/ParticularSign/ParticularSign.svelte';
-	import Offer from '$lib/components/mollecules/Offer/Offer.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import type { PageData } from './$types';
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME, SIZE } from '$lib/constants';
-	import logoQualiopi from '$lib/assets/pictures/LogoQualiopi.jpg';
-	import logoMasterClass from '$lib/assets/pictures/Logo-MASTERCLASS-carre-200x200.jpg';
+
 	import groupPicture from '$lib/assets/images/mj-group-picture.png';
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
@@ -22,7 +20,10 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-<header role="banner" class=" bg-blue-dark clipped--bottom md:pt-4 lg:pb-[15rem] pb-32  relative">
+<header
+	role="banner"
+	class=" bg-blue-dark clipped--bottom md:pt-4 lg:pb-[15rem] pb-32  relative overflow-hidden"
+>
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
 			<p class="text-sand text-xl font-bold">MJ Conseil</p>
@@ -54,7 +55,7 @@
 
 	<div
 		aria-hidden="true"
-		class="md:block md:absolute top-4 right-4 md:w-[200px] justify-center hidden opacity-80 text-white "
+		class="md:block md:absolute top-4 right-[-20px] md:w-[250px] justify-center hidden opacity-80 text-white "
 	>
 		<Icon width="100%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
 	</div>

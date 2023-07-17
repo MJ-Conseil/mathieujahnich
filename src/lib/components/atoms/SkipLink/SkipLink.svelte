@@ -1,14 +1,14 @@
 <script lang="ts">
 </script>
 
-<a id="skip-nav" class="skip bg-gray text-blue-dark text-xl underline" href="#main-content">
+<a id="skip-nav" class="skip bg-gray w-full  text-blue-dark text-xl underline" href="#main-content">
 	Aller au contenu principal
 </a>
 
 <style>
 	.skip {
 		position: relative;
-		display: block;
+		display: none;
 		top: 0;
 		width: 0px;
 		height: 0px;
@@ -17,5 +17,6 @@
 	.skip:focus {
 		width: 100%;
 		height: 50px;
+		display: block;
 	}
 </style>

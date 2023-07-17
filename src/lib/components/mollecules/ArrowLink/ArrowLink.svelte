@@ -5,11 +5,13 @@
 	export let href: string;
 	export let alt = false;
 	export let arrowSize: SIZE = SIZE.SMALL;
+	export let linkTitle = '';
 </script>
 
 <a
 	class:text-sand={alt}
 	class:text-indigo={!alt}
+	title={linkTitle}
 	class="text-indigo font-ptsans text-md font-bold flex items-center gap-2"
 	{href}
 >

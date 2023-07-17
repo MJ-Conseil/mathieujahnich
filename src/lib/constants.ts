@@ -7,14 +7,15 @@ export const SITE_WEB_NAME = 'MJ Conseil';
 
 export const ROUTES: Record<string, string> = {
 	Accueil: '/',
-	Références: '/references',
-	Blog: '/blog',
-	'Espace presse': '/espace-presse',
-	'Faire monter en compétences': '/offres-de-services/faire-monter-en-competence',
-	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
 	"Donner de l'élan": '/offres-de-services/donner-de-l-elan',
+	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
+	'Faire monter en compétences': '/offres-de-services/faire-monter-en-competence',
+	'Qui sommes nous ?': '/qui-sommes-nous',
+	Références: '/references',
+	'Espace presse': '/espace-presse',
+	Blog: '/blog',
 	Newsletter: '/newsletter',
-	'Qui sommes nous ?': '/qui-sommes-nous'
+
 };
 export const CONTACT_LINKS: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',

@@ -33,7 +33,7 @@
 </script>
 
 <div class="p-2">
-	<ul class="flex justify-end gap-8 ">
+	<ul class="flex justify-end  gap-12 ">
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Accueil']} href={ROUTES['Accueil']}
 			>Accueil
 		</DesktopMenuItem>
@@ -44,7 +44,7 @@
 			class="text-xl relative hover:underline underline-offset-[8px] decoration-sand"
 		>
 			<button
-				class="flex items-center"
+				class="flex items-center text-lg"
 				aria-haspopup="true"
 				aria-expanded={activatedMenu}
 				aria-controls={activatedMenu ? 'faire-monter-en-competence-menu' : undefined}
@@ -61,13 +61,13 @@
 				<ul
 					id="faire-monter-en-competence-menu"
 					data-testid="faire-monter-en-competence-menu"
-					class="bg-blue-xlight mt-2 min-w-[15rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
+					class="bg-blue-xlight mt-2 min-w-[18rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
 					on:keydown={(e) => handleKeyboardInterractions(e)}
 					use:clickOutside={{ callback: () => (activatedMenu = false) }}
 				>
 					<li>
 						<a
-							class="text-white py-3  hover:underline underline-offset-[8px] decoration-sand"
+							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand  text-lg"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES[`Donner de l'élan`]}
 							aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
@@ -77,7 +77,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white py-3  hover:underline underline-offset-[8px] decoration-sand"
+							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand  text-lg"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Trouver le juste équilibre']}
 							aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
@@ -87,7 +87,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white py-3 hover:underline underline-offset-[8px] decoration-sand"
+							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand  text-lg"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Faire monter en compétences']}
 							aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}
