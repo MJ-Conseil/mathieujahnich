@@ -9,6 +9,7 @@
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
+	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
 
 	export let data: PageData;
 </script>
@@ -178,42 +179,40 @@
 	{/if}
 
 	<Section alt={data.references.length > 0}>
-		<div
-			class="bg-blue-dark font-ptsans rounded-xl text-white flex md:flex-row flex-col gap-8  md:gap-32 md:py-8 px-8"
-		>
-			<div class="md:w-1/3">
-				<h3 class="text-white">Nos autres offres</h3>
+		<OtherOfferRow>
+			<div class="xl:w-1/3 md:w-2/3">
+				<h3 class="text-white mt-0">Nos autres offres</h3>
 				<p class=" text-white text-2xl">
-					Nous mettons la communication au service de la transition écologique.
+					J’aide les entreprises et les organisations à répondre aux attentes sociétales et à
+					relever les défis de la transition écologique et solidaire grâce à une communication plus
+					responsable.
 				</p>
 			</div>
 
-			<div class="flex md:flex-row justify-center flex-col gap-10">
-				<div class="flex items-center flex-col gap-5 ">
-					<Icon width="54%" height="auto" name="ladder" />
+			<div class="flex items-center flex-col gap-5 ">
+				<Icon width="54%" height="auto" name="ladder" />
 
-					<p class="text-sand text-center justify-center  text-2xl">Faire monter en compétences</p>
-					<a
-						href={ROUTES['Faire monter en compétences']}
-						aria-label="Voir l'offre Faire monter en compétences "
-						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
-					>
-						Voir l'offre
-					</a>
-				</div>
-				<div class="flex flex-col gap-5  items-center">
-					<Icon width="60%" height="auto" name="stones" />
-
-					<p class="text-sand text-center text-2xl">Trouver le juste équilibre</p>
-					<a
-						href={ROUTES['Trouver le juste équilibre']}
-						aria-label="Voir l'offre Trouver le juste équilibre"
-						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
-					>
-						Voir l'offre
-					</a>
-				</div>
+				<p class="text-sand text-center justify-center  text-2xl">Faire monter en compétences</p>
+				<a
+					href={ROUTES['Faire monter en compétences']}
+					aria-label="Voir l'offre Faire monter en compétences "
+					class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
+				>
+					Voir l'offre
+				</a>
 			</div>
-		</div>
+			<div class="flex flex-col gap-5  items-center">
+				<Icon width="60%" height="auto" name="stones" />
+
+				<p class="text-sand text-center text-2xl">Trouver le juste équilibre</p>
+				<a
+					href={ROUTES['Trouver le juste équilibre']}
+					aria-label="Voir l'offre Trouver le juste équilibre"
+					class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
+				>
+					Voir l'offre
+				</a>
+			</div>
+		</OtherOfferRow>
 	</Section>
 </main>

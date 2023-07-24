@@ -14,7 +14,7 @@
 			<Icon height="auto" width="130px" name="mjConseilFull" />
 		</a>
 
-		<a class="text-white xl:hidden md:hidden lg:block" title="Vers la page d'accueil" href="/">
+		<a class="text-white xl:hidden md:hidden lg:block" aria-label="Vers la page d'accueil" href="/">
 			<Icon height="auto" width="75px" name="mjConseilFull" />
 		</a>
 
@@ -23,7 +23,7 @@
 
 	<!-- Menu Mobile -->
 	<div class="flex lg:hidden justify-between w-full">
-		<a class="text-white" title="Vers la page d'accueil" href="/">
+		<a class="text-white" aria-label="Vers la page d'accueil" href="/">
 			<Icon height="35px" width="auto" name="mjConseilFull" />
 		</a>
 		<button on:click on:click={() => (isMenuOpen = true)} aria-label="ouvrir le menu de navigation">
