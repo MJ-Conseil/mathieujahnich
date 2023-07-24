@@ -1,10 +1,11 @@
 <script>
+	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { CONTACT_LINKS, ROUTES, SOCIAL_NETWORK_LINKS } from '$lib/constants';
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
-<footer role="contentinfo" class="bg-blue-dark  md:p-8 p-4">
+<footer role="contentinfo" class="bg-blue-dark  md:p-8 p-4 md:pt-12">
 	<div class="md:flex md:justify-around  justify-between">
 		<div class="hidden lg:block lg:w-1/5">
 			<p class="md:block font-ptsans text-blue-light hidden text-xl">
@@ -16,7 +17,7 @@
 		</div>
 
 		<nav aria-label="site-map">
-			<h3 class="mj-h3--alt my-2">MJ Conseil</h3>
+			<h3 class="mj-h4--alt">MJ Conseil</h3>
 
 			<ul class="flex flex-col gap-2">
 				<li>
@@ -24,7 +25,7 @@
 				</li>
 				<li class="text-white">
 					Offre de services :
-					<ul class="gap-3 flex flex-col pl-8 mt-2">
+					<ul class="gap-3  flex flex-col pl-8 mt-2 list-disc text-sand">
 						<li>
 							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
 						</li>
@@ -47,7 +48,7 @@
 		</nav>
 
 		<nav aria-labelledby="resources-links">
-			<h3 id="resources-links" class="mj-h3--alt my-2">Ressources</h3>
+			<h3 id="resources-links" class="mj-h4--alt">Ressources</h3>
 
 			<ul class="flex flex-col gap-2">
 				<li>
@@ -64,11 +65,11 @@
 		</nav>
 
 		<div>
-			<h3 class="mj-h3--alt my-2">Contact</h3>
-			<ul class="gap-1 flex flex-col">
+			<h3 class="mj-h3--alt">Contact</h3>
+			<ul class="gap-4 flex flex-col">
 				<li class="flex items-center text-white">
-					<span aria-hidden="true">
-						<Icon class="pr-1 text-sand" width="18px" height="auto" name="phone" />
+					<span aria-hidden="true" class="pr-3">
+						<Icon class="text-sand" width="18px" height="auto" name="phone" />
 					</span>
 
 					<a class="text-white" href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}>
@@ -77,8 +78,8 @@
 					</a>
 				</li>
 				<li class="flex items-center text-white">
-					<span aria-hidden="true">
-						<Icon class="pr-1 text-sand" width="18px" height="auto" name="letter" />
+					<span aria-hidden="true" class="pr-3">
+						<Icon class="text-sand" width="18px" height="auto" name="letter" />
 					</span>
 					<a class="text-white" href={`mailto:${CONTACT_LINKS.email}`}>
 						<span class="sr-only">email :</span>
@@ -88,13 +89,10 @@
 			</ul>
 
 			<div class="mt-5">
-				<a
-					href={ROUTES['Newsletter']}
-					class="bg-sand flex items-center gap-2 px-16 py-2 hover:bg-sand-dark font-bold  rounded  text-indigo"
-				>
-					<Icon width="24px" height="22px" name="letterFull" />
+				<ButtonLink href="/newsletter">
+					<Icon class="inline" width="24px" height="22px" name="letterFull" />
 					S'inscrire à la newsletter
-				</a>
+				</ButtonLink>
 			</div>
 
 			<ul class="mt-8 flex items-center gap-5">
@@ -105,7 +103,7 @@
 								name="linkedin"
 								width="30px"
 								height="auto"
-								class="text-sand  hover:text-sand-dark "
+								class="text-sand  c hover:text-sand-dark "
 							/></span
 						>
 						<span class="sr-only">Linkedin</span>
@@ -119,7 +117,7 @@
 								name="youtube"
 								width="auto"
 								height="25px"
-								class="text-sand hover:text-sand-dark"
+								class="text-sand rounded hover:text-sand-dark"
 							/></span
 						>
 						<span class="sr-only">Youtube</span>
@@ -143,6 +141,12 @@
 						>Informations légales</a
 					>
 				</li>
+				<li class="text-white hidden md:block">|</li>
+
+				<li class="text-sand">
+					<a class="text-sand font-bold decoration-dotted" href="/plan-de-site">Plan de site</a>
+				</li>
+
 				<li class="text-white hidden md:block">|</li>
 				<li class="text-white">
 					Conception et création : <a
