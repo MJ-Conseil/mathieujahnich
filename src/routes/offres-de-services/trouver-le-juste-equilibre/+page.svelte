@@ -9,6 +9,7 @@
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
+	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
 
 	export let data: PageData;
 </script>
@@ -82,7 +83,7 @@
 		<div class="md:px-8 relative">
 			<div
 				aria-hidden="true"
-				class="absolute h-full w-11/12 left-0 flex justify-center items-center hidden lg:flex"
+				class="absolute h-full w-11/12 left-0 md:flex justify-center items-center hidden lg:flex"
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
@@ -182,11 +183,9 @@
 	{/if}
 
 	<Section alt={data.references.length > 0}>
-		<div
-			class="bg-blue-dark font-ptsans rounded-xl text-white flex md:flex-row flex-col gap-8  md:gap-32 p-8"
-		>
+		<OtherOfferRow>
 			<div class="md:w-1/3">
-				<h3 class="text-white">Nos autres offres</h3>
+				<h3 class="text-white mt-0">Nos autres offres</h3>
 				<p class=" text-white text-2xl">
 					Nous mettons la communication au service de la transition écologique.
 				</p>
@@ -218,6 +217,6 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</OtherOfferRow>
 	</Section>
 </main>

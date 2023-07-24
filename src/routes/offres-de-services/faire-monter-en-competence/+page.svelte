@@ -9,6 +9,7 @@
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
+	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
 
 	export let data: PageData;
 </script>
@@ -21,23 +22,24 @@
 	<div class="flex items-start space-between">
 		<div>
 			<p class="text-sand font-bold text-2xl mb-2">Notre offre</p>
-			<h1 class="mj-h1--alt">
+			<h1 class="mj-h1--alt text-5xl break-word">
 				{`Faire monter en compétences`}
 			</h1>
 
 			<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
-				<i>Former pour transformer</i>
+				<i>60 années d’expérience cumulées</i>
 			</p>
 
 			<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">
-				Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
-				fonctions marketing, publicité, communication et toutes leurs interfaces (autres directions,
-				business units, partenaires…) vers des pratiques plus responsables.
+				Enrichir et (re)dynamiser les stratégies RSE et la communication des entreprises à travers
+				l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude de
+				l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes des
+				parties-prenantes internes et externes.
 			</p>
 		</div>
 
-		<div aria-hidden="true" class="hidden lg:block text-white mt-[-100px] mb-[20px]">
-			<Icon width="240px" height="450px" name="ladderYellow" fill="#ffffff" />
+		<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
+			<Icon width="240px" height="450px" name="planeYellow" fill="#ffffff" />
 		</div>
 	</div>
 </PageHeader>
@@ -87,7 +89,7 @@
 	</Section>
 
 	<Section alt>
-		<div class="md:px-8 relative">
+		<div class="md:px-8 relative pt-1">
 			<div
 				aria-hidden="true"
 				class="absolute h-full w-11/12 left-0 flex justify-center items-center hidden lg:flex"
@@ -187,11 +189,9 @@
 	{/if}
 
 	<Section alt={data.references.length > 0}>
-		<div
-			class="bg-blue-dark font-ptsans rounded-xl text-white flex md:flex-row flex-col gap-8  md:gap-32 p-8"
-		>
+		<OtherOfferRow>
 			<div class="md:w-1/3">
-				<h3 class="text-white">Nos autres offres</h3>
+				<h3 class="text-white mt-0">Nos autres offres</h3>
 				<p class=" text-white text-2xl">
 					Nous mettons la communication au service de la transition écologique
 				</p>
@@ -223,6 +223,6 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</OtherOfferRow>
 	</Section>
 </main>
