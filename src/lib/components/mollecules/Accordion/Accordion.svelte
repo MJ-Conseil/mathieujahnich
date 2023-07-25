@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
+	import { SIZE } from '$lib/constants';
 	export let id: string;
 
 	let isOpen = false;
@@ -24,7 +25,14 @@
 		>
 			<span class="flex items-center  justify-between">
 				<slot name="trigger-content" />
-				<ArrowInCircle iconRotation={isOpen ? 180 : 0} />
+
+				<span class="hidden md:block">
+					<ArrowInCircle size={SIZE.LARGE} iconRotation={isOpen ? 180 : 0} />
+				</span>
+
+				<span class="md:hidden">
+					<ArrowInCircle iconRotation={isOpen ? 180 : 0} />
+				</span>
 			</span>
 		</button>
 	</h3>

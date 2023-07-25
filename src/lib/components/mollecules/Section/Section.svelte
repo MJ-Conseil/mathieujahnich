@@ -5,7 +5,7 @@
 	export let narrow = false;
 </script>
 
-<section class:bg-gray={alt} class="opacity-95 md:pt-12 mb-8 px-4 md:p-0 pb-8">
+<section class:bg-gray={alt} class="opacity-95 md:pt-8 md:pb-8 px-4 md:p-0  pt-1">
 	<Container {narrow}>
 		<slot />
 	</Container>

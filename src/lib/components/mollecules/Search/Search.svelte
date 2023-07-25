@@ -9,6 +9,8 @@
 	export let value = '';
 	export let alt = false;
 
+	let hasError = false;
+
 	let input: HTMLInputElement;
 
 	let searchOptions: QueryOption = {
@@ -44,6 +46,8 @@
 	const handleOnInput = (e: Event) => {
 		const target = e.currentTarget as HTMLInputElement;
 
+		hasError = false;
+
 		searchOptions = {
 			...searchOptions,
 			search: target.value || ''
@@ -55,6 +59,8 @@
 	const handleSearch = () => {
 		if (!input.validity.valueMissing) {
 			dispatch('search', searchOptions);
+		} else {
+			hasError = true;
 		}
 	};
 
@@ -81,7 +87,7 @@
 		for={id}>{label}</label
 	>
 
-	{#if input && input.validity.valueMissing && inputTouched}
+	{#if hasError}
 		<span class="text-red border-red font-bold" id={`${id}-error-desc`}>Ce champs est requis</span>
 	{/if}
 
