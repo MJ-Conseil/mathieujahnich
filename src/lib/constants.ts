@@ -15,7 +15,7 @@ export const ROUTES: Record<string, string> = {
 	'Espace presse': '/espace-presse',
 	Blog: '/blog',
 	Newsletter: '/newsletter',
-
+	'Informations légales': '/informations-legales'
 };
 export const CONTACT_LINKS: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',

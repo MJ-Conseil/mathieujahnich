@@ -58,7 +58,7 @@
 	</Headline>
 </PageHeader>
 
-<main class="mt-8 mb-12" id="main-content">
+<main class="md:p-0 md:0" id="main-content">
 	{#if data.highlightedReferences.length > 0}
 		<Section>
 			<h2>Références phares</h2>
@@ -83,7 +83,7 @@
 			mots clés ci-dessous.
 		</p>
 
-		<div class="flex gap-2 md:gap-5 mt-5 flex-wrap ">
+		<div class="flex  mt-7  gap-3 flex-wrap">
 			{#each data.referenceTypes as referenceType}
 				<Tag
 					active={selectedFilterIds.includes(referenceType.id)}

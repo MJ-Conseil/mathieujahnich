@@ -10,14 +10,19 @@
 	$: switch (size) {
 		case SIZE.EXTRASMALL:
 			iconWidthAndHeight = '10px';
-
 			break;
 
 		case SIZE.SMALL:
 			iconWidthAndHeight = '12px';
 
+			break;
+
+		case SIZE.LARGE:
+			iconWidthAndHeight = '2rem';
+			break;
+
 		default:
-			iconWidthAndHeight = '12px';
+			iconWidthAndHeight = '16px';
 			break;
 	}
 </script>
@@ -26,6 +31,6 @@
 	aria-hidden={ariaHidden}
 	class:-rotate-90={iconRotation === 90}
 	class:-rotate-180={iconRotation === 180}
-	class={`rounded-full p-1 bg-sand text-indigo flex items-center justify-center `}
+	class={`rounded-full p-2 bg-sand text-indigo flex items-center justify-center `}
 	><Icon width={iconWidthAndHeight} height={iconWidthAndHeight} name="caret" /></span
 >

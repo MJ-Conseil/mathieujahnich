@@ -11,7 +11,7 @@ export async function GET(event: ServerLoadEvent) {
 
 	const URLS = [...postUrls, ...routesURL];
 
-	// gérnéré dynamiquement les urls des pages du site
+	// gérnérer dynamiquement les urls des pages du site
 	return new Response(
 		`
       <?xml version="1.0" encoding="UTF-8" ?>

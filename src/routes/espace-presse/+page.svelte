@@ -5,7 +5,7 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { CONTACT_LINKS, SITE_WEB_NAME } from '$lib/constants';
+	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
 	import { getMediaResources } from '$lib/repositories/mediaResources';
 	import type { MediaResourcesByTypes } from 'src/definitions';
 	import picture from '$lib/assets/pictures/mj-interview.jpg';
@@ -13,12 +13,21 @@
 	import type { PageData } from './$types';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
+	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 
 	export let data: PageData;
 
 	$: mediaResources = data.mediaResources;
 
 	let mediaResourceTypePageRecord: Record<number, number> = {};
+
+	const getButtonText = (mediaResource: MediaResourcesByTypes) => {
+		if ('aeiouy'.includes(mediaResource.mediaResourceTypeName.toLocaleLowerCase().charAt(0))) {
+			return `Afficher plus d'${mediaResource.mediaResourceTypeName.toLowerCase()}`;
+		}
+
+		return `Afficher plus de ${mediaResource.mediaResourceTypeName.toLowerCase()}`;
+	};
 
 	const handleLoadMorePostFormCategory = async (mediaResourceTypeId: number) => {
 		const newPage = (mediaResourceTypePageRecord[mediaResourceTypeId] || 1) + 1;
@@ -61,10 +70,8 @@
 <div class="py-8 bg-blue-dark ">
 	<Container>
 		<header>
-			<h1 class="mj-h1--alt">
-				<span class="text-sand text-4xl block mb-3">Radio, presse, télévision, web…</span>
-				Espace Presse
-			</h1>
+			<p class="text-sand text-xl font-bold">Radio, presse, télévision, web…</p>
+			<h1 class="mj-h1--alt">Espace Presse</h1>
 			<Headline>
 				Mathieu Jahnich intervient régulièrement dans les médias généralistes ou spécialisés pour
 				décrypter l’impact de la transition écologique sur les fonctions marketing et communication
@@ -103,12 +110,7 @@
 					</ul>
 				</div>
 
-				<a
-					href={`mailto:${CONTACT_LINKS.email}`}
-					class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold  rounded  text-indigo"
-				>
-					Nous contacter
-				</a>
+				<ButtonLink href="#main-footer">Nous contacter</ButtonLink>
 			</div>
 		</div>
 	</Section>
@@ -136,7 +138,11 @@
 								: undefined}
 						>
 							{#if mediaResource.associatedContent}
-								<ArrowLink href={mediaResource.associatedContent?.externalResourceURl}
+								<ArrowLink
+									linkTitle={`${mediaResource.associatedContent?.externalResourceName} (lien vers site externe)`}
+									external
+									arrowSize={SIZE.SMALL}
+									href={mediaResource.associatedContent?.externalResourceURl}
 									>{mediaResource.associatedContent?.externalResourceName}</ArrowLink
 								>
 							{/if}
@@ -147,7 +153,7 @@
 				<div class="w-full mt-8 mb-12 flex items-center justify-center">
 					<Button
 						on:click={() => handleLoadMorePostFormCategory(mediaResourceItem.mediaResourceTypeId)}
-						name={`Afficher plus d'articles pour  ${mediaResourceItem.mediaResourceTypeName.toLowerCase()}`}
+						name={getButtonText(mediaResourceItem)}
 						type="primary"
 					/>
 				</div>

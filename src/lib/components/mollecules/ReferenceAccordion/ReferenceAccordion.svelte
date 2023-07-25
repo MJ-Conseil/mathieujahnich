@@ -16,11 +16,11 @@
 				<img class="object-cover max-h-20" src={imageUrl} aria-hidden="true" alt="" />
 			</div>
 		{/if}
-		<p class="break-all max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
+		<p class="break-word md:max-w-[100%] max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
 			{title}
 		</p>
 	</div>
-	<div class="[&>p]:mb-4 [&>p]:text-justify text-xl accordion-content" slot="panel-content">
+	<div class="[&>p]:mb-4  text-lg accordion-content" slot="panel-content">
 		{@html content}
 
 		{#if href}

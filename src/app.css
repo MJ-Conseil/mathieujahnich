@@ -71,6 +71,10 @@
 		@apply mj-heading-base text-2xl text-blue-dark font-bold;
 	}
 
+	.mj-h4--alt {
+		@apply mj-h3 text-white;
+	}
+
 	.mj-subtitle {
 		@apply font-sans text-indigo text-2xl;
 	}
@@ -91,8 +95,6 @@
 		@apply mj-link--base;
 	}
 
-
-
 	.mj-link--alt:hover,
 	.mj-link:hover {
 		@apply underline underline-offset-2;
@@ -104,10 +106,6 @@
 
 	.mj-link--btn {
 		@apply text-indigo bg-sand py-2.5 px-4 font-bold rounded;
-	}
-
-	.mj-link--btn-alt {
-		@apply text-sand border border-sand block text-center w-3/4 p-2 font-bold 'hover:bg-sand' hover: text-blue-dark hover:boder-sand
 	}
 
 	/* Paragraph */

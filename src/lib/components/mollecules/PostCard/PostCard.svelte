@@ -40,7 +40,7 @@
 		{/if}
 	</div>
 
-	<div class="mt-2 p-4 flex-1 flex flex-col">
+	<div class="mt-2 p-4 flex-1 flex flex-col h-3/4">
 		<div class=" flex-1">
 			<p class="text-blue-dark text-sm">
 				{createdDate}

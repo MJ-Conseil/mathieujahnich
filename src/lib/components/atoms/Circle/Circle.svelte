@@ -4,7 +4,7 @@
 	export let size: SIZE = SIZE.REGULAR;
 </script>
 
-<div class={`bg-sand rounded-full mx-auto ${size}`} />
+<div class={`bg-sand rounded-full ${size}`} />
 
 <style>
 	.large {

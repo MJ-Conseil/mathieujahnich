@@ -19,7 +19,7 @@
 <div class="py-8 bg-blue-dark ">
 	<Container>
 		<header>
-			<p class="text-sand text-4xl block mb-3">Réconcilier communication et transition</p>
+			<p class="text-sand text-xl mb-3">Réconcilier communication et transition</p>
 			<h1 class="mj-h1--alt">Newsletter</h1>
 			<Headline>
 				Nous vous proposons une sélection de contenus originaux pas plus d’une fois par mois,
@@ -107,8 +107,10 @@
 					excerpt={newsletter.excerpt}
 				>
 					{#if newsletter.sendInBlueData}
-						<ArrowLink href={newsletter.sendInBlueData.url}
-							>{newsletter.sendInBlueData.urlLabel}</ArrowLink
+						<ArrowLink
+							linkTitle={`${newsletter.sendInBlueData.urlLabel} (vers un site externe)`}
+							external
+							href={newsletter.sendInBlueData.url}>{newsletter.sendInBlueData.urlLabel}</ArrowLink
 						>
 					{/if}
 				</PostCard>

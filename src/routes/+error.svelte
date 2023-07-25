@@ -20,7 +20,7 @@
 		Sinon, contactez-nous pour que l'on puisse vous rediriger vers la bonne information.
 	</p>
 
-	<div class="flex gap-2 mt-5">
+	<div class="flex md:flex-row flex-col sm:w-full gap-2 mt-5">
 		<div>
 			<a
 				class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold rounded text-indigo"
