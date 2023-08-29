@@ -48,12 +48,12 @@
 	<Section>
 		<div class="h-full">
 			<h2>Votre besoin</h2>
-			<p class="lg:text-[1.4rem] lg:leading-9 font-ptsans">
+			<p class="lg:text-[1.4rem] lg:leading-9 font-ptsans mb-6">
 				Les enjeux environnementaux et sociaux sont complexes, les attentes des parties prenantes
 				sont plurielles, les traductions dans le positionnement marketing, dans l’offre et dans les
 				actions de communication sont multiples.Vous avez besoin de donner de l’élan à :
 			</p>
-			<div class="lg:gap-x-10 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2 my-6">
+			<div class="lg:gap-x-10 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2">
 				<Need title="Votre stratégie RSE">
 					<ul class="mj-list--disc">
 						<li class="mb-2">
