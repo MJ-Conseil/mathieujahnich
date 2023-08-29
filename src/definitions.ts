@@ -37,6 +37,13 @@ export type ReferenceType = ResourceType;
 
 export type MediaResourceType = ResourceType;
 
+export type MediaResourceRecord = {
+	[index: number]: {
+		total: number;
+		remaining: number;
+	};
+};
+
 export type OfferType = ResourceType;
 
 export type MediaResource = {

@@ -40,8 +40,8 @@
 		{/if}
 	</div>
 
-	<div class="mt-2 p-4 flex-1 flex flex-col h-3/4">
-		<div class=" flex-1">
+	<div class="p-4">
+		<div class="">
 			<p class="text-blue-dark text-sm">
 				{createdDate}
 			</p>
@@ -55,13 +55,13 @@
 				</div>
 			{/if}
 		</div>
+	</div>
 
-		<div class="pt-8 flex items-end justify-end">
-			<slot>
-				{#if href}
-					<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>
-				{/if}
-			</slot>
-		</div>
+	<div class="p-4 pt-0">
+		<slot>
+			{#if href}
+				<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>
+			{/if}
+		</slot>
 	</div>
 </div>
