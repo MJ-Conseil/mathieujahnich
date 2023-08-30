@@ -38,6 +38,12 @@
 			>Accueil
 		</DesktopMenuItem>
 
+		<DesktopMenuItem
+			isActive={activeRoute === ROUTES['Qui sommes nous ?']}
+			href={ROUTES['Qui sommes nous ?']}
+			>Qui sommes-nous ?
+		</DesktopMenuItem>
+
 		<li
 			class:underline={activeRoute ? activeRoute.match(regex) : null}
 			class:text-sand={activeRoute ? activeRoute.match(regex) : null}
@@ -51,7 +57,7 @@
 				on:click={() => handleClickMenuButton()}
 				bind:this={button}
 			>
-				Offres de services
+				Notre offre
 				<span aria-hidden="true" class:rotate-180={activatedMenu} class="ml-2"
 					><Icon name="caret" /></span
 				>
@@ -99,14 +105,8 @@
 			{/if}
 		</li>
 
-		<DesktopMenuItem
-			isActive={activeRoute === ROUTES['Qui sommes nous ?']}
-			href={ROUTES['Qui sommes nous ?']}
-			>Qui sommes nous ?
-		</DesktopMenuItem>
-
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Références']} href={ROUTES['Références']}
-			>Références</DesktopMenuItem
+			>Nos références</DesktopMenuItem
 		>
 
 		<DesktopMenuItem
