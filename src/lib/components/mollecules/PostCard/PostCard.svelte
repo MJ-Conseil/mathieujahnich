@@ -12,10 +12,7 @@
 	export let tagName = '';
 </script>
 
-<div
-	data-testId={testId}
-	class="w-full h-full border-2 border-gray flex flex-col  rounded-xl bg-white"
->
+<div data-testId={testId} class="border-2 border-gray flex flex-col  rounded-xl bg-white h-[400px]">
 	<div class="relative h-1/2">
 		{#if pictureURL}
 			<div class="h-full w-full flex items-center justify-center ">
@@ -40,7 +37,7 @@
 		{/if}
 	</div>
 
-	<div class="p-4">
+	<div class="p-4 h-1/2">
 		<div class="">
 			<p class="text-blue-dark text-sm">
 				{createdDate}
