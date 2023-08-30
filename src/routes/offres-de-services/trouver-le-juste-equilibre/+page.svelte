@@ -195,9 +195,9 @@
 				<div class="flex flex-col gap-5  items-center">
 					<Icon width="50%" height="auto" name="ladder" />
 
-					<p class="text-sand text-center text-2xl">Faire Monter en compétences</p>
+					<p class="text-sand text-center text-2xl">Faire monter en compétences</p>
 					<a
-						href={ROUTES['Faire Monter en compétences']}
+						href={ROUTES['Faire monter en compétences']}
 						aria-label="Voir l'offre Faire monter en compétences"
 						class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 					>

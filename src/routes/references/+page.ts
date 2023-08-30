@@ -12,7 +12,7 @@ export const load: PageLoad = async ({ fetch }) => {
 		}),
 		getReferences(fetch, {
 			highlight: 1,
-			per_page: 3
+			per_page: 5
 		})
 	]);
 

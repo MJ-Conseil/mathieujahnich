@@ -6,7 +6,7 @@ export type QueryOption = {
 	offset?: number;
 	per_page?: number;
 	highlight?: 0 | 1;
-	offerTypeId?: number;
+	offer_type?: number;
 	categories?: number[];
 	search?: string;
 	media_resource_type?: number[];
@@ -36,6 +36,13 @@ export type ResourceType = {
 export type ReferenceType = ResourceType;
 
 export type MediaResourceType = ResourceType;
+
+export type MediaResourceRecord = {
+	[index: number]: {
+		total: number;
+		remaining: number;
+	};
+};
 
 export type OfferType = ResourceType;
 

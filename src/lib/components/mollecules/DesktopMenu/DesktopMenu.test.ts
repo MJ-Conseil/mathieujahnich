@@ -9,7 +9,7 @@ import DesktopMenu from './DesktopMenu.svelte';
 test('can see menu items only when the button has been pressed', async () => {
 	const { getByTestId, getByText } = render(DesktopMenu);
 
-	const button = await getByText('Offres de services', {
+	const button = await getByText('Notre offre', {
 		exact: false
 	});
 
@@ -22,7 +22,7 @@ test('can see menu items only when the button has been pressed', async () => {
 test('button has focus if escape key has been pressed', async () => {
 	const { getByTestId, getByText, queryByTestId } = render(DesktopMenu);
 
-	const button = await getByText('Offres de services', {
+	const button = await getByText('Notre offre', {
 		exact: false
 	});
 

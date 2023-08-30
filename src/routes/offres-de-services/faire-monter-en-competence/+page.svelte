@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - Offres de services : Prendre de la hauteur</title>
+	<title>{SITE_WEB_NAME} - Offres de services : Faire monter en compétence</title>
 </svelte:head>
 
 <PageHeader>
@@ -27,19 +27,18 @@
 			</h1>
 
 			<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
-				<i>60 années d’expérience cumulées</i>
+				<i>Former pour transformer</i>
 			</p>
 
 			<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">
-				Enrichir et (re)dynamiser les stratégies RSE et la communication des entreprises à travers
-				l’analyse du positionnement et des principaux enjeux environnementaux et sociaux, l’étude de
-				l’environnement concurrentiel, le recueil et l’analyse des perceptions et des attentes des
-				parties-prenantes internes et externes.
+				Animer des formations et concevoir des dispositifs pour sensibiliser et accompagner les
+				fonctions marketing, publicité, communication et toutes leurs interfaces (autres directions,
+				business units, partenaires…) vers des pratiques plus responsables.
 			</p>
 		</div>
 
 		<div aria-hidden="true" class="hidden lg:block text-white mt-[-80px]">
-			<Icon width="240px" height="450px" name="planeYellow" fill="#ffffff" />
+			<Icon width="240px" height="450px" name="ladderYellow" fill="#ffffff" />
 		</div>
 	</div>
 </PageHeader>

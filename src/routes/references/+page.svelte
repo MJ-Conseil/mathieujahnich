@@ -111,7 +111,7 @@
 		{#if filteredReferences.length > 4}
 			<div class="w-full mt-8 flex items-center justify-center">
 				<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
-					>Afficher plus
+					>Afficher plus de réferences
 				</button>
 			</div>{/if}
 	</Section>

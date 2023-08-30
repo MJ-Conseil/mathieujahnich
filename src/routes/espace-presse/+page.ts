@@ -1,6 +1,9 @@
 import { getMediaResources } from '$lib/repositories/mediaResources';
 import { getMediaResourceTypes } from '$lib/repositories/mediaResourceTypes';
-import { groupMediaResourceByType } from '$lib/utils/mediaResources';
+import {
+	buildRemainingMediaResourceRecord,
+	groupMediaResourceByType
+} from '$lib/utils/mediaResources';
 
 import type { PageLoad } from './$types';
 
@@ -17,8 +20,12 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 	const mediaResource = await Promise.all(mediaResourcePromises);
 
 	const postGrouppedByCategories = groupMediaResourceByType(mediaResource, mediaResourceTypes);
+	const remainingMediaResourceTypeRecord = buildRemainingMediaResourceRecord(mediaResourceTypes);
+
+	console.log(remainingMediaResourceTypeRecord);
 
 	return {
-		mediaResources: postGrouppedByCategories
+		mediaResources: postGrouppedByCategories,
+		remainingMediaResourceTypeRecord
 	};
 };

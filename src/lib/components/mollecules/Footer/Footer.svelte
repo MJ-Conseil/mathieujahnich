@@ -5,7 +5,7 @@
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
-<footer id="main-footer" role="contentinfo" class="bg-blue-dark mt-8  md:p-8 p-4 md:pt-12">
+<footer id="main-footer" role="contentinfo" class="bg-blue-dark  md:p-8 p-4 md:pt-12">
 	<div class="md:flex md:justify-around  justify-between">
 		<div class="hidden lg:block lg:w-1/5">
 			<p class="md:block font-ptsans text-blue-light hidden text-xl">
@@ -74,7 +74,7 @@
 
 					<a class="text-white" href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}>
 						<span class="sr-only">téléphone :</span>
-						{CONTACT_LINKS.phone}
+						{CONTACT_LINKS.phone} (Mathieu)
 					</a>
 				</li>
 				<li class="flex items-center text-white">

@@ -18,6 +18,7 @@
 	export let data: PageData;
 
 	$: mediaResources = data.mediaResources;
+	$: remainingMediaResourceTypeRecord = data.remainingMediaResourceTypeRecord;
 
 	let mediaResourceTypePageRecord: Record<number, number> = {};
 
@@ -31,6 +32,20 @@
 
 	const handleLoadMorePostFormCategory = async (mediaResourceTypeId: number) => {
 		const newPage = (mediaResourceTypePageRecord[mediaResourceTypeId] || 1) + 1;
+
+		const remainingMediaResourceTypeRecordItem =
+			remainingMediaResourceTypeRecord[mediaResourceTypeId];
+
+		remainingMediaResourceTypeRecord = {
+			...remainingMediaResourceTypeRecord,
+			[mediaResourceTypeId]: {
+				...remainingMediaResourceTypeRecordItem,
+				remaining:
+					remainingMediaResourceTypeRecordItem.remaining > 0
+						? remainingMediaResourceTypeRecordItem.remaining - 3
+						: 0
+			}
+		};
 
 		mediaResourceTypePageRecord = {
 			...mediaResourceTypePageRecord,
@@ -71,11 +86,11 @@
 	<Container>
 		<header>
 			<p class="text-sand text-xl font-bold">Radio, presse, télévision, web…</p>
-			<h1 class="mj-h1--alt">Espace Presse</h1>
+			<h1 class="mj-h1--alt">Espace presse</h1>
 			<Headline>
-				Mathieu Jahnich intervient régulièrement dans les médias généralistes ou spécialisés pour
-				décrypter l’impact de la transition écologique sur les fonctions marketing et communication
-				des entreprises.
+				Nous intervenons régulièrement dans les médias généralistes ou spécialisés pour décrypter
+				l’impact de la transition écologique sur les fonctions marketing et communication des
+				entreprises.
 			</Headline>
 		</header>
 	</Container>
@@ -150,13 +165,15 @@
 					{/each}
 				</div>
 
-				<div class="w-full mt-8 mb-12 flex items-center justify-center">
-					<Button
-						on:click={() => handleLoadMorePostFormCategory(mediaResourceItem.mediaResourceTypeId)}
-						name={getButtonText(mediaResourceItem)}
-						type="primary"
-					/>
-				</div>
+				{#if remainingMediaResourceTypeRecord[mediaResourceItem.mediaResourceTypeId].remaining > 0}
+					<div class="w-full mt-8 mb-12 flex items-center justify-center">
+						<Button
+							on:click={() => handleLoadMorePostFormCategory(mediaResourceItem.mediaResourceTypeId)}
+							name={getButtonText(mediaResourceItem)}
+							type="primary"
+						/>
+					</div>
+				{/if}
 			</Section>
 		{/if}
 	{/each}
