@@ -6,7 +6,7 @@ export type QueryOption = {
 	offset?: number;
 	per_page?: number;
 	highlight?: 0 | 1;
-	offerTypeId?: number;
+	offer_type?: number;
 	categories?: number[];
 	search?: string;
 	media_resource_type?: number[];

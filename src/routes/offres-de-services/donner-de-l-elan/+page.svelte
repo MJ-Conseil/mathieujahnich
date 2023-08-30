@@ -183,9 +183,7 @@
 			<div class="xl:w-1/3 md:w-2/3">
 				<h3 class="text-white mt-0">Nos autres offres</h3>
 				<p class=" text-white text-2xl">
-					J’aide les entreprises et les organisations à répondre aux attentes sociétales et à
-					relever les défis de la transition écologique et solidaire grâce à une communication plus
-					responsable.
+					Nous mettons la communication au service de la transition écologique
 				</p>
 			</div>
 

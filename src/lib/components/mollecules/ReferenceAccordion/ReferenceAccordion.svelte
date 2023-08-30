@@ -20,7 +20,7 @@
 			{title}
 		</p>
 	</div>
-	<div class="[&>p]:mb-4  text-lg accordion-content" slot="panel-content">
+	<div class="[&>p]:mb-4  text-lg accordion-content html-wrapper" slot="panel-content">
 		{@html content}
 
 		{#if href}

@@ -74,7 +74,7 @@
 
 					<a class="text-white" href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}>
 						<span class="sr-only">téléphone :</span>
-						{CONTACT_LINKS.phone}
+						{CONTACT_LINKS.phone} (Mathieu)
 					</a>
 				</li>
 				<li class="flex items-center text-white">

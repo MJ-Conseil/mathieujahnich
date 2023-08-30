@@ -20,7 +20,7 @@
 		<p class="text-sand text-xl font-bold">MJ Conseil</p>
 		<h1 class="mj-h1--alt">Qui sommes nous ?</h1>
 		<Headline>
-			MJ Conseil, c’est un trio d’expertes en RSE et communication capables de vous aider de la
+			MJ Conseil est un trio d’expertes en RSE et communication capables de vous aider de la
 			définition de votre stratégie à la mise en place opérationnelle.
 		</Headline>
 	</Container>
