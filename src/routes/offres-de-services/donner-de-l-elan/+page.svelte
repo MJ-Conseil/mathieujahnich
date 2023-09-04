@@ -173,7 +173,9 @@
 			</div>
 
 			<div class="flex justify-end mt-8">
-				<ArrowLink href={ROUTES['Références']}>Voir plus de références</ArrowLink>
+				<ArrowLink href={`${ROUTES['Références']}?offer_type=${data.offerTypeId}`}
+					>Voir plus de références</ArrowLink
+				>
 			</div>
 		</Section>
 	{/if}

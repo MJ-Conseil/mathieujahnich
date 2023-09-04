@@ -21,9 +21,6 @@
 		filteredReferences = data.references;
 	}
 
-	const hasFilterId = (reference: Reference) =>
-		reference.referenceTypes.some((item) => selectedFilterIds.includes(item));
-
 	const handleClickReferenceType = async (id: number) => {
 		if (selectedFilterIds.includes(id)) {
 			selectedFilterIds = selectedFilterIds.filter((item) => item !== id);

@@ -6,7 +6,7 @@ export type QueryOption = {
 	offset?: number;
 	per_page?: number;
 	highlight?: 0 | 1;
-	offer_type?: number;
+	offer_type?: number | null;
 	categories?: number[];
 	reference_types?: number[];
 	search?: string;

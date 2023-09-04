@@ -16,6 +16,5 @@ export const load: PageLoad = async ({ fetch }) => {
 		per_page: 3,
 		offer_type: offerType.id
 	});
-
-	return { references };
+	return { references, offerTypeId: offerType.id };
 };
