@@ -129,6 +129,11 @@
 		@apply list-disc;
 	}
 
+	.html-wrapper ul,
+	.html-wrapper ol {
+		@apply pl-4;
+	}
+
 	.blog-wrapper ol,
 	.html-wrapper ol {
 		@apply list-disc;

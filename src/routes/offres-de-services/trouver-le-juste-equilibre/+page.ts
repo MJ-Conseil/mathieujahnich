@@ -17,6 +17,5 @@ export const load: PageLoad = async ({ fetch }) => {
 		offer_type: offerType.id
 	});
 
-
 	return { references };
 };

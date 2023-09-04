@@ -24,7 +24,7 @@
 					<span aria-hidden="true">></span>
 				</li>
 				<li class="pl-2">
-					{data.reference.title}
+					{data.reference.caseStudy?.title}
 				</li>
 			</ul>
 		</nav>
@@ -36,6 +36,6 @@
 		<div class="w-full bg-white mb-10 flex justify-center">
 			<img alt={`image de ${data.reference.title}`} src={data.reference.imageUrl} />
 		</div>
-		{@html data.reference.associatedContent}
+		{@html data.reference.caseStudy?.content}
 	</Section>
 </main>

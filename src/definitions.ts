@@ -8,6 +8,7 @@ export type QueryOption = {
 	highlight?: 0 | 1;
 	offer_type?: number;
 	categories?: number[];
+	reference_types?: number[];
 	search?: string;
 	media_resource_type?: number[];
 	slug?: string;
@@ -60,6 +61,12 @@ export type MediaResource = {
 	};
 };
 
+export type CaseStudy = {
+	title: string;
+	content: string;
+	url?: string;
+};
+
 export type Reference = {
 	id: number;
 	date: Date;
@@ -70,6 +77,7 @@ export type Reference = {
 	highlighted: boolean;
 	imageUrl?: string;
 	associatedContent?: string;
+	caseStudy?: CaseStudy;
 };
 
 export type IconNames =
