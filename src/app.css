@@ -196,7 +196,7 @@ Usage:
 
 .clipped--bottom {
 	margin-top: -1px;
-	clip-path: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 88.5%, 0% 100%);
 }
 
 @media (min-width: 768px) {
@@ -207,12 +207,13 @@ Usage:
 
 @media (min-width: 1024px) {
 	.clipped--bottom {
-		clip-path: polygon(0 0, 100% 0, 100% 77%, 0% 100%);
+
+		clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 	}
 }
 
 .clipped--top {
-	clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 2.5%, 100% 0, 100% 100%, 0% 100%);
 }
 
 @media (min-width: 768px) {
@@ -223,6 +224,6 @@ Usage:
 
 @media (min-width: 1024px) {
 	.clipped--top {
-		clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%);
 	}
 }
