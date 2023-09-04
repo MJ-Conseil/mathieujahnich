@@ -77,7 +77,12 @@
 						content={reference.content}
 						imageUrl={reference.imageUrl}
 						title={reference.title}
-						href={reference.associatedContent ? `${ROUTES.Références}/${reference.slug}` : ''}
+						caseStudy={reference.caseStudy
+							? {
+									...reference.caseStudy,
+									url: `/references/${reference.slug}`
+							  }
+							: undefined}
 					/>
 				{/each}
 			</div>
