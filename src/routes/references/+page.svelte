@@ -21,16 +21,21 @@
 		filteredReferences = data.references;
 	}
 
-	const hasFilterId = (reference: Reference) =>
-		reference.referenceTypes.some((item) => selectedFilterIds.includes(item));
-
-	const handleClickReferenceType = (id: number) => {
+	const handleClickReferenceType = async (id: number) => {
 		if (selectedFilterIds.includes(id)) {
 			selectedFilterIds = selectedFilterIds.filter((item) => item !== id);
 		} else {
 			selectedFilterIds = [...selectedFilterIds, id];
 		}
-		filteredReferences = data.references.filter(hasFilterId);
+		//filteredReferences = data.references.filter(hasFilterId);
+
+		if (selectedFilterIds.length > 0) {
+			filteredReferences = await getReferences(fetch, {
+				reference_types: selectedFilterIds
+			});
+		} else {
+			filteredReferences = await getReferences(fetch);
+		}
 	};
 
 	const handleLoadMoreReferences = async () => {
@@ -69,7 +74,12 @@
 						content={reference.content}
 						imageUrl={reference.imageUrl}
 						title={reference.title}
-						href={reference.associatedContent ? `${ROUTES.Références}/${reference.slug}` : ''}
+						caseStudy={reference.caseStudy
+							? {
+									...reference.caseStudy,
+									url: `/references/${reference.slug}`
+							  }
+							: undefined}
 					/>
 				{/each}
 			</div>
@@ -103,7 +113,12 @@
 					content={reference.content}
 					imageUrl={reference.imageUrl}
 					title={reference.title}
-					href={reference.associatedContent ? `${ROUTES.Références}/${reference.slug}` : ''}
+					caseStudy={reference.caseStudy
+						? {
+								...reference.caseStudy,
+								url: `/references/${reference.slug}`
+						  }
+						: undefined}
 				/>
 			{/each}
 		</div>

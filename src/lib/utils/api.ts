@@ -14,6 +14,13 @@ const buildOptionRecord = (options: QueryOption): Record<string, string> => {
 		const currentOption = options[next as keyof QueryOption];
 
 		if (currentOption || currentOption === 0) {
+			if (Array.isArray(currentOption) && currentOption.length > 0) {
+
+				return {
+					...prev,
+					[next]: currentOption.join(',')
+				};
+			}
 			return {
 				...prev,
 				[next]: currentOption.toString()

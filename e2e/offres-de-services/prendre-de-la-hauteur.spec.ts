@@ -35,6 +35,6 @@ test.describe('faire-monter-en-competence page', () => {
 
 		await page.getByRole('link', { name: 'Voir plus de références' }).click();
 
-		await page.waitForURL('/references');
+		await page.waitForURL('/references?offer_type=97');
 	});
 });

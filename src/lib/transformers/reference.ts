@@ -11,7 +11,13 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 		referenceTypes: reference.reference_types,
 		highlighted: reference.acf.mise_en_avant_reference || false,
 		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : undefined,
-		associatedContent: reference?.acf?.associated_content,
+		caseStudy:
+			reference?.acf?.case_study_title && reference?.acf?.case_study
+				? {
+						content: reference?.acf?.case_study,
+						title: reference?.acf?.case_study_title
+				  }
+				: undefined,
 		slug: reference.slug
 	};
 };

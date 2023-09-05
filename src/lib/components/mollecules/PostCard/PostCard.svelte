@@ -12,7 +12,10 @@
 	export let tagName = '';
 </script>
 
-<div data-testId={testId} class="border-2 border-gray flex flex-col  rounded-xl bg-white h-[400px]">
+<div
+	data-testId={testId}
+	class="border-2 border-gray flex flex-col  rounded-xl bg-white max-h-[700px]"
+>
 	<div class="relative h-1/2">
 		{#if pictureURL}
 			<div class="h-full w-full flex items-center justify-center ">
@@ -37,7 +40,7 @@
 		{/if}
 	</div>
 
-	<div class="p-4 h-1/2">
+	<div class="p-4 h-2/3">
 		<div class="">
 			<p class="text-blue-dark text-sm">
 				{createdDate}
@@ -54,7 +57,7 @@
 		</div>
 	</div>
 
-	<div class="p-4 pt-0">
+	<div class="p-4 pt-0  mt-4 flex justify-end">
 		<slot>
 			{#if href}
 				<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>

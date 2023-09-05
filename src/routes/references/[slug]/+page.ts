@@ -12,7 +12,13 @@ export const load: PageLoad = async ({ params, fetch }) => {
 		throw error(404, 'Not found');
 	}
 
+	const reference = references[0];
+
+	if (!reference.caseStudy) {
+		throw error(404, 'Not found');
+	}
+
 	return {
-		reference: references[0]
+		reference
 	};
 };

@@ -3,9 +3,11 @@ import { getReferences } from '$lib/repositories/reference';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch }) => {
+
+	const OFFER_TYPE_SLUG = 'donner-de-l-elan'
 	const offerTypes = await getOfferTypes(fetch);
 
-	const offerType = offerTypes.find((item) => item.slug === 'donner-de-l-elan');
+	const offerType = offerTypes.find((item) => item.slug === OFFER_TYPE_SLUG);
 
 	if (!offerType) {
 		return { references: [] };
@@ -17,5 +19,5 @@ export const load: PageLoad = async ({ fetch }) => {
 		offer_type: offerType.id
 	});
 
-	return { references };
+	return { references, offerTypeId: offerType.id };
 };

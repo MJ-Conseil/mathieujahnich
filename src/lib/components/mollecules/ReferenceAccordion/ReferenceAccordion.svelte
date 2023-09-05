@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { CaseStudy } from 'src/definitions';
 	import Accordion from '../Accordion/Accordion.svelte';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
@@ -6,7 +7,7 @@
 	export let title: string;
 	export let content: string;
 	export let imageUrl = '';
-	export let href = '';
+	export let caseStudy: CaseStudy | undefined = undefined;
 </script>
 
 <Accordion id={`reference-${id}`}>
@@ -23,9 +24,9 @@
 	<div class="[&>p]:mb-4  text-lg accordion-content html-wrapper" slot="panel-content">
 		{@html content}
 
-		{#if href}
+		{#if caseStudy?.url}
 			<div class="flex  justify-end">
-				<ArrowLink {href}>Voir l'étude de cas</ArrowLink>
+				<ArrowLink href={caseStudy.url}>Voir l'étude de cas</ArrowLink>
 			</div>
 		{/if}
 	</div>
