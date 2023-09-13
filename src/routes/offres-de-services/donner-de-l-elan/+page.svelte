@@ -12,6 +12,7 @@
 	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
 
 	export let data: PageData;
+	$: references = data.references.data;
 </script>
 
 <svelte:head>
@@ -156,20 +157,18 @@
 		</div>
 	</Section>
 
-	{#if data.references.length > 0}
+	{#if references.length > 0}
 		<Section>
 			<h2>Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
-				{#if data.references.length > 0}
-					{#each data.references as reference}
-						<ReferenceAccordion
-							id={slugify(reference.title)}
-							content={reference.content}
-							imageUrl={reference.imageUrl}
-							title={reference.title}
-						/>
-					{/each}
-				{/if}
+				{#each references as reference}
+					<ReferenceAccordion
+						id={slugify(reference.title)}
+						content={reference.content}
+						imageUrl={reference.imageUrl}
+						title={reference.title}
+					/>
+				{/each}
 			</div>
 
 			<div class="flex justify-end mt-8">
@@ -180,7 +179,7 @@
 		</Section>
 	{/if}
 
-	<Section alt={data.references.length > 0}>
+	<Section alt={references.length > 0}>
 		<OtherOfferRow>
 			<div class="xl:w-1/3 md:w-2/3">
 				<h3 class="text-white mt-0">Nos autres offres</h3>

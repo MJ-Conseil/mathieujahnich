@@ -8,7 +8,11 @@ export const load: PageLoad = async ({ fetch }) => {
 	const offerType = offerTypes.find((item) => item.slug === 'trouver-le-juste-equilibre');
 
 	if (!offerType) {
-		return { references: [] };
+		return {
+			references: {
+				data: []
+			}
+		};
 	}
 
 	const references = await getReferences(fetch, {
@@ -16,5 +20,6 @@ export const load: PageLoad = async ({ fetch }) => {
 		per_page: 3,
 		offer_type: offerType.id
 	});
+
 	return { references, offerTypeId: offerType.id };
 };

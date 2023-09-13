@@ -8,7 +8,11 @@ export const load: PageLoad = async ({ fetch }) => {
 	const offerType = offerTypes.find((item) => item.slug === 'faire-monter-en-competence');
 
 	if (!offerType) {
-		return { references: [] };
+		return {
+			references: {
+				data: []
+			}
+		};
 	}
 
 	const references = await getReferences(fetch, {

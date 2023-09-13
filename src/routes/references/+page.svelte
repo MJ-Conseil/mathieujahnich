@@ -4,21 +4,24 @@
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import { getReferences } from '$lib/repositories/reference';
 	import type { PageData } from './$types';
-	import type { Reference } from 'src/definitions';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
+	import { SITE_WEB_NAME } from '$lib/constants';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 
 	export let data: PageData;
 
-	let filteredReferences: Reference[] = data.references;
+	$: filteredReferences = data.references.data;
+	$: highlightedReferences = data.highlightedReferences.data;
+
+	$: meta = data.references.meta;
+
 	let selectedFilterIds: number[] = [];
 
 	let currentPage = 1;
 	$: if (selectedFilterIds.length === 0) {
-		filteredReferences = data.references;
+		filteredReferences = data.references.data;
 	}
 
 	const handleClickReferenceType = async (id: number) => {
@@ -27,23 +30,27 @@
 		} else {
 			selectedFilterIds = [...selectedFilterIds, id];
 		}
-		//filteredReferences = data.references.filter(hasFilterId);
 
 		if (selectedFilterIds.length > 0) {
-			filteredReferences = await getReferences(fetch, {
-				reference_types: selectedFilterIds
-			});
+			filteredReferences = (
+				await getReferences(fetch, {
+					reference_types: selectedFilterIds
+				})
+			).data;
 		} else {
-			filteredReferences = await getReferences(fetch);
+			filteredReferences = (await getReferences(fetch)).data;
 		}
 	};
 
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
-		const newResults = await getReferences(fetch, {
-			per_page: 10,
-			page: currentPage
-		});
+		const newResults = (
+			await getReferences(fetch, {
+				per_page: 10,
+				page: currentPage,
+				offer_type: data.offerTypeId ? parseInt(data.offerTypeId) : undefined
+			})
+		).data;
 
 		filteredReferences = [...filteredReferences, ...newResults];
 	};
@@ -64,11 +71,11 @@
 </PageHeader>
 
 <main class="md:p-0 md:0" id="main-content">
-	{#if data.highlightedReferences.length > 0}
+	{#if highlightedReferences.length > 0}
 		<Section>
 			<h2>Références phares</h2>
 			<div class="flex flex-col gap-4">
-				{#each data.highlightedReferences as reference}
+				{#each highlightedReferences as reference}
 					<ReferenceAccordion
 						id={slugify(reference.title)}
 						content={reference.content}
@@ -123,7 +130,7 @@
 			{/each}
 		</div>
 
-		{#if filteredReferences.length > 4}
+		{#if filteredReferences.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
 				<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
 					>Afficher plus de réferences
