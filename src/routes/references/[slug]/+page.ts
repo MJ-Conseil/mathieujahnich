@@ -8,11 +8,11 @@ export const load: PageLoad = async ({ params, fetch }) => {
 		slug: params.slug
 	});
 
-	if (!references || references.length === 0) {
+	if (!references || references.data.length === 0) {
 		throw error(404, 'Not found');
 	}
 
-	const reference = references[0];
+	const reference = references.data[0];
 
 	if (!reference.caseStudy) {
 		throw error(404, 'Not found');

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';

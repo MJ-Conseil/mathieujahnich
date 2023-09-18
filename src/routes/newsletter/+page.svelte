@@ -5,7 +5,7 @@
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { SITE_WEB_NAME } from '$lib/constants';
+	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
 	import type { ActionData, PageData } from './$types';
 
 	export let form: ActionData;
@@ -103,6 +103,7 @@
 					}).format(newsletter.date)}
 					title={newsletter.title}
 					pictureURL={newsletter.imageUrl}
+					size={SIZE.LARGE}
 					tagName={newsletter.newsLetterNumber ? `n° ${newsletter.newsLetterNumber}` : ''}
 					excerpt={newsletter.excerpt}
 				>

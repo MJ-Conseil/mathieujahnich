@@ -23,10 +23,9 @@ export const load: PageLoad = async ({ fetch, url }) => {
 		getReferences(fetch, offerTypeId ? { ...params2, offer_type: parseInt(offerTypeId) } : params2)
 	]);
 
-
-	const highlightedReferences = rawHighlightedReferences.data.filter(item => item.highlighted).slice(0, 4)
-
-
+	const highlightedReferences = rawHighlightedReferences.data
+		.filter((item) => item.highlighted)
+		.slice(0, 4);
 
 	return { referenceTypes, references, highlightedReferences, offerTypeId };
 };

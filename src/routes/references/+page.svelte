@@ -1,6 +1,5 @@
 <script lang="ts">
 	import slugify from 'slugify';
-	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import { getReferences } from '$lib/repositories/reference';
 	import type { PageData } from './$types';
