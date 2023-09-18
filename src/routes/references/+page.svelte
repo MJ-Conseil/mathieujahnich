@@ -13,7 +13,7 @@
 	export let data: PageData;
 
 	$: filteredReferences = data.references.data;
-	$: highlightedReferences = data.highlightedReferences.data;
+	$: highlightedReferences = data.highlightedReferences;
 
 	$: meta = data.references.meta;
 

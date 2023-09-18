@@ -36,25 +36,27 @@
 		</div>
 	</Container>
 
-	<div class="flex  justify-center ">
-		<div class="relative ">
-			<img src={groupPicture} alt="trio d'experts en communication" />
+	<div class="flex justify-center">
+		<div class="relative w-4/5">
+			<img class="z-20 relative" src={groupPicture} alt="trio d'experts en communication" />
 
-			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden md:block">
+			<div
+				class="z-0 absolute md:bottom-[-15px] md:right-[-60px] lg:bottom-[-15px] lg:right-[90px] hidden md:block"
+			>
 				<Circle size={SIZE.LARGE} />
 			</div>
 
-			<div class="-z-10 absolute bottom-[-15px] right-[-30px] md:hidden">
+			<div class="z-0 absolute bottom-[-15px] right-[-20px] md:hidden">
 				<Circle size={SIZE.REGULAR} />
 			</div>
 		</div>
-	</div>
 
-	<div
-		aria-hidden="true"
-		class="md:block md:absolute top-4 right-[-20px] md:w-[250px] justify-center hidden opacity-80 text-white "
-	>
-		<Icon width="100%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
+		<div
+			aria-hidden="true"
+			class="md:block md:absolute top-4 right-[-20px] md:w-[250px] justify-center hidden opacity-80 text-white "
+		>
+			<Icon width="100%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
+		</div>
 	</div>
 </header>
 

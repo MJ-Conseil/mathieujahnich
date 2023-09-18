@@ -14,14 +14,19 @@ export const load: PageLoad = async ({ fetch, url }) => {
 
 	const params2: QueryOption = {
 		highlight: 1,
-		per_page: 5
+		per_page: 80
 	};
 
-	const [referenceTypes, references, highlightedReferences] = await Promise.all([
+	const [referenceTypes, references, rawHighlightedReferences] = await Promise.all([
 		getReferencesTypes(fetch),
 		getReferences(fetch, offerTypeId ? { ...params, offer_type: parseInt(offerTypeId) } : params),
-		getReferences(fetch, offerTypeId ? { ...params2, offer_type: parseInt(offerTypeId) } : params)
+		getReferences(fetch, offerTypeId ? { ...params2, offer_type: parseInt(offerTypeId) } : params2)
 	]);
+
+
+	const highlightedReferences = rawHighlightedReferences.data.filter(item => item.highlighted).slice(0, 4)
+
+
 
 	return { referenceTypes, references, highlightedReferences, offerTypeId };
 };
