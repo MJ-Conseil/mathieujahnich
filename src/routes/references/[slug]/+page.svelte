@@ -29,7 +29,7 @@
 			</ul>
 		</nav>
 
-		<p class="text-indigo font-bold font-ptsans mb-8">Etude de cas</p>
+		<p class="text-indigo font-bold font-ptsans mb-8">Étude de cas</p>
 		<h1 class="break-words">{data.reference.title}</h1>
 	</Section>
 	<Section>

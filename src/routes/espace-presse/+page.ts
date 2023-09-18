@@ -22,8 +22,6 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 	const postGrouppedByCategories = groupMediaResourceByType(mediaResource, mediaResourceTypes);
 	const remainingMediaResourceTypeRecord = buildRemainingMediaResourceRecord(mediaResourceTypes);
 
-	console.log(remainingMediaResourceTypeRecord);
-
 	return {
 		mediaResources: postGrouppedByCategories,
 		remainingMediaResourceTypeRecord

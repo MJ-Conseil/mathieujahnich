@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { SIZE, type SIZE as SIZEType } from '$lib/constants';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	export let title: string;
@@ -10,11 +11,15 @@
 	export let imageCover = true;
 	export let excerpt = '';
 	export let tagName = '';
+
+	export let size: SIZEType = SIZE.REGULAR;
 </script>
 
 <div
 	data-testId={testId}
-	class="border-2 border-gray flex flex-col  rounded-xl bg-white max-h-[700px]"
+	class={`border-2 border-gray flex flex-col  rounded-xl bg-white ${
+		size === SIZE.LARGE ? 'max-h-[600px]' : 'max-h-[450px]'
+	}`}
 >
 	<div class="relative h-1/2">
 		{#if pictureURL}

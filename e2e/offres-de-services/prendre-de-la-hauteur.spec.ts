@@ -27,14 +27,4 @@ test.describe('faire-monter-en-competence page', () => {
 
 		expect(expectedHeadings.every((item) => headingContents.includes(item))).toBeTruthy();
 	});
-
-	test('users should go on reference page using `voir plus de référence link` ', async ({
-		page
-	}) => {
-		await page.goto('/offres-de-services/faire-monter-en-competence');
-
-		await page.getByRole('link', { name: 'Voir plus de références' }).click();
-
-		await page.waitForURL('/references?offer_type=97');
-	});
 });

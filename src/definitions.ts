@@ -67,6 +67,11 @@ export type CaseStudy = {
 	url?: string;
 };
 
+export type MetaData = {
+	pageCount: number;
+	totalItems: number;
+};
+
 export type Reference = {
 	id: number;
 	date: Date;
@@ -78,6 +83,11 @@ export type Reference = {
 	imageUrl?: string;
 	associatedContent?: string;
 	caseStudy?: CaseStudy;
+};
+
+export type DataWithMeta<T> = {
+	data: T;
+	meta: MetaData;
 };
 
 export type IconNames =
