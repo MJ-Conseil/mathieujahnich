@@ -37,7 +37,7 @@
 	</Container>
 
 	<div class="flex justify-center">
-		<div class="relative w-4/5">
+		<div class="relative w-4/5 md:w-1/2">
 			<img class="z-20 relative" src={groupPicture} alt="trio d'experts en communication" />
 
 			<div
