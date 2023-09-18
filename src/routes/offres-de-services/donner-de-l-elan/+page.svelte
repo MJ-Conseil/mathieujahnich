@@ -7,7 +7,6 @@
 	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME } from '$lib/constants';
-	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
 	import { getReferences } from '$lib/repositories/reference';
@@ -188,7 +187,7 @@
 				{/each}
 			</div>
 
-			{#if references.length > 4 && currentPage < meta.pageCount}
+			{#if currentPage < meta.pageCount}
 				<div class="w-full mt-8 flex items-center justify-center">
 					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
 						>Afficher plus de réferences

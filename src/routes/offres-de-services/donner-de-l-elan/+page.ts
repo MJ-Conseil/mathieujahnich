@@ -15,8 +15,7 @@ export const load: PageLoad = async ({ fetch }) => {
 			pageCount: 0,
 			totalItems: 0
 		}
-
-	}
+	};
 
 	if (!offerType) {
 		return {

@@ -10,10 +10,27 @@
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
+	import { getReferences } from '$lib/repositories/reference';
 
 	export let data: PageData;
 
 	$: references = data.references.data;
+	$: meta = data.references.meta;
+
+	let currentPage = 1;
+
+	const handleLoadMoreReferences = async () => {
+		currentPage += 1;
+		const newResults = (
+			await getReferences(fetch, {
+				per_page: 4,
+				page: currentPage,
+				offer_type: data.offerTypeId
+			})
+		).data;
+
+		references = [...references, ...newResults];
+	};
 </script>
 
 <svelte:head>
@@ -176,11 +193,12 @@
 				{/each}
 			</div>
 
-			<div class="flex justify-end mt-8">
-				<ArrowLink href={`${ROUTES['Références']}?offer_type=${data.offerTypeId}`}
-					>Voir plus de références</ArrowLink
-				>
-			</div>
+			{#if currentPage < meta.pageCount}
+				<div class="w-full mt-8 flex items-center justify-center">
+					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
+						>Afficher plus de réferences
+					</button>
+				</div>{/if}
 		</Section>
 	{/if}
 
