@@ -20,10 +20,7 @@
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-<header
-	role="banner"
-	class=" bg-blue-dark clipped--bottom md:pt-4 lg:pb-[15rem] pb-32  relative overflow-hidden"
->
+<header role="banner" class=" bg-blue-dark md:pt-4 pb-8 lg:pb-12 relative overflow-hidden">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
 			<p class="text-sand text-xl font-bold">MJ Conseil</p>
@@ -40,7 +37,7 @@
 	</Container>
 
 	<div class="flex  justify-center ">
-		<div class="relative md:w-1/2 w-4/5 ">
+		<div class="relative ">
 			<img src={groupPicture} alt="trio d'experts en communication" />
 
 			<div class="-z-10 absolute bottom-[-15px] right-[90px] hidden md:block">
@@ -83,9 +80,7 @@
 
 	<OfferRow />
 
-	<section
-		class="clipped--top pt-[6rem] md:pt-[8rem] lg:pt-64 pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray"
-	>
+	<section class="pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">À la une du blog</h2>
 			<p class="font-ptsans text-xl md:my-12 my-8 ">
