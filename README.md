@@ -21,8 +21,6 @@ Une application client faite avec la technologie [SvelteKit](https://kit.svelte.
 Ce répertoire GitHub contient l'application client construite avec SvelteKit du site web mathieu-jahnich.fr
 
 
-h
-
 
 ## Démarrage
 
@@ -46,8 +44,9 @@ Pour ce faire, veuillez demander à un membre de l'équipe pour être rajouté �
 Pour déployer et une fois votre PR mergée sur la branche "main", il y a une série d'étape à faire sur l'interface graphique de Jelastic.
 
 Voici une vidéo décrivant ces étapes : 
+[Screencast 2023-09-21 11:26:54.webm](https://github.com/MJ-Conseil/mathieujahnich/assets/15958334/002de0ec-1783-4135-ace4-56b399bc3fff)
 
-https://github.com/MJ-Conseil/mathieujahnich/assets/15958334/dc656f23-53c8-4524-be40-4b3d4b36aad7
+
 
 
 
