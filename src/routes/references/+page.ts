@@ -25,7 +25,7 @@ export const load: PageLoad = async ({ fetch, url }) => {
 
 	const highlightedReferences = rawHighlightedReferences.data
 		.filter((item) => item.highlighted)
-		.slice(0, 4);
+		.slice(0, 5);
 
 	return { referenceTypes, references, highlightedReferences, offerTypeId };
 };
