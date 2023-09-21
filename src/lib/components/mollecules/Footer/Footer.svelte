@@ -144,6 +144,14 @@
 				<li class="text-white hidden md:block">|</li>
 
 				<li class="text-sand">
+					<a class="text-sand font-bold decoration-dotted" href="/declaration-accessibilité"
+						>Déclaration d'accessibilité : non évaluée</a
+					>
+				</li>
+
+				<li class="text-white hidden md:block">|</li>
+
+				<li class="text-sand">
 					<a class="text-sand font-bold decoration-dotted" href="/plan-de-site">Plan de site</a>
 				</li>
 

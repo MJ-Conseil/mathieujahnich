@@ -18,7 +18,7 @@ Une application client faite avec la technologie [SvelteKit](https://kit.svelte.
 
 ## Qu'est-ce que ce répertoire contient ?
 
-Ce répertoire GitHub contient l'application client construite avec SvelteKit de la future version du site web mathieu-jahnich.fr
+Ce répertoire GitHub contient l'application client construite avec SvelteKit du site web mathieu-jahnich.fr
 
 ## Démarrage
 
@@ -29,7 +29,21 @@ Le client est accessible sur l'url http://localhost:5175
 
 ## Déploiement
 
-TO DO
+La version de production du site est hébergée chez Infomaniak sur leur hébergement cloud "Jelastic".
+
+:warning: Actuellement, le déploiemennt se fait de manière manuelle. Etant donné la fréquence de mise à jour, il ne semblait pas nécessaire de créer un processus de Content Delivery (CD)
+
+### Obtenir ces accès sur Infomaniak
+
+La première étape est d'avoir accès à Jelastic.
+
+Pour ce faire, veuillez demander à un membre de l'équipe pour être rajouté à l'organisation "MJ Conseil"
+
+Pour déployer et une fois votre PR mergée sur la branche "main", il y a une série d'étape à faire sur l'interface graphique de Jelastic.
+
+Voici une vidéo décrivant ces étapes
+
+
 
 ## Licence
 
