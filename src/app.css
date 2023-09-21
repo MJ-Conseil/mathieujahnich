@@ -125,18 +125,20 @@
 	}
 
 	.blog-wrapper ul,
-	.html-wrapper ul {
-		@apply list-disc;
+	.html-wrapper ul,
+	.blog-wrapper ol,
+	.html-wrapper ol {
+		@apply list-disc text-blue-dark;
+	}
+
+	.blog-wrapper li,
+	.html-wrapper li {
+		@apply mb-2;
 	}
 
 	.html-wrapper ul,
 	.html-wrapper ol {
 		@apply pl-4;
-	}
-
-	.blog-wrapper ol,
-	.html-wrapper ol {
-		@apply list-disc;
 	}
 
 	.blog-wrapper ol {
@@ -148,9 +150,11 @@
 		@apply my-5 ml-5;
 	}
 
+	.html-wrapper ul li,
+	.html-wrapper ol li,
 	.blog-wrapper ul li,
 	.blog-wrapper ol li {
-		@apply text-xl my-2;
+		@apply text-xl my-2 mb-2;
 	}
 
 	.blog-wrapper h3 {

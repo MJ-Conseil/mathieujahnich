@@ -15,7 +15,7 @@
 		Si vous avez tapé l'adresse dans votre navigateur, veuillez vérifier qu'elle est correcte. La
 		page n'est peut-être plus disponible. <br />
 
-		Dans ce cas, pour continuer votre visite, vous pouvez visiter notre page d'acceuil. <br />
+		Dans ce cas, pour continuer votre visite, vous pouvez visiter notre page d'accueil. <br />
 
 		Sinon, contactez-nous pour que l'on puisse vous rediriger vers la bonne information.
 	</p>
@@ -24,7 +24,7 @@
 		<div>
 			<a
 				class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold rounded text-indigo"
-				href="/">Page d'acceuil</a
+				href="/">Page d'accueil</a
 			>
 		</div>
 		<div>
