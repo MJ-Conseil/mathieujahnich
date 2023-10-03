@@ -23,8 +23,11 @@
 				<li>
 					<a class="mj-link--alt" href={ROUTES.Accueil}>Accueil</a>
 				</li>
+				<li>
+					<a class="mj-link--alt" href={ROUTES['Qui sommes nous ?']}>Qui sommes-nous ?</a>
+				</li>
 				<li class="text-white">
-					Offre de services :
+					Notre offre :
 					<ul class="gap-3  flex flex-col pl-8 mt-2 list-disc text-sand">
 						<li>
 							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
@@ -42,7 +45,7 @@
 					</ul>
 				</li>
 				<li>
-					<a class="mj-link--alt" href={ROUTES.Références}>Références</a>
+					<a class="mj-link--alt" href={ROUTES.Références}>Nos références</a>
 				</li>
 			</ul>
 		</nav>

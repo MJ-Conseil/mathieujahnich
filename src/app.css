@@ -136,10 +136,18 @@
 		@apply mb-2;
 	}
 
+
 	.html-wrapper ul,
 	.html-wrapper ol {
-		@apply pl-4;
+		@apply pl-4 pb-3;
 	}
+
+	.html-wrapper ul li,
+	.html-wrapper ol li {
+
+		@apply !text-lg;
+	}
+
 
 	.blog-wrapper ol {
 		@apply list-decimal;
@@ -178,7 +186,5 @@
 		margin: 0 auto;
 	}
 
-	.html-wrapper p {
-		padding: 0;
-	}
+
 }
