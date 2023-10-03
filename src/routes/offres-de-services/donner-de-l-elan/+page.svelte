@@ -68,7 +68,7 @@
 			<p class="lg:text-[1.4rem] lg:leading-9 font-ptsans mb-6">
 				Les enjeux environnementaux et sociaux sont complexes, les attentes des parties prenantes
 				sont plurielles, les traductions dans le positionnement marketing, dans l’offre et dans les
-				actions de communication sont multiples.Vous avez besoin de donner de l’élan à :
+				actions de communication sont multiples. Vous avez besoin de donner de l’élan à :
 			</p>
 			<div class="lg:gap-x-10 lg:gap-y-10 grid gap-y-5 lg:grid-cols-2">
 				<Need title="Votre stratégie RSE">
@@ -190,7 +190,7 @@
 			{#if currentPage < meta.pageCount}
 				<div class="w-full mt-8 flex items-center justify-center">
 					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
-						>Afficher plus de réferences
+						>Afficher plus de réfétences
 					</button>
 				</div>{/if}
 		</Section>
@@ -204,6 +204,18 @@
 					Nous mettons la communication au service de la transition écologique
 				</p>
 			</div>
+			<div class="flex flex-col gap-5  items-center">
+				<Icon width="60%" height="auto" name="stones" />
+
+				<p class="text-sand text-center text-2xl">Trouver le juste équilibre</p>
+				<a
+					href={ROUTES['Trouver le juste équilibre']}
+					aria-label="Voir l'offre Trouver le juste équilibre"
+					class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
+				>
+					Voir l'offre
+				</a>
+			</div>
 
 			<div class="flex items-center flex-col gap-5 ">
 				<Icon width="54%" height="auto" name="ladder" />
@@ -212,18 +224,6 @@
 				<a
 					href={ROUTES['Faire monter en compétences']}
 					aria-label="Voir l'offre Faire monter en compétences "
-					class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
-				>
-					Voir l'offre
-				</a>
-			</div>
-			<div class="flex flex-col gap-5  items-center">
-				<Icon width="60%" height="auto" name="stones" />
-
-				<p class="text-sand text-center text-2xl">Trouver le juste équilibre</p>
-				<a
-					href={ROUTES['Trouver le juste équilibre']}
-					aria-label="Voir l'offre Trouver le juste équilibre"
 					class="text-sand border border-sand block text-center w-3/4 p-2 font-bold hover:bg-sand hover:text-blue-dark hover:boder-sand "
 				>
 					Voir l'offre

@@ -18,7 +18,7 @@
 <div
 	data-testId={testId}
 	class={`border-2 border-gray flex flex-col  rounded-xl bg-white ${
-		size === SIZE.LARGE ? 'max-h-[600px]' : 'max-h-[450px]'
+		size === SIZE.LARGE ? 'max-h-[600px]' : 'max-h-[500px]'
 	}`}
 >
 	<div class="relative h-1/2">
@@ -50,7 +50,7 @@
 			<p class="text-blue-dark text-sm">
 				{createdDate}
 			</p>
-			<h3 class="text-blue-dark mt-2 text-xl mb-0  pb-4 font-bold">
+			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0  pb-4 font-bold">
 				{@html title}
 			</h3>
 

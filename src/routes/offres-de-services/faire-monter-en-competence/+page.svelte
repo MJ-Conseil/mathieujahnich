@@ -75,8 +75,8 @@
 				<Need title="Vos équipes marketing et communication">
 					<ul class="mj-list--disc">
 						<li class="mb-2">
-							Quels sont les enjeux écologiques et la responsabilité du marketing, de la publicité,
-							de la communication ?
+							Quelle est la responsabilité du marketing, de la publicité et de la communication à la
+							lumière des enjeux environnementaux, sociaux et sociétaux ?
 						</li>
 						<li class="mb-2">
 							Marketing, publicité et communication plus responsables : de quoi s’agit-il ?
@@ -93,7 +93,8 @@
 				<Need title="L’ensemble de vos salarié·es">
 					<ul class="mj-list--disc">
 						<li class="mb-2">
-							Comment mettre en perspective la stratégie RSE avec les enjeux écologiques ?
+							Comment mettre en perspective la stratégie RSE avec les enjeux écologiques avec les
+							enjeux environnementaux, sociaux et sociétaux ? ?
 						</li>
 						<li class="mb-2">
 							Peut-on faciliter l’intégration et la mobilisation à l’échelle individuelle et
@@ -122,7 +123,7 @@
 						et replay)
 					</li>
 					<li class="mb-2">
-						<strong>Formation et ateliers de mise en pratique</strong> (de 3 heures à 3 jours)
+						<strong>Formation et ateliers de mise en pratique</strong> (de 3 heures à 3 jours ou plus)
 					</li>
 					<li class="mb-2">
 						<strong>Modalités pédagogiques variées</strong> : séquences descendantes, travaux en sous-groupes,
@@ -173,12 +174,12 @@
 				<p class="mb-2">
 					MJ Conseil est un <strong>organisme de formation enregistré</strong> sous le numéro 11770795177
 					auprès du préfet de région d'Île-de-France et certifié Qualiopi depuis janvier 2023 au titre
-					de la catégorie suivante : Actions de formation « Master Class »
+					de la catégorie suivante : Actions de formation Master Class
 				</p>
 				<ul class="mj-list--disc">
-					<li class="mb-2">Exonération de TVA.</li>
-					<li class="mb-2">Possibilité de prise en charge financière par votre OPCO.</li>
-					<li class="mb-2">Adaptation des modalités et des contenus à vos besoins.</li>
+					<li class="mb-2">Exonération de TVA</li>
+					<li class="mb-2">Possibilité de prise en charge financière par votre OPCO</li>
+					<li class="mb-2">Adaptation des modalités et des contenus à vos besoins</li>
 				</ul>
 			</Method>
 		</div>
@@ -201,7 +202,7 @@
 			{#if currentPage < meta.pageCount}
 				<div class="w-full mt-8 flex items-center justify-center">
 					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
-						>Afficher plus de réferences
+						>Afficher plus de réfétences
 					</button>
 				</div>{/if}
 		</Section>
@@ -229,7 +230,7 @@
 						Voir l'offre
 					</a>
 				</div>
-				<div class="flex items-center flex-col gap-5 ">
+				<div class="flex justify-between flex-col gap-5 ">
 					<Icon width="54%" height="auto" name="plane" />
 
 					<p class="text-sand text-center justify-center  text-2xl">Donner de l'élan</p>

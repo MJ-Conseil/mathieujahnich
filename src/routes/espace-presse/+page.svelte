@@ -106,8 +106,9 @@
 			<div class="ml-8">
 				<div class="mb-24">
 					<p>
-						J’invite les journalistes à me contacter directement pour discuter de manière informelle
-						dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une interview.
+						Nous invitons les journalistes à contacter Mathieu directemen pour discuter de manière
+						informelle dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une
+						interview.
 					</p>
 
 					<ul class="flex gap-5 mt-5">
