@@ -1,6 +1,12 @@
 # mathieu-jahnich.fr - client
 
-Ce site en en cours de développement est une nouvelle version du site actuel de Mathieu Jahnich dont la version actuelle est diponible à cette adresse https://mathieu-jahnich.fr
+
+Ce répertoire GitHub contient l'application client construite avec SvelteKit du site web mathieu-jahnich.fr.
+
+Cette application fait partie de la version du site développéeen 2023 par [Fairness](fairness.coop) en collaboration avec @AnneFa 
+
+
+## Contexte
 
 L'équipe projet a été formée en novembre 2022 à la suite d'une investigation menée par Anne Faubry. Cette investigation avait pour objectif la création d'une nouvelle version du site internet de Mathieu Jahnich créé dans une démarche d'éco-conception de service numérique.
 
@@ -8,21 +14,18 @@ Cette démarche a été synthétisée dans le [guide d'éco-conception de servic
 
 ## Implémentation et périmètre métier
 
-Le site actuel mathieu-jahnich.fr est un site initialement concu avec la technologie [Wordpress](https://wordpress.com/fr/).
+Initialement le site mathieu-jahnich.fr était un site concu  intégralement avec la technologie [Wordpress](https://wordpress.com/fr/).
 
-Mathieu Jahnich souhaite que son site intègre le plus possible des bonnes pratiques d'éco-conception de service numérique. Cette nouvelle version du site doit respecter les normes d'accessibilité de service numérique définies par le [Référentiel général d'amélioration de l'accessibilité (RGAA)](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/).
+Mathieu Jahnich souhaitait que son site intègre le plus possible des bonnes pratiques d'éco-conception de service numérique. Cette nouvelle version du site doit respecter les normes d'accessibilité de service numérique définies par le [Référentiel général d'amélioration de l'accessibilité (RGAA)](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/).
 
-Dans cette optique, le choix technique effectué pour répondre à ces objectifs est de transofmer le Wordpress actuel en [CMS headless](https://www.lafabriquedunet.fr/blog/headless-cms/).
+Dans cette optique, le choix technique effectué pour répondre à ces objectifs était de transofmer le Wordpress actuel en [CMS headless](https://www.lafabriquedunet.fr/blog/headless-cms/).
 
 Une application client faite avec la technologie [SvelteKit](https://kit.svelte.dev/) a été rajoutée. Cette application consommera le contenu (articles de blog, images,...) mise à disposition par Wordpress via l'API REST.
 
-## Qu'est-ce que ce répertoire contient ?
-
-Ce répertoire GitHub contient l'application client construite avec SvelteKit du site web mathieu-jahnich.fr
 
 
 
-## Démarrage
+## Démarrage du projet
 
 #### Installation des dépendances SvelteKit et initialisation de la DB
 
@@ -48,7 +51,21 @@ Voici une vidéo décrivant ces étapes :
 
 
 
+## Vue générale de l'architecture
 
+```mermaid
+flowchart TB
+
+id1["`Reverse Proxy
+URL : mathieu.jahnich.fr
+`"]
+id2[FrontEnd : serveur Node]
+id3[BackEnd : serveur Apache Wordpress]
+
+ id1-->|transmet les requètes HTTP|id2
+ id2-->|Récupère les données depuis|id3
+
+```
 
 ## Licence
 
