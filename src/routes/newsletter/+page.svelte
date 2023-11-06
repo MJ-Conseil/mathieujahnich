@@ -16,7 +16,7 @@
 	<title>{SITE_WEB_NAME} - Newsletter</title>
 </svelte:head>
 
-<div class="py-8 bg-blue-dark ">
+<div class="py-8 bg-blue-dark">
 	<Container>
 		<header>
 			<p class="text-sand text-xl mb-3">Réconcilier communication et transition</p>
@@ -85,7 +85,7 @@
 				Vous pouvez vous désinscrire à tout moment en cliquant sur le lien présent dans nos emails.
 			</p>
 
-			<button type="submit" class="bg-indigo mt-5 font-ptsans  rounded text-white py-3 px-6 block"
+			<button type="submit" class="bg-indigo mt-5 font-ptsans rounded text-white py-3 px-6 block"
 				>S'abonner</button
 			>
 		</form>
@@ -94,7 +94,7 @@
 	<Section alt>
 		<h2>Les numéros précédents</h2>
 
-		<div class="h-full md:gap-x-10 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-2">
+		<div class="h-full md:gap-x-10 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-2">
 			{#each data.newsletters as newsletter}
 				<PostCard
 					createdDate={new Intl.DateTimeFormat('fr-FR', {

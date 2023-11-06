@@ -8,7 +8,7 @@
 	<title>{SITE_WEB_NAME} - Informations Légales</title>
 </svelte:head>
 
-<div class="py-8 bg-blue-dark ">
+<div class="py-8 bg-blue-dark">
 	<Container>
 		<header>
 			<h1 class="mj-h1--alt">Déclaration d'accessibilité</h1>

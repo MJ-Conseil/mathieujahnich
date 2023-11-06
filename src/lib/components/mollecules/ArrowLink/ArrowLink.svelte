@@ -19,7 +19,7 @@
 	class="text-indigo font-ptsans text-md font-bold flex items-center gap-2"
 	{href}
 >
-	<span class="hover:decoration-sand hover:underline underline-offset-8  decoration-2">
+	<span class="hover:decoration-sand hover:underline underline-offset-8 decoration-2">
 		<slot />
 	</span>
 

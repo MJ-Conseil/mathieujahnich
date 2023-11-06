@@ -1,14 +1,14 @@
 import { getEmbeddedMedia } from '$lib/utils/media';
-import type { MediaResource } from 'src/definitions';
+import type { MediaResource } from 'definitions';
 
 export const transformWordpressMediaResourceToMediaResource = (resource: any): MediaResource => {
 	const embededMedias = getEmbeddedMedia(resource);
 
 	const associatedContent = resource.acf?.intitule_du_lien
 		? {
-				externalResourceName: resource.acf?.intitule_du_lien,
-				externalResourceURl: resource.acf.url_ressource_media
-		  }
+			externalResourceName: resource.acf?.intitule_du_lien,
+			externalResourceURl: resource.acf.url_ressource_media
+		}
 		: undefined;
 
 	return {

@@ -22,7 +22,7 @@
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 <header role="banner" class=" bg-blue-dark md:pt-4 pb-8 lg:pb-12 relative overflow-hidden">
 	<Container>
-		<div class="md:w-[70%] flex flex-col gap-4  break-words overflow-visible mb-8  ">
+		<div class="md:w-[70%] flex flex-col gap-4 break-words overflow-visible mb-8">
 			<p class="text-sand text-xl font-bold">MJ Conseil</p>
 			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Nous mettons la <span class="font-bold"> communication</span> au service de la
@@ -53,7 +53,7 @@
 
 		<div
 			aria-hidden="true"
-			class="md:block md:absolute top-4 right-[-20px] md:w-[250px] justify-center hidden opacity-80 text-white "
+			class="md:block md:absolute top-4 right-[-20px] md:w-[250px] justify-center hidden opacity-80 text-white"
 		>
 			<Icon width="100%" height="100%" stroke="#ffffff33" fill="#ffffff33" name="mjConseil" />
 		</div>
@@ -63,7 +63,7 @@
 <main class="md:p-0 md:0" id="main">
 	<Section>
 		<h2>Signes particuliers</h2>
-		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5  lg:grid-cols-3">
+		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-3">
 			<ParticularSign
 				title="Notre trio"
 				content="Nous collaborons toutes les trois depuis de nombreuses années. Nous mettons nos expertises complémentaires en RSE et en communication, notre complicité et notre bienveillance au service de la transformation de votre organisation."
@@ -85,13 +85,13 @@
 	<section class="pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
 		<Container>
 			<h2 class="mb-4">À la une du blog</h2>
-			<p class="font-ptsans text-xl md:my-12 my-8 ">
+			<p class="font-ptsans text-xl md:my-12 my-8">
 				Depuis 2005, nous interrogeons l’alignement de la communication et du marketing avec les
 				enjeux de transition écologique. Retrouvez ici nos analyses, des témoignages et des
 				ressources.
 			</p>
 
-			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 				{#each data.posts as post}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
@@ -107,7 +107,7 @@
 				{/each}
 			</div>
 
-			<div class="mt-8 flex  justify-center w-ful">
+			<div class="mt-8 flex justify-center w-ful">
 				<ButtonLink href={ROUTES['Blog']}>Découvrir tous les articles</ButtonLink>
 			</div>
 		</Container>

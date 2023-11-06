@@ -1,4 +1,4 @@
-import type { Post, PostGroupedByCategories, PostWithCategory } from 'src/definitions';
+import type { Post, PostGroupedByCategories, PostWithCategory } from 'definitions';
 import type { WP_REST_API_Category } from 'wp-types';
 
 export const groupPostByCategories = (

@@ -1,4 +1,4 @@
-import type { QueryOption } from 'src/definitions';
+import type { QueryOption } from 'definitions';
 
 export const patchQueryString = (options: QueryOption) => {
 	const params = new URLSearchParams();

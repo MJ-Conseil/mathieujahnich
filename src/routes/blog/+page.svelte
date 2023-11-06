@@ -11,7 +11,7 @@
 	import { getPosts } from '$lib/repositories/post';
 	import { patchQueryString } from '$lib/utils/url';
 	import slugify from 'slugify';
-	import type { PostGroupedByCategories, QueryOption } from 'src/definitions';
+	import type { PostGroupedByCategories, QueryOption } from 'definitions';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -122,7 +122,7 @@
 	<title>{SITE_WEB_NAME} - Blog</title>
 </svelte:head>
 
-<div class="py-8 bg-blue-dark ">
+<div class="py-8 bg-blue-dark">
 	<Container>
 		<header>
 			<h1 class="mj-h1--alt">
@@ -152,7 +152,7 @@
 	<Section alt>
 		<h2>Les derniers posts</h2>
 		<p class="text-xl">Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
-		<div class="flex  mt-7  gap-3 flex-wrap">
+		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.categories as category}
 				<Tag
 					active={searchParams.categories ? searchParams.categories.includes(category.id) : false}
@@ -162,7 +162,7 @@
 			{/each}
 		</div>
 
-		<div class=" md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols md:grid-cols-3">
+		<div class=" md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols md:grid-cols-3">
 			{#if posts.length > 0}
 				{#each posts as post}
 					<PostCard
@@ -193,7 +193,7 @@
 		<Section alt={isOdd}>
 			<h2>{postGrouppedByCategory.categoryName}</h2>
 
-			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 				{#each postGrouppedByCategory.posts as post}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {

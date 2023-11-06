@@ -1,5 +1,6 @@
 import { getEmbeddedAuthor, getEmbeddedMedia } from '$lib/utils/media';
-import type { Post } from 'src/definitions';
+import type { Post } from '../../definitions';
+
 
 export const transformWordpressPostToPost = (post: any): Post => {
 	const media = getEmbeddedMedia(post);

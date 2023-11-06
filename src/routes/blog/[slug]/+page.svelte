@@ -42,7 +42,7 @@
 		</p>
 
 		{#if data.post.tags.length > 0}
-			<div class="flex gap-2 md:gap-5 mt-5 flex-wrap ">
+			<div class="flex gap-2 md:gap-5 mt-5 flex-wrap">
 				{#each data.post.tags as tag}
 					<Tag name={tag.name} />
 				{/each}
@@ -59,7 +59,7 @@
 	<Section alt>
 		<h3>Les derniers articles</h3>
 
-		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 			{#each data.lastPosts as post}
 				<PostCard
 					href={`${ROUTES.Blog}/${post.slug}`}
@@ -76,7 +76,7 @@
 
 		<div class="w-full mt-8 mb-12 flex items-center justify-center">
 			<a
-				class="border-indigo border rounded block px-4 py-2 text-center hover:no-underline hover:bg-indigo hover:text-white font-bold min-w-[200px]  text-indigo"
+				class="border-indigo border rounded block px-4 py-2 text-center hover:no-underline hover:bg-indigo hover:text-white font-bold min-w-[200px] text-indigo"
 				href={ROUTES.Blog}>Voir tous les articles</a
 			>
 		</div>

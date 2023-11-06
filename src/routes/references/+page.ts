@@ -1,6 +1,6 @@
 import { getReferences } from '$lib/repositories/reference';
 import { getReferencesTypes } from '$lib/repositories/referenceTypes';
-import type { QueryOption } from 'src/definitions';
+import type { QueryOption } from 'definitions';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, url }) => {

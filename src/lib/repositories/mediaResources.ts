@@ -1,6 +1,6 @@
 import { transformWordpressMediaResourceToMediaResource } from '$lib/transformers/mediaResource';
 import { api, buildQueryString } from '$lib/utils/api';
-import type { Fetch, MediaResource, QueryOption } from 'src/definitions';
+import type { Fetch, MediaResource, QueryOption } from 'definitions';
 
 export const getMediaResources = async (
 	fetch: Fetch,

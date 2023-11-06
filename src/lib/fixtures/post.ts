@@ -1,4 +1,4 @@
-import type { Post } from 'src/definitions';
+import type { Post } from 'definitions';
 
 export const buildFakePost = (post: Partial<Post> = {}): Post => {
 	return {

@@ -1,4 +1,4 @@
-import type { ResourceType } from 'src/definitions';
+import type { ResourceType } from 'definitions';
 
 export const transformWordpressGenericResourceToResource = (offerType: any): ResourceType => {
 	return {

@@ -99,7 +99,7 @@
 			mots clés ci-dessous.
 		</p>
 
-		<div class="flex  mt-7  gap-3 flex-wrap">
+		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.referenceTypes as referenceType}
 				<Tag
 					active={selectedFilterIds.includes(referenceType.id)}

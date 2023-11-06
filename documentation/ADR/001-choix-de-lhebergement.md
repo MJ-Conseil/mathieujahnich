@@ -1,7 +1,7 @@
 # Choix d'un nouvel hébergeur pour `mathieu-jahnich.fr` et `beta.mathieu-jahnich.fr`
 
 _Date_ : 30/11/22
-_Status : approuvée
+\_Status : approuvée
 
 ## Contexte
 
@@ -188,4 +188,3 @@ Cela permettrait de se soulager de la gestion d'un serveur de type [VPS](https:/
 ### Décision
 
 Pour la nouvelle version du site mathieu-jahnich.fr, nous allons aller chez Infomaniak avec leur solution "Elastic Cloud"
-

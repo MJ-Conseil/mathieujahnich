@@ -10,7 +10,7 @@
 <div class="w-full px-4 py-8 pb-14 relative bg-blue-dark">
 	<div class="container lg:pb-8 lg:px-8 lg:mx-auto">
 		<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
-		<header role="banner" class="lg:w-[40%] flex flex-col gap-4  break-words overflow-visible">
+		<header role="banner" class="lg:w-[40%] flex flex-col gap-4 break-words overflow-visible">
 			<h1 class="mj-h1--alt font-bold text">Informations légales</h1>
 		</header>
 	</div>
