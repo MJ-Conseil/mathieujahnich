@@ -16,9 +16,7 @@ export type AppTestArgs = AppFixtures;
 
 export const test = base.extend<AppTestArgs>({
 	makeAxeBuilder: async ({ page }, use) => {
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		//@ts-ignore this is a hot fix untild this isssue will be resolved https://github.com/dequelabs/axe-core-npm/issues/601
-		const makeAxeBuilder = () => new AxeBuilder.default({ page });
+		const makeAxeBuilder = () => new AxeBuilder({ page })
 		await use(makeAxeBuilder);
 	}
 });
