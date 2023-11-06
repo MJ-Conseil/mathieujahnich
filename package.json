@@ -14,7 +14,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.28.1",
+		"@playwright/test": "^1.39.0",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-node": "^1.1.0",
 		"@sveltejs/kit": "^1.0.0",
@@ -40,7 +40,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@axe-core/playwright": "^4.5.2",
+		"@axe-core/playwright": "^4.8.1",
 		"@sendinblue/client": "^3.3.1",
 		"dialog-polyfill": "^0.5.6",
 		"slugify": "^1.6.5",
