@@ -1,4 +1,4 @@
-import type { QueryOption } from 'src/definitions';
+import type { QueryOption } from 'definitions';
 import { buildQueryString } from './api';
 
 describe('buildQueryString', () => {

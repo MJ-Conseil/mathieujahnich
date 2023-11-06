@@ -1,5 +1,5 @@
 import { buildFakePost } from '$lib/fixtures/post';
-import type { PostGroupedByCategories } from 'src/definitions';
+import type { PostGroupedByCategories } from 'definitions';
 import { groupPostByCategories } from './post';
 
 describe('group post by categories', () => {

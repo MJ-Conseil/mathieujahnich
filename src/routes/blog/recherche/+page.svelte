@@ -10,7 +10,7 @@
 	import { getPosts } from '$lib/repositories/post';
 
 	import { patchQueryString } from '$lib/utils/url';
-	import type { QueryOption } from 'src/definitions';
+	import type { QueryOption } from 'definitions';
 
 	import type { PageData } from './$types';
 
@@ -106,7 +106,7 @@
 			} ${searchParams.search ? `pour "${searchParams.search}"` : ''}`}
 		</h2>
 
-		<div class="flex  mt-12  gap-3 flex-wrap">
+		<div class="flex mt-12 gap-3 flex-wrap">
 			{#each data.categories as category}
 				<Tag
 					active={searchParams.categories ? searchParams.categories.includes(category.id) : false}
@@ -116,7 +116,7 @@
 			{/each}
 		</div>
 
-		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 			{#if posts.length > 0}
 				{#each posts as post}
 					<PostCard

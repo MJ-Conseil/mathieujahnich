@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { CaseStudy } from 'src/definitions';
+	import type { CaseStudy } from 'definitions';
 	import Accordion from '../Accordion/Accordion.svelte';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
@@ -21,11 +21,11 @@
 			{title}
 		</p>
 	</div>
-	<div class="[&>p]:mb-4  !text-lg accordion-content html-wrapper" slot="panel-content">
+	<div class="[&>p]:mb-4 !text-lg accordion-content html-wrapper" slot="panel-content">
 		{@html content}
 
 		{#if caseStudy?.url}
-			<div class="flex  justify-end">
+			<div class="flex justify-end">
 				<ArrowLink href={caseStudy.url}>Voir l'étude de cas</ArrowLink>
 			</div>
 		{/if}

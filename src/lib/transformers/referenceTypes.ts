@@ -1,4 +1,4 @@
-import type { ReferenceType } from 'src/definitions';
+import type { ReferenceType } from 'definitions';
 
 export const transformWordpressReferenceTypeToReferenceType = (
 	referenceType: any

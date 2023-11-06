@@ -1,5 +1,5 @@
 import { API_URL } from './config';
-import type { Fetch, QueryOption } from 'src/definitions';
+import type { Fetch, QueryOption } from 'definitions';
 
 export const api = async <T>(url: string, fetch: Fetch): Promise<T> => {
 	const request = await fetch(new Request(`${API_URL}/wp-json/wp/v2${url}`));

@@ -23,7 +23,7 @@
 >
 	<div class="relative h-1/2">
 		{#if pictureURL}
-			<div class="h-full w-full flex items-center justify-center ">
+			<div class="h-full w-full flex items-center justify-center">
 				<img
 					class:rounded-t-xl={imageCover}
 					class:h-full={imageCover}
@@ -50,7 +50,7 @@
 			<p class="text-blue-dark text-sm">
 				{createdDate}
 			</p>
-			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0  pb-4 font-bold">
+			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0 pb-4 font-bold">
 				{@html title}
 			</h3>
 
@@ -62,7 +62,7 @@
 		</div>
 	</div>
 
-	<div class="p-4 pt-0  mt-4 flex justify-end">
+	<div class="p-4 pt-0 mt-4 flex justify-end">
 		<slot>
 			{#if href}
 				<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>

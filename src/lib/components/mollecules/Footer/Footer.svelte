@@ -5,8 +5,8 @@
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
-<footer id="main-footer" role="contentinfo" class="bg-blue-dark  md:p-8 p-4 md:pt-12">
-	<div class="md:flex md:justify-around  justify-between">
+<footer id="main-footer" role="contentinfo" class="bg-blue-dark md:p-8 p-4 md:pt-12">
+	<div class="md:flex md:justify-around justify-between">
 		<div class="hidden lg:block lg:w-1/5">
 			<p class="md:block font-ptsans text-blue-light hidden text-xl">
 				<Icon name="mjConseilFull" width="220px" height="auto" />
@@ -28,7 +28,7 @@
 				</li>
 				<li class="text-white">
 					Notre offre :
-					<ul class="gap-3  flex flex-col pl-8 mt-2 list-disc text-sand">
+					<ul class="gap-3 flex flex-col pl-8 mt-2 list-disc text-sand">
 						<li>
 							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
 						</li>

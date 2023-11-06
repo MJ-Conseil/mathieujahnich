@@ -1,6 +1,6 @@
 import { transformWordpressReferenceTypeToReferenceType } from '$lib/transformers/referenceTypes';
 import { api } from '$lib/utils/api';
-import type { Fetch, ReferenceType } from 'src/definitions';
+import type { Fetch, ReferenceType } from 'definitions';
 
 export const getReferencesTypes = async (fetch: Fetch): Promise<ReferenceType[]> => {
 	// By default Wordpress send 10 items only and a maxium of 100. Here we want to have as many elements as possible.

@@ -33,7 +33,7 @@
 </script>
 
 <div class="p-2">
-	<ul class="flex justify-end  gap-12 ">
+	<ul class="flex justify-end gap-12">
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Accueil']} href={ROUTES['Accueil']}
 			>Accueil
 		</DesktopMenuItem>
@@ -73,7 +73,7 @@
 				>
 					<li>
 						<a
-							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand  text-lg"
+							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES[`Donner de l'élan`]}
 							aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
@@ -83,7 +83,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand  text-lg"
+							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Trouver le juste équilibre']}
 							aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
@@ -93,7 +93,7 @@
 					</li>
 					<li>
 						<a
-							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand  text-lg"
+							class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
 							on:click={() => handleClickMenuButton()}
 							href={ROUTES['Faire monter en compétences']}
 							aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}

@@ -1,6 +1,6 @@
 import { transformWordpressPostToPost } from '$lib/transformers/posts';
 import { api } from '$lib/utils/api';
-import type { Fetch, Post, QueryOption } from 'src/definitions';
+import type { Fetch, Post, QueryOption } from 'definitions';
 import type { WP_Post } from 'wp-types';
 
 const createQueryUrl = (options: QueryOption): string => {

@@ -16,7 +16,7 @@ export type AppTestArgs = AppFixtures;
 
 export const test = base.extend<AppTestArgs>({
 	makeAxeBuilder: async ({ page }, use) => {
-		const makeAxeBuilder = () => new AxeBuilder({ page })
+		const makeAxeBuilder = () => new AxeBuilder({ page });
 		await use(makeAxeBuilder);
 	}
 });

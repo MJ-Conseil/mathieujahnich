@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<a id="skip-nav" class="skip bg-gray w-full  text-blue-dark text-xl underline" href="#main-content">
+<a id="skip-nav" class="skip bg-gray w-full text-blue-dark text-xl underline" href="#main-content">
 	Aller au contenu principal
 </a>
 

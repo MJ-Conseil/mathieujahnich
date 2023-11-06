@@ -20,7 +20,7 @@
 	}
 
 	const handleCloseModal = () => {
-		dispatch('closeModal');
+		dispatch('closeModal', false);
 	};
 
 	const handleKeyboardInterractions = (e: KeyboardEvent) => {
@@ -89,7 +89,7 @@
 	class="h-full hidden w-full fixed z-10 left-0 top-0 bg-gray overflow-x-hidden overflow-y-hidden p-4"
 >
 	<h3 id="modal-title" class="sr-only">Menu de navigation</h3>
-	<div class="w-full flex  justify-end">
+	<div class="w-full flex justify-end">
 		<button
 			on:click={handleCloseModal}
 			aria-label="fermer le menu de navigation"

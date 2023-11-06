@@ -15,7 +15,7 @@
 	<title>{SITE_WEB_NAME} - Qui sommes nous ?</title>
 </svelte:head>
 
-<header class="py-8 bg-blue-dark ">
+<header class="py-8 bg-blue-dark">
 	<Container>
 		<p class="text-sand text-xl font-bold">MJ Conseil</p>
 		<h1 class="mj-h1--alt">Qui sommes nous ?</h1>
@@ -50,7 +50,7 @@
 						prenantes et assurer la cohérence et la crédibilité entre action et communication.
 					</p>
 
-					<p class=" py-9  flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
+					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="LinkedIn Sandrine Cadic"
 							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
@@ -95,7 +95,7 @@
 						enthousiasme pour donner envie de passer à l’action.
 					</p>
 
-					<p class=" py-9  flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
+					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="Contacter Sandrine Cadic"
 							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
@@ -129,7 +129,7 @@
 						posture « de la recherche à l'action ».
 					</p>
 
-					<p class=" py-9  flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
+					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="Linkedin Mathieu Jahnich"
 							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"

@@ -3,7 +3,7 @@ import type {
 	MediaResourceRecord,
 	MediaResourcesByTypes,
 	MediaResourceType
-} from 'src/definitions';
+} from 'definitions';
 
 export const groupMediaResourceByType = (
 	mediaResource: MediaResource[][],

@@ -23,7 +23,7 @@
 			name="display-card"
 			class="w-full"
 		>
-			<span class="flex items-center  justify-between">
+			<span class="flex items-center justify-between">
 				<slot name="trigger-content" />
 
 				<span class="hidden md:block">

@@ -1,5 +1,5 @@
 import { getEmbeddedMedia } from '$lib/utils/media';
-import type { Newsletter } from 'src/definitions';
+import type { Newsletter } from 'definitions';
 
 export const transformRawNewsletterToNewsletter = (rawNewsletter: any): Newsletter => {
 	const media = getEmbeddedMedia(rawNewsletter);

@@ -1,7 +1,7 @@
 import { getCategories } from '$lib/repositories/categories';
 import { getPosts } from '$lib/repositories/post';
 import { addCategoryToPost, groupPostByCategories } from '$lib/utils/post';
-import type { QueryOption } from 'src/definitions';
+import type { QueryOption } from 'definitions';
 
 import type { PageLoad } from './$types';
 

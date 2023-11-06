@@ -1,6 +1,6 @@
 <script lang="ts">
 	import slugify from 'slugify';
-	import type { QueryOption } from 'src/definitions';
+	import type { QueryOption } from 'definitions';
 	import { createEventDispatcher } from 'svelte';
 
 	export let label: string;
@@ -91,7 +91,7 @@
 		<span class="text-red border-red font-bold" id={`${id}-error-desc`}>Ce champs est requis</span>
 	{/if}
 
-	<div class="lg:w-2/3 w-full md:h-10 md:flex md:rounded-l ">
+	<div class="lg:w-2/3 w-full md:h-10 md:flex md:rounded-l">
 		<input
 			aria-describedby={input && input.validity.valueMissing && inputTouched
 				? `${id}-error-desc`

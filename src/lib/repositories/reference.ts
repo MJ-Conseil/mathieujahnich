@@ -1,6 +1,6 @@
 import { transformWordpressReferenceToReference } from '$lib/transformers/reference';
 import { apiWithHeaders, buildQueryString } from '$lib/utils/api';
-import type { DataWithMeta, Fetch, QueryOption, Reference } from 'src/definitions';
+import type { DataWithMeta, Fetch, QueryOption, Reference } from 'definitions';
 
 export const getReferences = async (
 	fetch: Fetch,

@@ -9,6 +9,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		alias: {
+			"definitions": "src/definitions",
+		},
 		csp: {
 			directives: {
 				'default-src': [

@@ -98,14 +98,13 @@ Passer par du PaaS ou un VPS semblerait êtres deux solutions envisageables.
 
 Une préférence irait pour le PaaS
 
-
 ## Décision finale et ce qui a été mis en place à la mise en ligne en octobre 2023
 
 La solution retenue est d'utiliser la solution PAAS d'Infomaniak.
 
 Le service numérique utilise deux environements Jelastic :
 
-- Front : un "boite" node JS pour servir les fichiers buildés 
+- Front : un "boite" node JS pour servir les fichiers buildés
 - Back : une "boite" contenant Wordpress, Apache et une DB MySQL
 
 Le front bénéficie d'une IP public pour être rattaché au nom de domaine mathieu-jahnich.fr

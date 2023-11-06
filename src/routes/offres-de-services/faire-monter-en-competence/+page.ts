@@ -1,6 +1,6 @@
 import { getOfferTypes } from '$lib/repositories/offerTypes';
 import { getReferences } from '$lib/repositories/reference';
-import type { DataWithMeta, Reference } from 'src/definitions';
+import type { DataWithMeta, Reference } from 'definitions';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch }) => {

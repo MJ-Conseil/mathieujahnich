@@ -7,7 +7,7 @@
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
 	import { getMediaResources } from '$lib/repositories/mediaResources';
-	import type { MediaResourcesByTypes } from 'src/definitions';
+	import type { MediaResourcesByTypes } from 'definitions';
 	import picture from '$lib/assets/pictures/mj-interview.jpg';
 
 	import type { PageData } from './$types';
@@ -82,7 +82,7 @@
 	<title>{SITE_WEB_NAME} - Espace presse</title>
 </svelte:head>
 
-<div class="py-8 bg-blue-dark ">
+<div class="py-8 bg-blue-dark">
 	<Container>
 		<header>
 			<p class="text-sand text-xl font-bold">Radio, presse, télévision, web…</p>
@@ -137,7 +137,7 @@
 			<Section alt={isOdd}>
 				<h2>{mediaResourceItem.mediaResourceTypeName}</h2>
 
-				<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12  md:grid-cols-3">
+				<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 					{#each mediaResourceItem.resource as mediaResource}
 						<PostCard
 							createdDate={new Intl.DateTimeFormat('fr-FR', {
