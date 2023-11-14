@@ -13,7 +13,7 @@
 <Accordion id={`reference-${id}`}>
 	<div title={`voir la référence ${title}`} slot="trigger-content" class="md:w-full flex md:gap-5">
 		{#if imageUrl}
-			<div class="w-1/10 flex items-center">
+			<div class="w-1/10 md:flex items-center hidden">
 				<img class="object-cover max-h-20" src={imageUrl} aria-hidden="true" alt="" />
 			</div>
 		{/if}

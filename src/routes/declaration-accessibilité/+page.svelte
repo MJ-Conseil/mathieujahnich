@@ -11,7 +11,7 @@
 <div class="py-8 bg-blue-dark">
 	<Container>
 		<header>
-			<h1 class="mj-h1--alt">Déclaration d'accessibilité</h1>
+			<h1 class="mj-h1--alt break-words">Déclaration d'accessibilité</h1>
 		</header>
 	</Container>
 </div>
