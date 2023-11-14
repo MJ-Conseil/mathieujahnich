@@ -25,8 +25,8 @@
 		</Headline>
 	</Container>
 </header>
-
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<h2 class="">Un trio d'expertes</h2>
 

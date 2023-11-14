@@ -15,8 +15,8 @@
 		</header>
 	</Container>
 </div>
-
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<p class="mb-8">Chères utilisatrices et utilisateurs,</p>
 

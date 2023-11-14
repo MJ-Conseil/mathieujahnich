@@ -69,7 +69,9 @@
 	</Headline>
 </PageHeader>
 
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+
+<main role="main" class="md:p-0 md:0" id="main-content">
 	{#if highlightedReferences.length > 0}
 		<Section>
 			<h2>Références phares</h2>

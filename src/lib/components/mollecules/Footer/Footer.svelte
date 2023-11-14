@@ -16,7 +16,7 @@
 			</p>
 		</div>
 
-		<nav aria-label="site-map">
+		<nav aria-label="navigation pied de page">
 			<h3 class="mj-h4--alt">MJ Conseil</h3>
 
 			<ul class="flex flex-col gap-2">
@@ -109,7 +109,7 @@
 								class="text-sand  c hover:text-sand-dark "
 							/></span
 						>
-						<span class="sr-only">Linkedin</span>
+						<span class="sr-only">Nous suivre sur Linkedin</span>
 					</a>
 				</li>
 
@@ -123,7 +123,7 @@
 								class="text-sand rounded hover:text-sand-dark"
 							/></span
 						>
-						<span class="sr-only">Youtube</span>
+						<span class="sr-only">Nous suivre sur Youtube</span>
 					</a>
 				</li>
 			</ul>

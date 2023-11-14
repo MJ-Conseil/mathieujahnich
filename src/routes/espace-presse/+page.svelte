@@ -95,8 +95,8 @@
 		</header>
 	</Container>
 </div>
-
-<main id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" id="main-content">
 	<Section>
 		<h2 class="sr-only">Contactez-moi</h2>
 

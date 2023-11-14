@@ -6,16 +6,17 @@
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - Références</title>
+	<title>{SITE_WEB_NAME} - Plan de site</title>
 </svelte:head>
 
 <PageHeader>
 	<h1 class="mj-h1--alt">Plan de site</h1>
 </PageHeader>
-
-<main class="mt-8 mb-12" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="mt-8 mb-12" id="main-content">
 	<Section>
-		<nav aria-label="site-map">
+		<!-- svelte-ignore a11y-no-redundant-roles -- must have the navigation role -->
+		<nav role="navigation" aria-label="site-map">
 			<h3 class="mj-h4--alt">MJ Conseil</h3>
 
 			<ul class="flex flex-col gap-2">

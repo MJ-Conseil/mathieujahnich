@@ -6,9 +6,7 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
-	import type { ActionData, PageData } from './$types';
-
-	export let form: ActionData;
+	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
 

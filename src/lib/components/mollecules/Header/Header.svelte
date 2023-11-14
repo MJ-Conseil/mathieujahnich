@@ -9,13 +9,37 @@
 
 <div class="bg-blue-dark sticky top-0 font-ptsans text-white md:px-16 p-4 z-50">
 	<!-- Menu Desktop -->
-	<nav class="lg:flex w-full top-0 items-center justify-between hidden" aria-label="menu principal">
-		<a class="text-white lg:hidden xl:block" title="Vers la page d'accueil" href="/">
-			<Icon height="auto" width="130px" name="mjConseilFull" />
+	<!-- svelte-ignore a11y-no-redundant-roles -- this is the main navigation menu -->
+	<nav
+		class="lg:flex w-full top-0 items-center justify-between hidden"
+		role="navigation"
+		aria-label="menu principal"
+	>
+		<a
+			class="text-white lg:hidden xl:block"
+			title="MJ Communication &
+		transition écologique - Accueil"
+			href="/"
+		>
+			<Icon
+				role="img"
+				ariaLabel="MJ Communication &
+			transition écologique"
+				height="auto"
+				width="130px"
+				name="mjConseilFull"
+			/>
 		</a>
 
 		<a class="text-white xl:hidden md:hidden lg:block" aria-label="Vers la page d'accueil" href="/">
-			<Icon height="auto" width="75px" name="mjConseilFull" />
+			<Icon
+				role="img"
+				ariaLabel="MJ Communication &
+		transition écologique"
+				height="auto"
+				width="75px"
+				name="mjConseilFull"
+			/>
 		</a>
 
 		<DesktopMenu activeRoute={$page.route.id} />

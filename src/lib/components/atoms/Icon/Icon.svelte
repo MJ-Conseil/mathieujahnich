@@ -8,6 +8,8 @@
 	export let fill = 'none';
 	export let stroke = 'currentColor';
 	export let ariaHidden = true;
+	export let role = '';
+	export let ariaLabel = '';
 
 	type Icon = {
 		boxWidth: number;
@@ -198,6 +200,7 @@
 </script>
 
 <svg
+	aria-label={ariaLabel}
 	aria-hidden={ariaHidden}
 	class={$$props.class}
 	focusable={focusable.toString()}
@@ -205,5 +208,6 @@
 	{height}
 	{stroke}
 	{fill}
+	{role}
 	viewBox={`0 0 ${displayIcon.boxWidth} ${displayIcon.boxHeight}`}>{@html displayIcon.svg}</svg
 >

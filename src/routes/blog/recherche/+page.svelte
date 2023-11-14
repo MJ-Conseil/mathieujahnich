@@ -98,7 +98,8 @@
 	</Container>
 </div>
 
-<main>
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" id="main">
 	<Section>
 		<h2>
 			{`${posts.length} résultat${posts.length > 1 ? 's' : ''} trouvé${

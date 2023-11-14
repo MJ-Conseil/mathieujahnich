@@ -60,7 +60,8 @@
 	</div>
 </header>
 
-<main class="md:p-0 md:0" id="main">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main section of the page -->
+<main role="main" class="md:p-0 md:0" id="main">
 	<Section>
 		<h2>Signes particuliers</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-3">

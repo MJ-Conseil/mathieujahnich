@@ -10,8 +10,8 @@
 <svelte:head>
 	<title>{SITE_WEB_NAME} - {data.reference.title}</title>
 </svelte:head>
-
-<main class="blog-wrapper">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="blog-wrapper">
 	<Section alt>
 		<nav aria-label="fil d'ariane" class="mb-8">
 			<ul class="flex list-none p-0 m-0">

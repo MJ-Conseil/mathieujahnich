@@ -147,8 +147,8 @@
 		</div>
 	</Container>
 </div>
-
-<main>
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main">
 	<Section alt>
 		<h2>Les derniers posts</h2>
 		<p class="text-xl">Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>

@@ -15,8 +15,8 @@
 		</header>
 	</div>
 </div>
-
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<div class="h-full md:px-8">
 			<div class="md:grid md:grid-cols-3 md:gap-7">

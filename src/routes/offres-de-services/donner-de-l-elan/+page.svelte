@@ -60,8 +60,8 @@
 		</div>
 	</div>
 </PageHeader>
-
-<main id="main-content" class="md:p-0 md:0">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" id="main-content" class="md:p-0 md:0">
 	<Section>
 		<div class="h-full">
 			<h2>Votre besoin</h2>
