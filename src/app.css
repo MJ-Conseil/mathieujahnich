@@ -35,6 +35,11 @@
 @layer components {
 	/* Heading */
 
+
+	body {
+		background-color: white;
+	}
+
 	.mj-heading-base {
 		@apply font-ptsans font-bold mt-8 mb-5;
 	}
