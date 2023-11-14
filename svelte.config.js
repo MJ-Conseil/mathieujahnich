@@ -10,7 +10,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			"definitions": "src/definitions",
+			definitions: 'src/definitions'
 		},
 		csp: {
 			directives: {

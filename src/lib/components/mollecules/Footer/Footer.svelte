@@ -134,7 +134,9 @@
 
 	<div class="md:flex items-center justify-between">
 		<div>
-			<p class="text-white">© Copyright 2005 – {new Date().getFullYear()} | Tous droits réservés</p>
+			<p class="text-white">
+				© Copyright 2005 – {new Date().getFullYear()} | Tous droits réservés
+			</p>
 		</div>
 
 		<nav aria-label="liens importants" class="md:m-0 mt-4">

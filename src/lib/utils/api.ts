@@ -20,24 +20,27 @@ export const apiWithHeaders = async <T>(url: string, fetch: Fetch): Promise<[T, 
 };
 
 const buildOptionRecord = (options: QueryOption): Record<string, string> => {
-	return Object.keys(options).reduce((prev, next) => {
-		const currentOption = options[next as keyof QueryOption];
+	return Object.keys(options).reduce(
+		(prev, next) => {
+			const currentOption = options[next as keyof QueryOption];
 
-		if (currentOption || currentOption === 0) {
-			if (Array.isArray(currentOption) && currentOption.length > 0) {
+			if (currentOption || currentOption === 0) {
+				if (Array.isArray(currentOption) && currentOption.length > 0) {
+					return {
+						...prev,
+						[next]: currentOption.join(',')
+					};
+				}
 				return {
 					...prev,
-					[next]: currentOption.join(',')
+					[next]: currentOption.toString()
 				};
 			}
-			return {
-				...prev,
-				[next]: currentOption.toString()
-			};
-		}
 
-		return prev;
-	}, {} as Record<string, string>);
+			return prev;
+		},
+		{} as Record<string, string>
+	);
 };
 
 export const buildQueryString = (options: QueryOption): string => {
