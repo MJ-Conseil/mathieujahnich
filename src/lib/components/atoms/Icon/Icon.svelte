@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { IconNames } from "../../../../definitions";
-
-
+	import type { IconNames } from '../../../../definitions';
 
 	export let name: IconNames;
 	export let width = '1rem';

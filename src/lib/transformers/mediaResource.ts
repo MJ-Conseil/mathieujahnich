@@ -6,9 +6,9 @@ export const transformWordpressMediaResourceToMediaResource = (resource: any): M
 
 	const associatedContent = resource.acf?.intitule_du_lien
 		? {
-			externalResourceName: resource.acf?.intitule_du_lien,
-			externalResourceURl: resource.acf.url_ressource_media
-		}
+				externalResourceName: resource.acf?.intitule_du_lien,
+				externalResourceURl: resource.acf.url_ressource_media
+		  }
 		: undefined;
 
 	return {

@@ -14,9 +14,9 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 		caseStudy:
 			reference?.acf?.case_study_title && reference?.acf?.case_study
 				? {
-					content: reference?.acf?.case_study,
-					title: reference?.acf?.case_study_title
-				}
+						content: reference?.acf?.case_study,
+						title: reference?.acf?.case_study_title
+				  }
 				: undefined,
 		slug: reference.slug
 	};
