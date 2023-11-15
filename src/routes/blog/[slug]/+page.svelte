@@ -15,49 +15,50 @@
 </svelte:head>
 
 <!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
-<main role="main" class="blog-wrapper" id="main-content">
-	<Section alt>
-		<nav aria-label="fil d'ariane" class="mb-8">
-			<ul class="md:flex list-none p-0 m-0">
-				<li>
-					<a class="hover:underline" href="/">Accueil</a>
-					<span aria-hidden="true">></span>
-				</li>
-				<li class="md:pl-2">
-					<a class="hover:underline" href={ROUTES.Blog}>Blog</a>
-					<span aria-hidden="true">></span>
-				</li>
-				<li class="md:pl-2">
-					{data.post.title}
-				</li>
-			</ul>
-		</nav>
+<main role="main" id="main-content">
+	<div class="blog-wrapper">
+		<Section alt>
+			<nav aria-label="fil d'ariane" class="mb-8">
+				<ul class="md:flex list-none p-0 m-0">
+					<li>
+						<a class="mj-link--ternary" href="/">Accueil</a>
+						<span aria-hidden="true">></span>
+					</li>
+					<li class="md:pl-2">
+						<a class="mj-link--ternary" href={ROUTES.Blog}>Blog</a>
+						<span aria-hidden="true">></span>
+					</li>
+					<li class="md:pl-2">
+						{data.post.title}
+					</li>
+				</ul>
+			</nav>
 
-		<p class="text-indigo font-bold font-ptsans mb-8">Article</p>
-		<h1 class="break-words">{data.post.title}</h1>
-		<p>
-			Rédigé par {data.post.author}, publié le {new Intl.DateTimeFormat('fr-FR', {
-				day: '2-digit',
-				month: 'long',
-				year: 'numeric'
-			}).format(data.post.createdDate)}
-		</p>
+			<p class="text-indigo font-bold font-ptsans mb-8">Article</p>
+			<h1 class="break-words">{data.post.title}</h1>
+			<p>
+				Rédigé par {data.post.author}, publié le {new Intl.DateTimeFormat('fr-FR', {
+					day: '2-digit',
+					month: 'long',
+					year: 'numeric'
+				}).format(data.post.createdDate)}
+			</p>
 
-		{#if data.post.tags.length > 0}
-			<div class="flex gap-2 md:gap-5 mt-5 flex-wrap">
-				{#each data.post.tags as tag}
-					<Tag name={tag.name} />
-				{/each}
+			{#if data.post.tags.length > 0}
+				<div class="flex gap-2 md:gap-5 mt-5 flex-wrap">
+					{#each data.post.tags as tag}
+						<Tag name={tag.name} />
+					{/each}
+				</div>
+			{/if}
+		</Section>
+		<Section narrow>
+			<div class="w-full bg-white mb-10 flex justify-center">
+				<img alt={`image de ${data.post.title}`} src={data.post.imageUrl} />
 			</div>
-		{/if}
-	</Section>
-	<Section narrow>
-		<div class="w-full bg-white mb-10 flex justify-center">
-			<img alt={`image de ${data.post.title}`} src={data.post.imageUrl} />
-		</div>
-		{@html data.post.content}
-	</Section>
-
+			{@html data.post.content}
+		</Section>
+	</div>
 	<Section alt>
 		<h3>Les derniers articles</h3>
 

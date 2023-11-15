@@ -36,7 +36,9 @@
 		<p class="mb-8">
 			Nous vous tiendrons informés des progrès réalisés dans notre démarche d'accessibilité
 			conformément au RGAA. Si vous avez des commentaires ou des suggestions à ce sujet, n'hésitez
-			pas à nous contacter à <a href={CONTACT_LINKS.email}>conseil@mathieu-jahnich.fr</a>.
+			pas à nous contacter à <a class="mj-link--ternary" href={CONTACT_LINKS.email}
+				>conseil@mathieu-jahnich.fr</a
+			>.
 		</p>
 
 		<p>Cordialement,</p>

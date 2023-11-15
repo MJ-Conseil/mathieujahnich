@@ -2,7 +2,7 @@
 	import { SIZE, type SIZE as SIZEType } from '$lib/constants';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
-	export let title: string;
+	export let title: string = '';
 	export let createdDate: string;
 
 	export let pictureURL = '';

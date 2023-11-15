@@ -99,6 +99,7 @@
 		@apply mj-link--base;
 	}
 
+	.mj-link--ternary,
 	.mj-link--alt:hover,
 	.mj-link:hover {
 		@apply underline underline-offset-2;
@@ -126,6 +127,10 @@
 
 	.blog-wrapper p {
 		@apply text-xl my-3;
+	}
+
+	.blog-wrapper a {
+		@apply mj-link--ternary;
 	}
 
 	.blog-wrapper ul,

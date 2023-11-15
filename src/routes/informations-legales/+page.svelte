@@ -25,12 +25,12 @@
 
 					<p class="py-2">Raison sociale : MJ Conseil</p>
 					<p class="py-2">
-						Tél: <a href={`tel:${CONTACT_LINKS.phone}`}>
+						Tél: <a class="mj-link--ternary" href={`tel:${CONTACT_LINKS.phone}`}>
 							{CONTACT_LINKS.phone}
 						</a>
 					</p>
 					<p class="py-2">
-						Email : <a href={`mailto:${CONTACT_LINKS.email}`}>
+						Email : <a class="mj-link--ternary" href={`mailto:${CONTACT_LINKS.email}`}>
 							{CONTACT_LINKS.email}
 						</a>
 					</p>
@@ -45,8 +45,11 @@
 					<p class="py-2">Site réalisé par</p>
 					<p class="py-2">Fairness Scop Arl</p>
 					<p class="py-2">
-						<a href="https://fairness.coop/" target="_blank" rel="noreferrer"
-							>https://fairness.coop</a
+						<a
+							class="mj-link--ternary"
+							href="https://fairness.coop/"
+							target="_blank"
+							rel="noreferrer">https://fairness.coop</a
 						>
 					</p>
 
@@ -54,6 +57,7 @@
 
 					<p class="py-2">
 						<a
+							class="mj-link--ternary"
 							href="https://www.linkedin.com/in/anne-faubry-3b2b8390/"
 							target="_blank"
 							rel="noreferrer">Anne Faubry</a
@@ -63,8 +67,11 @@
 					<p class="py-2">Sur la base d’un design initialement réalisé par</p>
 					<p class="py-2">Cyanne – Tiphaine Pellé</p>
 					<p class="py-2">
-						<a href="https://www.cyanne.fr/" target="_blank" rel="noreferrer"
-							>https://www.cyanne.fr/</a
+						<a
+							class="mj-link--ternary"
+							href="https://www.cyanne.fr/"
+							target="_blank"
+							rel="noreferrer">https://www.cyanne.fr/</a
 						>
 					</p>
 				</div>
@@ -76,8 +83,11 @@
 					<p class="py-2">Adresse : {CONTACT_HOSTING.address}</p>
 					<p class="py-2">Téléphone : {CONTACT_HOSTING.phone}</p>
 					<p class="py-2">
-						Site web : <a href={CONTACT_HOSTING.website} target="_blank" rel="noreferrer"
-							>{CONTACT_HOSTING.website}</a
+						Site web : <a
+							class="mj-link--ternary"
+							href={CONTACT_HOSTING.website}
+							target="_blank"
+							rel="noreferrer">{CONTACT_HOSTING.website}</a
 						>
 					</p>
 				</div>
@@ -90,6 +100,7 @@
 			<h2 class="my-8">Conditions d’utilisation</h2>
 			<p class="my-3">
 				Le site accessible par l’url suivant : <a
+					class="mj-link--ternary"
 					href={CONTACT_LINKS.website}
 					target="_blank"
 					rel="noreferrer">{CONTACT_LINKS.website}</a
@@ -152,7 +163,7 @@
 			</p>
 			<p class="my-3">
 				Pour toute demande d’autorisation ou d’information, veuillez nous contacter par email :
-				<a href={`mailto:${CONTACT_LINKS.email}`}>{CONTACT_LINKS.email}</a>
+				<a class="mj-link--ternary" href={`mailto:${CONTACT_LINKS.email}`}>{CONTACT_LINKS.email}</a>
 			</p>
 			<p class="my-3">
 				Par ailleurs, la mise en forme de ce site a nécessité le recours à des sources externes dont
@@ -181,6 +192,7 @@
 			<h2 class="my-8">Droit applicable</h2>
 			<p class="my-3">
 				Tout litige en relation avec l’utilisation du site <a
+					class="mj-link--ternary"
 					href={CONTACT_LINKS.website}
 					target="_blank"
 					rel="noreferrer">{CONTACT_LINKS.website}</a

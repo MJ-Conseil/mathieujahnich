@@ -53,7 +53,7 @@
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="LinkedIn Sandrine Cadic"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="https://www.linkedin.com/in/sandrinecadic/"
 						>
 							<span aria-hidden="true">
@@ -64,7 +64,7 @@
 
 						<a
 							title="Contacter Sandrine Cadic"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:sandrine[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">
@@ -98,7 +98,7 @@
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="Contacter Sandrine Cadic"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:aurelie[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">
@@ -132,7 +132,7 @@
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="Linkedin Mathieu Jahnich"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="https://www.linkedin.com/in/mathieujahnich/"
 						>
 							<span aria-hidden="true">
