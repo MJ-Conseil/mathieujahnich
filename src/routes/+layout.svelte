@@ -7,7 +7,6 @@
 	let modalShown = false;
 </script>
 
-<SkipLink />
 <Header
 	on:click={() => {
 		modalShown = true;

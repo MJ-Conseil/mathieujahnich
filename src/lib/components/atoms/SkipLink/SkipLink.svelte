@@ -1,22 +1,23 @@
 <script lang="ts">
 </script>
 
-<a id="skip-nav" class="skip bg-gray w-full text-blue-dark text-xl underline" href="#main-content">
+<a id="skip-nav" class="skip mb-5 p-4 block bg-gray" href="#main-content">
 	Aller au contenu principal
 </a>
 
 <style>
 	.skip {
-		position: relative;
-		display: none;
-		top: 0;
-		width: 0px;
-		height: 0px;
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 	}
 
 	.skip:focus {
+		position: static;
 		width: 100%;
-		height: 50px;
-		display: block;
+		height: auto;
 	}
 </style>

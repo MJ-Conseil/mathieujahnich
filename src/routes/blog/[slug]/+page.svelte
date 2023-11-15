@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
@@ -12,6 +13,7 @@
 <svelte:head>
 	<title>{SITE_WEB_NAME} - {data.post.title}</title>
 </svelte:head>
+
 <!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
 <main role="main" class="blog-wrapper" id="main-content">
 	<Section alt>

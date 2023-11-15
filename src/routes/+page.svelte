@@ -12,6 +12,7 @@
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
+	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 
 	export let data: PageData;
 </script>
@@ -19,6 +20,7 @@
 <svelte:head>
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
+
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 <header role="banner" class=" bg-blue-dark md:pt-4 pb-8 lg:pb-12 relative overflow-hidden">
 	<Container>

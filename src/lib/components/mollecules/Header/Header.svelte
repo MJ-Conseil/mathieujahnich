@@ -3,11 +3,13 @@
 	import { page } from '$app/stores';
 	import MenuMobile from '../MenuMobile/MenuMobile.svelte';
 	import DesktopMenu from '../DesktopMenu/DesktopMenu.svelte';
+	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 
 	export let isMenuOpen = false;
 </script>
 
 <div class="bg-blue-dark sticky top-0 font-ptsans text-white md:px-16 p-4 z-50">
+	<SkipLink />
 	<!-- Menu Desktop -->
 	<!-- svelte-ignore a11y-no-redundant-roles -- this is the main navigation menu -->
 	<nav
@@ -63,3 +65,6 @@
 		/>
 	</div>
 </div>
+
+<style>
+</style>
