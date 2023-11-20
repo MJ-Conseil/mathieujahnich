@@ -40,7 +40,7 @@
 
 	<div class="flex justify-center">
 		<div class="relative w-4/5 md:w-1/2">
-			<img class="z-20 relative" src={groupPicture} alt="trio d'experts en communication" />
+			<img class="z-20 relative" src={groupPicture} alt="" />
 
 			<div
 				class="z-0 absolute md:bottom-[-15px] md:right-[-60px] lg:bottom-[-15px] lg:right-[90px] hidden md:block"
@@ -102,7 +102,7 @@
 							month: 'long',
 							year: 'numeric'
 						}).format(post.createdDate)}
-						title={post.title}
+						picureAlternativeText={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.tags[0]?.name}
 						href={`${ROUTES.Blog}/${post.slug}`}

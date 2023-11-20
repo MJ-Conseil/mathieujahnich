@@ -187,7 +187,7 @@
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
-						title={reference.title}
+						referenceName={reference.title}
 					/>
 				{/each}
 			</div>

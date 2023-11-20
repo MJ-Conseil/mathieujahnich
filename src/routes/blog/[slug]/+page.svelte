@@ -66,7 +66,6 @@
 			{#each data.lastPosts as post}
 				<PostCard
 					href={`${ROUTES.Blog}/${post.slug}`}
-					title={post.title}
 					createdDate={new Intl.DateTimeFormat('fr-FR', {
 						day: '2-digit',
 						month: 'long',

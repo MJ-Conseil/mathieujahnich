@@ -81,7 +81,7 @@
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
-						title={reference.title}
+						referenceName={reference.title}
 						caseStudy={reference.caseStudy
 							? {
 									...reference.caseStudy,
@@ -120,7 +120,7 @@
 					id={slugify(reference.title + i)}
 					content={reference.content}
 					imageUrl={reference.imageUrl}
-					title={reference.title}
+					referenceName={reference.title}
 					caseStudy={reference.caseStudy
 						? {
 								...reference.caseStudy,

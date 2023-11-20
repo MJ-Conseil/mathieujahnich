@@ -126,7 +126,7 @@
 							month: 'long',
 							year: 'numeric'
 						}).format(post.createdDate)}
-						title={post.title}
+						picureAlternativeText={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}
 						href={`${ROUTES.Blog}/${post.slug}`}

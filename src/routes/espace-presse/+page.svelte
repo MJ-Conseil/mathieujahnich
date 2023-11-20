@@ -145,7 +145,7 @@
 								month: 'long',
 								year: 'numeric'
 							}).format(mediaResource.date)}
-							title={mediaResource.title}
+							picureAlternativeText={mediaResource.title}
 							imageCover={false}
 							pictureURL={mediaResource.imageUrl}
 							excerpt={mediaResource.content}

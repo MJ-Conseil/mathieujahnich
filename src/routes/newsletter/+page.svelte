@@ -40,7 +40,6 @@
 						month: 'long',
 						year: 'numeric'
 					}).format(newsletter.date)}
-					title={newsletter.title}
 					pictureURL={newsletter.imageUrl}
 					size={SIZE.LARGE}
 					tagName={newsletter.newsLetterNumber ? `n° ${newsletter.newsLetterNumber}` : ''}

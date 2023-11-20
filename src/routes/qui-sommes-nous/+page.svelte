@@ -32,11 +32,7 @@
 
 		<div class="md:flex flex-col gap-6">
 			<div class="flex flex-col md:flex-row gap-8">
-				<img
-					src={sandrinePicture}
-					class="object-contain rounded-xl"
-					alt="portrait Sandrine Cadic"
-				/>
+				<img src={sandrinePicture} class="object-contain rounded-xl" alt="" />
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />
@@ -78,7 +74,7 @@
 			</div>
 
 			<div class="flex flex-col md:flex-row gap-8">
-				<img src={aureliePicture} class="object-contain rounded-xl" alt="portrait Sandrine Cadic" />
+				<img src={aureliePicture} class="object-contain rounded-xl" alt="" />
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />
@@ -112,7 +108,7 @@
 			</div>
 
 			<div class="flex flex-col md:flex-row gap-8">
-				<img src={mathieuPicture} class="object-contain rounded-xl" alt="portrait Aurélie Wastin" />
+				<img src={mathieuPicture} class="object-contain rounded-xl" alt="" />
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />

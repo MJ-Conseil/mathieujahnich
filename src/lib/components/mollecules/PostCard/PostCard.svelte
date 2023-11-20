@@ -2,7 +2,7 @@
 	import { SIZE, type SIZE as SIZEType } from '$lib/constants';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
-	export let title: string = '';
+	export let picureAlternativeText: string = '';
 	export let createdDate: string;
 
 	export let pictureURL = '';
@@ -31,7 +31,7 @@
 					class:object-cover={imageCover}
 					class:object-contain={!imageCover}
 					src={pictureURL}
-					alt={title}
+					alt={picureAlternativeText}
 				/>
 			</div>
 		{/if}
@@ -51,7 +51,7 @@
 				{createdDate}
 			</p>
 			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0 pb-4 font-bold">
-				{@html title}
+				{@html picureAlternativeText}
 			</h3>
 
 			{#if excerpt}
@@ -65,7 +65,9 @@
 	<div class="p-4 pt-0 mt-4 flex justify-end">
 		<slot>
 			{#if href}
-				<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>
+				<ArrowLink linkTitle={`Lire l'article : ${picureAlternativeText} `} {href}
+					>Lire l'article</ArrowLink
+				>
 			{/if}
 		</slot>
 	</div>
