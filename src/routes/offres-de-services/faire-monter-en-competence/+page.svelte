@@ -15,9 +15,9 @@
 	$: references = data.references.data;
 	$: meta = data.references.meta;
 
-	$: console.log(references.length);
-
 	let currentPage = 1;
+
+	let firstNewReferenceIndex = 0;
 
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
@@ -29,7 +29,11 @@
 			})
 		).data;
 
+		const oldReferencesLastIndex = references.length - 1;
+
 		references = [...references, ...newResults];
+
+		firstNewReferenceIndex = oldReferencesLastIndex + 1;
 	};
 </script>
 
@@ -189,8 +193,9 @@
 		<Section>
 			<h2>Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
-				{#each references as reference}
+				{#each references as reference, i}
 					<ReferenceAccordion
+						focused={firstNewReferenceIndex === i}
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
@@ -202,7 +207,7 @@
 			{#if currentPage < meta.pageCount}
 				<div class="w-full mt-8 flex items-center justify-center">
 					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
-						>Afficher plus de réfétences
+						>Afficher plus de références
 					</button>
 				</div>{/if}
 		</Section>

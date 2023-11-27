@@ -4,13 +4,14 @@
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	export let id: number | string = '';
+	export let focused = false;
 	export let referenceName: string;
 	export let content: string;
 	export let imageUrl = '';
 	export let caseStudy: CaseStudy | undefined = undefined;
 </script>
 
-<Accordion id={`reference-${id}`}>
+<Accordion {focused} id={`reference-${id}`}>
 	<div
 		title={`voir la référence ${referenceName}`}
 		slot="trigger-content"

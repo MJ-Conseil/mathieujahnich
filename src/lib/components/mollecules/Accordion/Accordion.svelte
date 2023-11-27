@@ -3,18 +3,28 @@
 	import { SIZE } from '$lib/constants';
 	export let id: string;
 
+	let element: HTMLElement;
+
 	let isOpen = false;
+
+	export let focused = false;
+
+	$: if (focused && element) {
+		element.focus();
+	}
 
 	const handleClickIsOpen = () => {
 		isOpen = !isOpen;
 	};
 </script>
 
-<div data-testid={id} class="py-2 px-3 border rounded-b-xl border-gray-light rounded-xl">
+<div data-testid={id} class="py-2 px-3 border rounded-b-xl border-gray-light rounded-xl tata">
 	<h3
 		class="accordion-trigger__title text-xl md:text-2xl w-full m-0 p-0 min-h-[65px] flex items-center"
 	>
 		<button
+			bind:this={element}
+			tabindex={focused ? 0 : undefined}
 			aria-expanded={isOpen}
 			aria-controls={`sect-${id}`}
 			id={`accordion-${id}`}
