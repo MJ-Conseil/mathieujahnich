@@ -1,11 +1,18 @@
-<script>
+<script lang="ts">
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { CONTACT_LINKS, ROUTES, SOCIAL_NETWORK_LINKS } from '$lib/constants';
+	import { focusableElementStore } from '$lib/stores/setFocusableElement';
+
+	let phoneLink: HTMLElement;
+
+	$: if (phoneLink && $focusableElementStore.findIndex((item) => item === '#phone-link') !== -1) {
+		phoneLink.focus();
+	}
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
-<footer id="main-footer" role="contentinfo" class="bg-blue-dark md:p-8 p-4 md:pt-12">
+<footer role="contentinfo" class="bg-blue-dark md:p-8 p-4 md:pt-12">
 	<div class="md:flex md:justify-around justify-between">
 		<div class="hidden lg:block lg:w-1/5">
 			<p class="md:block font-ptsans text-blue-light hidden text-xl">
@@ -75,7 +82,12 @@
 						<Icon class="text-sand" width="18px" height="auto" name="phone" />
 					</span>
 
-					<a class="text-white" href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}>
+					<a
+						id="phone-link"
+						bind:this={phoneLink}
+						class="text-white"
+						href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}
+					>
 						<span class="sr-only">téléphone :</span>
 						{CONTACT_LINKS.phone} (Mathieu)
 					</a>

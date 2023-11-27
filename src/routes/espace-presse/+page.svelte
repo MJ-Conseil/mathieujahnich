@@ -14,6 +14,7 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
+	import { focusableElementStore } from '$lib/stores/setFocusableElement';
 
 	export let data: PageData;
 
@@ -76,6 +77,10 @@
 			item.mediaResourceTypeId == mediaResourceTypeId ? forgedMatchningPostCategory : item
 		);
 	};
+
+	const setFocus = (id: string) => {
+		focusableElementStore.setFocusableElementIds(id);
+	};
 </script>
 
 <svelte:head>
@@ -100,18 +105,18 @@
 	<Section>
 		<h2 class="sr-only">Contactez-moi</h2>
 
-		<div class="flex text-blue-dark">
+		<div class="flex pb-4 flex-col md:flex-row text-blue-dark">
 			<img class="object-contain" src={picture} alt="Mathieu Jahnich durant une interview" />
 
-			<div class="ml-8">
-				<div class="mb-24">
+			<div class="md:ml-8">
+				<div class="md:mb-24 mb-12">
 					<p>
 						Nous invitons les journalistes à contacter Mathieu directemen pour discuter de manière
 						informelle dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une
 						interview.
 					</p>
 
-					<ul class="flex gap-5 mt-5">
+					<ul class="flex flex-col md:flex-row gap-5 mt-5">
 						<li class="flex gap-2">
 							<Icon width="25px" height="25px" name="target" /> Dossier
 						</li>
@@ -126,7 +131,9 @@
 					</ul>
 				</div>
 
-				<ButtonLink href="#main-footer">Nous contacter</ButtonLink>
+				<ButtonLink on:click={() => setFocus('#phone-link')} href="#phone-link"
+					>Nous contacter</ButtonLink
+				>
 			</div>
 		</div>
 	</Section>

@@ -59,7 +59,7 @@
 						</a>
 
 						<a
-							title="Contacter Sandrine Cadic"
+							title="Contacter Sandrine Cadic : sandrine@team-mjconseil.fr"
 							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:sandrine[@]team-mjconseil.fr"
 						>
@@ -93,7 +93,7 @@
 
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
-							title="Contacter Sandrine Cadic"
+							title="Contacter Aurélie Wastin : aurelie@team-mjconseil.fr"
 							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:aurelie[@]team-mjconseil.fr"
 						>
@@ -138,9 +138,9 @@
 						</a>
 
 						<a
-							title="Contacter Mathieu Jahnich"
+							title="Contacter Mathieu Jahnich : mathieu@team-mjconseil.fr"
 							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
-							href="mailto:sandrine[@]team-mjconseil.fr"
+							href="mailto:mathieu[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">
 								<Icon name="letter" width="30px" height="auto" class="text-sand" /></span
