@@ -103,7 +103,7 @@
 <!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
 <main role="main" id="main-content">
 	<Section>
-		<h2 class="sr-only">Contactez-moi</h2>
+		<h2 class="sr-only">Contactez-nous</h2>
 
 		<div class="flex pb-4 flex-col md:flex-row text-blue-dark">
 			<img class="object-contain" src={picture} alt="Mathieu Jahnich durant une interview" />
@@ -145,7 +145,7 @@
 				<h2>{mediaResourceItem.mediaResourceTypeName}</h2>
 
 				<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
-					{#each mediaResourceItem.resource as mediaResource}
+					{#each mediaResourceItem.resource as mediaResource, i}
 						<PostCard
 							createdDate={new Intl.DateTimeFormat('fr-FR', {
 								day: '2-digit',
@@ -165,6 +165,7 @@
 									linkTitle={`${mediaResource.associatedContent?.externalResourceName} (lien vers site externe)`}
 									external
 									arrowSize={SIZE.SMALL}
+									focused={mediaResourceItem.resource.length - 3 === i}
 									href={mediaResource.associatedContent?.externalResourceURl}
 									>{mediaResource.associatedContent?.externalResourceName}</ArrowLink
 								>

@@ -9,6 +9,7 @@
 	export let testId = '';
 	export let href = '';
 	export let imageCover = true;
+	export let focused = false;
 	export let excerpt = '';
 	export let tagName = '';
 
@@ -17,7 +18,7 @@
 
 <div
 	data-testId={testId}
-	class={`border-2 border-gray flex flex-col  rounded-xl bg-white ${
+	class={`border-2 border-gray flex flex-col bg-white  rounded-xl ${
 		size === SIZE.LARGE ? 'max-h-[600px]' : 'max-h-[500px]'
 	}`}
 >
@@ -65,7 +66,7 @@
 	<div class="p-4 pt-0 mt-4 flex justify-end">
 		<slot>
 			{#if href}
-				<ArrowLink linkTitle={`Lire l'article : ${picureAlternativeText} `} {href}
+				<ArrowLink {focused} linkTitle={`Lire l'article : ${picureAlternativeText} `} {href}
 					>Lire l'article</ArrowLink
 				>
 			{/if}

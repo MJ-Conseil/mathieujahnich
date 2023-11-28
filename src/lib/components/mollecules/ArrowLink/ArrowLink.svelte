@@ -8,6 +8,13 @@
 	export let arrowSize: SIZE = SIZE.SMALL;
 	export let linkTitle = '';
 	export let external = false;
+	let element: HTMLElement;
+
+	export let focused = false;
+
+	$: if (focused && element) {
+		element.focus();
+	}
 </script>
 
 <a
@@ -16,6 +23,7 @@
 	title={linkTitle}
 	target={external ? '_blank' : '_self'}
 	rel="noreferrer"
+	bind:this={element}
 	class="text-indigo font-ptsans text-md font-bold flex items-center gap-2"
 	{href}
 >
