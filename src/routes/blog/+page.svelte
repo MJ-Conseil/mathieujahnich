@@ -28,6 +28,8 @@
 
 	$: searchParams = data.searchParams;
 
+	let newFirstPostItemIndex: undefined | number = undefined;
+
 	let categoryPageRecord: Record<number, number> = {};
 
 	const handleFilterByCategory = async (id: number) => {
@@ -67,6 +69,8 @@
 
 		const newPosts = await getPosts(fetch, searchParams);
 
+		newFirstPostItemIndex = posts.length;
+
 		posts = [...posts, ...newPosts];
 
 		const queryString = patchQueryString(searchParams);
@@ -100,7 +104,8 @@
 		const forgedMatchningPostCategory: PostGroupedByCategories = {
 			categoryId: matchingPostCategory.categoryId,
 			categoryName: matchingPostCategory.categoryName,
-			posts: [...matchingPostCategory.posts, ...newPosts]
+			posts: [...matchingPostCategory.posts, ...newPosts],
+			firstNewPostItemIndex: matchingPostCategory.posts.length
 		};
 
 		postGrouppedByCategories = postGrouppedByCategories.map((item) =>
@@ -147,8 +152,8 @@
 		</div>
 	</Container>
 </div>
-
-<main>
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main">
 	<Section alt>
 		<h2>Les derniers posts</h2>
 		<p class="text-xl">Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
@@ -164,7 +169,7 @@
 
 		<div class=" md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols md:grid-cols-3">
 			{#if posts.length > 0}
-				{#each posts as post}
+				{#each posts as post, i}
 					<PostCard
 						testId={`toutes-references-${slugify(post.title)}`}
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
@@ -172,9 +177,10 @@
 							month: 'long',
 							year: 'numeric'
 						}).format(post.createdDate)}
-						title={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}
+						picureAlternativeText={post.title}
+						focused={newFirstPostItemIndex == i}
 						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}
@@ -194,15 +200,16 @@
 			<h2>{postGrouppedByCategory.categoryName}</h2>
 
 			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
-				{#each postGrouppedByCategory.posts as post}
+				{#each postGrouppedByCategory.posts as post, i}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
 							day: '2-digit',
 							month: 'long',
 							year: 'numeric'
 						}).format(post.createdDate)}
-						title={post.title}
+						picureAlternativeText={post.title}
 						pictureURL={post.imageUrl}
+						focused={postGrouppedByCategory.firstNewPostItemIndex === i}
 						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}

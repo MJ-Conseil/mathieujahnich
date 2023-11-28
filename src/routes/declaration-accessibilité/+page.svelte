@@ -11,12 +11,12 @@
 <div class="py-8 bg-blue-dark">
 	<Container>
 		<header>
-			<h1 class="mj-h1--alt">Déclaration d'accessibilité</h1>
+			<h1 class="mj-h1--alt break-words">Déclaration d'accessibilité</h1>
 		</header>
 	</Container>
 </div>
-
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<p class="mb-8">Chères utilisatrices et utilisateurs,</p>
 
@@ -36,7 +36,9 @@
 		<p class="mb-8">
 			Nous vous tiendrons informés des progrès réalisés dans notre démarche d'accessibilité
 			conformément au RGAA. Si vous avez des commentaires ou des suggestions à ce sujet, n'hésitez
-			pas à nous contacter à <a href={CONTACT_LINKS.email}>conseil@mathieu-jahnich.fr</a>.
+			pas à nous contacter à <a class="mj-link--ternary" href={CONTACT_LINKS.email}
+				>conseil@mathieu-jahnich.fr</a
+			>.
 		</p>
 
 		<p>Cordialement,</p>

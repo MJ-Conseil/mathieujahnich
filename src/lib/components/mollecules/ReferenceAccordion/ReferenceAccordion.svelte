@@ -4,21 +4,26 @@
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
 	export let id: number | string = '';
-	export let title: string;
+	export let focused = false;
+	export let referenceName: string;
 	export let content: string;
 	export let imageUrl = '';
 	export let caseStudy: CaseStudy | undefined = undefined;
 </script>
 
-<Accordion id={`reference-${id}`}>
-	<div title={`voir la référence ${title}`} slot="trigger-content" class="md:w-full flex md:gap-5">
+<Accordion {focused} id={`reference-${id}`}>
+	<div
+		title={`voir la référence ${referenceName}`}
+		slot="trigger-content"
+		class="md:w-full flex md:gap-5"
+	>
 		{#if imageUrl}
-			<div class="w-1/10 flex items-center">
+			<div class="w-1/10 md:flex items-center hidden">
 				<img class="object-cover max-h-20" src={imageUrl} aria-hidden="true" alt="" />
 			</div>
 		{/if}
 		<p class="break-word md:max-w-[100%] max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
-			{title}
+			{referenceName}
 		</p>
 	</div>
 	<div class="[&>p]:mb-4 !text-lg accordion-content html-wrapper" slot="panel-content">

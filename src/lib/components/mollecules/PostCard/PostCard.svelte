@@ -2,13 +2,14 @@
 	import { SIZE, type SIZE as SIZEType } from '$lib/constants';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
-	export let title: string;
+	export let picureAlternativeText: string = '';
 	export let createdDate: string;
 
 	export let pictureURL = '';
 	export let testId = '';
 	export let href = '';
 	export let imageCover = true;
+	export let focused = false;
 	export let excerpt = '';
 	export let tagName = '';
 
@@ -17,7 +18,7 @@
 
 <div
 	data-testId={testId}
-	class={`border-2 border-gray flex flex-col  rounded-xl bg-white ${
+	class={`border-2 border-gray flex flex-col bg-white  rounded-xl ${
 		size === SIZE.LARGE ? 'max-h-[600px]' : 'max-h-[500px]'
 	}`}
 >
@@ -31,17 +32,17 @@
 					class:object-cover={imageCover}
 					class:object-contain={!imageCover}
 					src={pictureURL}
-					alt={title}
+					alt={picureAlternativeText}
 				/>
 			</div>
 		{/if}
 
 		{#if tagName}
-			<div
+			<p
 				class="bg-blue-dark text-white absolute right-0 bottom-0 px-4 py-2 font-bold min-w-[60px] text-center"
 			>
 				{tagName}
-			</div>
+			</p>
 		{/if}
 	</div>
 
@@ -51,7 +52,7 @@
 				{createdDate}
 			</p>
 			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0 pb-4 font-bold">
-				{@html title}
+				{@html picureAlternativeText}
 			</h3>
 
 			{#if excerpt}
@@ -65,7 +66,9 @@
 	<div class="p-4 pt-0 mt-4 flex justify-end">
 		<slot>
 			{#if href}
-				<ArrowLink linkTitle={`Lire l'article : ${title} `} {href}>Lire l'article</ArrowLink>
+				<ArrowLink {focused} linkTitle={`Lire l'article : ${picureAlternativeText} `} {href}
+					>Lire l'article</ArrowLink
+				>
 			{/if}
 		</slot>
 	</div>

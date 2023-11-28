@@ -25,18 +25,14 @@
 		</Headline>
 	</Container>
 </header>
-
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<h2 class="">Un trio d'expertes</h2>
 
 		<div class="md:flex flex-col gap-6">
 			<div class="flex flex-col md:flex-row gap-8">
-				<img
-					src={sandrinePicture}
-					class="object-contain rounded-xl"
-					alt="portrait Sandrine Cadic"
-				/>
+				<img src={sandrinePicture} class="object-contain rounded-xl" alt="" />
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />
@@ -53,7 +49,7 @@
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="LinkedIn Sandrine Cadic"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="https://www.linkedin.com/in/sandrinecadic/"
 						>
 							<span aria-hidden="true">
@@ -63,8 +59,8 @@
 						</a>
 
 						<a
-							title="Contacter Sandrine Cadic"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							title="Contacter Sandrine Cadic : sandrine@team-mjconseil.fr"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:sandrine[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">
@@ -78,7 +74,7 @@
 			</div>
 
 			<div class="flex flex-col md:flex-row gap-8">
-				<img src={aureliePicture} class="object-contain rounded-xl" alt="portrait Sandrine Cadic" />
+				<img src={aureliePicture} class="object-contain rounded-xl" alt="" />
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />
@@ -97,8 +93,8 @@
 
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
-							title="Contacter Sandrine Cadic"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							title="Contacter Aurélie Wastin : aurelie@team-mjconseil.fr"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:aurelie[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">
@@ -112,7 +108,7 @@
 			</div>
 
 			<div class="flex flex-col md:flex-row gap-8">
-				<img src={mathieuPicture} class="object-contain rounded-xl" alt="portrait Aurélie Wastin" />
+				<img src={mathieuPicture} class="object-contain rounded-xl" alt="" />
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />
@@ -132,7 +128,7 @@
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="Linkedin Mathieu Jahnich"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="https://www.linkedin.com/in/mathieujahnich/"
 						>
 							<span aria-hidden="true">
@@ -142,9 +138,9 @@
 						</a>
 
 						<a
-							title="Contacter Mathieu Jahnich"
+							title="Contacter Mathieu Jahnich : mathieu@team-mjconseil.fr"
 							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
-							href="mailto:sandrine[@]team-mjconseil.fr"
+							href="mailto:mathieu[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">
 								<Icon name="letter" width="30px" height="auto" class="text-sand" /></span

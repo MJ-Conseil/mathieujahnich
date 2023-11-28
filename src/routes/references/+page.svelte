@@ -11,6 +11,8 @@
 
 	export let data: PageData;
 
+	let referenceIndexToBeFocused: number | undefined = undefined;
+
 	$: filteredReferences = data.references.data;
 	$: highlightedReferences = data.highlightedReferences;
 
@@ -51,7 +53,11 @@
 			})
 		).data;
 
-		filteredReferences = [...filteredReferences, ...newResults];
+		const oldReferences = filteredReferences;
+
+		filteredReferences = [...oldReferences, ...newResults];
+
+		referenceIndexToBeFocused = oldReferences.length;
 	};
 </script>
 
@@ -69,7 +75,9 @@
 	</Headline>
 </PageHeader>
 
-<main class="md:p-0 md:0" id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+
+<main role="main" class="md:p-0 md:0" id="main-content">
 	{#if highlightedReferences.length > 0}
 		<Section>
 			<h2>Références phares</h2>
@@ -79,7 +87,7 @@
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
-						title={reference.title}
+						referenceName={reference.title}
 						caseStudy={reference.caseStudy
 							? {
 									...reference.caseStudy,
@@ -115,10 +123,11 @@
 			{/if}
 			{#each filteredReferences as reference, i}
 				<ReferenceAccordion
+					focused={i === referenceIndexToBeFocused}
 					id={slugify(reference.title + i)}
 					content={reference.content}
 					imageUrl={reference.imageUrl}
-					title={reference.title}
+					referenceName={reference.title}
 					caseStudy={reference.caseStudy
 						? {
 								...reference.caseStudy,
@@ -132,7 +141,7 @@
 		{#if filteredReferences.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
 				<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
-					>Afficher plus de réfétences
+					>Afficher plus de références
 				</button>
 			</div>{/if}
 	</Section>

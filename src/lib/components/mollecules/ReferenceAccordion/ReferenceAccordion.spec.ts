@@ -8,7 +8,7 @@ import ReferenceAccordion from './ReferenceAccordion.svelte';
 test('shows panel if button has been clicked', async () => {
 	const { getByRole } = render(ReferenceAccordion, {
 		props: {
-			title: 'Hello',
+			referenceName: 'Hello',
 			content: '<p>Hello World<p/>'
 		}
 	});

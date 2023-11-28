@@ -16,18 +16,23 @@
 	$: meta = data.references.meta;
 
 	let currentPage = 1;
+	let firstNewReferenceIndex = 0;
 
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
 		const newResults = (
 			await getReferences(fetch, {
-				per_page: 4,
+				per_page: 3,
 				page: currentPage,
 				offer_type: data.offerTypeId
 			})
 		).data;
 
+		const oldReferencesLastIndex = references.length - 1;
+
 		references = [...references, ...newResults];
+
+		firstNewReferenceIndex = oldReferencesLastIndex + 1;
 	};
 </script>
 
@@ -60,8 +65,8 @@
 		</div>
 	</div>
 </PageHeader>
-
-<main id="main-content" class="md:p-0 md:0">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" id="main-content" class="md:p-0 md:0">
 	<Section>
 		<div class="h-full">
 			<h2>Votre besoin</h2>
@@ -177,12 +182,13 @@
 		<Section>
 			<h2>Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
-				{#each references as reference}
+				{#each references as reference, i}
 					<ReferenceAccordion
+						focused={firstNewReferenceIndex === i}
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
-						title={reference.title}
+						referenceName={reference.title}
 					/>
 				{/each}
 			</div>
@@ -190,7 +196,7 @@
 			{#if currentPage < meta.pageCount}
 				<div class="w-full mt-8 flex items-center justify-center">
 					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
-						>Afficher plus de réfétences
+						>Afficher plus de références
 					</button>
 				</div>{/if}
 		</Section>

@@ -84,9 +84,10 @@
 	aria-labelledby="modal-title"
 	aria-hidden={!isMenuOpen}
 	class:hidden={!isMenuOpen}
+	class:fixed={isMenuOpen}
 	aria-modal={isMenuOpen}
 	role="dialog"
-	class="h-full hidden w-full fixed z-10 left-0 top-0 bg-gray overflow-x-hidden overflow-y-hidden p-4"
+	class="h-full w-full overflow-auto z-10 top-0 bg-gray p-4"
 >
 	<h3 id="modal-title" class="sr-only">Menu de navigation</h3>
 	<div class="w-full flex justify-end">

@@ -12,6 +12,7 @@
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
+	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 
 	export let data: PageData;
 </script>
@@ -19,6 +20,7 @@
 <svelte:head>
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
+
 <!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
 <header role="banner" class=" bg-blue-dark md:pt-4 pb-8 lg:pb-12 relative overflow-hidden">
 	<Container>
@@ -38,7 +40,7 @@
 
 	<div class="flex justify-center">
 		<div class="relative w-4/5 md:w-1/2">
-			<img class="z-20 relative" src={groupPicture} alt="trio d'experts en communication" />
+			<img class="z-20 relative" src={groupPicture} alt="" />
 
 			<div
 				class="z-0 absolute md:bottom-[-15px] md:right-[-60px] lg:bottom-[-15px] lg:right-[90px] hidden md:block"
@@ -60,7 +62,8 @@
 	</div>
 </header>
 
-<main class="md:p-0 md:0" id="main">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main section of the page -->
+<main role="main" class="md:p-0 md:0" id="main">
 	<Section>
 		<h2>Signes particuliers</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-3">
@@ -99,7 +102,7 @@
 							month: 'long',
 							year: 'numeric'
 						}).format(post.createdDate)}
-						title={post.title}
+						picureAlternativeText={post.title}
 						pictureURL={post.imageUrl}
 						tagName={post.tags[0]?.name}
 						href={`${ROUTES.Blog}/${post.slug}`}

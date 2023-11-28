@@ -14,6 +14,7 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
+	import { focusableElementStore } from '$lib/stores/setFocusableElement';
 
 	export let data: PageData;
 
@@ -60,7 +61,7 @@
 			return;
 		}
 
-		const newPosts = await getMediaResources(fetch, {
+		const newResource = await getMediaResources(fetch, {
 			media_resource_type: [mediaResourceTypeId],
 			per_page: 3,
 			page: newPage
@@ -69,12 +70,18 @@
 		const forgedMatchningPostCategory: MediaResourcesByTypes = {
 			mediaResourceTypeId: matchingPostCategory.mediaResourceTypeId,
 			mediaResourceTypeName: matchingPostCategory.mediaResourceTypeName,
-			resource: [...matchingPostCategory.resource, ...newPosts]
+			resource: [...matchingPostCategory.resource, ...newResource],
+
+			firstNewResourceItemIndex: matchingPostCategory.resource.length
 		};
 
 		mediaResources = mediaResources.map((item) =>
 			item.mediaResourceTypeId == mediaResourceTypeId ? forgedMatchningPostCategory : item
 		);
+	};
+
+	const setFocus = (id: string) => {
+		focusableElementStore.setFocusableElementIds(id);
 	};
 </script>
 
@@ -95,23 +102,23 @@
 		</header>
 	</Container>
 </div>
-
-<main id="main-content">
+<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<main role="main" id="main-content">
 	<Section>
-		<h2 class="sr-only">Contactez-moi</h2>
+		<h2 class="sr-only">Contactez-nous</h2>
 
-		<div class="flex text-blue-dark">
+		<div class="flex pb-4 flex-col md:flex-row text-blue-dark">
 			<img class="object-contain" src={picture} alt="Mathieu Jahnich durant une interview" />
 
-			<div class="ml-8">
-				<div class="mb-24">
+			<div class="md:ml-8">
+				<div class="md:mb-24 mb-12">
 					<p>
 						Nous invitons les journalistes à contacter Mathieu directemen pour discuter de manière
 						informelle dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une
 						interview.
 					</p>
 
-					<ul class="flex gap-5 mt-5">
+					<ul class="flex flex-col md:flex-row gap-5 mt-5">
 						<li class="flex gap-2">
 							<Icon width="25px" height="25px" name="target" /> Dossier
 						</li>
@@ -126,7 +133,9 @@
 					</ul>
 				</div>
 
-				<ButtonLink href="#main-footer">Nous contacter</ButtonLink>
+				<ButtonLink on:click={() => setFocus('#phone-link')} href="#phone-link"
+					>Nous contacter</ButtonLink
+				>
 			</div>
 		</div>
 	</Section>
@@ -138,14 +147,14 @@
 				<h2>{mediaResourceItem.mediaResourceTypeName}</h2>
 
 				<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
-					{#each mediaResourceItem.resource as mediaResource}
+					{#each mediaResourceItem.resource as mediaResource, i}
 						<PostCard
 							createdDate={new Intl.DateTimeFormat('fr-FR', {
 								day: '2-digit',
 								month: 'long',
 								year: 'numeric'
 							}).format(mediaResource.date)}
-							title={mediaResource.title}
+							picureAlternativeText={mediaResource.title}
 							imageCover={false}
 							pictureURL={mediaResource.imageUrl}
 							excerpt={mediaResource.content}
@@ -159,6 +168,7 @@
 									external
 									arrowSize={SIZE.SMALL}
 									href={mediaResource.associatedContent?.externalResourceURl}
+									focused={mediaResourceItem.firstNewResourceItemIndex === i}
 									>{mediaResource.associatedContent?.externalResourceName}</ArrowLink
 								>
 							{/if}
