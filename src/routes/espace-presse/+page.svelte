@@ -61,7 +61,7 @@
 			return;
 		}
 
-		const newPosts = await getMediaResources(fetch, {
+		const newResource = await getMediaResources(fetch, {
 			media_resource_type: [mediaResourceTypeId],
 			per_page: 3,
 			page: newPage
@@ -70,7 +70,9 @@
 		const forgedMatchningPostCategory: MediaResourcesByTypes = {
 			mediaResourceTypeId: matchingPostCategory.mediaResourceTypeId,
 			mediaResourceTypeName: matchingPostCategory.mediaResourceTypeName,
-			resource: [...matchingPostCategory.resource, ...newPosts]
+			resource: [...matchingPostCategory.resource, ...newResource],
+
+			firstNewResourceItemIndex: matchingPostCategory.resource.length
 		};
 
 		mediaResources = mediaResources.map((item) =>
@@ -165,8 +167,8 @@
 									linkTitle={`${mediaResource.associatedContent?.externalResourceName} (lien vers site externe)`}
 									external
 									arrowSize={SIZE.SMALL}
-									focused={mediaResourceItem.resource.length - 3 === i}
 									href={mediaResource.associatedContent?.externalResourceURl}
+									focused={mediaResourceItem.firstNewResourceItemIndex === i}
 									>{mediaResource.associatedContent?.externalResourceName}</ArrowLink
 								>
 							{/if}

@@ -117,12 +117,14 @@ export type PostGroupedByCategories = {
 	categoryId: number;
 	categoryName: string;
 	posts: Post[];
+	firstNewPostItemIndex?: number;
 };
 
 export type MediaResourcesByTypes = {
 	mediaResourceTypeId: number;
 	mediaResourceTypeName: string;
 	resource: MediaResource[];
+	firstNewResourceItemIndex?: number;
 };
 
 export type PostWithCategory = {
