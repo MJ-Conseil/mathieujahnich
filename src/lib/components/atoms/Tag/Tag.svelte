@@ -13,7 +13,7 @@
 	class:text-indigo={!active}
 	aria-pressed={active}
 	id={slugify(name)}
-	class="border-[1.5px] font-bold flex items-center border-indigo py-[0.6rem] px-5 active:bg-indigo active:text-white min-w-[50px] hover:bg-gray-light rounded-xl"
+	class="border-[1.5px] font-bold hover:text-indigo flex items-center border-indigo py-[0.6rem] px-5 active:bg-indigo active:text-white min-w-[50px] hover:bg-gray-light rounded-xl"
 	on:click
 >
 	{#if active}
