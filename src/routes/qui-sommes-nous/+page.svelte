@@ -139,7 +139,7 @@
 
 						<a
 							title="Contacter Mathieu Jahnich : mathieu@team-mjconseil.fr"
-							class="hover:decoration-sand hover:underline underline-offset-8 decoration-2 flex gap-3"
+							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
 							href="mailto:mathieu[@]team-mjconseil.fr"
 						>
 							<span aria-hidden="true">

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
-	import Input from '$lib/components/atoms/Input/Input.svelte';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
@@ -42,6 +41,8 @@
 					}).format(newsletter.date)}
 					pictureURL={newsletter.imageUrl}
 					size={SIZE.LARGE}
+					title={newsletter.title}
+					picureAlternativeText={newsletter.imageAltText}
 					tagName={newsletter.newsLetterNumber ? `n° ${newsletter.newsLetterNumber}` : ''}
 					excerpt={newsletter.excerpt}
 				>

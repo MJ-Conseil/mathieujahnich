@@ -54,7 +54,7 @@
 		</Section>
 		<Section narrow>
 			<div class="w-full bg-white mb-10 flex justify-center">
-				<img alt={`image de ${data.post.title}`} src={data.post.imageUrl} />
+				<img alt={data.post.imageAltText} src={data.post.imageUrl} />
 			</div>
 			{@html data.post.content}
 		</Section>
@@ -71,6 +71,8 @@
 						month: 'long',
 						year: 'numeric'
 					}).format(post.createdDate)}
+					title={post.title}
+					picureAlternativeText={post.imageAltText}
 					pictureURL={post.imageUrl}
 				/>
 			{/each}

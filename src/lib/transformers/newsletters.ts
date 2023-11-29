@@ -11,6 +11,7 @@ export const transformRawNewsletterToNewsletter = (rawNewsletter: any): Newslett
 		title: rawNewsletter.title.rendered,
 		date: new Date(rawNewsletter.date),
 		imageUrl: media && media.length > 0 ? media[0].source_url : '',
+		imageAltText: media && media.length > 0 ? media[0].alt_text : '',
 		newsLetterNumber: newsLetterNumber ? parseInt(newsLetterNumber) : undefined,
 		sendInBlueData: {
 			url: rawNewsletter.acf?.newsletter_sendinblue_url,

@@ -18,6 +18,7 @@ export type Post = {
 	title: string;
 	imageUrl: string;
 	tags: WP_REST_API_Tag[];
+	imageAltText?: string;
 	createdDate: Date;
 	slug: string;
 	content: string;
@@ -53,6 +54,7 @@ export type MediaResource = {
 	date: Date;
 	mediaResourcesTypes: number[];
 	imageUrl: string;
+	imageAltText?: string;
 	title: string;
 	slug: string;
 	associatedContent?: {
@@ -136,6 +138,7 @@ export type Newsletter = {
 	date: Date;
 	imageUrl?: string;
 	excerpt: string;
+	imageAltText: string;
 	title: string;
 	id: number;
 	sendInBlueData?: {
