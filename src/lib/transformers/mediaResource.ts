@@ -17,6 +17,7 @@ export const transformWordpressMediaResourceToMediaResource = (resource: any): M
 		date: new Date(resource.date),
 		mediaResourcesTypes: resource.media_resource_type,
 		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : '',
+		imageAltText: embededMedias && embededMedias.length > 0 ? embededMedias[0].alt_text : undefined,
 		title: resource.title.rendered,
 		slug: resource.slug,
 		associatedContent

@@ -2,7 +2,9 @@
 	import { SIZE, type SIZE as SIZEType } from '$lib/constants';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
+	export let title: string;
 	export let picureAlternativeText: string = '';
+
 	export let createdDate: string;
 
 	export let pictureURL = '';
@@ -52,7 +54,7 @@
 				{createdDate}
 			</p>
 			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0 pb-4 font-bold">
-				{@html picureAlternativeText}
+				{@html title}
 			</h3>
 
 			{#if excerpt}

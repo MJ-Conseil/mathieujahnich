@@ -118,7 +118,7 @@
 								name="linkedin"
 								width="30px"
 								height="auto"
-								class="text-sand  c hover:text-sand-dark "
+								class="text-sand hover:text-sand-dark "
 							/></span
 						>
 						<span class="sr-only">Nous suivre sur Linkedin</span>

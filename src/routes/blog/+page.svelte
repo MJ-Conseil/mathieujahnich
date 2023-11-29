@@ -153,7 +153,7 @@
 	</Container>
 </div>
 <!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
-<main role="main">
+<main role="main" id="main-content">
 	<Section alt>
 		<h2>Les derniers posts</h2>
 		<p class="text-xl">Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
@@ -179,7 +179,8 @@
 						}).format(post.createdDate)}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}
-						picureAlternativeText={post.title}
+						title={post.title}
+						picureAlternativeText={post.imageAltText}
 						focused={newFirstPostItemIndex == i}
 						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
@@ -207,7 +208,8 @@
 							month: 'long',
 							year: 'numeric'
 						}).format(post.createdDate)}
-						picureAlternativeText={post.title}
+						title={post.title}
+						picureAlternativeText={post.imageAltText}
 						pictureURL={post.imageUrl}
 						focused={postGrouppedByCategory.firstNewPostItemIndex === i}
 						href={`${ROUTES.Blog}/${post.slug}`}
