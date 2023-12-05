@@ -24,7 +24,8 @@ module.exports = {
 				DEFAULT: '#F2F3F7',
 				light: '#D0D6EC',
 				dark: '#FAFBFE'
-			}
+			},
+			teal: '#0d9488'
 		},
 		fontFamily: {
 			ptsans: ['PT Sans', 'sans-serif'],

@@ -1,10 +1,9 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import * as SibApiV3Sdk from '@sendinblue/client';
 import { SENDINBLUE_API_KEY } from '$env/static/private';
 
 export const actions = {
-	default: async ({ request }) => {
+	default: async ({ request, fetch }) => {
 		const data = await request.formData();
 
 		const email = data.get('email');
@@ -22,23 +21,31 @@ export const actions = {
 			return fail(400, { cgu, missing: true });
 		}
 
-		const apiInstance = new SibApiV3Sdk.ContactsApi();
-
 		if (!SENDINBLUE_API_KEY) {
 			return fail(400, { contactCreationFailed: true });
 		}
 
-		apiInstance.setApiKey(SibApiV3Sdk.ContactsApiApiKeys.apiKey, SENDINBLUE_API_KEY);
-
-		const createContact = new SibApiV3Sdk.CreateContact();
-
-		createContact.email = email.toString();
-		createContact.attributes = {
-			PRENOM: firstname.toString()
-		};
-
 		try {
-			await apiInstance.createContact(createContact);
+			const response = await fetch('https://api.brevo.com/v3/contacts', {
+				method: 'POST',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json',
+					'api-key': SENDINBLUE_API_KEY
+				},
+
+				body: JSON.stringify({
+					email: email.toString(),
+					attributes: {
+						PRENOM: firstname.toString()
+					}
+				})
+			});
+
+			if (response.status !== 201) {
+				return fail(400, { contactCreationFailed: true });
+			}
+
 			return { success: true };
 		} catch (error) {
 			return fail(400, { contactCreationFailed: true });
