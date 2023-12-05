@@ -12,7 +12,13 @@
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - Newsletter</title>
+	<title
+		>{SITE_WEB_NAME} - Newsletter - {form?.success ? 'Vous êtes bien inscrit à la newsletter' : ''}
+
+		{form?.contactCreationFailed
+			? '	Impossible de vous abonner à la newsletter. Peut-être vous êtes vous déja inscrit ?'
+			: ''}
+	</title>
 </svelte:head>
 
 <div class="py-8 bg-blue-dark">
@@ -39,17 +45,17 @@
 		</p>
 
 		<form method="POST" class="mt-8 md:w-1/2 w-full">
+			{#if form?.success}
+				<p aria-live="polite" class="font-bold mt- bg-teal p-4 text-white">
+					Votre inscription à la newsletter a bien été prise en compte. Merci.
+				</p>
+			{/if}
 			{#if form?.contactCreationFailed}
-				<p class="font-bold mt-5 bg-red text-white p-4">
+				<p aria-live="polite" class="font-bold mt-5 bg-red text-white p-4">
 					Impossible de vous abonner à la newsletter. Peut-être vous êtes vous déja inscrit ?
 				</p>
 			{/if}
 
-			{#if form?.success}
-				<p class="font-bold mt- bg-teal p-4 text-white">
-					Votre inscription à la newsletter a bien été prise en compte. Merci.
-				</p>
-			{/if}
 			<Input
 				error={form && !form?.email && !form?.success && !form.contactCreationFailed
 					? 'Ce champs est obligatoire'
