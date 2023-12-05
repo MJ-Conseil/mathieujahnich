@@ -5,6 +5,7 @@
 	export let type: 'text' | 'number' | 'email' = 'text';
 	export let required = false;
 	export let error = '';
+	export let autocomplete: 'email' | 'given-name' | undefined = undefined;
 </script>
 
 <label class="block font-ptsans my-2 mt-4 font-bold text-blue-dark" for={id}> {label}</label>
@@ -17,6 +18,7 @@
 	aria-describedby={error ? `error-message-${name}` : undefined}
 	{required}
 	{type}
+	{autocomplete}
 />
 
 {#if error}
