@@ -1,7 +1,9 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import type { UserConfig } from 'vite';
 
-const config: UserConfig = {
+
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+const config = defineConfig(() => ({
 	plugins: [sveltekit()],
 	test: {
 		environment: 'jsdom',
@@ -17,6 +19,6 @@ const config: UserConfig = {
 		port: 5173,
 		strictPort: true
 	}
-};
+}));
 
 export default config;
