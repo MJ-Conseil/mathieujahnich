@@ -39,7 +39,9 @@ export const actions = {
 					attributes: {
 						PRENOM: firstname.toString()
 					},
-					includeListIds: [3]
+					includeListIds: [3],
+					templateId: 1,
+					redirectionUrl: 'http://mathieu-jahnich.fr/newsletter/inscription-validee'
 				})
 			});
 
