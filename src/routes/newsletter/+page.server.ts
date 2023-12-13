@@ -26,7 +26,7 @@ export const actions = {
 		}
 
 		try {
-			const response = await fetch('https://api.brevo.com/v3/contacts', {
+			const response = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
 				method: 'POST',
 				mode: 'cors',
 				headers: {
@@ -38,7 +38,8 @@ export const actions = {
 					email: email.toString(),
 					attributes: {
 						PRENOM: firstname.toString()
-					}
+					},
+					includeListIds: [3]
 				})
 			});
 
