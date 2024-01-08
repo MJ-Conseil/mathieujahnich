@@ -9,7 +9,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	});
 
 	if (!mediaResources || mediaResources.length === 0) {
-		throw error(404, 'Not found');
+		error(404, 'Not found');
 	}
 
 	return {
