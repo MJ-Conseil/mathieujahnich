@@ -9,13 +9,13 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	});
 
 	if (!references || references.data.length === 0) {
-		throw error(404, 'Not found');
+		error(404, 'Not found');
 	}
 
 	const reference = references.data[0];
 
 	if (!reference.caseStudy) {
-		throw error(404, 'Not found');
+		error(404, 'Not found');
 	}
 
 	return {

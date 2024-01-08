@@ -16,7 +16,7 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 				? {
 						content: reference?.acf?.case_study,
 						title: reference?.acf?.case_study_title
-				  }
+					}
 				: undefined,
 		slug: reference.slug
 	};
