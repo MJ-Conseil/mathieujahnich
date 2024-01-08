@@ -92,7 +92,7 @@
 							? {
 									...reference.caseStudy,
 									url: `/references/${reference.slug}`
-							  }
+								}
 							: undefined}
 					/>
 				{/each}
@@ -132,7 +132,7 @@
 						? {
 								...reference.caseStudy,
 								url: `/references/${reference.slug}`
-						  }
+							}
 						: undefined}
 				/>
 			{/each}
