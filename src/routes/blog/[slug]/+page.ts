@@ -9,7 +9,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	});
 
 	if (!postsToDisplay || postsToDisplay.length === 0) {
-		throw error(404, 'Not found');
+		error(404, 'Not found');
 	}
 
 	const lastPosts = await getPosts(fetch, {

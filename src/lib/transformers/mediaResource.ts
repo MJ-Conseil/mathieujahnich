@@ -8,7 +8,7 @@ export const transformWordpressMediaResourceToMediaResource = (resource: any): M
 		? {
 				externalResourceName: resource.acf?.intitule_du_lien,
 				externalResourceURl: resource.acf.url_ressource_media
-		  }
+			}
 		: undefined;
 
 	return {
