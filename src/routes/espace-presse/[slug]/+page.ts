@@ -1,5 +1,5 @@
 import { getMediaResources } from '$lib/repositories/mediaResources';
-import { error, redirect } from '@sveltejs/kit';
+import { error, } from '@sveltejs/kit';
 
 import type { PageLoad } from './$types';
 
