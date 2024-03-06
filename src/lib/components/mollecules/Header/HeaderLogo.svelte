@@ -15,6 +15,7 @@ transition écologique"
 		height="auto"
 		width="130px"
 		name="mjConseilFull"
+		id="mainLogo"
 	/>
 </a>
 
@@ -26,5 +27,6 @@ transition écologique"
 		height="auto"
 		width="75px"
 		name="mjConseilFull"
+		id="mainLogo"
 	/>
 </a>

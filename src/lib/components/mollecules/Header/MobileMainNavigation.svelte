@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
+	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 	import MobileMenu from './MobileMenu.svelte';
 
 	let isMenuOpen = false;
@@ -12,6 +13,8 @@
 {#if isMenuOpen}
 	<MobileMenu on:clickLink={handleCloseModal} on:closeModal={handleCloseModal} />
 {/if}
+
+<SkipLink />
 
 <div class="h-full lg:hidden">
 	<div class="flex justify-between w-full bg-blue-dark text-white p-4">

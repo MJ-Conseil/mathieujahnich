@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
-	import { ROUTES } from '../../../constants';
+	import { ROUTES, focusableElements } from '../../../constants';
 	import { handleKeyboardTrapFocus } from '$lib/directives/trapfocus';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
@@ -22,9 +22,6 @@
 		if (button) {
 			button.focus();
 		}
-
-		const focusableElements =
-			'button, a, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), summary';
 
 		focusableElementsItems = Array.from(navigation.querySelectorAll(focusableElements));
 

@@ -4,7 +4,12 @@
 
 	export let activeRoute: string | null;
 
-	export let activatedMenu: boolean;
+	export let activatedMenu = false;
+
+	const handleOpenMenu = () => {
+		activatedMenu = !activatedMenu;
+	};
+
 	let button: HTMLElement;
 
 	const regex = new RegExp(`^${ROUTES['Offres de services']}`);
@@ -32,7 +37,7 @@
 		aria-haspopup="true"
 		aria-expanded={activatedMenu}
 		aria-controls={activatedMenu ? 'faire-monter-en-competence-menu' : undefined}
-		on:click
+		on:click={handleOpenMenu}
 		bind:this={button}
 	>
 		Notre offre
