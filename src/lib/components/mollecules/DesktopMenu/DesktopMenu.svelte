@@ -9,13 +9,9 @@
 	export let activeRoute: string | null = null;
 
 	let activatedMenu = false;
-
-	const handleClickMenuButton = () => {
-		activatedMenu = !activatedMenu;
-	};
 </script>
 
-<div class="p-2">
+<div class="p-2 h-full z-50">
 	<ul class="flex justify-end gap-12">
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Accueil']} href={ROUTES['Accueil']}
 			>Accueil
