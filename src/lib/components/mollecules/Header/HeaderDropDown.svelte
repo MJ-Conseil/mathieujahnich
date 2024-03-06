@@ -7,7 +7,11 @@
 	export let activatedMenu = false;
 
 	const handleOpenMenu = () => {
-		activatedMenu = !activatedMenu;
+		activatedMenu = true;
+	};
+
+	const handleCloseMenu = () => {
+		activatedMenu = false;
 	};
 
 	let button: HTMLElement;
@@ -19,6 +23,7 @@
 			case 'Escape':
 				if (button) {
 					button.focus();
+					handleCloseMenu();
 				}
 
 			default:
@@ -47,16 +52,18 @@
 	</button>
 
 	{#if activatedMenu}
+		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<ul
 			id="faire-monter-en-competence-menu"
 			data-testid="faire-monter-en-competence-menu"
 			class="bg-blue-xlight mt-2 min-w-[18rem] p-3 flex flex-col gap-2 rounded-lg left-[-15px] absolute z-50"
+			on:keydown={handleKeyboardInterractions}
 		>
 			<li>
 				<a
 					class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
-					on:click
-					href={'/blog'}
+					on:click={handleCloseMenu}
+					href={ROUTES[`Donner de l'élan`]}
 					aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
 				>
 					Donner de l'élan
@@ -65,8 +72,8 @@
 			<li>
 				<a
 					class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
-					on:click
-					href="/references"
+					on:click={handleCloseMenu}
+					href={ROUTES['Trouver le juste équilibre']}
 					aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
 				>
 					Trouver le juste équilibre
@@ -75,7 +82,7 @@
 			<li>
 				<a
 					class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
-					on:click
+					on:click={handleCloseMenu}
 					href={ROUTES['Faire monter en compétences']}
 					aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}
 				>
