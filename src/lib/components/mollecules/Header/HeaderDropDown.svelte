@@ -7,7 +7,7 @@
 	export let activatedMenu = false;
 
 	const handleOpenMenu = () => {
-		activatedMenu = true;
+		activatedMenu = !activatedMenu;
 	};
 
 	const handleCloseMenu = () => {
@@ -61,7 +61,7 @@
 		>
 			<li>
 				<a
-					class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
+					class="text-white hover:underline decoration-2 no-underline underline-offset-[8px] decoration-sand text-lg"
 					on:click={handleCloseMenu}
 					href={ROUTES[`Donner de l'élan`]}
 					aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
@@ -71,7 +71,7 @@
 			</li>
 			<li>
 				<a
-					class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
+					class="text-white hover:underline decoration-2 no-underline underline-offset-[8px] decoration-sand text-lg"
 					on:click={handleCloseMenu}
 					href={ROUTES['Trouver le juste équilibre']}
 					aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
@@ -81,7 +81,7 @@
 			</li>
 			<li>
 				<a
-					class="text-white hover:underline decoration-2 underline-offset-[8px] decoration-sand text-lg"
+					class="text-white hover:underline decoration-2 no-underline underline-offset-[8px] decoration-sand text-lg"
 					on:click={handleCloseMenu}
 					href={ROUTES['Faire monter en compétences']}
 					aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}

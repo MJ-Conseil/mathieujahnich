@@ -12,7 +12,6 @@
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
-	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 
 	export let data: PageData;
 </script>

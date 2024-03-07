@@ -40,6 +40,5 @@ export enum SIZE {
 	MEDIUM = 'medium'
 }
 
-
 export const focusableElements =
 	'button, a, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), summary';

@@ -7,6 +7,7 @@
 	export let activeRoute: string | null;
 </script>
 
+<!-- svelte-ignore a11y-no-redundant-roles -->
 <div
 	class="lg:block h-full bg-blue-dark sticky top-0 font-ptsans text-white md:px-16 z-50 p-4 hidden"
 >

@@ -52,7 +52,7 @@
 		</div>
 	</header>
 
-	<nav>
+	<nav role="navigation">
 		<ul class="flex flex-col gap-5">
 			{#each Object.keys(ROUTES) as key, index}
 				<li class="text-2xl">
