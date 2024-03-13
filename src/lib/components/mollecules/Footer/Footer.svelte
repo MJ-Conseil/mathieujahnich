@@ -16,13 +16,7 @@
 	<div class="md:flex md:justify-around justify-between">
 		<div class="hidden lg:block lg:w-1/5">
 			<p class="md:block font-ptsans text-blue-light hidden text-xl">
-				<Icon
-					role="img"
-					ariaLabel={'MJ Communication & transition écologique'}
-					name="mjConseilFull"
-					width="220px"
-					height="auto"
-				/>
+				<Icon name="mjConseilFull" width="220px" height="auto" />
 			</p>
 			<p class="lg:block font-ptsans text-blue-light hidden text-xl my-4">
 				Nous mettons la communication au service de la transition écologique
@@ -91,7 +85,7 @@
 					<a
 						id="phone-link"
 						bind:this={phoneLink}
-						class="text-white no-underline"
+						class="text-white"
 						href={`tel:${CONTACT_LINKS.phone.replaceAll(' ', '')}`}
 					>
 						<span class="sr-only">téléphone :</span>
@@ -102,7 +96,7 @@
 					<span aria-hidden="true" class="pr-3">
 						<Icon class="text-sand" width="18px" height="auto" name="letter" />
 					</span>
-					<a class="text-white no-underline" href={`mailto:${CONTACT_LINKS.email}`}>
+					<a class="text-white" href={`mailto:${CONTACT_LINKS.email}`}>
 						<span class="sr-only">email :</span>
 						{CONTACT_LINKS.email}
 					</a>

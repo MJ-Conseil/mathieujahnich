@@ -86,7 +86,7 @@
 				class="mt-5 bg-gray-dark border-2 border-gray"
 				type="checkbox"
 			/>
-			<label for="cgu" class="text-blue-dark"
+			<label for="cgu"
 				>J'accepte de recevoir des e-mails de MJ Conseil et confirme avoir pris connaissance de la
 				politique de confidentialité et des <a href="/informations-legales">mentions légales.</a
 				></label

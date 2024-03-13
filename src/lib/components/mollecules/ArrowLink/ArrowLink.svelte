@@ -24,7 +24,7 @@
 	target={external ? '_blank' : '_self'}
 	rel="noreferrer"
 	bind:this={element}
-	class="text-indigo font-ptsans no-underline text-md font-bold flex items-center gap-2"
+	class="text-indigo font-ptsans text-md font-bold flex items-center gap-2"
 	{href}
 >
 	<span class="hover:decoration-sand hover:underline underline-offset-8 decoration-2">
