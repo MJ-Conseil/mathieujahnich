@@ -9,8 +9,6 @@
 	export let value = '';
 	export let alt = false;
 
-	let errorMessage: HTMLElement;
-
 	let hasError = false;
 
 	let input: HTMLInputElement;
@@ -59,15 +57,10 @@
 	};
 
 	const handleSearch = () => {
-		console.log(input.validity);
 		if (!input.validity.valueMissing) {
-			return dispatch('search', searchOptions);
-		}
-
-		if (input.dataset.errorRequired) {
-			input.setCustomValidity(input.dataset?.errorRequired);
+			dispatch('search', searchOptions);
+		} else {
 			hasError = true;
-			input.reportValidity();
 		}
 	};
 
@@ -94,15 +87,13 @@
 		for={id}>{label}</label
 	>
 
-	<strong class:hidden={!hasError} class="text-red font-bold block" id="name-validation-error"
-		>Ce champs est requis</strong
-	>
+	{#if hasError}
+		<p class="text-red border-red font-bold" id={`${id}-error-desc`}>Ce champs est requis</p>
+	{/if}
+
 	<div class="lg:w-2/3 w-full md:h-10 md:flex md:rounded-l">
 		<input
-			aria-required="true"
-			data-error-required="Veuillez remplir ce champs"
-			aria-errormessage="name-validation-error"
-			aria-invalid={hasError}
+			aria-describedby={hasError ? `${id}-error-desc` : undefined}
 			on:input={handleOnInput}
 			bind:this={input}
 			class="lg:w-2/3 w-full h-full p-2 md:rounded-l-lg"
