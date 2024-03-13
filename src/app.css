@@ -90,7 +90,7 @@
 	/* Link */
 
 	.mj-link--base {
-		@apply text-indigo;
+		@apply text-indigo underline;
 	}
 
 	[href],
@@ -106,7 +106,7 @@
 	}
 
 	.mj-link--alt {
-		@apply text-sand;
+		@apply text-sand no-underline;
 	}
 
 	.mj-link--btn {
