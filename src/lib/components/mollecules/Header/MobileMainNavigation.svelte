@@ -14,10 +14,9 @@
 	<MobileMenu on:clickLink={handleCloseModal} on:closeModal={handleCloseModal} />
 {/if}
 
-<SkipLink />
-
 <!-- svelte-ignore a11y-no-redundant-roles -->
 <div class="h-full md:hidden">
+	<SkipLink />
 	<div class="flex justify-between w-full bg-blue-dark text-white p-4">
 		<a class="text-white" aria-label="Vers la page d'accueil" href="/">
 			<Icon height="35px" width="auto" name="mjConseilFull" />

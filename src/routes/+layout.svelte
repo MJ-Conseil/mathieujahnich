@@ -9,7 +9,7 @@
 
 	// note : this is a bit hacking ... After navigating to a page with a "subroute" (aka notre-offre/xxxx) the focus was not correctly reset
 	// this code ensure that ...
-	afterNavigate(() => {
+	afterNavigate((navigation) => {
 		node.focus();
 	});
 </script>
