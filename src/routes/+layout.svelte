@@ -1,23 +1,21 @@
-<script>
+<script lang="ts">
 	import Header from '$lib/components/mollecules/Header/Header.svelte';
 	import Footer from '$lib/components/mollecules/Footer/Footer.svelte';
 	import '../app.css';
-	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 
-	let modalShown = false;
+	import { afterNavigate } from '$app/navigation';
+
+	let node: HTMLElement;
+
+	// note : this is a bit hacking ... After navigating to a page with a "subroute" (aka notre-offre/xxxx) the focus was not correctly reset
+	// this code ensure that ...
+	afterNavigate((navigation) => {
+		node.focus();
+	});
 </script>
 
-<Header
-	on:click={() => {
-		modalShown = true;
-	}}
-	on:clickLink={() => {
-		modalShown = false;
-	}}
-	on:closeModal={() => (modalShown = false)}
-/>
-
-<div class="relative" inert={modalShown ? true : null} class:overflow-hidden={modalShown}>
+<div bind:this={node} tabindex="-1" class="relative h-full">
+	<Header />
 	<slot />
 
 	<Footer />
