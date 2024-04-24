@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import SkipLink from '$lib/components/atoms/SkipLink/SkipLink.svelte';
 	import MobileMenu from './MobileMenu.svelte';
@@ -8,6 +9,8 @@
 	const handleCloseModal = () => {
 		isMenuOpen = false;
 	};
+
+	$: if (browser) document.body.classList.toggle('overflow-y-hidden', isMenuOpen);
 </script>
 
 {#if isMenuOpen}

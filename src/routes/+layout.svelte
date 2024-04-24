@@ -17,10 +17,6 @@
 	// note : this is a bit hacking ... After navigating to a page with a "subroute" (aka notre-offre/xxxx) the focus was not correctly reset
 	// this code ensure that ...
 	afterNavigate((navigation) => {
-		console.log({
-			from: navigation.from?.url,
-			to: navigation.to?.url
-		});
 		if (navigation.from?.url.pathname !== navigation.to?.url.pathname) {
 			node.focus();
 		}
