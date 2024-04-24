@@ -52,11 +52,6 @@
 		};
 
 		posts = await getPosts(fetch, searchParams);
-		const queryString = patchQueryString(searchParams);
-
-		await goto(`${ROUTES.Blog}?${queryString}`, {
-			noScroll: true
-		});
 	};
 
 	const handleLoadMorePosts = async () => {
@@ -69,14 +64,9 @@
 
 		const newPosts = await getPosts(fetch, searchParams);
 
-		newFirstPostItemIndex = posts.length;
+		newFirstPostItemIndex = posts.length - 1;
 
 		posts = [...posts, ...newPosts];
-
-		const queryString = patchQueryString(searchParams);
-		await goto(`${ROUTES.Blog}?${queryString}`, {
-			noScroll: true
-		});
 	};
 
 	const handleLoadMorePostFormCategory = async (categoryId: number) => {

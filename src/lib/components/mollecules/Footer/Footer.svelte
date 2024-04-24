@@ -116,7 +116,7 @@
 				</ButtonLink>
 			</div>
 
-			<ul class="mt-8 flex items-center gap-5">
+			<ul class="mt-8 items-center gap-5 flex">
 				<li>
 					<a href={SOCIAL_NETWORK_LINKS.linkedin}>
 						<span aria-hidden="true">

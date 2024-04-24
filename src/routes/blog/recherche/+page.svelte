@@ -19,6 +19,8 @@
 	$: searchParams = data.searchParams;
 	$: posts = data.posts;
 
+	let newFirstPostItemIndex: undefined | number = undefined;
+
 	const handleSearch = async (e: CustomEvent<QueryOption>) => {
 		const searchParams = {
 			...e.detail,
@@ -30,6 +32,8 @@
 	};
 
 	const handleFilterByCategory = async (id: number) => {
+		newFirstPostItemIndex = undefined;
+
 		let categoryIds = (searchParams.categories || []) as number[];
 
 		searchParams = {
@@ -49,11 +53,6 @@
 		};
 
 		posts = await getPosts(fetch, searchParams);
-		const queryString = patchQueryString(searchParams);
-
-		await goto(`${ROUTES.Blog}/recherche?${queryString}`, {
-			noScroll: true
-		});
 	};
 
 	const handleLoadMorePosts = async () => {
@@ -65,6 +64,8 @@
 		};
 
 		const newPosts = await getPosts(fetch, searchParams);
+
+		newFirstPostItemIndex = posts.length - 1;
 
 		posts = [...posts, ...newPosts];
 	};
@@ -119,7 +120,7 @@
 
 		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 			{#if posts.length > 0}
-				{#each posts as post}
+				{#each posts as post, i}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
 							day: '2-digit',
@@ -130,6 +131,7 @@
 						picureAlternativeText={post.imageAltText}
 						pictureURL={post.imageUrl}
 						tagName={post.categoryName}
+						focused={newFirstPostItemIndex == i}
 						href={`${ROUTES.Blog}/${post.slug}`}
 					/>
 				{/each}

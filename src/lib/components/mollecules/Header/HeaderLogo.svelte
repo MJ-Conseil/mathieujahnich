@@ -19,7 +19,12 @@ transition écologique"
 	/>
 </a>
 
-<a class="text-white xl:hidden md:hidden lg:block" aria-label="Vers la page d'accueil" href="/">
+<a
+	class="text-white xl:hidden md:hidden lg:block"
+	title="MJ Communication &
+transition écologique - Accueil"
+	href="/"
+>
 	<Icon
 		role="img"
 		ariaLabel="MJ Communication &
