@@ -1,9 +1,9 @@
 name: Playwright Tests
 env:
-  PUBLIC_API_URL: "https://mj-cms.jcloud-ver-jpe.ik-server.com"
-  SENDINBLUE_API_KEY: "<change-me>" # Keep this variable empty.
-  PUBLIC_MATOMO_CDN_URL: "" # Keep this variable empty.
-  PUBLIC_MATOMO_URL: "" # Keep this variable empty.
+  PUBLIC_API_URL: 'https://mj-cms.jcloud-ver-jpe.ik-server.com'
+  SENDINBLUE_API_KEY: '<change-me>' # Keep this variable empty.
+  PUBLIC_MATOMO_CDN_URL: '' # Keep this variable empty.
+  PUBLIC_MATOMO_URL: '' # Keep this variable empty.
 on:
   push:
     branches: [main, master]
