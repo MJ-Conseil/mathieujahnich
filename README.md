@@ -44,6 +44,27 @@ Pour déployer et une fois votre PR mergée sur la branche "main", il y a une s�
 Voici une vidéo décrivant ces étapes :
 [Screencast 2023-09-21 11:26:54.webm](https://github.com/MJ-Conseil/mathieujahnich/assets/15958334/002de0ec-1783-4135-ace4-56b399bc3fff)
 
+## Récapitulatif des variables d'environnements
+
+| Nom                   | Utilisation                                                      | Type   | Requis ? |
+| --------------------- | ---------------------------------------------------------------- | ------ | -------- |
+| SENDINBLUE_API_KEY    | Défini le "Satic Token" pour communiquer avec SendInBlue (Brevo) | string | oui      |
+| PUBLIC_API_URL        | Défini l'URL de l'instance du CMS                                | string | oui      |
+| PUBLIC_MATOMO_CDN_URL | L'URL du CDN de Matomo                                           | string | oui      |
+
+:question-mark: Besoin d'en savoir plus sur les variables d'environnement avec SvelteKit ? C'est par ici :pointing-right: https://kit.svelte.dev/docs/modules#$app-environment
+
+## Matomo
+
+Ce site utilise [Matomo](https://fr.matomo.org/) pour le suivi d'audience en production.
+
+Pour l'activer en local il est nécessaire de rajouter ces variables d'env dans le fichier `.env`
+
+| Nom                   | Utilisation                   | Type   | Requis ? |
+| --------------------- | ----------------------------- | ------ | -------- |
+| PUBLIC_MATOMO_CDN_URL | L'URL du CDN de Matomo        | string | oui      |
+| PUBLIC_MATOMO_URL     | L'URL de l'instance de Matomo | string | oui      |
+
 ## Vue générale de l'architecture
 
 ```mermaid

@@ -17,10 +17,10 @@ const config = {
 				'default-src': [
 					'self',
 					'https://mj-cms.jcloud-ver-jpe.ik-server.com/', // we allow resources loading from this website
-					'http://localhost:*'
+					'http://localhost:*',
+					'https://*.matomo.cloud'
 				],
 				'base-uri': ['self'],
-				'script-src': ['self'],
 				'manifest-src': ['self'],
 				'font-src': ['self'],
 				'img-src': [

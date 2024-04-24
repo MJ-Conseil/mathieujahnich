@@ -4,6 +4,13 @@
 	import '../app.css';
 
 	import { afterNavigate } from '$app/navigation';
+	import Matomo from '$lib/components/mollecules/Matomo/Matomo.svelte';
+
+	let showMatomoMenu = true;
+
+	const handleCloseMatomoMenu = () => {
+		showMatomoMenu = false;
+	};
 
 	let node: HTMLElement;
 
@@ -16,7 +23,12 @@
 
 <div bind:this={node} tabindex="-1" class="relative h-full">
 	<Header />
+
 	<slot />
 
 	<Footer />
+
+	{#if showMatomoMenu}
+		<Matomo on:click={handleCloseMatomoMenu} />
+	{/if}
 </div>
