@@ -176,9 +176,10 @@
 
 			<Method title="Des formations certifiées Qualiopi">
 				<p class="mb-2">
-					MJ Conseil est un <strong>organisme de formation enregistré</strong> sous le numéro 11770795177
-					auprès du préfet de région d'Île-de-France et certifié Qualiopi depuis janvier 2023 au titre
-					de la catégorie suivante : Actions de formation Master Class
+					MJ Conseil est un <strong>organisme de formation enregistré</strong> sous le numéro
+					11770795177 auprès du préfet de région d'Île-de-France et certifié Qualiopi depuis janvier
+					2023 au titre de la catégorie suivante : Actions de formation
+					<a href="https://www.master-class-communication-responsable.fr/ ">Master Class </a>
 				</p>
 				<ul class="mj-list--disc">
 					<li class="mb-2">Exonération de TVA</li>
