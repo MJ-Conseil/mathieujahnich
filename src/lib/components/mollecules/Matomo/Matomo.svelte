@@ -10,6 +10,7 @@
 	const url = `${ENV.PUBLIC_MATOMO_CDN_URL}/matomo.js`;
 
 	let isOptOut = false;
+	let showBannder = false;
 
 	let tracker: any;
 
@@ -41,6 +42,11 @@
 
 	onMount(async () => {
 		setTimeout(initializeMatomo, 100);
+
+		const storedOptOutValue = sessionStorage.getItem('showMatomoBanner');
+		if (!storedOptOutValue) {
+			showBannder = true;
+		}
 	});
 
 	afterNavigate(() => {
@@ -52,13 +58,15 @@
 			return;
 		}
 
-		tracker.optUserOut();
-
 		isOptOut = true;
 
 		if (!alert) return;
-
 		alert.focus();
+	};
+
+	const handleCloseBanner = () => {
+		showBannder = false;
+		sessionStorage.setItem('showMatomoBanner', String(showBannder));
 	};
 </script>
 
@@ -68,29 +76,37 @@
 	{/if}
 </svelte:head>
 
-<div bind:this={alert} role="alert" class=" fixed w-full bg-sand bottom-0 text-blue-dark p-4 z-50">
-	<div class="w-full text-blue-dark flex justify-end font-bold">
-		<button on:click aria-label="fermer le menu"> <Icon width="25px" name="close" /></button>
+{#if showBannder}
+	<div
+		bind:this={alert}
+		role="alert"
+		class=" fixed w-full bg-sand bottom-0 text-blue-dark p-4 z-50"
+	>
+		<div class="w-full text-blue-dark flex justify-end font-bold">
+			<button on:click={handleCloseBanner} aria-label="fermer le menu">
+				<Icon width="25px" name="close" /></button
+			>
+		</div>
+
+		{#if !isOptOut}
+			<p>
+				Ce site utilise <a class="underline" href="https://fr.matomo.org/">Matomo</a> pour réaliser des
+				mesures d'audience. Pour refuser le suivi par Matomo vous pouvez cocher la case.
+			</p>
+
+			<form>
+				<label class="font-bold" for="opt-out">Je refuse d'être suivi par Matomo</label>
+				<input
+					id="opt-out"
+					checked={isOptOut}
+					on:keydown={handleOptOut}
+					on:input={handleOptOut}
+					on:change={handleOptOut}
+					type="checkbox"
+				/>
+			</form>
+		{:else}
+			<p>Votre demande a bien été prise en compte. Merci</p>
+		{/if}
 	</div>
-
-	{#if !isOptOut}
-		<p>
-			Ce site utilise <a class="underline" href="https://fr.matomo.org/">Matomo</a> pour réaliser des
-			mesures d'audience. Pour refuser le suivi par Matomo vous pouvez cocher la case.
-		</p>
-
-		<form>
-			<label class="font-bold" for="opt-out">Je refuse d'être suivi par Matomo</label>
-			<input
-				id="opt-out"
-				checked={isOptOut}
-				on:keydown={handleOptOut}
-				on:input={handleOptOut}
-				on:change={handleOptOut}
-				type="checkbox"
-			/>
-		</form>
-	{:else}
-		<p>Votre demande a bien été prise en compte. Merci</p>
-	{/if}
-</div>
+{/if}
