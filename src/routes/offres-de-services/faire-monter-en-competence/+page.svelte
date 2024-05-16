@@ -174,7 +174,7 @@
 				</ul>
 			</Method>
 
-			<Method title="Des formations certifiées Qualiopi">
+			<Method title="Certification qualité">
 				<p class="mb-2">
 					MJ Conseil est un <strong>organisme de formation enregistré</strong> sous le numéro
 					11770795177 auprès du préfet de région d'Île-de-France et certifié Qualiopi depuis janvier
