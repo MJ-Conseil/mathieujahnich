@@ -20,7 +20,7 @@ test.describe('faire-monter-en-competence page', () => {
 			'Des formats adaptés à vos publics',
 			'Des contenus sur-mesure',
 			'Co-construction d’outils pratiques',
-			'Des formations certifiées Qualiopi'
+			'Certification qualité'
 		];
 
 		// check if page headings contains at least the heading specified above
