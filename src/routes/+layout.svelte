@@ -18,11 +18,11 @@
 </script>
 
 <div bind:this={node} tabindex="-1" class="relative h-full">
+	<Matomo />
+
 	<Header />
 
 	<slot />
 
 	<Footer />
-
-	<Matomo />
 </div>

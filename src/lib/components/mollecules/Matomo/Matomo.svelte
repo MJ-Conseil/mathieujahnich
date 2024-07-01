@@ -4,6 +4,7 @@
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
+	import Button from '$lib/components/atoms/Button/Button.svelte';
 
 	let alert: HTMLElement;
 
@@ -62,6 +63,8 @@
 
 		if (!alert) return;
 		alert.focus();
+
+		handleCloseBanner();
 	};
 
 	const handleCloseBanner = () => {
@@ -82,29 +85,17 @@
 		role="alert"
 		class=" fixed w-full bg-sand bottom-0 text-blue-dark p-4 z-50"
 	>
-		<div class="w-full text-blue-dark flex justify-end font-bold">
-			<button on:click={handleCloseBanner} aria-label="fermer le menu">
-				<Icon width="25px" name="close" /></button
-			>
-		</div>
-
 		{#if !isOptOut}
 			<p>
 				Ce site utilise <a class="underline" href="https://fr.matomo.org/">Matomo</a> pour réaliser des
-				mesures d'audience. Pour refuser le suivi par Matomo vous pouvez cocher la case.
+				mesures d'audience.
 			</p>
 
-			<form>
-				<label class="font-bold" for="opt-out">Je refuse d'être suivi par Matomo</label>
-				<input
-					id="opt-out"
-					checked={isOptOut}
-					on:keydown={handleOptOut}
-					on:input={handleOptOut}
-					on:change={handleOptOut}
-					type="checkbox"
-				/>
-			</form>
+			<div class="flex gap-5">
+				<Button on:click={handleOptOut} name="Je refuse le suivi matomo" type="primary" />
+
+				<Button on:click={handleCloseBanner} name="J'accepte le suivi matomo" type="secondary" />
+			</div>
 		{:else}
 			<p>Votre demande a bien été prise en compte. Merci</p>
 		{/if}
