@@ -45,7 +45,7 @@
 <PageHeader>
 	<div class="flex items-start space-between">
 		<div>
-			<p class="text-sand font-bold text-2xl mb-2">Notre offre</p>
+			<p class="text-sand font-bold text-2xl mb-2">Offres</p>
 			<h1 class="mj-h1--alt">
 				{`Trouver le juste équilibre`}
 			</h1>
@@ -111,7 +111,7 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2 class="my-8 text-3xl lg:text-4xl">Nos méthodes et les résultats</h2>
+			<h2 class="my-8 text-3xl lg:text-4xl">Méthodes et les résultats</h2>
 			<Method title="Analyse et recommandations">
 				<ul class="mj-list--disc">
 					<li class="mb-2">

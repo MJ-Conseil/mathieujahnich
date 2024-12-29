@@ -44,7 +44,7 @@
 <PageHeader>
 	<div class="flex items-start space-between">
 		<div>
-			<p class="text-sand font-bold text-2xl mb-2">Notre offre</p>
+			<p class="text-sand font-bold text-2xl mb-2">Offres</p>
 			<h1 class="mj-h1--alt text-5xl break-word">
 				{`Faire monter en compétences`}
 			</h1>
@@ -119,7 +119,7 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2 class="mb-10 text-3xl lg:text-4xl">Nos prestations</h2>
+			<h2 class="mb-10 text-3xl lg:text-4xl">Prestations</h2>
 			<Method title="Des formats adaptés à vos publics">
 				<ul class="mj-list--disc">
 					<li class="mb-2">

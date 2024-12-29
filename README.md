@@ -54,16 +54,6 @@ Voici une vidéo décrivant ces étapes :
 
 :question-mark: Besoin d'en savoir plus sur les variables d'environnement avec SvelteKit ? C'est par ici :pointing-right: https://kit.svelte.dev/docs/modules#$app-environment
 
-## Matomo
-
-Ce site utilise [Matomo](https://fr.matomo.org/) pour le suivi d'audience en production.
-
-Pour l'activer en local il est nécessaire de rajouter ces variables d'env dans le fichier `.env`
-
-| Nom                   | Utilisation                   | Type   | Requis ? |
-| --------------------- | ----------------------------- | ------ | -------- |
-| PUBLIC_MATOMO_CDN_URL | L'URL du CDN de Matomo        | string | oui      |
-| PUBLIC_MATOMO_URL     | L'URL de l'instance de Matomo | string | oui      |
 
 ## Vue générale de l'architecture
 

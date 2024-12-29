@@ -16,14 +16,12 @@
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Accueil']} href={ROUTES['Accueil']}
 			>Accueil
 		</DesktopMenuItem>
-		<DesktopMenuItem
-			isActive={activeRoute === ROUTES['Qui sommes nous ?']}
-			href={ROUTES['Qui sommes nous ?']}
-			>Qui sommes-nous ?
+		<DesktopMenuItem isActive={activeRoute === ROUTES['A propos']} href={ROUTES['A propos']}
+			>A propos
 		</DesktopMenuItem>
 
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Références']} href={ROUTES['Références']}
-			>Nos références</DesktopMenuItem
+			>Références</DesktopMenuItem
 		>
 
 		<HeaderDropDown {activeRoute} {activatedMenu} />

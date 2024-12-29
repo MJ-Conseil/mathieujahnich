@@ -45,7 +45,7 @@
 		on:click={handleOpenMenu}
 		bind:this={button}
 	>
-		Notre offre
+		Offres
 		<span aria-hidden="true" class:rotate-180={activatedMenu} class="ml-2"
 			><Icon name="caret" /></span
 		>

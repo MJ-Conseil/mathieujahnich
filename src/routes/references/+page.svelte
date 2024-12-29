@@ -68,10 +68,9 @@
 <PageHeader>
 	<h1 class="mj-h1--alt">Références</h1>
 	<Headline>
-		Depuis plus de vingt ans, nous analysons les stratégies marketing et communication des
-		entreprises dans les domaines de l’environnement et de la RSE. Découvrez comment nous les
-		accompagnons vers des pratiques plus responsables, avec la posture « de la recherche à l’action
-		» qui nous caractérise.
+		Depuis plus de vingt ans, j’analyse les stratégies marketing et communication des entreprises
+		dans les domaines de l’environnement et de la RSE. Découvrez comment je les accompagne vers des
+		pratiques plus responsables, avec la posture « de la recherche à l’action » qui me caractérise.
 	</Headline>
 </PageHeader>
 
@@ -101,10 +100,10 @@
 	{/if}
 
 	<Section>
-		<h2>Toutes nos références</h2>
+		<h2>Toutes les références</h2>
 		<p class="text-xl mb-5">
-			Nous travaillons pour des secteurs variés. Vous pouvez filtrer nos références à l’aide des
-			mots clés ci-dessous.
+			Je travaille pour des secteurs variés. Vous pouvez filtrer les références à l’aide des
+			mots-clés ci-dessous.
 		</p>
 
 		<div class="flex mt-7 gap-3 flex-wrap">

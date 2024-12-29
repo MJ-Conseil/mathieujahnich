@@ -14,7 +14,7 @@
 	</p>
 	{#if link}
 		<div class="mt-6">
-			<ArrowLink {linkTitle} href={link}>Lire la suite</ArrowLink>
+			<ArrowLink {linkTitle} href={link}>Découvrir l'offre</ArrowLink>
 		</div>
 	{/if}
 </div>
