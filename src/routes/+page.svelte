@@ -8,7 +8,7 @@
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { ROUTES, SITE_WEB_NAME, SIZE } from '$lib/constants';
 
-	import groupPicture from '$lib/assets/images/mj-group-picture.png';
+	import mathieuJahnich from '$lib/assets/images/mj-group-picture.jpg';
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
@@ -26,20 +26,20 @@
 		<div class="md:w-[70%] flex flex-col gap-4 break-words overflow-visible mb-8">
 			<p class="text-sand text-xl font-bold">MJ Conseil</p>
 			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
-				Nous mettons la <span class="font-bold"> communication</span> au service de la
+				Je mets la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>
 			</h1>
 
 			<Headline>
-				Nous sommes un trio d’expertes en RSE et communication capables de vous aider de la
-				définition de votre stratégie à la mise en place opérationnelle.
+				En tant que consultant-chercheur indépendant, j’aide les organisations et les entreprises à
+				répondre aux attentes sociétales grâce à une communication plus responsable.
 			</Headline>
 		</div>
 	</Container>
 
 	<div class="flex justify-center">
 		<div class="relative w-4/5 md:w-1/2">
-			<img class="z-20 relative" src={groupPicture} alt="" />
+			<img class="z-20 relative -rotate-3" src={mathieuJahnich} alt="" />
 
 			<div
 				class="z-0 absolute md:bottom-[-15px] md:right-[-60px] lg:bottom-[-15px] lg:right-[90px] hidden md:block"
@@ -67,16 +67,16 @@
 		<h2>Signes particuliers</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-3">
 			<ParticularSign
-				title="Notre trio"
-				content="Nous collaborons toutes les trois depuis de nombreuses années. Nous mettons nos expertises complémentaires en RSE et en communication, notre complicité et notre bienveillance au service de la transformation de votre organisation."
+				title="+ 25 ans d'experience"
+				content="Depuis 1999, j’analyse les enjeux de communication des entreprises et des organisations dans le domaine de l’environnement et de la responsabilité sociétale."
 			/>
 			<ParticularSign
-				title="Notre engagement"
-				content="Nous concevons notre activité de conseil comme un levier pour mettre la filière marketing et communication au service de la transformation des modèles économiques et de la transition écologique et solidaire. Nous cherchons à faire « bouger les lignes ». "
+				title="De la recherche à l’action"
+				content="Normalien en sciences pour l’ingénieur et titulaire d'un doctorat en communication, j’ai exercé en tant que chercheur, communicant puis consultant. J’enseigne à Sciences Po Paris.    "
 			/>
 			<ParticularSign
-				title="Notre écoute"
-				content="Parce que tout projet commence par l’écoute de vos enjeux, de vos inquiétudes et de vos freins, nous vous aidons à identifier vos besoins réels et vos marges de progrès. Notre rôle est à la fois de vous soutenir et de vous « challenger ». "
+				title="Une expertise reconnue"
+				content="Sollicité par l’ADEME depuis 2012, je suis notamment l’auteur principal du Guide de la communication responsable (2020, 2022) et du Guide anti-greenwashing (2025)."
 			/>
 		</div>
 		<div class="lg:container h-full" />
@@ -88,8 +88,8 @@
 		<Container>
 			<h2 class="mb-4">À la une du blog</h2>
 			<p class="font-ptsans text-xl md:my-12 my-8">
-				Depuis 2005, nous interrogeons l’alignement de la communication et du marketing avec les
-				enjeux de transition écologique. Retrouvez ici nos analyses, des témoignages et des
+				Depuis 2005, j'interroge l'alignement des pratiques communication et marketing avec les
+				enjeux de transition écologique. Retrouvez ici mes analyses, des témoignages et des
 				ressources.
 			</p>
 

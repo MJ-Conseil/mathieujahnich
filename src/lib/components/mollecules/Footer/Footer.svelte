@@ -25,7 +25,7 @@
 				/>
 			</p>
 			<p class="lg:block font-ptsans text-blue-light hidden text-xl my-4">
-				Nous mettons la communication au service de la transition écologique
+				Je mets la communication au service de la transition écologique
 			</p>
 		</div>
 
@@ -37,10 +37,10 @@
 					<a class="mj-link--alt" href={ROUTES.Accueil}>Accueil</a>
 				</li>
 				<li>
-					<a class="mj-link--alt" href={ROUTES['Qui sommes nous ?']}>Qui sommes-nous ?</a>
+					<a class="mj-link--alt" href={ROUTES['A propos']}>A propos</a>
 				</li>
 				<li class="text-white">
-					Notre offre :
+					Offres :
 					<ul class="gap-3 flex flex-col pl-8 mt-2 list-disc text-sand">
 						<li>
 							<a class="mj-link--alt" href={ROUTES["Donner de l'élan"]}>Donner de l'élan</a>
@@ -58,7 +58,7 @@
 					</ul>
 				</li>
 				<li>
-					<a class="mj-link--alt" href={ROUTES.Références}>Nos références</a>
+					<a class="mj-link--alt" href={ROUTES.Références}>Références</a>
 				</li>
 			</ul>
 		</nav>
