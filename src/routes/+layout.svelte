@@ -4,7 +4,6 @@
 	import '../app.css';
 
 	import { afterNavigate } from '$app/navigation';
-	import Matomo from '$lib/components/mollecules/Matomo/Matomo.svelte';
 
 	let node: HTMLElement;
 
@@ -18,8 +17,6 @@
 </script>
 
 <div bind:this={node} tabindex="-1" class="relative h-full">
-	<Matomo />
-
 	<Header />
 
 	<slot />

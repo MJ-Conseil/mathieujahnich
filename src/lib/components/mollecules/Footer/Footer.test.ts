@@ -16,5 +16,5 @@ test('shows proper heading when rendered', () => {
 
 test('shows proper catch phrase when rendered', () => {
 	render(Footer);
-	screen.getByText('Nous mettons la communication au service de la transition écologique');
+	screen.getByText('Je mets la communication au service de la transition écologique');
 });
