@@ -95,7 +95,7 @@
 			<p class="text-sand text-xl font-bold">Radio, presse, télévision, web…</p>
 			<h1 class="mj-h1--alt">Espace presse</h1>
 			<Headline>
-				Nous intervenons régulièrement dans les médias généralistes ou spécialisés pour décrypter
+				J'interviens régulièrement dans les médias généralistes ou spécialisés pour décrypter
 				l’impact de la transition écologique sur les fonctions marketing et communication des
 				entreprises.
 			</Headline>
@@ -113,9 +113,8 @@
 			<div class="md:ml-8">
 				<div class="md:mb-24 mb-12">
 					<p>
-						Nous invitons les journalistes à contacter Mathieu directemen pour discuter de manière
-						informelle dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une
-						interview.
+						J’invite les journalistes à me contacter directement pour discute de manière informelle
+						dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une interview.
 					</p>
 
 					<ul class="flex flex-col md:flex-row gap-5 mt-5">

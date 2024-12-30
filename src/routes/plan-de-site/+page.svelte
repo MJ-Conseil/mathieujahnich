@@ -24,7 +24,7 @@
 					<a class="mj-link" href={ROUTES.Accueil}>Accueil</a>
 				</li>
 				<li>
-					<a class="mj-link" href={ROUTES['A propos']}>A propos</a>
+					<a class="mj-link" href={ROUTES['À propos']}>À propos</a>
 				</li>
 				<li class="text-indigo">
 					Offres :
