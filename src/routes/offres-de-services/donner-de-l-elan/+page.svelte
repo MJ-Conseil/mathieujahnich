@@ -205,9 +205,9 @@
 	<Section alt={references.length > 0}>
 		<OtherOfferRow>
 			<div class="xl:w-1/3 md:w-2/3">
-				<h3 class="text-white mt-0">Nos autres offres</h3>
+				<h3 class="text-white mt-0">Mes autres offres</h3>
 				<p class=" text-white text-2xl">
-					Nous mettons la communication au service de la transition écologique
+					Je mets la communication au service de la transition écologique
 				</p>
 			</div>
 			<div class="flex flex-col gap-5 items-center">

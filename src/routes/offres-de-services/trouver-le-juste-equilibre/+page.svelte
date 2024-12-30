@@ -145,8 +145,8 @@
 
 			<Method title="Modalités">
 				<p class="mb-2">
-					Nous ajustons les modalités de notre intervention à vos besoins et au caractère d’urgence
-					de votre demande.
+					J'ajuste les modalités de notre intervention à vos besoins et au caractère d’urgence de
+					votre demande.
 				</p>
 				<ul class="mj-list--disc">
 					<li class="mb-2">
@@ -158,11 +158,11 @@
 						remise au client : communiqué de presse, nouveau site web, idée créative, story board…
 					</li>
 					<li class="mb-2">
-						Nous adoptons une <strong>posture critique</strong> (“sans filtre”)
+						J'adopte une <strong>posture critique</strong> (“sans filtre”)
 						<strong>et constructive</strong>
 					</li>
 					<li class="mb-2">
-						Nous facturons <strong>à l’heure</strong> : vous ne payez que le temps effectif d’analyse
+						Je facture <strong>à l’heure</strong> : vous ne payez que le temps effectif d’analyse
 					</li>
 				</ul>
 			</Method>
@@ -211,9 +211,9 @@
 	<Section alt={references.length > 0}>
 		<OtherOfferRow>
 			<div class="md:w-1/3">
-				<h3 class="text-white mt-0">Nos autres offres</h3>
+				<h3 class="text-white mt-0">Mes autres offres</h3>
 				<p class=" text-white text-2xl">
-					Nous mettons la communication au service de la transition écologique.
+					Je mets la communication au service de la transition écologique.
 				</p>
 			</div>
 

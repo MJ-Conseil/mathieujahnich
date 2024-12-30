@@ -16,8 +16,8 @@
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Accueil']} href={ROUTES['Accueil']}
 			>Accueil
 		</DesktopMenuItem>
-		<DesktopMenuItem isActive={activeRoute === ROUTES['A propos']} href={ROUTES['A propos']}
-			>A propos
+		<DesktopMenuItem isActive={activeRoute === ROUTES['À propos']} href={ROUTES['À propos']}
+			>À propos
 		</DesktopMenuItem>
 
 		<DesktopMenuItem isActive={activeRoute === ROUTES['Références']} href={ROUTES['Références']}

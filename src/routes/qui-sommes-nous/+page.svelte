@@ -11,13 +11,13 @@
 </script>
 
 <svelte:head>
-	<title>{SITE_WEB_NAME} - A propos</title>
+	<title>{SITE_WEB_NAME} - À propos</title>
 </svelte:head>
 
 <header class="py-8 bg-blue-dark">
 	<Container>
 		<p class="text-sand text-xl font-bold">Mathieu Jahnich</p>
-		<h1 class="mj-h1--alt">A propos</h1>
+		<h1 class="mj-h1--alt">À propos</h1>
 		<Headline>
 			Mes thèmes de prédilection : communication responsable, communication RSE, lutte contre le
 			greenwashing et les stéréotypes.
@@ -49,7 +49,7 @@
 					<p class=" py-9 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
 						<a
 							title="Linkedin Mathieu Jahnich"
-							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
+							class="hover:decoration-sand underline hover:decoration-2 flex gap-3"
 							href="https://www.linkedin.com/in/mathieujahnich/"
 						>
 							<span aria-hidden="true">
@@ -60,7 +60,7 @@
 
 						<a
 							title="Contacter Mathieu Jahnich : conseil@mathieu-jahnich.fr"
-							class="hover:decoration-sand underline underline-offset-8 hover:decoration-2 flex gap-3"
+							class="hover:decoration-sand underline hover:decoration-2 flex gap-3"
 							href="mailto:conseil[@]conseil@mathieu-jahnich.fr"
 						>
 							<span aria-hidden="true">
@@ -76,7 +76,7 @@
 
 			<ul class="list-disc">
 				<li>
-					Formation initiale à l' <span class="font-bold">ENS Paris-Saclay </span>en sciences pour
+					Formation initiale à l'<span class="font-bold">ENS Paris-Saclay </span>en sciences pour
 					l'ingénieur jusqu’à l’agrégation de mécanique.
 				</li>
 				<li>
@@ -157,72 +157,87 @@
 			<p>Merci Mary-Lou MAURICIO pour la photo et le temps d'échange le 27 novembre 2023.</p>
 
 			<p>
-				« BORN IN ... PPM est une série de portraits à découvrir sur borninppm.com Les
-				participant·es posent avec le taux de concentration en CO2 (exprimée en PPM, parties par
-				million) de leur année de naissance en signe de mobilisation contre la combustion des
+				« BORN IN ... PPM est une série de portraits <a href="https://borninppm.com">
+					à découvrir sur borninppm.com
+				</a>Les participant·es posent avec le taux de concentration en CO2 (exprimée en PPM, parties
+				par million) de leur année de naissance en signe de mobilisation contre la combustion des
 				énergies fossiles toujours plus grandissante et pour dénoncer l'injustice climatique. »
 			</p>
 
 			<h3>Focus sur les années 2023 et 2024</h3>
 
 			<p>
-				Pendant deux années, Sandrine CADIC et Aurélie WASTIN étaient salariées de mon entreprise.
-				Toutes* les trois, nous avons mis nos expertises complémentaires en RSE et en communication,
-				notre complicité et notre bienveillance au service de plusieurs organisations : Centre Juno
-				Beach, Assurance Maladie, CDC Habitat, Groupe CDC, Stardust Group et d’autres.
+				Pendant deux années, <span class="font-bold">Sandrine CADIC</span> et
+				<span class="font-bold">Aurélie WASTIN </span> étaient salariées de mon entreprise. Toutes* les
+				trois, nous avons mis nos expertises complémentaires en RSE et en communication, notre complicité
+				et notre bienveillance au service de plusieurs organisations : Centre Juno Beach, Assurance Maladie,
+				CDC Habitat, Groupe CDC, Stardust Group et d’autres.
 			</p>
-			<ul class="list-disc flex flex-col gap-3">
+			<ul class="list-disc flex flex-col gap-3 text-blue-dark">
 				<li>
-					Sandrine CADIC. Experte des sujets RSE et des questions de reporting extra-financier,
-					forte de près de vingt ans d’expérience, Sandrine accompagne les organisations dans leur
-					démarche responsable et le déploiement de leur stratégie RSE. Elle a à cœur de lier
-					stratégie RSE et communication responsable afin de favoriser l’engagement de l’ensemble
-					des parties prenantes et assurer la cohérence et la crédibilité entre action et
-					communication. <a
-						title="LinkedIn Sandrine Cadic"
-						class="hover:decoration-sand underline underline-offset-8 hover:decoration-2"
-						href="https://www.linkedin.com/in/sandrinecadic/"
-					>
-						LinkedIn
-					</a>
-					|
-					<a
-						title="Contacter Sandrine Cadic : scadic@yahoo.com"
-						class="hover:decoration-sand underline underline-offset-8 hover:decoration-2"
-						href="mailto:scadic[@]yahoo.comr"
-					>
-						Email
-					</a>
+					<span class="font-bold">Sandrine CADIC</span>. Experte des sujets RSE et des questions de
+					reporting extra-financier, forte de près de vingt ans d’expérience, Sandrine accompagne
+					les organisations dans leur démarche responsable et le déploiement de leur stratégie RSE.
+					Elle a à cœur de lier stratégie RSE et communication responsable afin de favoriser
+					l’engagement de l’ensemble des parties prenantes et assurer la cohérence et la crédibilité
+					entre action et communication.
+
+					<div class="flex gap-4 my-2">
+						<a
+							title="LinkedIn Sandrine Cadic (vers site externe)"
+							class="underline flex gap-2"
+							target="_blank"
+							href="https://www.linkedin.com/in/aur%C3%A9lie-wastin-8683a649/"
+						>
+							LinkedIn <Icon name="external" />
+						</a>
+						|
+						<a
+							title="Contacter Sandrine Cadic : scadic@yahoo.com"
+							class="underline"
+							href="mailto:scadic[@]yahoo.com"
+						>
+							Email
+						</a>
+					</div>
 				</li>
 
 				<li>
-					Aurélie WASTIN. Depuis près de vingt ans, Aurélie travaille sur la question des
-					engagements RSE des organisations, leur traduction dans une stratégie de communication
-					responsable et la mise en œuvre opérationnelle au sein des métiers des communicants, pour
-					soutenir et animer les transformations. Elle accompagne les porteurs de projets et les
-					équipes avec patience, nuance, bienveillance et enthousiasme pour faciliter le passage à
-					l'action dans leur contexte. Je la solliciterai en tant qu'indépendante selon la nature
-					des projets qui me sont confiés. <a
-						title="LinkedIn Aurélie Wastin"
-						class="hover:decoration-sand underline underline-offset-8 hover:decoration-2"
-						href="https://www.linkedin.com/in/aurelie-wastin-8683a649/"
-					>
-						LinkedIn
-					</a>
-					|
-					<a
-						title="Contacter Sandrine Cadic : aurelie.wastin@gmail.com"
-						class="hover:decoration-sand underline underline-offset-8 hover:decoration-2"
-						href="mailto:aurelie.wastin[@]gmail.com"
-					>
-						Email
-					</a>
+					<span class="font-bold">Aurélie WASTIN </span> Depuis près de vingt ans, Aurélie travaille
+					sur la question des engagements RSE des organisations, leur traduction dans une stratégie
+					de communication responsable et la mise en œuvre opérationnelle au sein des métiers des
+					communicants, pour soutenir et animer les transformations. Elle accompagne les porteurs de
+					projets et les équipes avec patience, nuance, bienveillance et enthousiasme pour faciliter
+					le passage à l'action dans leur contexte. Je la solliciterai en tant qu'indépendante selon
+					la nature des projets qui me sont confiés.
+
+					<div class="flex gap-4 my-2">
+						<a
+							title="LinkedIn Aurélie Wastin (vers site externe)"
+							target="_blank"
+							class="underline flex gap-2"
+							href="https://www.linkedin.com/in/aurelie-wastin-8683a649/"
+						>
+							LinkedIn <Icon name="external" />
+						</a>
+						|
+						<a
+							title="Contacter Aurélie Wastin : aurelie.wastin@gmail.com"
+							class="underline flex gap-2"
+							href="mailto:aurelie.wastin[@]gmail.com"
+						>
+							Email
+						</a>
+					</div>
 				</li>
 			</ul>
 
 			<p>
-				Retrouvez leur témoignage sur mon blog : « Aurélie Wastin et Sandrine Cadic : la rencontre
-				d’équilibristes pour réconcilier communication et RSE ».
+				Retrouvez leur témoignage sur mon blog : <a
+					href="https://mathieu-jahnich.fr/blog/aurelie-wastin-et-sandrine-cadic-la-rencontre-dequilibristes-pour-reconcilier-la-communication-et-la-rse"
+					>« Aurélie Wastin et Sandrine Cadic : la rencontre d’équilibristes pour réconcilier
+					communication et RSE »</a
+				> .
 			</p>
 
 			<p>* Le féminin l’emporte sur le masculin.</p>
