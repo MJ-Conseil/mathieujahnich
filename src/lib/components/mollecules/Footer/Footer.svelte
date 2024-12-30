@@ -37,7 +37,7 @@
 					<a class="mj-link--alt" href={ROUTES.Accueil}>Accueil</a>
 				</li>
 				<li>
-					<a class="mj-link--alt" href={ROUTES['A propos']}>A propos</a>
+					<a class="mj-link--alt" href={ROUTES['À propos']}>À propos</a>
 				</li>
 				<li class="text-white">
 					Offres :
