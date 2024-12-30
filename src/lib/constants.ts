@@ -7,7 +7,7 @@ export const SITE_WEB_NAME = 'MJ Conseil';
 
 export const ROUTES: Record<string, string> = {
 	Accueil: '/',
-	'À propos': '/qui-sommes-nous',
+	'À propos': '/a-propos',
 	"Donner de l'élan": '/offres-de-services/donner-de-l-elan',
 	'Trouver le juste équilibre': '/offres-de-services/trouver-le-juste-equilibre',
 	'Faire monter en compétences': '/offres-de-services/faire-monter-en-competence',
