@@ -10,7 +10,7 @@ test('shows proper heading when rendered', () => {
 	const headings = screen.getAllByRole('heading');
 
 	expect(headings.length).toBe(3);
-	expect(headings[0]).toHaveTextContent('MJ Conseil');
+	expect(headings[0]).toHaveTextContent('Mathieu Jahnich ');
 	expect(headings[1]).toHaveTextContent('Ressources');
 });
 

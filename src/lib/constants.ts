@@ -3,7 +3,7 @@ export const SOCIAL_NETWORK_LINKS: Record<string, string> = {
 	youtube: 'https://www.youtube.com/playlist?list=PLS3PLG72rJqGFGtMIgJRaDqx0NAzLMMhM'
 };
 
-export const SITE_WEB_NAME = 'MJ Conseil';
+export const SITE_WEB_NAME = 'Mathieu Jahnich ';
 
 export const ROUTES: Record<string, string> = {
 	Accueil: '/',

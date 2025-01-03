@@ -17,7 +17,7 @@
 	<Section>
 		<!-- svelte-ignore a11y-no-redundant-roles -- must have the navigation role -->
 		<nav role="navigation" aria-label="site-map">
-			<h3 class="mj-h4--alt">MJ Conseil</h3>
+			<h3 class="mj-h4--alt">Mathieu Jahnich </h3>
 
 			<ul class="flex flex-col gap-2">
 				<li>

@@ -42,6 +42,6 @@
 		</p>
 
 		<p>Cordialement,</p>
-		<p>L'équipe MJ Conseil</p>
+		<p>Mathieu Jahnich</p>
 	</Section>
 </main>
