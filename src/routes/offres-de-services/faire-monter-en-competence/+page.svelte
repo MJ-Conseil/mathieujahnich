@@ -196,7 +196,6 @@
 			<div class="mt-8 flex flex-col gap-5">
 				{#each references as reference, i}
 					<ReferenceAccordion
-						focused={firstNewReferenceIndex === i}
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
