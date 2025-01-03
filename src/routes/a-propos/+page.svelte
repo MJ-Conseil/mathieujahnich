@@ -216,7 +216,7 @@
 							title="LinkedIn Aurélie Wastin (vers site externe)"
 							target="_blank"
 							class="underline flex gap-2"
-							href="https://www.linkedin.com/in/aurelie-wastin-8683a649/"
+							href="https://fr.linkedin.com/in/aurélie-wastin-8683a649"
 						>
 							LinkedIn <Icon name="external" />
 						</a>

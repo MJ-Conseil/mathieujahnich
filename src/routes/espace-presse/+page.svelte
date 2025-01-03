@@ -113,7 +113,7 @@
 			<div class="md:ml-8">
 				<div class="md:mb-24 mb-12">
 					<p>
-						J’invite les journalistes à me contacter directement pour discute de manière informelle
+						J’invite les journalistes à me contacter directement pour discuter de manière informelle
 						dans le cadre de la préparation d’un dossier ou d’un reportage ou pour une interview.
 					</p>
 

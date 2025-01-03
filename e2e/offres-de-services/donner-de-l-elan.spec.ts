@@ -10,7 +10,7 @@ test.describe('donner-de-l-elan page', () => {
 		const expectedHeadings = [
 			'Donner de l’élan',
 			'Votre besoin',
-			'Nos méthodes et les livrables',
+			'Nos méthodes et livrables',
 			'Diagnostic',
 			'Stratégie',
 			'Appropriation',
