@@ -42,13 +42,13 @@
 			</a> révèle que :
 		</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li><strong>88,24% </strong> des critères RGAA sont respectés.</li>
 		</ul>
 
 		<p class="my-3">Dans le détail :</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>Nombre de critères conformes : 45</li>
 			<li>Nombre de critères non applicables : 55</li>
 			<li>Nombre de critères non conformes : 6</li>
@@ -58,7 +58,7 @@
 
 		<p class="my-3">Liste des critères non conforme :</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>
 				1.2 - Chaque image de décoration est-elle correctement ignorée par les technologies
 				d’assistance ?
@@ -91,7 +91,7 @@
 		<h2 class="mj-h2">Etablissement de cette déclaration d'accessibilité</h2>
 		<p>Cette déclaration a été établie le 03 juillet 2024.</p>
 		<h3 class="mj-h3">Technologies utilisées pour la réalisation du site web</h3>
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>CSS</li>
 
 			<li>HTML</li>
@@ -105,7 +105,7 @@
 			d’écran suivants :
 		</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>NVDA, Firefox</li>
 
 			<li>Jaws , Firefox</li>
@@ -115,7 +115,7 @@
 
 		<p class="my-3">Les outils suivants ont été utilisés lors de l’évaluation :</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>Color Contrast Analyser</li>
 
 			<li>HeadingsMap</li>
@@ -127,7 +127,7 @@
 
 		<p class="my-5">Pages du site ayant fait l’objet de la vérification de conformité :</p>
 
-		<ol class="list-decimal">
+		<ol class="list-decimal text-blue-dark">
 			<li>Accueil : https://mathieu-jahnich.fr/</li>
 			<li>Plan du site : https://mathieu-jahnich.fr/plan-de-site</li>
 			<li>
@@ -153,7 +153,7 @@
 			contenu sous une autre forme.
 		</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>
 				Contacter <a class="mj-link--ternary" href={CONTACT_LINKS.email}
 					>conseil@mathieu-jahnich.fr</a
@@ -169,7 +169,7 @@
 			vous n’avez pas obtenu de réponse satisfaisante.
 		</p>
 
-		<ul class="list-disc">
+		<ul class="list-disc text-blue-dark">
 			<li>
 				<a href="https://formulaire.defenseurdesdroits.fr/">
 					Écrire un message au Défenseur des droits
