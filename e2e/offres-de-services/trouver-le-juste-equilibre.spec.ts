@@ -10,7 +10,7 @@ test.describe('trouver-le-juste-equilibre page', () => {
 		const expectedHeadings = [
 			'Trouver le juste équilibre',
 			'Votre besoin',
-			'Nos méthodes et les résultats',
+			'Nos Méthodes et résultats',
 			'Analyse et recommandations',
 			'Tous types de supports',
 			'Modalités',
