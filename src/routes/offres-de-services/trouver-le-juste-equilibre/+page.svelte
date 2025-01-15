@@ -111,7 +111,7 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2 class="my-8 text-3xl lg:text-4xl">Méthodes et les résultats</h2>
+			<h2 class="my-8 text-3xl lg:text-4xl">Méthodes et résultats</h2>
 			<Method title="Analyse et recommandations">
 				<ul class="mj-list--disc">
 					<li class="mb-2">

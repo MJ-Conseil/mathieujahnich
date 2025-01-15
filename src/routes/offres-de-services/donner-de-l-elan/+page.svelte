@@ -119,7 +119,7 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2>Nos méthodes et livrables</h2>
+			<h2>Méthodes et livrables</h2>
 			<Method title="Diagnostic">
 				<p class="mb-2">
 					Recueillir et analyser les
