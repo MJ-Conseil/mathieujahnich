@@ -38,7 +38,7 @@
 
 <main id="main-content">
 	<Section>
-		<h2>Inscription à la newsletter de Mathieu Jahnich </h2>
+		<h2>Inscription à la newsletter de Mathieu Jahnich</h2>
 		<p class="">
 			Inscrivez-vous à notre newsletter afin de retrouver une sélection mensuelle de contenus
 			originaux, reliant les enjeux de soutenabilité aux pratiques marketing et communication.
@@ -87,8 +87,8 @@
 				type="checkbox"
 			/>
 			<label for="cgu" class="text-blue-dark"
-				>J'accepte de recevoir des e-mails de Mathieu Jahnich  et confirme avoir pris connaissance de la
-				politique de confidentialité et des <a href="/informations-legales">mentions légales.</a
+				>J'accepte de recevoir des e-mails de Mathieu Jahnich et confirme avoir pris connaissance de
+				la politique de confidentialité et des <a href="/informations-legales">mentions légales.</a
 				></label
 			>
 

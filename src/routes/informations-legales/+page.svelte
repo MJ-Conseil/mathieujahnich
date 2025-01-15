@@ -162,7 +162,7 @@
 				appartenant à d’autres sociétés partenaires ou auteurs.
 			</p>
 			<p class="my-3">
-				Pour toute demande d’autorisation ou d’information, veuillez nous contacter par email :
+				Pour toute demande d’autorisation ou d’information, veuillez Me Contacter par email :
 				<a class="mj-link--ternary" href={`mailto:${CONTACT_LINKS.email}`}>{CONTACT_LINKS.email}</a>
 			</p>
 			<p class="my-3">

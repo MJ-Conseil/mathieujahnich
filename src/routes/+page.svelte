@@ -24,7 +24,7 @@
 <header role="banner" class=" bg-blue-dark md:pt-4 pb-8 lg:pb-12 relative overflow-hidden">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4 break-words overflow-visible mb-8">
-			<p class="text-sand text-xl font-bold">Mathieu Jahnich </p>
+			<p class="text-sand text-xl font-bold">Mathieu Jahnich</p>
 			<h1 class="mj-h1--alt lg:text-6xl text-4xl m-0 p-0">
 				Je mets la <span class="font-bold"> communication</span> au service de la
 				<span class="font-bold">transition écologique</span>

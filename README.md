@@ -54,7 +54,6 @@ Voici une vidéo décrivant ces étapes :
 
 :question-mark: Besoin d'en savoir plus sur les variables d'environnement avec SvelteKit ? C'est par ici :pointing-right: https://kit.svelte.dev/docs/modules#$app-environment
 
-
 ## Vue générale de l'architecture
 
 ```mermaid

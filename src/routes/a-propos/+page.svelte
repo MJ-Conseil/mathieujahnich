@@ -187,7 +187,7 @@
 							title="LinkedIn Sandrine Cadic (vers site externe)"
 							class="underline flex gap-2"
 							target="_blank"
-							href="https://www.linkedin.com/in/aur%C3%A9lie-wastin-8683a649/"
+							href="https://www.linkedin.com/in/sandrinecadic"
 						>
 							LinkedIn <Icon name="external" />
 						</a>

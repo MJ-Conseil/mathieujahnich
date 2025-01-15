@@ -30,7 +30,7 @@
 		</div>
 
 		<nav aria-label="navigation pied de page">
-			<h3 class="mj-h4--alt">Mathieu Jahnich </h3>
+			<h3 class="mj-h4--alt">Mathieu Jahnich</h3>
 
 			<ul class="flex flex-col gap-2">
 				<li>
@@ -168,7 +168,7 @@
 
 				<li class="text-sand">
 					<a class="text-sand font-bold decoration-dotted" href="/declaration-accessibilité"
-						>Déclaration d'accessibilité : non évaluée</a
+						>Déclaration d'accessibilité : Conformité Partielle (88,24%)</a
 					>
 				</li>
 
