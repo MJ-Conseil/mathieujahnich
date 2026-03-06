@@ -4,7 +4,10 @@ import type { Fetch, QueryOption } from 'definitions';
 export const api = async <T>(url: string, fetch: Fetch): Promise<T> => {
 	const request = await fetch(new Request(`${API_URL}/wp-json/wp/v2${url}`));
 
-	console.log(JSON.stringify(request));
+	console.log({
+		url,
+		request: request
+	});
 
 	if (request.ok) {
 		return await request.json();
@@ -15,7 +18,10 @@ export const api = async <T>(url: string, fetch: Fetch): Promise<T> => {
 export const apiWithHeaders = async <T>(url: string, fetch: Fetch): Promise<[T, Headers]> => {
 	const request = await fetch(new Request(`${API_URL}/wp-json/wp/v2${url}`));
 
-	console.log(JSON.stringify(request));
+	console.log({
+		url,
+		request: request
+	});
 
 	if (request.ok) {
 		return [await request.json(), request.headers];
