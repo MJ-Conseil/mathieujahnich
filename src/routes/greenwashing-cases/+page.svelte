@@ -84,7 +84,6 @@
 			I regularly encounter various types of greenwashing. You can filter them according to their
 			categories.
 		</p>
-
 		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.greenWashingCaseTypes as greenWashingCaseType}
 				<Tag
