@@ -16,7 +16,7 @@ export const ROUTES: Record<string, string> = {
 	Blog: '/blog',
 	Newsletter: '/newsletter',
 	'Informations légales': '/informations-legales',
-	'Greenwashing cases' : '/greenwashing-cases'
+	'Greenwashing cases': '/greenwashing-cases'
 };
 export const CONTACT_LINKS: Record<string, string> = {
 	reservio: 'https://mathieu-jahnich.reservio.com/',

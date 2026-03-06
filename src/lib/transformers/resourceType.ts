@@ -1,6 +1,8 @@
 import type { ResourceType } from 'definitions';
 
-export const transformWordpressGenericResourceToResource = (wordpressResource: any): ResourceType => {
+export const transformWordpressGenericResourceToResource = (
+	wordpressResource: any
+): ResourceType => {
 	return {
 		description: wordpressResource.description,
 		id: wordpressResource.id,

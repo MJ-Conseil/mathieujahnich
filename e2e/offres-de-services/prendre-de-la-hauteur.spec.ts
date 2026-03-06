@@ -18,7 +18,7 @@ test.describe('faire-monter-en-competence page', () => {
 			'Votre besoin',
 			'Vos équipes marketing et communication',
 			'L’ensemble de vos salarié·es',
-			'Prestations',
+			'Prestations'
 		];
 
 		// check if page headings contains at least the heading specified above

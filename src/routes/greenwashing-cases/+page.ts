@@ -12,9 +12,8 @@ export const load: PageLoad = async ({ fetch }) => {
 
 	const [greenWashingCaseTypes, grennWashingCases] = await Promise.all([
 		getGreenWhasingCasesTypes(fetch),
-		getGreenWhasingCases(fetch, params),
+		getGreenWhasingCases(fetch, params)
 	]);
-
 
 	return { greenWashingCaseTypes, grennWashingCases };
 };

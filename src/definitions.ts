@@ -9,7 +9,7 @@ export type QueryOption = {
 	offer_type?: number | null;
 	categories?: number[];
 	reference_types?: number[];
-	greenwashing_case_types? : number[],
+	greenwashing_case_types?: number[];
 	search?: string;
 	media_resource_type?: number[];
 	slug?: string;

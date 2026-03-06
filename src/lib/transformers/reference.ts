@@ -6,8 +6,9 @@ export const transformWordpressReferenceToReference = (reference: any): Referenc
 	return {
 		content: reference.content.rendered,
 		id: reference.id,
-		title: reference.title.rendered,
 		date: new Date(reference.date),
+		title: reference.title.rendered,
+
 		referenceTypes: reference.reference_types,
 		highlighted: reference.acf?.highlight || false,
 		imageUrl: embededMedias && embededMedias.length > 0 ? embededMedias[0].source_url : undefined,
