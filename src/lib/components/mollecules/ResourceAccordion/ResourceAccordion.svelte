@@ -5,7 +5,7 @@
 
 	export let id: number | string = '';
 	export let focused = false;
-	export let referenceName: string;
+	export let resourceName: string;
 	export let content: string;
 	export let imageUrl = '';
 	export let caseStudy: CaseStudy | undefined = undefined;
@@ -13,7 +13,7 @@
 
 <Accordion {focused} id={`reference-${id}`}>
 	<div
-		title={`voir la référence ${referenceName}`}
+		title={`voir la ressource ${resourceName}`}
 		slot="trigger-content"
 		class="md:w-full flex md:gap-5"
 	>
@@ -23,7 +23,7 @@
 			</div>
 		{/if}
 		<p class="break-word md:max-w-[100%] max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
-			{referenceName}
+			{resourceName}
 		</p>
 	</div>
 	<div class="[&>p]:mb-4 !text-lg accordion-content html-wrapper" slot="panel-content">

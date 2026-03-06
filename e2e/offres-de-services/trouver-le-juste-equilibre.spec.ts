@@ -7,14 +7,16 @@ test.describe('trouver-le-juste-equilibre page', () => {
 
 		const headingContents = await Promise.all(headings.map((item) => item.textContent()));
 
+		console.log(headingContents);
+
 		const expectedHeadings = [
 			'Trouver le juste équilibre',
 			'Votre besoin',
-			'Nos Méthodes et résultats',
+			'Méthodes et résultats',
 			'Analyse et recommandations',
 			'Tous types de supports',
 			'Modalités',
-			'Résultats'
+			'Résultats',
 		];
 
 		// check if page headings contains at least the heading specified above

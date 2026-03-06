@@ -3,12 +3,12 @@ import '@testing-library/jest-dom';
 
 import { render } from '@testing-library/svelte';
 
-import ReferenceAccordion from './ReferenceAccordion.svelte';
+import ResourceAccordion from './ResourceAccordion.svelte';
 
 test('shows panel if button has been clicked', async () => {
-	const { getByRole } = render(ReferenceAccordion, {
+	const { getByRole } = render(ResourceAccordion, {
 		props: {
-			referenceName: 'Hello',
+			resourceName: 'Hello',
 			content: '<p>Hello World<p/>'
 		}
 	});

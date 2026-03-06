@@ -31,6 +31,12 @@
 			href={ROUTES['Espace presse']}
 			>Espace presse
 		</DesktopMenuItem>
+
+		<DesktopMenuItem
+			isActive={activeRoute === ROUTES['Greenwashing cases']}
+			href={ROUTES['Greenwashing cases']}
+			>Greenwashing cases
+		</DesktopMenuItem>
 		<DesktopMenuItem isActive={activeRoute === ROUTES.Blog} href={ROUTES.Blog}
 			>Blog
 		</DesktopMenuItem>

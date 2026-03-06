@@ -9,6 +9,7 @@ export type QueryOption = {
 	offer_type?: number | null;
 	categories?: number[];
 	reference_types?: number[];
+	greenwashing_case_types? : number[],
 	search?: string;
 	media_resource_type?: number[];
 	slug?: string;
@@ -38,6 +39,8 @@ export type ResourceType = {
 export type ReferenceType = ResourceType;
 
 export type MediaResourceType = ResourceType;
+
+export type GreenWhasingCaseType = ResourceType;
 
 export type MediaResourceRecord = {
 	[index: number]: {
@@ -85,6 +88,17 @@ export type Reference = {
 	imageUrl?: string;
 	associatedContent?: string;
 	caseStudy?: CaseStudy;
+};
+
+export type GreenWhasingCase = {
+	id: number;
+	date: Date;
+	title: string;
+	slug: string;
+	content: string;
+	greenwashingCaseTypes: number[];
+	imageUrl?: string;
+	associatedContent?: string;
 };
 
 export type DataWithMeta<T> = {

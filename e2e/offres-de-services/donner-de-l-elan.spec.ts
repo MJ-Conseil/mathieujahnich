@@ -10,6 +10,8 @@ test.describe('donner-de-l-elan page', () => {
 		const expectedHeadings = [
 			'Donner de l’élan',
 			'Votre besoin',
+			'Votre stratégie RSE',
+			'Votre communication RSE',
 			'Méthodes et livrables',
 			'Diagnostic',
 			'Stratégie',

@@ -2,7 +2,7 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import Method from '$lib/components/mollecules/Offer/Method.svelte';
 	import Need from '$lib/components/mollecules/Offer/Need.svelte';
-	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
+	import ResourceAccordion from '$lib/components/mollecules/ResourceAccordion/ResourceAccordion.svelte';
 	import type { PageData } from './$types';
 	import slugify from 'slugify';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
@@ -195,11 +195,11 @@
 			<h2>Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
 				{#each references as reference, i}
-					<ReferenceAccordion
+					<ResourceAccordion
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
-						referenceName={reference.title}
+						resourceName={reference.title}
 					/>
 				{/each}
 			</div>

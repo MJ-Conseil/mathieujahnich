@@ -4,7 +4,7 @@
 	import { getReferences } from '$lib/repositories/reference';
 	import type { PageData } from './$types';
 	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
-	import ReferenceAccordion from '$lib/components/mollecules/ReferenceAccordion/ReferenceAccordion.svelte';
+	import ResourceAccordion from '$lib/components/mollecules/ResourceAccordion/ResourceAccordion.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME } from '$lib/constants';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
@@ -82,11 +82,11 @@
 			<h2>Références phares</h2>
 			<div class="flex flex-col gap-4">
 				{#each highlightedReferences as reference}
-					<ReferenceAccordion
+					<ResourceAccordion
 						id={slugify(reference.title)}
 						content={reference.content}
 						imageUrl={reference.imageUrl}
-						referenceName={reference.title}
+						resourceName={reference.title}
 						caseStudy={reference.caseStudy
 							? {
 									...reference.caseStudy,
@@ -121,12 +121,12 @@
 				<p class="text-xl">Pas de résultat</p>
 			{/if}
 			{#each filteredReferences as reference, i}
-				<ReferenceAccordion
+				<ResourceAccordion
 					focused={i === referenceIndexToBeFocused}
 					id={slugify(reference.title + i)}
 					content={reference.content}
 					imageUrl={reference.imageUrl}
-					referenceName={reference.title}
+					resourceName={reference.title}
 					caseStudy={reference.caseStudy
 						? {
 								...reference.caseStudy,

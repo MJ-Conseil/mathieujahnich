@@ -59,7 +59,6 @@
 	};
 
 	const handleSearch = () => {
-		console.log(input.validity);
 		if (!input.validity.valueMissing) {
 			return dispatch('search', searchOptions);
 		}

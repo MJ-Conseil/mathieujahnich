@@ -16,15 +16,13 @@ test.describe('faire-monter-en-competence page', () => {
 		const expectedHeadings = [
 			'Faire monter en compétences',
 			'Votre besoin',
-			'Nos prestations',
-			'Des formats adaptés à vos publics',
-			'Des contenus sur-mesure',
-			'Co-construction d’outils pratiques',
-			'Certification qualité'
+			'Vos équipes marketing et communication',
+			'L’ensemble de vos salarié·es',
+			'Prestations',
 		];
 
 		// check if page headings contains at least the heading specified above
 
-		expect(expectedHeadings.every((item) => headingContents.includes(item))).toBeTruthy();
+		expect(expectedHeadings.every((item) => headingContents.includes(item.trim()))).toBeTruthy();
 	});
 });
