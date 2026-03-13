@@ -12,6 +12,7 @@
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
+	import ExclusiveContentRow from '$lib/components/organisms/ExclusiveContentRow.svelte';
 
 	export let data: PageData;
 </script>
@@ -84,7 +85,10 @@
 
 	<OfferRow />
 
-	<section class="pb-8 md:pb-8 md:p-0 md:py-4 p-4 bg-gray">
+	<ExclusiveContentRow alt/>
+
+
+	<section class="pb-8 md:pb-8 md:p-0 md:py-4 p-4">
 		<Container>
 			<h2 class="mb-4">À la une du blog</h2>
 			<p class="font-ptsans text-xl md:my-12 my-8">

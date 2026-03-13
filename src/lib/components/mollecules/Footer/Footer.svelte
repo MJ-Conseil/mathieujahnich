@@ -184,8 +184,8 @@
 						href="https://www.linkedin.com/in/anne-faubry-3b2b8390/"
 						class="text-sand font-bold decoration-dotted">Anne Faubry</a
 					>,
-					<a class="text-sand font-bold decoration-dotted" href="https://www.fairness.coop"
-						>Fairness Scop</a
+					<a class="text-sand font-bold decoration-dotted" href="https://pathtech.coop/"
+						>Pathtech Scop</a
 					>,
 
 					<a class="text-sand font-bold decoration-dotted" href="https://www.cyanne.fr/">Cyanne</a>

@@ -14,7 +14,7 @@ export const load: PageLoad = async ({ fetch, url }) => {
 
 	const params2: QueryOption = {
 		highlight: 1,
-		per_page: 80
+		per_page: 30
 	};
 
 	const [referenceTypes, references, rawHighlightedReferences] = await Promise.all([

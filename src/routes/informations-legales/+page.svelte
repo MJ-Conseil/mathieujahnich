@@ -43,13 +43,13 @@
 
 					<p class="py-2">Version actuelle</p>
 					<p class="py-2">Site réalisé par</p>
-					<p class="py-2">Fairness Scop Arl</p>
+					<p class="py-2">Pathtech Scop Arl</p>
 					<p class="py-2">
 						<a
 							class="mj-link--ternary"
-							href="https://fairness.coop/"
+							href="https://pathtech.coop/"
 							target="_blank"
-							rel="noreferrer">https://fairness.coop</a
+							rel="noreferrer">https://pathtech.coop/</a
 						>
 					</p>
 
