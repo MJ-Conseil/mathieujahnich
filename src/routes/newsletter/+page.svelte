@@ -27,10 +27,10 @@
 			<p class="text-sand text-xl mb-3">Réconcilier communication et transition</p>
 			<h1 class="mj-h1--alt">Newsletter</h1>
 			<Headline>
-				Nous vous proposons une sélection de contenus originaux pas plus d’une fois par mois,
-				reliant les enjeux de soutenabilité aux pratiques marketing et communication. Notre objectif
-				est de nourrir votre réflexion et d’éclairer votre champ d’actions. Notre ambition est de
-				contribuer à (ré)concilier communication et transition. Au plaisir de lire vos commentaires.
+				Je vous propose une sélection de contenus originaux pas plus d’une fois par mois, reliant
+				les enjeux de soutenabilité aux pratiques marketing et communication. Mon objectif est de
+				nourrir votre réflexion et d’éclairer votre champ d’actions. Mon ambition est de contribuer
+				à (ré)concilier communication et transition. Au plaisir de lire vos commentaires.
 			</Headline>
 		</header>
 	</Container>
@@ -40,7 +40,7 @@
 	<Section>
 		<h2>Inscription à la newsletter de Mathieu Jahnich</h2>
 		<p class="">
-			Inscrivez-vous à notre newsletter afin de retrouver une sélection mensuelle de contenus
+			Inscrivez-vous à ma newsletter afin de retrouver une sélection mensuelle de contenus
 			originaux, reliant les enjeux de soutenabilité aux pratiques marketing et communication.
 		</p>
 
@@ -95,7 +95,8 @@
 			<p class="my-5">(*) ces champs sont requis</p>
 
 			<p class="my-5">
-				Vous pouvez vous désinscrire à tout moment en cliquant sur le lien présent dans nos emails.
+				Vous pouvez vous désinscrire à tout moment en cliquant sur le lien présent dans mes
+				courriels.
 			</p>
 
 			<button type="submit" class="bg-indigo mt-5 font-ptsans rounded text-white py-3 px-6 block"
