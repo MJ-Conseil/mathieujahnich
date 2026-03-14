@@ -23,7 +23,7 @@
 		"@playwright/test": "^1.43.1",
 		"@storybook/sveltekit": "^7.4.6",
 		"@storybook/testing-library": "^0.2.2",
-		"@sveltejs/adapter-node": "^2.0.0",
+		"@sveltejs/adapter-node": "^5.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@testing-library/jest-dom": "^6.2.0",
