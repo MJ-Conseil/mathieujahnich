@@ -81,8 +81,7 @@
 	<Section>
 		<h2>All cases of greenwashing</h2>
 		<p class="text-xl mb-5">
-			I regularly encounter various types of greenwashing. You can filter them according to their
-			categories.
+			You can filter them by industry sector and topic.
 		</p>
 		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.greenWashingCaseTypes as greenWashingCaseType}

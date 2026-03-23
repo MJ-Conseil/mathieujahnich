@@ -68,6 +68,9 @@
 
 			<ul class="flex flex-col gap-2">
 				<li>
+					<a class="mj-link--alt" href={ROUTES['Greenwashing cases']}>Greenwashing cases</a>
+				</li>
+				<li>
 					<a class="mj-link--alt" href={ROUTES.Blog}>Blog</a>
 				</li>
 				<li>
