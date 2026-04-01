@@ -30,7 +30,8 @@ const config = {
 					'https://mj-cms.jcloud-ver-jpe.ik-server.com/', // the images come from the current on line website,
 					'https://mj-storage.s3.fr-par.scw.cloud', // this is the storage S3 for images,
 					'https://mj-conseil-wordpress.osc-fr1.scalingo.io',
-					'http://localhost:*'
+					'http://localhost:*',
+					'data:',
 				]
 			}
 		}

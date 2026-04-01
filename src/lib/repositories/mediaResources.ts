@@ -8,7 +8,7 @@ export const getMediaResources = async (
 ): Promise<MediaResource[]> => {
 	const query = buildQueryString(options);
 
-	return (await api<MediaResource[]>(`/media_resource${query}&_embed`, fetch)).map(
+	return (await api<MediaResource[]>(`/media_resources${query}&_embed`, fetch)).map(
 		transformWordpressMediaResourceToMediaResource
 	);
 };

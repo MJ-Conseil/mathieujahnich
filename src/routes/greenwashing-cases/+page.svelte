@@ -8,9 +8,9 @@
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 	import { getGreenWhasingCases } from '$lib/repositories/greenWashingCases';
 	import ResourceAccordion from '$lib/components/mollecules/ResourceAccordion/ResourceAccordion.svelte';
-	import CaseClosed from '$lib/assets/pictures/Case-closed-greenwashing-confirmed.jpg';
-	import NotGuity from '$lib/assets/pictures/Case-closed-not-guilty.jpg';
-	import StillPending from '$lib/assets/pictures/Case-still-pending.jpg';
+	import caseClosed from '$lib/assets/images/foo.jpg';
+	import notGuity from '$lib/assets/images/case-closed-not-guilty.jpg';
+	import stillPending from '$lib/assets/images/case-still-pending.jpg';
 
 	export let data: PageData;
 
@@ -91,9 +91,9 @@
 			<h3>Legend</h3>
 
 			<ul class="flex flex-col gap-3">
-				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={NotGuity} alt="" /> <p> Case ruled : no greenwashing </p> </li>
-				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={CaseClosed} alt="" /> <p> Case ruled : greenwashing confirmed </p> </li>
-				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={StillPending} alt="" /> <p> Case still pending</p> </li>
+				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={notGuity} alt="" /> <p> Case ruled : no greenwashing </p> </li>
+				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={caseClosed} alt="" /> <p> Case ruled : greenwashing confirmed </p> </li>
+				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={stillPending} alt="" /> <p> Case still pending</p> </li>
 
 			</ul>
 		</div>

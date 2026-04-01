@@ -3,7 +3,7 @@ import { api } from '$lib/utils/api';
 import type { Fetch, MediaResourceType } from 'definitions';
 
 export const getMediaResourceTypes = async (fetch: Fetch): Promise<MediaResourceType[]> => {
-	return (await api<MediaResourceType[]>(`/media_resource_type`, fetch)).map(
+	return (await api<MediaResourceType[]>(`/media_resource_types`, fetch)).map(
 		transformWordpressGenericResourceToResource
 	);
 };
