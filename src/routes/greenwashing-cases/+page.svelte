@@ -8,6 +8,9 @@
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 	import { getGreenWhasingCases } from '$lib/repositories/greenWashingCases';
 	import ResourceAccordion from '$lib/components/mollecules/ResourceAccordion/ResourceAccordion.svelte';
+	import CaseClosed from '$lib/assets/pictures/Case-closed-greenwashing-confirmed.jpg';
+	import NotGuity from '$lib/assets/pictures/Case-closed-not-guilty.jpg';
+	import StillPending from '$lib/assets/pictures/Case-still-pending.jpg';
 
 	export let data: PageData;
 
@@ -79,10 +82,23 @@
 
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
-		<h2>All cases of greenwashing</h2>
-		<p class="text-xl mb-5">
-			You can filter them by industry sector and topic.
-		</p>
+		<h2>Greenwashing cases</h2>
+
+		
+	
+
+		<div class=" mt-7">
+			<h3>Legend</h3>
+
+			<ul class="flex flex-col gap-3">
+				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={NotGuity} alt="" /> <p> Case ruled : no greenwashing </p> </li>
+				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={CaseClosed} alt="" /> <p> Case ruled : greenwashing confirmed </p> </li>
+				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={StillPending} alt="" /> <p> Case still pending</p> </li>
+
+			</ul>
+		</div>
+
+	<p class="text-xl mb-5 mt-7">You can filter them by industry sector and topic.</p>
 		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.greenWashingCaseTypes as greenWashingCaseType}
 				<Tag
