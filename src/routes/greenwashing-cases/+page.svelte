@@ -11,6 +11,7 @@
 	import caseClosed from '$lib/assets/images/foo.jpg';
 	import notGuity from '$lib/assets/images/case-closed-not-guilty.jpg';
 	import stillPending from '$lib/assets/images/case-still-pending.jpg';
+	import greenwhasinglogo from '$lib/assets/pictures/greenwashing-cases-logo.svg';
 
 	export let data: PageData;
 
@@ -68,37 +69,45 @@
 
 <PageHeader>
 	<h1 class="mj-h1--alt">Greenwashing Cases</h1>
-	<Headline>
-		In this section, you will find the main court decisions or ongoing cases related to the fight
-		against greenwashing in France, Europe, and elsewhere in the world. This list is updated
-		regularly. Please feel free to send me any information you may have on other greenwashing cases. <br
-		/> <br />
-		My name is Mathieu Jahnich. I’m a freelance consultant in responsible marketing and communication.
-		I help committed companies promote their CSR strategy without falling into the trap of greenwashing.
-	</Headline>
+
+	<div class="flex gap-8 mt-8 items-center">
+		<img class="w-[15%]" src={greenwhasinglogo} alt="" />
+
+		<Headline>
+			In this section, you will find the main court decisions or ongoing cases related to the fight
+			against greenwashing in France, Europe, and elsewhere in the world. This list is updated
+			regularly. Please feel free to send me any information you may have on other greenwashing
+			cases. <br /> <br />
+			My name is Mathieu Jahnich. I’m a freelance consultant in responsible marketing and communication.
+			I help committed companies promote their CSR strategy without falling into the trap of greenwashing.
+		</Headline>
+	</div>
 </PageHeader>
 
 <!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
 
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
-		<h2>Greenwashing cases</h2>
-
-		
-	
-
 		<div class=" mt-7">
-			<h3>Legend</h3>
+			<h2>Legend</h2>
 
 			<ul class="flex flex-col gap-3">
-				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={notGuity} alt="" /> <p> Case ruled : no greenwashing </p> </li>
-				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={caseClosed} alt="" /> <p> Case ruled : greenwashing confirmed </p> </li>
-				<li class=" flex items-center gap-3"><img class="max-h-[40px] w-auto" src={stillPending} alt="" /> <p> Case still pending</p> </li>
-
+				<li class=" flex items-center gap-3">
+					<img class="max-h-[40px] w-auto" src={notGuity} alt="" />
+					<p>Case ruled : no greenwashing</p>
+				</li>
+				<li class=" flex items-center gap-3">
+					<img class="max-h-[40px] w-auto" src={caseClosed} alt="" />
+					<p>Case ruled : greenwashing confirmed</p>
+				</li>
+				<li class=" flex items-center gap-3">
+					<img class="max-h-[40px] w-auto" src={stillPending} alt="" />
+					<p>Case still pending</p>
+				</li>
 			</ul>
 		</div>
 
-	<p class="text-xl mb-5 mt-7">You can filter them by industry sector and topic.</p>
+		<p class="text-xl mb-5 mt-7">You can filter them by industry sector and topic.</p>
 		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.greenWashingCaseTypes as greenWashingCaseType}
 				<Tag

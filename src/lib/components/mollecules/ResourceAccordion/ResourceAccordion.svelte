@@ -18,8 +18,8 @@
 		class="md:w-full flex md:gap-5"
 	>
 		{#if imageUrl}
-			<div class="w-1/10 md:flex items-center hidden">
-				<img class="object-cover max-h-20" src={imageUrl} aria-hidden="true" alt="" />
+			<div class=" w-[5%] md:flex items-center hidden">
+				<img class="object-cover max-h-15" src={imageUrl} aria-hidden="true" alt="" />
 			</div>
 		{/if}
 		<p class="break-word md:max-w-[100%] max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
