@@ -27,7 +27,7 @@ Une application client faite avec la technologie [SvelteKit](https://kit.svelte.
 _Commande_: `npm install`
 Le client est accessible sur l'url http://localhost:5175
 
-## Déploiement
+## Déploiement 
 
 La version de production du site est hébergée chez Infomaniak sur leur hébergement cloud "Jelastic".
 
