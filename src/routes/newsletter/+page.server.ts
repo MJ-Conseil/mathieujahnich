@@ -46,6 +46,8 @@ export const actions = {
 				})
 			});
 
+			console.log(await response.json());
+
 			if (response.status !== 201) {
 				return fail(400, { contactCreationFailed: true });
 			}
