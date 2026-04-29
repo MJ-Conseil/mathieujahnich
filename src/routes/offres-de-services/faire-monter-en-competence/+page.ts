@@ -22,9 +22,11 @@ export const load: PageLoad = async ({ fetch }) => {
 		};
 	}
 
+
+	
 	referencesMeta = await getReferences(fetch, {
 		per_page: 3,
-		offer_type: offerType.id
+		offer_types: offerType.id
 	});
 
 	return { references: referencesMeta, offerTypeId: offerType.id };

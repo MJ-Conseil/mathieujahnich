@@ -26,7 +26,7 @@
 			await getReferences(fetch, {
 				per_page: 3,
 				page: currentPage,
-				offer_type: data.offerTypeId
+				offer_types: data.offerTypeId
 			})
 		).data;
 

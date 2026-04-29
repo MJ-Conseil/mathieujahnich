@@ -19,8 +19,8 @@ export const load: PageLoad = async ({ fetch, url }) => {
 
 	const [referenceTypes, references, rawHighlightedReferences] = await Promise.all([
 		getReferencesTypes(fetch),
-		getReferences(fetch, offerTypeId ? { ...params, offer_type: parseInt(offerTypeId) } : params),
-		getReferences(fetch, offerTypeId ? { ...params2, offer_type: parseInt(offerTypeId) } : params2)
+		getReferences(fetch, offerTypeId ? { ...params, offer_types: parseInt(offerTypeId) } : params),
+		getReferences(fetch, offerTypeId ? { ...params2, offer_types: parseInt(offerTypeId) } : params2)
 	]);
 
 	const highlightedReferences = rawHighlightedReferences.data

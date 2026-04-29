@@ -19,13 +19,15 @@
 
 	let firstNewReferenceIndex = 0;
 
+	console.log(data.offerTypeId)
+
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
 		const newResults = (
 			await getReferences(fetch, {
 				per_page: 3,
 				page: currentPage,
-				offer_type: data.offerTypeId
+				offer_types: data.offerTypeId
 			})
 		).data;
 

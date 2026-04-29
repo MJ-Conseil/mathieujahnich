@@ -13,7 +13,7 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 	const mediaResourcePromises = mediaResourceTypes.map((item) =>
 		getMediaResources(serverFetch, {
 			per_page: 3,
-			media_resource_type: [item.id]
+			media_resource_types: [item.id]
 		})
 	);
 
