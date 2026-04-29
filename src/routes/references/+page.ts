@@ -4,7 +4,7 @@ import type { QueryOption } from 'definitions';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch, url }) => {
-	const offerTypeId = url.searchParams.get('offer_type');
+	const offerTypeId = url.searchParams.get('offer_types');
 
 	const params: QueryOption = {
 		page: 1,
