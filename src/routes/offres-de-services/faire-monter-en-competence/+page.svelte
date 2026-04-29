@@ -237,7 +237,7 @@
 						Voir l'offre
 					</a>
 				</div>
-				<div class="flex justify-between flex-col gap-5">
+				<div class="flex justify-between items-center flex-col gap-5">
 					<Icon width="54%" height="auto" name="plane" />
 
 					<p class="text-sand text-center justify-center text-2xl">Donner de l'élan</p>
