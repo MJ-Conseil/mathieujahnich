@@ -47,10 +47,11 @@ Lien : https://github.com/cnumr/best-practices/blob/main/chapters/BP_086_fr.md
 ### Option serveur cloud non managé
 
 **Prix**
-| Dénomination | Prix|
-| -------- | --------
+
+| Dénomination       | Prix         |
+| ------------------ | ------------ |
 | Serveur applicatif | 29€HTVA/mois |
-| DB managée | 4.84 /mois |
+| DB managée         | 4.84 /mois   |
 
 Lien https://www.infomaniak.com/fr/hebergement/serveurs-dedies-et-cloud/serveur-cloud-non-manage
 

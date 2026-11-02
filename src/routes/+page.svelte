@@ -85,8 +85,7 @@
 
 	<OfferRow />
 
-	<ExclusiveContentRow alt/>
-
+	<ExclusiveContentRow alt />
 
 	<section class="pb-8 md:pb-8 md:p-0 md:py-4 p-4">
 		<Container>

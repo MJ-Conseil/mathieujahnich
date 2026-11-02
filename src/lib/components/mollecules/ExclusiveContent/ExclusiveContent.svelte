@@ -4,13 +4,12 @@
 	export let content: string;
 	export let link: string = '';
 	export let linkTitle: string = '';
-    export let linkContent : string
+	export let linkContent: string;
 </script>
 
 <div class="h-full w-full flex flex-col justify-evenly relative">
-
 	<div class="min-h-[250px]">
-	<slot />
+		<slot />
 	</div>
 
 	<h3 class="my-5">{title}</h3>

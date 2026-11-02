@@ -8,7 +8,7 @@ export const api = async <T>(url: string, fetch: Fetch): Promise<T> => {
 		return await request.json();
 	}
 
-	console.log(request)
+	console.log(request);
 	throw Error('Unable to fetch data');
 };
 

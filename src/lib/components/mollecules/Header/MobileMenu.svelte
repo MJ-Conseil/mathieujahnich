@@ -4,7 +4,6 @@
 	import { handleKeyboardTrapFocus } from '$lib/directives/trapfocus';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
-	let button: HTMLElement;
 	let navigation: HTMLElement;
 
 	let focusableElementsItems: HTMLElement[];
@@ -19,10 +18,6 @@
 	};
 
 	onMount(() => {
-		if (button) {
-			button.focus();
-		}
-
 		focusableElementsItems = Array.from(navigation.querySelectorAll(focusableElements));
 
 		firstFocusableElement = focusableElementsItems[0];

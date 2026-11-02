@@ -19,7 +19,10 @@
 			link={ROUTES['Newsletter']}
 			linkContent="Abonnez-vous"
 		>
-			<div aria-hidden="true" class=" h-full w-full text-blue-dark flex justify-center bg-white p-10">
+			<div
+				aria-hidden="true"
+				class=" h-full w-full text-blue-dark flex justify-center bg-white p-10"
+			>
 				<Icon
 					role="img"
 					ariaLabel="MJ Communication &
@@ -36,7 +39,7 @@ transition écologique"
 			title="Greenwashing News"
 			linkTitle="Découvrir les Greenwashing news"
 			content="Veille sur la lutte contre le greenwashing, exemples à éviter et pratiques inspirantes."
-			link={"/blog/greenwashing-news-une-newsletter-dediee-au-greenwashing"}
+			link={'/blog/greenwashing-news-une-newsletter-dediee-au-greenwashing'}
 			linkContent="Consultez les articles"
 		>
 			<div aria-hidden="true" class=" text-blue-dark flex justify-center">
@@ -44,11 +47,11 @@ transition écologique"
 			</div>
 		</ExclusiveContent>
 
-	<ExclusiveContent
+		<ExclusiveContent
 			title="Greenwashing Cases"
 			linkTitle="Découvrir les Greenwashing cases (en anglais)"
 			content="Principales décisions de justice ou affaires en cours liées à la lutte contre le greenwashing. "
-			link={ROUTES["Greenwashing cases"]}
+			link={ROUTES['Greenwashing cases']}
 			linkContent="Découvrez les cas"
 		>
 			<div aria-hidden="true" class=" text-blue-dark flex justify-center">
