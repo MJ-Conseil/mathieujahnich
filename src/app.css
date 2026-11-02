@@ -1,6 +1,204 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@config '../tailwind.config.cjs';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility mj-heading-base {
+  @apply font-ptsans font-bold mt-8 mb-5;
+}
+
+@utility mj-h1 {
+  @apply mj-heading-base text-6xl text-blue-dark;
+}
+
+@utility mj-h1--alt {
+  @apply mj-h1 text-white;
+}
+
+@utility mj-h2 {
+  @apply mj-heading-base text-4xl text-blue-dark font-bold;
+}
+
+@utility mj-h2--alt {
+  @apply mj-h2 text-white;
+}
+
+@utility mj-h3 {
+  @apply mj-heading-base text-3xl text-blue-dark font-bold;
+}
+
+@utility mj-h3--alt {
+  @apply mj-h3 text-white;
+}
+
+@utility mj-h4 {
+  @apply mj-heading-base text-2xl text-blue-dark font-bold;
+}
+
+@utility mj-h4--alt {
+  @apply mj-h3 text-white;
+}
+
+@utility mj-subtitle {
+  @apply font-sans text-indigo text-2xl;
+}
+
+@utility mj-subtitle--alt {
+  @apply font-sans text-sand text-2xl;
+}
+
+@utility mj-link--base {
+  /* Link */
+  @apply text-indigo underline;
+}
+
+@utility mj-link {
+  @apply mj-link--base;
+
+  &:hover {
+    @apply underline underline-offset-2;
+  }
+}
+
+@utility mj-link--ternary {
+  @apply underline underline-offset-2;
+}
+
+@utility mj-link--alt {
+  &:hover {
+    @apply underline underline-offset-2;
+  }
+  @apply text-sand no-underline;
+}
+
+@utility mj-link--btn {
+  @apply text-indigo bg-sand py-2.5 px-4 font-bold rounded-sm;
+}
+
+@utility mj-list--disc {
+  /* List */
+  @apply list-disc pl-6 text-blue-dark;
+}
+
+@utility blog-wrapper {
+  /* Blog  */
+
+  & p {
+    @apply text-xl my-3;
+  }
+
+  & a {
+    @apply mj-link--ternary;
+  }
+
+  & ul {
+    @apply list-disc text-blue-dark;
+  }
+
+  & ol {
+    @apply list-disc text-blue-dark;
+  }
+
+  & li {
+    @apply mb-2;
+  }
+
+  & ol {
+    @apply list-decimal;
+  }
+
+  & ul {
+    @apply my-5 ml-5;
+  }
+
+  & ol {
+    @apply my-5 ml-5;
+  }
+
+  & ul li {
+    @apply text-xl my-2 mb-2;
+  }
+
+  & ol li {
+    @apply text-xl my-2 mb-2;
+  }
+
+  & h3 {
+    @apply mb-8 mt-12 wrap-break-word;
+  }
+
+  & h4 {
+    @apply mb-4 mt-8;
+  }
+
+  & a:hover {
+    @apply underline;
+  }
+
+  & p {
+    @apply leading-7 text-blue-dark;
+  }
+
+  & p img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@utility html-wrapper {
+  & ul {
+    @apply list-disc text-blue-dark;
+  }
+
+  & ol {
+    @apply list-disc text-blue-dark;
+  }
+
+  & li {
+    @apply mb-2;
+  }
+
+  & ul {
+    @apply pl-4 pb-3;
+  }
+
+  & ol {
+    @apply pl-4 pb-3;
+  }
+
+  & ul li {
+    @apply text-lg!;
+  }
+
+  & ol li {
+    @apply text-lg!;
+  }
+
+  & ul li {
+    @apply text-xl my-2 mb-2;
+  }
+
+  & ol li {
+    @apply text-xl my-2 mb-2;
+  }
+}
 
 @layer base {
 	@font-face {
@@ -39,156 +237,8 @@
 		background-color: white;
 	}
 
-	.mj-heading-base {
-		@apply font-ptsans font-bold mt-8 mb-5;
-	}
-
-	h1,
-	.mj-h1 {
-		@apply mj-heading-base text-6xl text-blue-dark;
-	}
-
-	.mj-h1--alt {
-		@apply mj-h1 text-white;
-	}
-
-	h2,
-	.mj-h2 {
-		@apply mj-heading-base text-4xl text-blue-dark font-bold;
-	}
-
-	.mj-h2--alt {
-		@apply mj-h2 text-white;
-	}
-
-	h3,
-	.mj-h3 {
-		@apply mj-heading-base text-3xl text-blue-dark font-bold;
-	}
-
-	.mj-h3--alt {
-		@apply mj-h3 text-white;
-	}
-
-	h4,
-	.mj-h4 {
-		@apply mj-heading-base text-2xl text-blue-dark font-bold;
-	}
-
-	.mj-h4--alt {
-		@apply mj-h3 text-white;
-	}
-
-	.mj-subtitle {
-		@apply font-sans text-indigo text-2xl;
-	}
-
-	.mj-subtitle--alt {
-		@apply font-sans text-sand text-2xl;
-	}
-
-	/* Link */
-
-	.mj-link--base {
-		@apply text-indigo underline;
-	}
-
-	[href],
-	a,
-	.mj-link {
-		@apply mj-link--base;
-	}
-
-	.mj-link--ternary,
-	.mj-link--alt:hover,
-	.mj-link:hover {
-		@apply underline underline-offset-2;
-	}
-
-	.mj-link--alt {
-		@apply text-sand no-underline;
-	}
-
-	.mj-link--btn {
-		@apply text-indigo bg-sand py-2.5 px-4 font-bold rounded;
-	}
-
 	/* Paragraph */
 	p {
 		@apply leading-7 text-blue-dark;
-	}
-
-	/* List */
-	.mj-list--disc {
-		@apply list-disc pl-6 text-blue-dark;
-	}
-
-	/* Blog  */
-
-	.blog-wrapper p {
-		@apply text-xl my-3;
-	}
-
-	.blog-wrapper a {
-		@apply mj-link--ternary;
-	}
-
-	.blog-wrapper ul,
-	.html-wrapper ul,
-	.blog-wrapper ol,
-	.html-wrapper ol {
-		@apply list-disc text-blue-dark;
-	}
-
-	.blog-wrapper li,
-	.html-wrapper li {
-		@apply mb-2;
-	}
-
-	.html-wrapper ul,
-	.html-wrapper ol {
-		@apply pl-4 pb-3;
-	}
-
-	.html-wrapper ul li,
-	.html-wrapper ol li {
-		@apply !text-lg;
-	}
-
-	.blog-wrapper ol {
-		@apply list-decimal;
-	}
-
-	.blog-wrapper ul,
-	.blog-wrapper ol {
-		@apply my-5 ml-5;
-	}
-
-	.html-wrapper ul li,
-	.html-wrapper ol li,
-	.blog-wrapper ul li,
-	.blog-wrapper ol li {
-		@apply text-xl my-2 mb-2;
-	}
-
-	.blog-wrapper h3 {
-		@apply mb-8 mt-12 break-words;
-	}
-
-	.blog-wrapper h4 {
-		@apply mb-4 mt-8;
-	}
-
-	.blog-wrapper a:hover {
-		@apply underline;
-	}
-
-	.blog-wrapper p {
-		@apply leading-7 text-blue-dark;
-	}
-
-	.blog-wrapper p img {
-		display: block;
-		margin: 0 auto;
 	}
 }
