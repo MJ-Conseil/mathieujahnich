@@ -11,193 +11,193 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @utility mj-heading-base {
-  @apply font-ptsans font-bold mt-8 mb-5;
+	@apply font-ptsans font-bold mt-8 mb-5;
 }
 
 @utility mj-h1 {
-  @apply mj-heading-base text-6xl text-blue-dark;
+	@apply mj-heading-base text-6xl text-blue-dark;
 }
 
 @utility mj-h1--alt {
-  @apply mj-h1 text-white;
+	@apply mj-h1 text-white;
 }
 
 @utility mj-h2 {
-  @apply mj-heading-base text-4xl text-blue-dark font-bold;
+	@apply mj-heading-base text-4xl text-blue-dark font-bold;
 }
 
 @utility mj-h2--alt {
-  @apply mj-h2 text-white;
+	@apply mj-h2 text-white;
 }
 
 @utility mj-h3 {
-  @apply mj-heading-base text-3xl text-blue-dark font-bold;
+	@apply mj-heading-base text-3xl text-blue-dark font-bold;
 }
 
 @utility mj-h3--alt {
-  @apply mj-h3 text-white;
+	@apply mj-h3 text-white;
 }
 
 @utility mj-h4 {
-  @apply mj-heading-base text-2xl text-blue-dark font-bold;
+	@apply mj-heading-base text-2xl text-blue-dark font-bold;
 }
 
 @utility mj-h4--alt {
-  @apply mj-h3 text-white;
+	@apply mj-h3 text-white;
 }
 
 @utility mj-subtitle {
-  @apply font-sans text-indigo text-2xl;
+	@apply font-sans text-indigo text-2xl;
 }
 
 @utility mj-subtitle--alt {
-  @apply font-sans text-sand text-2xl;
+	@apply font-sans text-sand text-2xl;
 }
 
 @utility mj-link--base {
-  /* Link */
-  @apply text-indigo underline;
+	/* Link */
+	@apply text-indigo underline;
 }
 
 @utility mj-link {
-  @apply mj-link--base;
+	@apply mj-link--base;
 
-  &:hover {
-    @apply underline underline-offset-2;
-  }
+	&:hover {
+		@apply underline underline-offset-2;
+	}
 }
 
 @utility mj-link--ternary {
-  @apply underline underline-offset-2;
+	@apply underline underline-offset-2;
 }
 
 @utility mj-link--alt {
-  &:hover {
-    @apply underline underline-offset-2;
-  }
-  @apply text-sand no-underline;
+	&:hover {
+		@apply underline underline-offset-2;
+	}
+	@apply text-sand no-underline;
 }
 
 @utility mj-link--btn {
-  @apply text-indigo bg-sand py-2.5 px-4 font-bold rounded-xs;
+	@apply text-indigo bg-sand py-2.5 px-4 font-bold rounded-xs;
 }
 
 @utility mj-list--disc {
-  /* List */
-  @apply list-disc pl-6 text-blue-dark;
+	/* List */
+	@apply list-disc pl-6 text-blue-dark;
 }
 
 @utility blog-wrapper {
-  /* Blog  */
+	/* Blog  */
 
-  & p {
-    @apply text-xl my-3;
-  }
+	& p {
+		@apply text-xl my-3;
+	}
 
-  & a {
-    @apply mj-link--ternary;
-  }
+	& a {
+		@apply mj-link--ternary;
+	}
 
-  & ul {
-    @apply list-disc text-blue-dark;
-  }
+	& ul {
+		@apply list-disc text-blue-dark;
+	}
 
-  & ol {
-    @apply list-disc text-blue-dark;
-  }
+	& ol {
+		@apply list-disc text-blue-dark;
+	}
 
-  & li {
-    @apply mb-2;
-  }
+	& li {
+		@apply mb-2;
+	}
 
-  & ol {
-    @apply list-decimal;
-  }
+	& ol {
+		@apply list-decimal;
+	}
 
-  & ul {
-    @apply my-5 ml-5;
-  }
+	& ul {
+		@apply my-5 ml-5;
+	}
 
-  & ol {
-    @apply my-5 ml-5;
-  }
+	& ol {
+		@apply my-5 ml-5;
+	}
 
-  & ul li {
-    @apply text-xl my-2 mb-2;
-  }
+	& ul li {
+		@apply text-xl my-2 mb-2;
+	}
 
-  & ol li {
-    @apply text-xl my-2 mb-2;
-  }
+	& ol li {
+		@apply text-xl my-2 mb-2;
+	}
 
-  & h3 {
-    @apply mb-8 mt-12 wrap-break-word;
-  }
+	& h3 {
+		@apply mb-8 mt-12 wrap-break-word;
+	}
 
-  & h4 {
-    @apply mb-4 mt-8;
-  }
+	& h4 {
+		@apply mb-4 mt-8;
+	}
 
-  & a:hover {
-    @apply underline;
-  }
+	& a:hover {
+		@apply underline;
+	}
 
-  & p {
-    @apply leading-7 text-blue-dark;
-  }
+	& p {
+		@apply leading-7 text-blue-dark;
+	}
 
-  & p img {
-    display: block;
-    margin: 0 auto;
-  }
+	& p img {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 @utility html-wrapper {
-  & ul {
-    @apply list-disc text-blue-dark;
-  }
+	& ul {
+		@apply list-disc text-blue-dark;
+	}
 
-  & ol {
-    @apply list-disc text-blue-dark;
-  }
+	& ol {
+		@apply list-disc text-blue-dark;
+	}
 
-  & li {
-    @apply mb-2;
-  }
+	& li {
+		@apply mb-2;
+	}
 
-  & ul {
-    @apply pl-4 pb-3;
-  }
+	& ul {
+		@apply pl-4 pb-3;
+	}
 
-  & ol {
-    @apply pl-4 pb-3;
-  }
+	& ol {
+		@apply pl-4 pb-3;
+	}
 
-  & ul li {
-    @apply text-lg!;
-  }
+	& ul li {
+		@apply text-lg!;
+	}
 
-  & ol li {
-    @apply text-lg!;
-  }
+	& ol li {
+		@apply text-lg!;
+	}
 
-  & ul li {
-    @apply text-xl my-2 mb-2;
-  }
+	& ul li {
+		@apply text-xl my-2 mb-2;
+	}
 
-  & ol li {
-    @apply text-xl my-2 mb-2;
-  }
+	& ol li {
+		@apply text-xl my-2 mb-2;
+	}
 }
 
 /*
@@ -209,13 +209,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @layer base {

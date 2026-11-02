@@ -124,7 +124,7 @@
 
 		<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 			{#if posts.length > 0}
-				{#each posts as post}
+				{#each posts as post, i}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
 							day: '2-digit',

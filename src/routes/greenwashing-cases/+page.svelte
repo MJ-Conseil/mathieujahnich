@@ -130,7 +130,7 @@
 			{#if filteredgrennWashingCases.length === 0}
 				<p class="text-xl">Pas de résultat</p>
 			{/if}
-			{#each filteredgrennWashingCases as greenWashingCase}
+			{#each filteredgrennWashingCases as greenWashingCase, i}
 				<ResourceAccordion
 					focused={i === greenWashingCaseIndexToBeFocused}
 					id={slugify(greenWashingCase.title + i)}
@@ -143,7 +143,9 @@
 
 		{#if filteredgrennWashingCases.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
-				<button onclick={handleLoadMoregrennWashingCases} class="bg-indigo rounded-sm text-white p-3"
+				<button
+					onclick={handleLoadMoregrennWashingCases}
+					class="bg-indigo rounded-sm text-white p-3"
 					>See more
 				</button>
 			</div>{/if}
