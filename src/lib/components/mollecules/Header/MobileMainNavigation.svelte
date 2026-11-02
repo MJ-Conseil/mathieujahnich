@@ -31,10 +31,7 @@
 		<a class="text-white" aria-label="Vers la page d'accueil" href="/">
 			<Icon height="35px" width="auto" name="mjConseilFull" />
 		</a>
-		<button
-			onclick={handleOpenMenu}
-			aria-label="ouvrir le menu de navigation"
-		>
+		<button onclick={handleOpenMenu} aria-label="ouvrir le menu de navigation">
 			<Icon height="2rem" width="2rem" name="burger" />
 		</button>
 	</div>
