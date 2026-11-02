@@ -6,7 +6,7 @@ on:
   pull_request:
   workflow_dispatch:
 env:
-  PUBLIC_API_URL: 'https://mj-cms.jcloud-ver-jpe.ik-server.com'
+  PUBLIC_API_URL: 'https://mj-conseil-wordpress.osc-fr1.scalingo.io/'
   SENDINBLUE_API_KEY: '' # Keep this variable empty.
   PUBLIC_MATOMO_CDN_URL: '' # Keep this variable empty.
   PUBLIC_MATOMO_URL: '' # Keep this variable empty.
