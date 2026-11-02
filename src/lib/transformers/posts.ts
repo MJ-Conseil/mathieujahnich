@@ -1,7 +1,7 @@
 import { getEmbeddedAuthor, getEmbeddedMedia } from '$lib/utils/media';
 import type { Post } from '../../definitions';
 
-export const transformWordpressPostToPost = (post: any): Post => {
+export const transformWordpressPostToPost = (post: unknown): Post => {
 	const media = getEmbeddedMedia(post);
 	return {
 		imageUrl: media && media.length > 0 ? media[0].source_url : '',

@@ -1,8 +1,6 @@
 <script lang="ts">
-	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { ROUTES } from '$lib/constants';
 
-	import { clickOutside } from '$lib/directives/clickoutside';
 	import DesktopMenuItem from '../DesktopMenuItem/DesktopMenuItem.svelte';
 	import HeaderDropDown from '../Header/HeaderDropDown.svelte';
 

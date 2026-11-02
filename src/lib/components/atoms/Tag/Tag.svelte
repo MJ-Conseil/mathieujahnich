@@ -6,7 +6,7 @@
 	interface Props {
 		name: string;
 		active?: boolean;
-		onclick?: (e: MouseEvent) => void;
+		onclick?: () => void;
 	}
 
 	let { name, active = false, onclick }: Props = $props();

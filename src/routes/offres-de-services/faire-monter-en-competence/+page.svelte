@@ -21,8 +21,6 @@
 
 	let currentPage = $state(1);
 
-	let _firstNewReferenceIndex = 0;
-
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
 		const newResults = (
@@ -33,11 +31,7 @@
 			})
 		).data;
 
-		const oldReferencesLastIndex = references.length - 1;
-
 		references = [...references, ...newResults];
-
-		_firstNewReferenceIndex = oldReferencesLastIndex + 1;
 	};
 </script>
 

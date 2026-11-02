@@ -8,8 +8,8 @@ export const clickOutside = (
 ): {
 	destroy: () => void;
 } => {
-	const handleClick = (event: Event & { target: any }) => {
-		if (!node.contains(event.target)) {
+	const handleClick = (event: Event) => {
+		if (!node.contains(event.target as Node)) {
 			callback();
 		}
 	};

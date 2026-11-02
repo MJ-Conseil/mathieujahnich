@@ -1,7 +1,7 @@
 import type { ReferenceType } from 'definitions';
 
 export const transformWordpressReferenceTypeToReferenceType = (
-	referenceType: any
+	referenceType: unknown
 ): ReferenceType => {
 	return {
 		description: referenceType.description,

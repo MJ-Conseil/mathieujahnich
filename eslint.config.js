@@ -19,6 +19,7 @@ const globals = {
 	console: 'readonly',
 	document: 'readonly',
 	window: 'readonly',
+	Node: 'readonly',
 	HTMLElement: 'readonly',
 	HTMLInputElement: 'readonly',
 	Event: 'readonly',
@@ -43,6 +44,15 @@ export default [
 			'*.cjs',
 			'.svelte-kit/',
 			'build/',
+			'.DS_Store',
+			'node_modules',
+			'.env*',
+			'!.env.example',
+			'coverage',
+			'playwright-report/**',
+			'pnpm-lock.yaml',
+			'package-lock.json',
+			'yarn.lock',
 			'+error.svelte',
 			'declaration-accessibilité/+page.svelte',
 			'plan-de-site/+page.svelte'
@@ -85,5 +95,10 @@ export default [
 			...sveltePlugin.configs.recommended.rules
 		}
 	},
-	prettier
+	prettier,
+	{
+		rules: {
+			'no-irregular-whitespace': 'off'
+		}
+	}
 ];

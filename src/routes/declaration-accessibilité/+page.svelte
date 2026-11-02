@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
-	import { CONTACT_HOSTING, CONTACT_LINKS, SITE_WEB_NAME } from '$lib/constants';
+	import { CONTACT_LINKS, SITE_WEB_NAME } from '$lib/constants';
 </script>
 
 <svelte:head>

@@ -28,6 +28,7 @@
 					button.focus();
 					handleCloseMenu();
 				}
+				break;
 
 			default:
 				break;

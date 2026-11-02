@@ -53,7 +53,7 @@ export const actions = {
 			}
 
 			return { success: true };
-		} catch (error) {
+		} catch {
 			return fail(400, { contactCreationFailed: true });
 		}
 	}

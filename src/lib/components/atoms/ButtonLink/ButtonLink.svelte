@@ -2,7 +2,7 @@
 	interface Props {
 		href: string;
 		children?: import('svelte').Snippet;
-		onclick?: (e: MouseEvent) => void;
+		onclick?: () => void;
 	}
 
 	let { href, children, onclick }: Props = $props();

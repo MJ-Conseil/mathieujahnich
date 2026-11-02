@@ -19,8 +19,6 @@
 		alt = false
 	}: Props = $props();
 
-	let errorMessage: HTMLElement;
-
 	let hasError = $state(false);
 
 	let input: HTMLInputElement | undefined = $state();
@@ -28,8 +26,6 @@
 	let searchOptions: QueryOption = {
 		search: undefined
 	};
-
-	let inputTouched = false;
 
 	let id = $derived(slugify(label));
 
@@ -64,8 +60,6 @@
 			...searchOptions,
 			search: target.value || ''
 		};
-
-		inputTouched = true;
 	};
 
 	const handleSearch = () => {

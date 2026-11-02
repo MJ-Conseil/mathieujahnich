@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Container from '$lib/components/atoms/Container/Container.svelte';
-	import Headline from '$lib/components/atoms/Headline/Headline.svelte';
 	import ArrowLink from '$lib/components/mollecules/ArrowLink/ArrowLink.svelte';
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';

@@ -2,7 +2,7 @@ import { getEmbeddedMedia } from '$lib/utils/media';
 import type { GreenWhasingCase } from 'definitions';
 
 export const transformWordpressGreenWhasingCaseToGreenWhasingCase = (
-	greenWhasingCase: any
+	greenWhasingCase: unknown
 ): GreenWhasingCase => {
 	const embededMedias = getEmbeddedMedia(greenWhasingCase);
 	return {

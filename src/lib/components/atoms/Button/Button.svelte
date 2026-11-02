@@ -2,7 +2,7 @@
 	interface Props {
 		name: string;
 		type?: 'secondary' | 'primary';
-		onclick?: (e: MouseEvent) => void;
+		onclick?: () => void;
 	}
 
 	let { name, type = 'primary', onclick }: Props = $props();
