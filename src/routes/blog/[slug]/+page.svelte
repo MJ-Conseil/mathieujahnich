@@ -38,7 +38,7 @@
 			</nav>
 
 			<p class="text-indigo font-bold font-ptsans mb-8">Article</p>
-			<h1 class="break-words">{data.post.title}</h1>
+			<h1 class="wrap-break-word">{data.post.title}</h1>
 			<p>
 				Rédigé par {data.post.author}, publié le {new Intl.DateTimeFormat('fr-FR', {
 					day: '2-digit',
@@ -83,7 +83,7 @@
 
 		<div class="w-full mt-8 mb-12 flex items-center justify-center">
 			<a
-				class="border-indigo border rounded block px-4 py-2 text-center hover:no-underline hover:bg-indigo hover:text-white font-bold min-w-[200px] text-indigo"
+				class="border-indigo border rounded-sm block px-4 py-2 text-center hover:no-underline hover:bg-indigo hover:text-white font-bold min-w-[200px] text-indigo"
 				href={ROUTES.Blog}>Voir tous les articles</a
 			>
 		</div>

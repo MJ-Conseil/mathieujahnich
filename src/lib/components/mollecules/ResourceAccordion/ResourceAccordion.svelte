@@ -34,12 +34,12 @@
 				<img class="object-cover max-h-15" src={imageUrl} aria-hidden="true" alt="" />
 			</div>
 		{/if}
-		<p class="break-word md:max-w-[100%] max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
+		<p class="break-word md:max-w-full max-w-[60%] flex items-center" class:pl-4={!imageUrl}>
 			{resourceName}
 		</p>
 	</div>
 	<!-- @migration-task: migrate this slot by hand, `panel-content` is an invalid identifier -->
-	<div class="[&>p]:mb-4 !text-lg accordion-content html-wrapper" slot="panel-content">
+	<div class="[&>p]:mb-4 text-lg! accordion-content html-wrapper" slot="panel-content">
 		{@html content}
 
 		{#if caseStudy?.url}

@@ -26,7 +26,7 @@
 	{name}
 	class:text-red={error}
 	class:border-red={error}
-	class="bg-gray-dark w-full h-8 px-2 py-1 rounded border-2 border-blue-dark"
+	class="bg-gray-dark w-full h-8 px-2 py-1 rounded-sm border-2 border-blue-dark"
 	aria-describedby={error ? `error-message-${name}` : undefined}
 	{required}
 	{type}

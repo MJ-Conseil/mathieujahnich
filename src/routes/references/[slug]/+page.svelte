@@ -34,7 +34,7 @@
 		</nav>
 
 		<p class="text-indigo font-bold font-ptsans mb-8">Étude de cas</p>
-		<h1 class="break-words">{data.reference.title}</h1>
+		<h1 class="wrap-break-word">{data.reference.title}</h1>
 	</Section>
 	<Section>
 		<div class="w-full bg-white mb-10 flex justify-center">

@@ -145,7 +145,7 @@
 								name="youtube"
 								width="auto"
 								height="25px"
-								class="text-sand rounded hover:text-sand-dark"
+								class="text-sand rounded-sm hover:text-sand-dark"
 							/></span
 						>
 						<span class="sr-only">Nous suivre sur Youtube</span>

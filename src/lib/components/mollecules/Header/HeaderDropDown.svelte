@@ -38,7 +38,7 @@
 <li
 	class:underline={activeRoute ? activeRoute.match(regex) : null}
 	class:text-sand={activeRoute ? activeRoute.match(regex) : null}
-	class="text-xl relative hover:underline underline-offset-[8px] decoration-sand"
+	class="text-xl relative hover:underline underline-offset-8 decoration-sand"
 >
 	<button
 		class="flex items-center text-lg"
@@ -64,7 +64,7 @@
 		>
 			<li>
 				<a
-					class="text-white hover:underline decoration-2 no-underline underline-offset-[8px] decoration-sand text-lg"
+					class="text-white hover:underline decoration-2 no-underline underline-offset-8 decoration-sand text-lg"
 					onclick={handleCloseMenu}
 					href={ROUTES[`Donner de l'élan`]}
 					aria-current={activeRoute === ROUTES[`Donner de l'élan`] ? 'page' : null}
@@ -74,7 +74,7 @@
 			</li>
 			<li>
 				<a
-					class="text-white hover:underline decoration-2 no-underline underline-offset-[8px] decoration-sand text-lg"
+					class="text-white hover:underline decoration-2 no-underline underline-offset-8 decoration-sand text-lg"
 					onclick={handleCloseMenu}
 					href={ROUTES['Trouver le juste équilibre']}
 					aria-current={activeRoute === ROUTES['Trouver le juste équilibre'] ? 'page' : null}
@@ -84,7 +84,7 @@
 			</li>
 			<li>
 				<a
-					class="text-white hover:underline decoration-2 no-underline underline-offset-[8px] decoration-sand text-lg"
+					class="text-white hover:underline decoration-2 no-underline underline-offset-8 decoration-sand text-lg"
 					onclick={handleCloseMenu}
 					href={ROUTES['Faire monter en compétences']}
 					aria-current={activeRoute === ROUTES['Faire monter en compétences'] ? 'page' : null}

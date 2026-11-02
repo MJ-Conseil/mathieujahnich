@@ -23,13 +23,13 @@
 	<div class="flex md:flex-row flex-col sm:w-full gap-2 mt-5">
 		<div>
 			<a
-				class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold rounded text-indigo"
+				class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold rounded-sm text-indigo"
 				href="/">Page d'accueil</a
 			>
 		</div>
 		<div>
 			<a
-				class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold rounded text-indigo"
+				class="bg-sand inline-block px-16 py-2 hover:bg-sand-dark font-bold rounded-sm text-indigo"
 				href={`mailto:${CONTACT_LINKS.email}`}
 				>Contactez-nous
 			</a>

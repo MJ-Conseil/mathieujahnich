@@ -143,7 +143,7 @@
 
 		{#if filteredgrennWashingCases.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
-				<button onclick={handleLoadMoregrennWashingCases} class="bg-indigo rounded text-white p-3"
+				<button onclick={handleLoadMoregrennWashingCases} class="bg-indigo rounded-sm text-white p-3"
 					>See more
 				</button>
 			</div>{/if}

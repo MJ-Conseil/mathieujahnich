@@ -147,7 +147,7 @@
 
 		{#if filteredReferences.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
-				<button onclick={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
+				<button onclick={handleLoadMoreReferences} class="bg-indigo rounded-sm text-white p-3"
 					>Afficher plus de références
 				</button>
 			</div>{/if}

@@ -103,7 +103,7 @@
 				courriels.
 			</p>
 
-			<button type="submit" class="bg-indigo mt-5 font-ptsans rounded text-white py-3 px-6 block"
+			<button type="submit" class="bg-indigo mt-5 font-ptsans rounded-sm text-white py-3 px-6 block"
 				>S'abonner</button
 			>
 		</form>

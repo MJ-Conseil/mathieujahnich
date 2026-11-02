@@ -11,7 +11,7 @@
 <a
 	{href}
 	{onclick}
-	class="bg-sand 2 inline-block px-5 no-underline md:px-14 py-3 hover:bg-sand-dark font-bold rounded text-indigo"
+	class="bg-sand 2 inline-block px-5 no-underline md:px-14 py-3 hover:bg-sand-dark font-bold rounded-sm text-indigo"
 >
 	{@render children?.()}
 </a>
