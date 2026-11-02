@@ -4,12 +4,12 @@
 	import { handleKeyboardTrapFocus } from '$lib/directives/trapfocus';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 
-	let navigation: HTMLElement;
+	let navigation: HTMLElement | undefined = $state();
 
 	let focusableElementsItems: HTMLElement[];
 
-	let firstFocusableElement: HTMLElement;
-	let lastFocusableElement: HTMLElement;
+	let firstFocusableElement: HTMLElement | undefined = $state();
+	let lastFocusableElement: HTMLElement | undefined = $state();
 
 	const dispatch = createEventDispatcher();
 
@@ -18,18 +18,18 @@
 	};
 
 	onMount(() => {
-		focusableElementsItems = Array.from(navigation.querySelectorAll(focusableElements));
+		focusableElementsItems = Array.from(navigation!.querySelectorAll(focusableElements));
 
 		firstFocusableElement = focusableElementsItems[0];
 		lastFocusableElement = focusableElementsItems[focusableElementsItems.length - 1];
 	});
 </script>
 
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<!-- svelte-ignore a11y-no-redundant-roles -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+<!-- svelte-ignore a11y_no_redundant_roles -->
 <section
-	on:keydown={(e) =>
-		handleKeyboardTrapFocus(e, firstFocusableElement, lastFocusableElement, handleCloseModal)}
+	onkeydown={(e) =>
+		handleKeyboardTrapFocus(e, firstFocusableElement!, lastFocusableElement!, handleCloseModal)}
 	bind:this={navigation}
 	class="fixed z-50 h-full w-full inset-0 bg-gray p-4"
 	role="navigation"
@@ -38,7 +38,7 @@
 		<h3 id="modal-title" class="sr-only">Menu de navigation</h3>
 		<div class="w-full flex justify-end">
 			<button
-				on:click={handleCloseModal}
+				onclick={handleCloseModal}
 				aria-label="fermer le menu de navigation"
 				class="text-blue-dark"
 			>
@@ -51,8 +51,8 @@
 		<ul class="flex flex-col gap-5">
 			{#each Object.keys(ROUTES) as key, index}
 				<li class="text-2xl">
-					<!-- svelte-ignore a11y-autofocus -->
-					<a on:click={() => dispatch('clickLink')} autofocus={index == 0} href={ROUTES[key]}
+					<!-- svelte-ignore a11y_autofocus -->
+					<a onclick={() => dispatch('clickLink')} autofocus={index == 0} href={ROUTES[key]}
 						>{key}</a
 					>
 				</li>

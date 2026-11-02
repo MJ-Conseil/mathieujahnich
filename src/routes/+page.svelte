@@ -14,14 +14,18 @@
 	import OfferRow from '$lib/components/organisms/OfferRow.svelte';
 	import ExclusiveContentRow from '$lib/components/organisms/ExclusiveContentRow.svelte';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
 	<title>{SITE_WEB_NAME} - Accueil</title>
 </svelte:head>
 
-<!-- svelte-ignore a11y-no-redundant-roles -- this role is not redudant because this is the main page header -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this role is not redudant because this is the main page header -->
 <header role="banner" class=" bg-blue-dark md:pt-4 pb-8 lg:pb-12 relative overflow-hidden">
 	<Container>
 		<div class="md:w-[70%] flex flex-col gap-4 break-words overflow-visible mb-8">
@@ -62,7 +66,7 @@
 	</div>
 </header>
 
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main section of the page -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main section of the page -->
 <main role="main" class="md:p-0 md:0" id="main">
 	<Section>
 		<h2>Signes particuliers</h2>
@@ -80,7 +84,7 @@
 				content="Sollicité par l’ADEME depuis 2012, je suis notamment l’auteur principal du Guide de la communication responsable (2020, 2022) et du Guide anti-greenwashing (2025)."
 			/>
 		</div>
-		<div class="lg:container h-full" />
+		<div class="lg:container h-full"></div>
 	</Section>
 
 	<OfferRow />

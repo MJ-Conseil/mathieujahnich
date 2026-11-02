@@ -14,12 +14,16 @@
 
 	import type { PageData } from './$types';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
 
-	$: searchParams = data.searchParams;
-	$: posts = data.posts;
+	let { data }: Props = $props();
 
-	let newFirstPostItemIndex: undefined | number = undefined;
+	let searchParams = $derived(data.searchParams);
+	let posts = $derived(data.posts);
+
+	let newFirstPostItemIndex: undefined | number = $state(undefined);
 
 	const handleSearch = async (e: CustomEvent<QueryOption>) => {
 		const searchParams = {
@@ -99,7 +103,7 @@
 	</Container>
 </div>
 
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main">
 	<Section>
 		<h2>
@@ -112,7 +116,7 @@
 			{#each data.categories as category}
 				<Tag
 					active={searchParams.categories ? searchParams.categories.includes(category.id) : false}
-					on:click={() => handleFilterByCategory(category.id)}
+					onclick={() => handleFilterByCategory(category.id)}
 					name={category.name}
 				/>
 			{/each}
@@ -142,7 +146,7 @@
 
 		{#if posts.length > 0}
 			<div class="w-full mt-12 flex items-center justify-center">
-				<Button on:click={handleLoadMorePosts} name="Afficher plus d'articles" type="primary" />
+				<Button onclick={handleLoadMorePosts} name="Afficher plus d'articles" type="primary" />
 			</div>
 		{/if}
 	</Section>

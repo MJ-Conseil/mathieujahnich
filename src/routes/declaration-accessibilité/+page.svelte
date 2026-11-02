@@ -15,7 +15,7 @@
 		</header>
 	</Container>
 </div>
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<h2 class="mj-h2 sr-only">Nos engagements</h2>

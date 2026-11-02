@@ -16,10 +16,14 @@
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import { focusableElementStore } from '$lib/stores/setFocusableElement';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
 
-	$: mediaResources = data.mediaResources;
-	$: remainingMediaResourceTypeRecord = data.remainingMediaResourceTypeRecord;
+	let { data }: Props = $props();
+
+	let mediaResources = $derived(data.mediaResources);
+	let remainingMediaResourceTypeRecord = $derived(data.remainingMediaResourceTypeRecord);
 
 	let mediaResourceTypePageRecord: Record<number, number> = {};
 
@@ -102,7 +106,7 @@
 		</header>
 	</Container>
 </div>
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main-content">
 	<Section>
 		<h2 class="sr-only">Contactez-nous</h2>
@@ -132,7 +136,7 @@
 					</ul>
 				</div>
 
-				<ButtonLink on:click={() => setFocus('#phone-link')} href="#phone-link"
+				<ButtonLink onclick={() => setFocus('#phone-link')} href="#phone-link"
 					>Nous contacter</ButtonLink
 				>
 			</div>
@@ -179,7 +183,7 @@
 				{#if remainingMediaResourceTypeRecord[mediaResourceItem.mediaResourceTypeId].remaining > 0}
 					<div class="w-full mt-8 mb-12 flex items-center justify-center">
 						<Button
-							on:click={() => handleLoadMorePostFormCategory(mediaResourceItem.mediaResourceTypeId)}
+							onclick={() => handleLoadMorePostFormCategory(mediaResourceItem.mediaResourceTypeId)}
 							name={getButtonText(mediaResourceItem)}
 							type="primary"
 						/>

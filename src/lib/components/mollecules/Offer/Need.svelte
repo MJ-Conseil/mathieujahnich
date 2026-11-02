@@ -1,7 +1,12 @@
 <script lang="ts">
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import { SIZE } from '$lib/constants';
-	export let title: string;
+	interface Props {
+		title: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { title, children }: Props = $props();
 </script>
 
 <div class="bg-gray p-6 relative rounded-xl font-ptsans lg:text-[1.2rem]">
@@ -11,5 +16,5 @@
 
 	<h3 class="my-8 mj-h4">{title}</h3>
 
-	<slot />
+	{@render children?.()}
 </div>

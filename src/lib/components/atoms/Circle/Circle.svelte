@@ -1,10 +1,14 @@
 <script lang="ts">
 	import { SIZE } from '$lib/constants';
 
-	export let size: SIZE = SIZE.REGULAR;
+	interface Props {
+		size?: SIZE;
+	}
+
+	let { size = SIZE.REGULAR }: Props = $props();
 </script>
 
-<div class={`bg-sand rounded-full ${size}`} />
+<div class={`bg-sand rounded-full ${size}`}></div>
 
 <style>
 	.large {

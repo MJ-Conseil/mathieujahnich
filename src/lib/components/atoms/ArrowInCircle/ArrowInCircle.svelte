@@ -1,30 +1,38 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { SIZE } from '$lib/constants';
 	import Icon from '../Icon/Icon.svelte';
-	export let ariaHidden = true;
-	export let iconRotation: 90 | 180 | 0 = 0;
-	export let size: SIZE = SIZE.REGULAR;
-
-	let iconWidthAndHeight: string;
-
-	$: switch (size) {
-		case SIZE.EXTRASMALL:
-			iconWidthAndHeight = '10px';
-			break;
-
-		case SIZE.SMALL:
-			iconWidthAndHeight = '12px';
-
-			break;
-
-		case SIZE.LARGE:
-			iconWidthAndHeight = '2rem';
-			break;
-
-		default:
-			iconWidthAndHeight = '16px';
-			break;
+	interface Props {
+		ariaHidden?: boolean;
+		iconRotation?: 90 | 180 | 0;
+		size?: SIZE;
 	}
+
+	let { ariaHidden = true, iconRotation = 0, size = SIZE.REGULAR }: Props = $props();
+
+	let iconWidthAndHeight: string | undefined = $state();
+
+	run(() => {
+		switch (size) {
+			case SIZE.EXTRASMALL:
+				iconWidthAndHeight = '10px';
+				break;
+
+			case SIZE.SMALL:
+				iconWidthAndHeight = '12px';
+
+				break;
+
+			case SIZE.LARGE:
+				iconWidthAndHeight = '2rem';
+				break;
+
+			default:
+				iconWidthAndHeight = '16px';
+				break;
+		}
+	});
 </script>
 
 <span

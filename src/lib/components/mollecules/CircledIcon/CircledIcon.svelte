@@ -4,7 +4,11 @@
 	import { SIZE } from '$lib/constants';
 	import type { IconNames } from 'definitions';
 
-	export let iconName: IconNames;
+	interface Props {
+		iconName: IconNames;
+	}
+
+	let { iconName }: Props = $props();
 </script>
 
 <div aria-hidden="true" class="relative h-[200px]">

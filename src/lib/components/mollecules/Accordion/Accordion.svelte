@@ -1,3 +1,4 @@
+<!-- @migration-task Error while migrating Svelte code: This migration would change the name of a slot (trigger-content to trigger_content) making the component unusable -->
 <script lang="ts">
 	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
 	import { SIZE } from '$lib/constants';

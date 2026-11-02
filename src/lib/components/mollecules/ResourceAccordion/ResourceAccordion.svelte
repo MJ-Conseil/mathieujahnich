@@ -3,15 +3,27 @@
 	import Accordion from '../Accordion/Accordion.svelte';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
-	export let id: number | string = '';
-	export let focused = false;
-	export let resourceName: string;
-	export let content: string;
-	export let imageUrl = '';
-	export let caseStudy: CaseStudy | undefined = undefined;
+	interface Props {
+		id?: number | string;
+		focused?: boolean;
+		resourceName: string;
+		content: string;
+		imageUrl?: string;
+		caseStudy?: CaseStudy | undefined;
+	}
+
+	let {
+		id = '',
+		focused = false,
+		resourceName,
+		content,
+		imageUrl = '',
+		caseStudy = undefined
+	}: Props = $props();
 </script>
 
 <Accordion {focused} id={`reference-${id}`}>
+	<!-- @migration-task: migrate this slot by hand, `trigger-content` is an invalid identifier -->
 	<div
 		title={`voir la ressource ${resourceName}`}
 		slot="trigger-content"
@@ -26,6 +38,7 @@
 			{resourceName}
 		</p>
 	</div>
+	<!-- @migration-task: migrate this slot by hand, `panel-content` is an invalid identifier -->
 	<div class="[&>p]:mb-4 !text-lg accordion-content html-wrapper" slot="panel-content">
 		{@html content}
 

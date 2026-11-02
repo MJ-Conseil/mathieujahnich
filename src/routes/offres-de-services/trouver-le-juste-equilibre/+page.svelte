@@ -11,12 +11,16 @@
 	import OtherOfferRow from '$lib/components/organisms/OtherOfferRow/OtherOfferRow.svelte';
 	import { getReferences } from '$lib/repositories/reference';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
 
-	$: references = data.references.data;
-	$: meta = data.references.meta;
+	let { data }: Props = $props();
 
-	let currentPage = 1;
+	let references = $derived(data.references.data);
+	let meta = $derived(data.references.meta);
+
+	let currentPage = $state(1);
 
 	let firstNewReferenceIndex = 0;
 
@@ -67,7 +71,7 @@
 		</div>
 	</div>
 </PageHeader>
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<div class="h-full md:px-8">
@@ -200,7 +204,7 @@
 
 			{#if currentPage < meta.pageCount}
 				<div class="w-full mt-8 flex items-center justify-center">
-					<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
+					<button onclick={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
 						>Afficher plus de références
 					</button>
 				</div>{/if}

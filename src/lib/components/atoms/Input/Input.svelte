@@ -1,11 +1,23 @@
 <script lang="ts">
-	export let name: string;
-	export let label: string;
-	export let id: string;
-	export let type: 'text' | 'number' | 'email' = 'text';
-	export let required = false;
-	export let error = '';
-	export let autocomplete: 'email' | 'given-name' | undefined = undefined;
+	interface Props {
+		name: string;
+		label: string;
+		id: string;
+		type?: 'text' | 'number' | 'email';
+		required?: boolean;
+		error?: string;
+		autocomplete?: 'email' | 'given-name' | undefined;
+	}
+
+	let {
+		name,
+		label,
+		id,
+		type = 'text',
+		required = false,
+		error = '',
+		autocomplete = undefined
+	}: Props = $props();
 </script>
 
 <label class="block font-ptsans my-2 mt-4 font-bold text-blue-dark" for={id}> {label}</label>

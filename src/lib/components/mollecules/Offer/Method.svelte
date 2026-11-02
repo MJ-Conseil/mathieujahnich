@@ -1,7 +1,12 @@
 <script lang="ts">
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import { SIZE } from '$lib/constants';
-	export let title: string;
+	interface Props {
+		title: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { title, children }: Props = $props();
 </script>
 
 <div class="flex even:justify-end mb-6 lg:mb-10 font-ptsans">
@@ -16,7 +21,7 @@
 		</div>
 		<h3 class="text-2xl lg:text-3xl font-extralight mb-6 lg:pl-6">{title}</h3>
 		<div class="lg:text-[1.2rem]">
-			<slot />
+			{@render children?.()}
 		</div>
 	</article>
 </div>

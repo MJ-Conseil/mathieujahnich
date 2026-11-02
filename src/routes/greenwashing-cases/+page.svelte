@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import slugify from 'slugify';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import type { PageData } from './$types';
@@ -13,20 +15,26 @@
 	import stillPending from '$lib/assets/images/case-still-pending.jpg';
 	import greenwhasinglogo from '$lib/assets/pictures/greenwashing-cases-logo.svg';
 
-	export let data: PageData;
-
-	let greenWashingCaseIndexToBeFocused: number | undefined = undefined;
-
-	$: filteredgrennWashingCases = data.grennWashingCases.data;
-
-	$: meta = data.grennWashingCases.meta;
-
-	let selectedFilterIds: number[] = [];
-
-	let currentPage = 1;
-	$: if (selectedFilterIds.length === 0) {
-		filteredgrennWashingCases = data.grennWashingCases.data;
+	interface Props {
+		data: PageData;
 	}
+
+	let { data }: Props = $props();
+
+	let greenWashingCaseIndexToBeFocused: number | undefined = $state(undefined);
+
+	let filteredgrennWashingCases = $derived(data.grennWashingCases.data);
+
+	let meta = $derived(data.grennWashingCases.meta);
+
+	let selectedFilterIds: number[] = $state([]);
+
+	let currentPage = $state(1);
+	run(() => {
+		if (selectedFilterIds.length === 0) {
+			filteredgrennWashingCases = data.grennWashingCases.data;
+		}
+	});
 
 	const handleClickgreenWashingCaseType = async (id: number) => {
 		if (selectedFilterIds.includes(id)) {
@@ -84,7 +92,7 @@
 	</div>
 </PageHeader>
 
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
@@ -112,7 +120,7 @@
 			{#each data.greenWashingCaseTypes as greenWashingCaseType}
 				<Tag
 					active={selectedFilterIds.includes(greenWashingCaseType.id)}
-					on:click={() => handleClickgreenWashingCaseType(greenWashingCaseType.id)}
+					onclick={() => handleClickgreenWashingCaseType(greenWashingCaseType.id)}
 					name={greenWashingCaseType.name}
 				/>
 			{/each}
@@ -135,7 +143,7 @@
 
 		{#if filteredgrennWashingCases.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
-				<button on:click={handleLoadMoregrennWashingCases} class="bg-indigo rounded text-white p-3"
+				<button onclick={handleLoadMoregrennWashingCases} class="bg-indigo rounded text-white p-3"
 					>See more
 				</button>
 			</div>{/if}

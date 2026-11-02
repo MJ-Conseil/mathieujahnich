@@ -7,8 +7,12 @@
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
 	import type { ActionData, PageData } from './$types';
-	export let form: ActionData;
-	export let data: PageData;
+	interface Props {
+		form: ActionData;
+		data: PageData;
+	}
+
+	let { form, data }: Props = $props();
 </script>
 
 <svelte:head>

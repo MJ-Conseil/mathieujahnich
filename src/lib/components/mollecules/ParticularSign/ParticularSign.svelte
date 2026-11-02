@@ -1,8 +1,12 @@
 <script lang="ts">
 	import Circle from '$lib/components/atoms/Circle/Circle.svelte';
 	import { SIZE } from '$lib/constants';
-	export let title: string;
-	export let content: string;
+	interface Props {
+		title: string;
+		content: string;
+	}
+
+	let { title, content }: Props = $props();
 </script>
 
 <div class="bg-gray p-6 relative rounded-xl">

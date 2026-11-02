@@ -6,7 +6,11 @@
 	import DesktopMenuItem from '../DesktopMenuItem/DesktopMenuItem.svelte';
 	import HeaderDropDown from '../Header/HeaderDropDown.svelte';
 
-	export let activeRoute: string | null = null;
+	interface Props {
+		activeRoute?: string | null;
+	}
+
+	let { activeRoute = null }: Props = $props();
 
 	let activatedMenu = false;
 </script>
@@ -44,7 +48,4 @@
 </div>
 
 <style>
-	a:active {
-		outline: none;
-	}
 </style>

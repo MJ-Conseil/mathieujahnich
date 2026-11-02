@@ -1,10 +1,14 @@
-<script lang>
+<script lang="ts">
 	import { ROUTES } from '$lib/constants';
 	import Offer from '../mollecules/Offer/Offer.svelte';
 	import OfferIcon from '../mollecules/OfferIcon/OfferIcon.svelte';
 	import Section from '../mollecules/Section/Section.svelte';
 
-	export let alt = false;
+	interface Props {
+		alt?: boolean;
+	}
+
+	let { alt = false }: Props = $props();
 </script>
 
 <Section {alt}>

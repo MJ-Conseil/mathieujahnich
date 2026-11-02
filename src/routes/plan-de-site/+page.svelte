@@ -12,10 +12,10 @@
 <PageHeader>
 	<h1 class="mj-h1--alt">Plan de site</h1>
 </PageHeader>
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" class="mt-8 mb-12" id="main-content">
 	<Section>
-		<!-- svelte-ignore a11y-no-redundant-roles -- must have the navigation role -->
+		<!-- svelte-ignore a11y_no_redundant_roles -- must have the navigation role -->
 		<nav role="navigation" aria-label="site-map">
 			<h3 class="mj-h4--alt">Mathieu Jahnich</h3>
 

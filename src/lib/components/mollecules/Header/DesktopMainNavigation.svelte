@@ -4,15 +4,19 @@
 
 	import HeaderLogo from './HeaderLogo.svelte';
 
-	export let activeRoute: string | null;
+	interface Props {
+		activeRoute: string | null;
+	}
+
+	let { activeRoute }: Props = $props();
 </script>
 
-<!-- svelte-ignore a11y-no-redundant-roles -->
+<!-- svelte-ignore a11y_no_redundant_roles -->
 <div
 	class="lg:block h-full bg-blue-dark sticky top-0 font-ptsans text-white md:px-16 z-50 p-4 hidden"
 >
 	<SkipLink />
-	<!-- svelte-ignore a11y-no-redundant-roles -- this is the main navigation menu -->
+	<!-- svelte-ignore a11y_no_redundant_roles -- this is the main navigation menu -->
 	<nav
 		class="w-full top-0 items-center justify-between flex"
 		role="navigation"

@@ -1,11 +1,17 @@
 <script lang="ts">
-	export let href: string;
+	interface Props {
+		href: string;
+		children?: import('svelte').Snippet;
+		onclick?: (e: MouseEvent) => void;
+	}
+
+	let { href, children, onclick }: Props = $props();
 </script>
 
 <a
 	{href}
-	on:click
+	{onclick}
 	class="bg-sand 2 inline-block px-5 no-underline md:px-14 py-3 hover:bg-sand-dark font-bold rounded text-indigo"
 >
-	<slot />
+	{@render children?.()}
 </a>

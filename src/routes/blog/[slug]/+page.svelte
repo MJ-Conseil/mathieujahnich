@@ -6,14 +6,18 @@
 
 	import type { PageData } from './$types';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
 	<title>{SITE_WEB_NAME} - {data.post.title}</title>
 </svelte:head>
 
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main-content">
 	<div class="blog-wrapper">
 		<Section alt>

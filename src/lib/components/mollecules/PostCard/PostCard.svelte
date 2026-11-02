@@ -2,20 +2,35 @@
 	import { SIZE, type SIZE as SIZEType } from '$lib/constants';
 	import ArrowLink from '../ArrowLink/ArrowLink.svelte';
 
-	export let title: string;
-	export let picureAlternativeText: string = '';
+	interface Props {
+		title: string;
+		picureAlternativeText?: string;
+		createdDate: string;
+		pictureURL?: string;
+		testId?: string;
+		href?: string;
+		imageCover?: boolean;
+		focused?: boolean;
+		excerpt?: string;
+		tagName?: string;
+		size?: SIZEType;
+		children?: import('svelte').Snippet;
+	}
 
-	export let createdDate: string;
-
-	export let pictureURL = '';
-	export let testId = '';
-	export let href = '';
-	export let imageCover = true;
-	export let focused = false;
-	export let excerpt = '';
-	export let tagName = '';
-
-	export let size: SIZEType = SIZE.REGULAR;
+	let {
+		title,
+		picureAlternativeText = '',
+		createdDate,
+		pictureURL = '',
+		testId = '',
+		href = '',
+		imageCover = true,
+		focused = false,
+		excerpt = '',
+		tagName = '',
+		size = SIZE.REGULAR,
+		children
+	}: Props = $props();
 </script>
 
 <div
@@ -66,12 +81,12 @@
 	</div>
 
 	<div class="p-4 pt-0 mt-4 flex justify-end">
-		<slot>
+		{#if children}{@render children()}{:else}
 			{#if href}
 				<ArrowLink {focused} linkTitle={`Lire l'article : ${picureAlternativeText} `} {href}
 					>Lire l'article</ArrowLink
 				>
 			{/if}
-		</slot>
+		{/if}
 	</div>
 </div>

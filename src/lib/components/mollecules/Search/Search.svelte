@@ -3,17 +3,27 @@
 	import type { QueryOption } from 'definitions';
 	import { createEventDispatcher } from 'svelte';
 
-	export let label: string;
-	export let buttonLabel: string;
-	export let categories: { id: unknown; name: unknown }[] | undefined = undefined;
-	export let value = '';
-	export let alt = false;
+	interface Props {
+		label: string;
+		buttonLabel: string;
+		categories?: { id: unknown; name: unknown }[] | undefined;
+		value?: string;
+		alt?: boolean;
+	}
+
+	let {
+		label,
+		buttonLabel,
+		categories = undefined,
+		value = $bindable(''),
+		alt = false
+	}: Props = $props();
 
 	let errorMessage: HTMLElement;
 
-	let hasError = false;
+	let hasError = $state(false);
 
-	let input: HTMLInputElement;
+	let input: HTMLInputElement | undefined = $state();
 
 	let searchOptions: QueryOption = {
 		search: undefined
@@ -21,7 +31,7 @@
 
 	let inputTouched = false;
 
-	$: id = slugify(label);
+	let id = $derived(slugify(label));
 
 	const dispatch = createEventDispatcher<{
 		search: QueryOption;
@@ -59,14 +69,14 @@
 	};
 
 	const handleSearch = () => {
-		if (!input.validity.valueMissing) {
+		if (!input!.validity.valueMissing) {
 			return dispatch('search', searchOptions);
 		}
 
-		if (input.dataset.errorRequired) {
-			input.setCustomValidity(input.dataset?.errorRequired);
+		if (input!.dataset.errorRequired) {
+			input!.setCustomValidity(input!.dataset?.errorRequired);
 			hasError = true;
-			input.reportValidity();
+			input!.reportValidity();
 		}
 	};
 
@@ -80,7 +90,7 @@
 </script>
 
 <form
-	on:submit={(e) => {
+	onsubmit={(e) => {
 		e.preventDefault();
 		handleSearch();
 	}}
@@ -102,11 +112,11 @@
 			data-error-required="Veuillez remplir ce champs"
 			aria-errormessage="name-validation-error"
 			aria-invalid={hasError}
-			on:input={handleOnInput}
+			oninput={handleOnInput}
 			bind:this={input}
 			class="lg:w-2/3 w-full h-full p-2 md:rounded-l-lg"
-			on:change
-			on:keydown={handleKeyDown}
+			onchange={() => {}}
+			onkeydown={handleKeyDown}
 			required
 			{id}
 			bind:value
@@ -118,7 +128,7 @@
 				>Rechercher un sujet pour une catégorie spécifique</label
 			>
 			<select
-				on:change={handleSelectCategory}
+				onchange={handleSelectCategory}
 				id="filter-by-category"
 				class="md:w-1/3 md:h-full w-full h-10 px-5 cursor-pointer"
 			>
@@ -131,7 +141,7 @@
 
 		<button
 			type="button"
-			on:click={handleSearch}
+			onclick={handleSearch}
 			class="bg-sand hover:bg-sand-dark px-5 md:w-1/4 font-bold md:h-full h-10 w-full md:rounded-r-lg text-indigo"
 		>
 			{buttonLabel}

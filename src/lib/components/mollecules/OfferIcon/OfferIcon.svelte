@@ -3,7 +3,11 @@
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { SIZE } from '$lib/constants';
 
-	export let iconName: 'plane' | 'stones' | 'ladder';
+	interface Props {
+		iconName: 'plane' | 'stones' | 'ladder';
+	}
+
+	let { iconName }: Props = $props();
 </script>
 
 <div aria-hidden="true" class=" text-blue-dark flex justify-center">

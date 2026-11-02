@@ -1,20 +1,37 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import ArrowInCircle from '$lib/components/atoms/ArrowInCircle/ArrowInCircle.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { SIZE } from '$lib/constants';
 
-	export let href: string;
-	export let alt = false;
-	export let arrowSize: SIZE = SIZE.SMALL;
-	export let linkTitle = '';
-	export let external = false;
-	let element: HTMLElement;
+	let element: HTMLElement | undefined = $state();
 
-	export let focused = false;
-
-	$: if (focused && element) {
-		element.focus();
+	interface Props {
+		href: string;
+		alt?: boolean;
+		arrowSize?: SIZE;
+		linkTitle?: string;
+		external?: boolean;
+		focused?: boolean;
+		children?: import('svelte').Snippet;
 	}
+
+	let {
+		href,
+		alt = false,
+		arrowSize = SIZE.SMALL,
+		linkTitle = '',
+		external = false,
+		focused = false,
+		children
+	}: Props = $props();
+
+	run(() => {
+		if (focused && element) {
+			element.focus();
+		}
+	});
 </script>
 
 <a
@@ -28,7 +45,7 @@
 	{href}
 >
 	<span class="hover:decoration-sand hover:underline underline-offset-8 decoration-2">
-		<slot />
+		{@render children?.()}
 	</span>
 
 	{#if external}

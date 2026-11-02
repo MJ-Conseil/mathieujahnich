@@ -6,7 +6,11 @@
 	import greenwashingCasesLogo from '$lib/assets/pictures/greenwashing-cases-logo.jpg';
 	import greenwashingNewsLogo from '$lib/assets/pictures/greenwashing-news-logo.jpg';
 
-	export let alt = false;
+	interface Props {
+		alt?: boolean;
+	}
+
+	let { alt = false }: Props = $props();
 </script>
 
 <Section {alt}>

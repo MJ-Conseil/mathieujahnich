@@ -14,21 +14,27 @@
 	import type { PostGroupedByCategories, QueryOption } from 'definitions';
 	import type { PageData } from './$types';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
 
-	$: posts = data.posts;
+	let { data }: Props = $props();
 
-	$: postGrouppedByCategories = data.postGrouppedByCategories.reduce((prev, next) => {
-		if (next.posts.length > 0) {
-			return [...prev, next];
-		}
+	let posts = $derived(data.posts);
 
-		return prev;
-	}, [] as PostGroupedByCategories[]);
+	let postGrouppedByCategories = $derived(
+		data.postGrouppedByCategories.reduce((prev, next) => {
+			if (next.posts.length > 0) {
+				return [...prev, next];
+			}
 
-	$: searchParams = data.searchParams;
+			return prev;
+		}, [] as PostGroupedByCategories[])
+	);
 
-	let newFirstPostItemIndex: undefined | number = undefined;
+	let searchParams = $derived(data.searchParams);
+
+	let newFirstPostItemIndex: undefined | number = $state(undefined);
 
 	let categoryPageRecord: Record<number, number> = {};
 
@@ -142,7 +148,7 @@
 		</div>
 	</Container>
 </div>
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main-content">
 	<Section alt>
 		<h2>Les derniers posts</h2>
@@ -151,7 +157,7 @@
 			{#each data.categories as category}
 				<Tag
 					active={searchParams.categories ? searchParams.categories.includes(category.id) : false}
-					on:click={() => handleFilterByCategory(category.id)}
+					onclick={() => handleFilterByCategory(category.id)}
 					name={category.name}
 				/>
 			{/each}
@@ -180,7 +186,7 @@
 			{/if}
 		</div>
 		<div class="w-full mt-8 mb-12 flex items-center justify-center">
-			<Button on:click={handleLoadMorePosts} name="Afficher plus d'articles" type="primary" />
+			<Button onclick={handleLoadMorePosts} name="Afficher plus d'articles" type="primary" />
 		</div>
 	</Section>
 
@@ -209,7 +215,7 @@
 
 			<div class="w-full mt-8 mb-12 flex items-center justify-center">
 				<Button
-					on:click={() => handleLoadMorePostFormCategory(postGrouppedByCategory.categoryId)}
+					onclick={() => handleLoadMorePostFormCategory(postGrouppedByCategory.categoryId)}
 					name={`Afficher plus d'articles "${postGrouppedByCategory.categoryName.toLowerCase()}"`}
 					type="primary"
 				/>

@@ -1,17 +1,21 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import ButtonLink from '$lib/components/atoms/ButtonLink/ButtonLink.svelte';
 	import Icon from '$lib/components/atoms/Icon/Icon.svelte';
 	import { CONTACT_LINKS, ROUTES, SOCIAL_NETWORK_LINKS } from '$lib/constants';
 	import { focusableElementStore } from '$lib/stores/setFocusableElement';
 
-	let phoneLink: HTMLElement;
+	let phoneLink: HTMLElement | undefined = $state();
 
-	$: if (phoneLink && $focusableElementStore.findIndex((item) => item === '#phone-link') !== -1) {
-		phoneLink.focus();
-	}
+	run(() => {
+		if (phoneLink && $focusableElementStore.findIndex((item) => item === '#phone-link') !== -1) {
+			phoneLink.focus();
+		}
+	});
 </script>
 
-<!-- svelte-ignore a11y-no-redundant-roles not redundant because this is the main footer -->
+<!-- svelte-ignore a11y_no_redundant_roles not redundant because this is the main footer -->
 <footer role="contentinfo" class="bg-blue-dark md:p-8 p-4 md:pt-12">
 	<div class="md:flex md:justify-around justify-between">
 		<div class="hidden lg:block lg:w-1/5">

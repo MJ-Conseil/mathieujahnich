@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import slugify from 'slugify';
 	import Tag from '$lib/components/atoms/Tag/Tag.svelte';
 	import { getReferences } from '$lib/repositories/reference';
@@ -9,21 +11,27 @@
 	import { SITE_WEB_NAME } from '$lib/constants';
 	import PageHeader from '$lib/components/atoms/PageHeader/PageHeader.svelte';
 
-	export let data: PageData;
-
-	let referenceIndexToBeFocused: number | undefined = undefined;
-
-	$: filteredReferences = data.references.data;
-	$: highlightedReferences = data.highlightedReferences;
-
-	$: meta = data.references.meta;
-
-	let selectedFilterIds: number[] = [];
-
-	let currentPage = 1;
-	$: if (selectedFilterIds.length === 0) {
-		filteredReferences = data.references.data;
+	interface Props {
+		data: PageData;
 	}
+
+	let { data }: Props = $props();
+
+	let referenceIndexToBeFocused: number | undefined = $state(undefined);
+
+	let filteredReferences = $derived(data.references.data);
+	let highlightedReferences = $derived(data.highlightedReferences);
+
+	let meta = $derived(data.references.meta);
+
+	let selectedFilterIds: number[] = $state([]);
+
+	let currentPage = $state(1);
+	run(() => {
+		if (selectedFilterIds.length === 0) {
+			filteredReferences = data.references.data;
+		}
+	});
 
 	const handleClickReferenceType = async (id: number) => {
 		if (selectedFilterIds.includes(id)) {
@@ -74,7 +82,7 @@
 	</Headline>
 </PageHeader>
 
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 
 <main role="main" class="md:p-0 md:0" id="main-content">
 	{#if highlightedReferences.length > 0}
@@ -110,7 +118,7 @@
 			{#each data.referenceTypes as referenceType}
 				<Tag
 					active={selectedFilterIds.includes(referenceType.id)}
-					on:click={() => handleClickReferenceType(referenceType.id)}
+					onclick={() => handleClickReferenceType(referenceType.id)}
 					name={referenceType.name}
 				/>
 			{/each}
@@ -139,7 +147,7 @@
 
 		{#if filteredReferences.length > 4 && currentPage < meta.pageCount}
 			<div class="w-full mt-8 flex items-center justify-center">
-				<button on:click={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
+				<button onclick={handleLoadMoreReferences} class="bg-indigo rounded text-white p-3"
 					>Afficher plus de références
 				</button>
 			</div>{/if}

@@ -7,7 +7,11 @@
 	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
 	import type { PageData } from './$types';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -22,7 +26,7 @@
 		</header>
 	</Container>
 </div>
-<!-- svelte-ignore a11y-no-redundant-roles -- this is the main page section -->
+<!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<p>Votre inscription à la newsletter est désormais validée. Merci !</p>
