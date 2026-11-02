@@ -165,7 +165,7 @@
 
 		<div class=" md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols md:grid-cols-3">
 			{#if posts.length > 0}
-				{#each posts as post, i}
+				{#each posts as post}
 					<PostCard
 						testId={`toutes-references-${slugify(post.title)}`}
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
@@ -197,7 +197,7 @@
 			<h2>{postGrouppedByCategory.categoryName}</h2>
 
 			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
-				{#each postGrouppedByCategory.posts as post, i}
+				{#each postGrouppedByCategory.posts as post}
 					<PostCard
 						createdDate={new Intl.DateTimeFormat('fr-FR', {
 							day: '2-digit',

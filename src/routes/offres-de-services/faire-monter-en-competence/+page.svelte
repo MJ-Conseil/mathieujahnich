@@ -21,7 +21,7 @@
 
 	let currentPage = $state(1);
 
-	let firstNewReferenceIndex = 0;
+	let _firstNewReferenceIndex = 0;
 
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
@@ -37,7 +37,7 @@
 
 		references = [...references, ...newResults];
 
-		firstNewReferenceIndex = oldReferencesLastIndex + 1;
+		_firstNewReferenceIndex = oldReferencesLastIndex + 1;
 	};
 </script>
 
@@ -198,7 +198,7 @@
 		<Section>
 			<h2>Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
-				{#each references as reference, i}
+				{#each references as reference}
 					<ResourceAccordion
 						id={slugify(reference.title)}
 						content={reference.content}

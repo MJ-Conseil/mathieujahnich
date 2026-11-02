@@ -130,7 +130,7 @@
 			{#if filteredgrennWashingCases.length === 0}
 				<p class="text-xl">Pas de résultat</p>
 			{/if}
-			{#each filteredgrennWashingCases as greenWashingCase, i}
+			{#each filteredgrennWashingCases as greenWashingCase}
 				<ResourceAccordion
 					focused={i === greenWashingCaseIndexToBeFocused}
 					id={slugify(greenWashingCase.title + i)}
