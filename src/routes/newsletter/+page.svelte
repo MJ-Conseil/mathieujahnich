@@ -6,13 +6,50 @@
 	import PostCard from '$lib/components/mollecules/PostCard/PostCard.svelte';
 	import Section from '$lib/components/mollecules/Section/Section.svelte';
 	import { SITE_WEB_NAME, SIZE } from '$lib/constants';
+	import { onMount } from 'svelte';
 	import type { ActionData, PageData } from './$types';
+	import {
+		FriendlyCaptchaSDK,
+		type WidgetHandle,
+		FRCWidgetCompleteEventName,
+		FRCWidgetErrorEventName,
+		FRCWidgetExpireEventName,
+		FRCWidgetResetEventName
+	} from '@friendlycaptcha/sdk';
+	import { PUBLIC_FRIENDLY_CAPTCHA_KEY } from '$env/static/public';
+
 	interface Props {
 		form: ActionData;
 		data: PageData;
 	}
 
 	let { form, data }: Props = $props();
+
+	let captchadiv: HTMLDivElement;
+	let widget: WidgetHandle | undefined = undefined;
+	let captchaSolved = $state(false);
+
+	onMount(() => {
+		if (captchadiv) {
+			const sdk = new FriendlyCaptchaSDK();
+			widget = sdk.createWidget({
+				element: captchadiv,
+				sitekey: PUBLIC_FRIENDLY_CAPTCHA_KEY
+			});
+			widget.addEventListener(FRCWidgetCompleteEventName, () => (captchaSolved = true));
+			widget.addEventListener(FRCWidgetErrorEventName, () => (captchaSolved = false));
+			widget.addEventListener(FRCWidgetExpireEventName, () => (captchaSolved = false));
+			widget.addEventListener(FRCWidgetResetEventName, () => (captchaSolved = false));
+		}
+	});
+
+	// Once a form action response arrives the captcha token has been consumed:
+	// reset the widget so the next submission starts from a fresh puzzle.
+	$effect(() => {
+		if (form) {
+			widget?.reset();
+		}
+	});
 </script>
 
 <svelte:head>
@@ -21,7 +58,7 @@
 
 		{form?.contactCreationFailed
 			? '	Impossible de vous abonner à la newsletter. Peut-être vous êtes vous déja inscrit ?'
-			: ''}
+			: ''}{form?.captchaFailed ? '	Vérification anti-spam échouée, merci de réessayer' : ''}
 	</title>
 </svelte:head>
 
@@ -57,6 +94,12 @@
 			{#if form?.contactCreationFailed}
 				<p aria-live="polite" class="font-bold mt-5 bg-red text-white p-4">
 					Impossible de vous abonner à la newsletter. Peut-être vous êtes vous déja inscrit ?
+				</p>
+			{/if}
+			{#if form?.captchaFailed}
+				<p aria-live="polite" class="font-bold mt-5 bg-red text-white p-4">
+					La vérification anti-spam a échoué. Attendez quelques secondes que le captcha se recharge
+					puis réessayez.
 				</p>
 			{/if}
 
@@ -103,7 +146,12 @@
 				courriels.
 			</p>
 
-			<button type="submit" class="bg-indigo mt-5 font-ptsans rounded-sm text-white py-3 px-6 block"
+			<div bind:this={captchadiv}></div>
+
+			<button
+				type="submit"
+				disabled={!captchaSolved}
+				class="bg-indigo mt-5 font-ptsans rounded-sm text-white py-3 px-6 block disabled:opacity-50 disabled:cursor-not-allowed"
 				>S'abonner</button
 			>
 		</form>

@@ -19,9 +19,9 @@ const config = {
 					'https://mj-cms.jcloud-ver-jpe.ik-server.com/', // we allow resources loading from this website
 					'https://mj-conseil-wordpress.osc-fr1.scalingo.io',
 					'https://mj-storage.s3.fr-par.scw.cloud', // this is the storage S3 for images
-					'http://localhost:*',
-					'https://*.matomo.cloud'
+					'http://localhost:*'
 				],
+				'frame-src': ['self', 'https://*.frcapi.com', 'http://localhost:*'],
 				'base-uri': ['self'],
 				'manifest-src': ['self'],
 				'font-src': ['self'],

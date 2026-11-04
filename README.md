@@ -46,11 +46,13 @@ Voici une vidéo décrivant ces étapes :
 
 ## Récapitulatif des variables d'environnements
 
-| Nom                   | Utilisation                                                      | Type   | Requis ? |
-| --------------------- | ---------------------------------------------------------------- | ------ | -------- |
-| SENDINBLUE_API_KEY    | Défini le "Satic Token" pour communiquer avec SendInBlue (Brevo) | string | oui      |
-| PUBLIC_API_URL        | Défini l'URL de l'instance du CMS                                | string | oui      |
-| PUBLIC_MATOMO_CDN_URL | L'URL du CDN de Matomo                                           | string | oui      |
+| Nom                         | Utilisation                                                                    | Type   | Requis ? |
+| --------------------------- | ------------------------------------------------------------------------------ | ------ | -------- |
+| SENDINBLUE_API_KEY          | Défini le "Satic Token" pour communiquer avec SendInBlue (Brevo)               | string | oui      |
+| PUBLIC_API_URL              | Défini l'URL de l'instance du CMS                                              | string | oui      |
+| PUBLIC_MATOMO_CDN_URL       | L'URL du CDN de Matomo                                                         | string | oui      |
+| PUBLIC_FRIENDLY_CAPTCHA_KEY | Sitekey Friendly Captcha utilisée par le widget de la newsletter               | string | oui      |
+| FRIENDLY_CAPTCHA_API_KEY    | Clé d'API Friendly Captcha pour vérifier les solutions du captcha côté serveur | string | oui      |
 
 :question-mark: Besoin d'en savoir plus sur les variables d'environnement avec SvelteKit ? C'est par ici :pointing-right: https://kit.svelte.dev/docs/modules#$app-environment
 
