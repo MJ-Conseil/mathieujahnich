@@ -39,7 +39,7 @@ La première étape est d'avoir accès à Scalingo.
 
 Pour ce faire, veuillez demander à un membre de l'équipe pour être rajouté à l'organisation "MJ Conseil" et rajouter votre clé SSH
 
-Pour déployer et une fois votre PR mergée sur la branche "main", vous allez pouvoir déployer en faisant un `git push origin scalingo`
+Pour déployer et une fois votre PR mergée sur la branche "main", vous allez pouvoir déployer en faisant un `git push origin scalingo main`
 
 ## Récapitulatif des variables d'environnements
 
