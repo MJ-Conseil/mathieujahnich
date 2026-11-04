@@ -5,40 +5,20 @@ import svelteParser from 'svelte-eslint-parser';
 import sveltePlugin from 'eslint-plugin-svelte';
 import prettier from 'eslint-config-prettier';
 
-const globals = {
-	browser: true,
-	es2017: true,
-	node: true,
-	process: 'readonly',
-	fetch: 'readonly',
-	URL: 'readonly',
-	URLSearchParams: 'readonly',
-	Request: 'readonly',
-	Response: 'readonly',
-	Headers: 'readonly',
-	console: 'readonly',
-	document: 'readonly',
-	window: 'readonly',
-	Node: 'readonly',
-	HTMLElement: 'readonly',
-	HTMLInputElement: 'readonly',
-	Event: 'readonly',
-	KeyboardEvent: 'readonly',
-	MouseEvent: 'readonly',
-	CustomEvent: 'readonly'
-};
+import { defineConfig } from 'eslint/config';
 
-const testGlobals = {
-	...globals,
-	test: 'readonly',
-	describe: 'readonly',
-	it: 'readonly',
-	expect: 'readonly',
-	beforeEach: 'readonly',
-	afterEach: 'readonly'
-};
+import globals from 'globals';
 
-export default [
+export default defineConfig([
+	{
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				...globals.jest,
+				...globals.svelte
+			}
+		}
+	},
 	{
 		ignores: [
 			'*.cjs',
@@ -101,4 +81,4 @@ export default [
 			'no-irregular-whitespace': 'off'
 		}
 	}
-];
+]);
