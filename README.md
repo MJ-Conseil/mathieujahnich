@@ -35,14 +35,11 @@ La version de production du site est hébergée chez Infomaniak sur leur héberg
 
 ### Obtenir ces accès sur Infomaniak
 
-La première étape est d'avoir accès à Jelastic.
+La première étape est d'avoir accès à Scalingo.
 
-Pour ce faire, veuillez demander à un membre de l'équipe pour être rajouté à l'organisation "MJ Conseil"
+Pour ce faire, veuillez demander à un membre de l'équipe pour être rajouté à l'organisation "MJ Conseil" et rajouter votre clé SSH
 
-Pour déployer et une fois votre PR mergée sur la branche "main", il y a une série d'étape à faire sur l'interface graphique de Jelastic.
-
-Voici une vidéo décrivant ces étapes :
-[Screencast 2023-09-21 11:26:54.webm](https://github.com/MJ-Conseil/mathieujahnich/assets/15958334/002de0ec-1783-4135-ace4-56b399bc3fff)
+Pour déployer et une fois votre PR mergée sur la branche "main", vous allez pouvoir déployer en faisant un `git push origin scalingo`
 
 ## Récapitulatif des variables d'environnements
 
