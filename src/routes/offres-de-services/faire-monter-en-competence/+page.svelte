@@ -21,13 +21,15 @@
 
 	let currentPage = $state(1);
 
+	console.log(data.offerTypeId)
+
 	const handleLoadMoreReferences = async () => {
 		currentPage += 1;
 		const newResults = (
 			await getReferences(fetch, {
 				per_page: 3,
 				page: currentPage,
-				offer_type: data.offerTypeId
+				offer_types: data.offerTypeId
 			})
 		).data;
 
@@ -233,7 +235,7 @@
 						Voir l'offre
 					</a>
 				</div>
-				<div class="flex justify-between flex-col gap-5">
+				<div class="flex justify-between items-center flex-col gap-5">
 					<Icon width="54%" height="auto" name="plane" />
 
 					<p class="text-sand text-center justify-center text-2xl">Donner de l'élan</p>

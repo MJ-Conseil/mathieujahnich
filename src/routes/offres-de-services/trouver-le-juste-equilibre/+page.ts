@@ -25,7 +25,7 @@ export const load: PageLoad = async ({ fetch }) => {
 	referencesMeta = await getReferences(fetch, {
 		highlight: 1,
 		per_page: 3,
-		offer_type: offerType.id
+		offer_types: offerType.id
 	});
 
 	return { references: referencesMeta, offerTypeId: offerType.id };

@@ -27,7 +27,7 @@
 			await getReferences(fetch, {
 				per_page: 3,
 				page: currentPage,
-				offer_type: data.offerTypeId
+				offer_types: data.offerTypeId
 			})
 		).data;
 
@@ -48,7 +48,7 @@
 			</h1>
 
 			<p class="text-white text-xl lg:text-3xl mb-4 lg:mb-6">
-				<i>60 années d’expérience cumulées</i>
+				<i>Plus de 25 années d'expérience</i>
 			</p>
 
 			<p class="text-white lg:text-[1.4rem] lg:w-[80%] font-ptsans lg:leading-9">

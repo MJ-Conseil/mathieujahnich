@@ -6,12 +6,12 @@ export type QueryOption = {
 	offset?: number;
 	per_page?: number;
 	highlight?: 0 | 1;
-	offer_type?: number | null;
+	offer_types?: number | null;
 	categories?: number[];
 	reference_types?: number[];
 	greenwashing_case_types?: number[];
 	search?: string;
-	media_resource_type?: number[];
+	media_resource_types?: number[];
 	slug?: string;
 };
 

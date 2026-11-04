@@ -57,7 +57,7 @@
 			await getReferences(fetch, {
 				per_page: 10,
 				page: currentPage,
-				offer_type: data.offerTypeId ? parseInt(data.offerTypeId) : undefined
+				offer_types: data.offerTypeId ? parseInt(data.offerTypeId) : undefined
 			})
 		).data;
 

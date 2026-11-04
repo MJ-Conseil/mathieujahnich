@@ -66,7 +66,7 @@
 		}
 
 		const newResource = await getMediaResources(fetch, {
-			media_resource_type: [mediaResourceTypeId],
+			media_resource_types: [mediaResourceTypeId],
 			per_page: 3,
 			page: newPage
 		});

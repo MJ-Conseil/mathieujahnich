@@ -10,7 +10,7 @@ L'équipe projet a été formée en novembre 2022 à la suite d'une investigatio
 
 Cette démarche a été synthétisée dans le [guide d'éco-conception de service numérique](https://eco-conception.designersethiques.org/guide/fr/content/0-introduction.html) rédigé par le collectif [Designer Ethiques](https://designersethiques.org/)
 
-## Implémentation et périmètre métier
+## Implémentation et périmètre métier 
 
 Initialement le site mathieu-jahnich.fr était un site concu intégralement avec la technologie [Wordpress](https://wordpress.com/fr/).
 
@@ -27,7 +27,7 @@ Une application client faite avec la technologie [SvelteKit](https://kit.svelte.
 _Commande_: `npm install`
 Le client est accessible sur l'url http://localhost:5175
 
-## Déploiement
+## Déploiement  
 
 La version de production du site est hébergée chez Infomaniak sur leur hébergement cloud "Jelastic".
 
