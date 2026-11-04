@@ -10,6 +10,8 @@ import type { PageLoad } from './$types';
 export const load: PageLoad = async ({ fetch: serverFetch }) => {
 	const mediaResourceTypes = await getMediaResourceTypes(serverFetch);
 
+
+
 	const mediaResourcePromises = mediaResourceTypes.map((item) =>
 		getMediaResources(serverFetch, {
 			per_page: 3,
@@ -19,11 +21,11 @@ export const load: PageLoad = async ({ fetch: serverFetch }) => {
 
 	const mediaResource = await Promise.all(mediaResourcePromises);
 
-	const postGrouppedByCategories = groupMediaResourceByType(mediaResource, mediaResourceTypes);
+	const mediaGrouppedByType = groupMediaResourceByType(mediaResource, mediaResourceTypes);
 	const remainingMediaResourceTypeRecord = buildRemainingMediaResourceRecord(mediaResourceTypes);
 
 	return {
-		mediaResources: postGrouppedByCategories,
+		mediaResources: mediaGrouppedByType,
 		remainingMediaResourceTypeRecord
 	};
 };
