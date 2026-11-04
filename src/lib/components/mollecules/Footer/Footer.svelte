@@ -34,7 +34,7 @@
 		</div>
 
 		<nav aria-label="navigation pied de page">
-			<h3 class="mj-h4--alt">Mathieu Jahnich</h3>
+			<h3 class="mj-h3 mj-h4--alt text-white">Mathieu Jahnich</h3>
 
 			<ul class="flex flex-col gap-2">
 				<li>
@@ -68,7 +68,7 @@
 		</nav>
 
 		<nav aria-labelledby="resources-links">
-			<h3 id="resources-links" class="mj-h4--alt">Ressources</h3>
+			<h3 id="resources-links" class="mj-h3 mj-h4--alt text-white">Ressources</h3>
 
 			<ul class="flex flex-col gap-2">
 				<li>

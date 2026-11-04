@@ -12,7 +12,7 @@
 </script>
 
 <Section {alt}>
-	<h2>Mes offres de services</h2>
+	<h2 class="mj-h2">Mes offres de services</h2>
 	<div class="md:gap-x-20 md:gap-y-10 grid gap-y-12 md:grid-cols-3 pt-8">
 		<Offer
 			offerName="Donner de l’élan"

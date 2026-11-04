@@ -68,7 +68,7 @@
 			<p class="text-blue-dark text-sm">
 				{createdDate}
 			</p>
-			<h3 class="text-blue-dark mt-2 text-xl md:text-lg mb-0 pb-4 font-bold">
+			<h3 class="mj-h3 text-blue-dark mt-2 text-xl md:text-lg mb-0 pb-4 font-bold">
 				{@html title}
 			</h3>
 

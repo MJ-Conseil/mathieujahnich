@@ -97,7 +97,7 @@
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<div class=" mt-7">
-			<h2>Legend</h2>
+			<h2 class="mj-h2">Legend</h2>
 
 			<ul class="flex flex-col gap-3">
 				<li class=" flex items-center gap-3">

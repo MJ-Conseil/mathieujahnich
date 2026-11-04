@@ -69,7 +69,7 @@
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
 		<div class="h-full md:px-8">
-			<h2 class="mb-4 text-3xl lg:text-4xl">Votre besoin</h2>
+			<h2 class="mb-4 mj-h2">Votre besoin</h2>
 			<p class="lg:text-[1.4rem] lg:leading-9 font-ptsans">
 				Valoriser les atouts environnementaux, sociaux ou sociétaux d’un produit ou service,
 				communiquer les engagements, mettre en lumière les équipes… c’est indispensable. Mais
@@ -109,7 +109,7 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2 class="my-8 text-3xl lg:text-4xl">Méthodes et résultats</h2>
+			<h2 class="my-8 mj-h2">Méthodes et résultats</h2>
 			<Method title="Analyse et recommandations">
 				<ul class="mj-list--disc">
 					<li class="mb-2">
@@ -184,7 +184,7 @@
 
 	{#if references.length > 0}
 		<Section>
-			<h2>Missions récentes</h2>
+			<h2 class="mj-h2">Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
 				{#each references as reference}
 					<ResourceAccordion
@@ -208,7 +208,7 @@
 	<Section alt={references.length > 0}>
 		<OtherOfferRow>
 			<div class="md:w-1/3">
-				<h3 class="text-white mt-0">Mes autres offres</h3>
+				<h3 class="mj-h3 text-white mt-0">Mes autres offres</h3>
 				<p class=" text-white text-2xl">
 					Je mets la communication au service de la transition écologique.
 				</p>

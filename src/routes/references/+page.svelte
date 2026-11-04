@@ -87,7 +87,7 @@
 <main role="main" class="md:p-0 md:0" id="main-content">
 	{#if highlightedReferences.length > 0}
 		<Section>
-			<h2>Références phares</h2>
+			<h2 class="mj-h2">Références phares</h2>
 			<div class="flex flex-col gap-4">
 				{#each highlightedReferences as reference}
 					<ResourceAccordion
@@ -108,7 +108,7 @@
 	{/if}
 
 	<Section>
-		<h2>Toutes les références</h2>
+		<h2 class="mj-h2">Toutes les références</h2>
 		<p class="text-xl mb-5">
 			Je travaille pour des secteurs variés. Vous pouvez filtrer les références à l’aide des
 			mots-clés ci-dessous.

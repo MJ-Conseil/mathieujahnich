@@ -14,7 +14,7 @@
 </script>
 
 <Section {alt}>
-	<h2>Contenus exclusifs</h2>
+	<h2 class="mj-h2">Contenus exclusifs</h2>
 	<div class="md:gap-x-20 md:gap-y-10 grid gap-y-12 md:grid-cols-3 pt-8">
 		<ExclusiveContent
 			title="Newsletter MJ Conseil"

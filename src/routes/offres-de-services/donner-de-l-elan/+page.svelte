@@ -68,7 +68,7 @@
 <main role="main" id="main-content" class="md:p-0 md:0">
 	<Section>
 		<div class="h-full">
-			<h2>Votre besoin</h2>
+			<h2 class="mj-h2">Votre besoin</h2>
 			<p class="lg:text-[1.4rem] lg:leading-9 font-ptsans mb-6">
 				Les enjeux environnementaux et sociaux sont complexes, les attentes des parties prenantes
 				sont plurielles, les traductions dans le positionnement marketing, dans l’offre et dans les
@@ -118,7 +118,7 @@
 			>
 				<Icon width="100%" height="75%" name="curve" fill="none" />
 			</div>
-			<h2>Méthodes et livrables</h2>
+			<h2 class="mj-h2">Méthodes et livrables</h2>
 			<Method title="Diagnostic">
 				<p class="mb-2">
 					Recueillir et analyser les
@@ -179,7 +179,7 @@
 
 	{#if references.length > 0}
 		<Section>
-			<h2>Missions récentes</h2>
+			<h2 class="mj-h2">Missions récentes</h2>
 			<div class="mt-8 flex flex-col gap-5">
 				{#each references as reference}
 					<ResourceAccordion
@@ -203,7 +203,7 @@
 	<Section alt={references.length > 0}>
 		<OtherOfferRow>
 			<div class="xl:w-1/3 md:w-2/3">
-				<h3 class="text-white mt-0">Mes autres offres</h3>
+				<h3 class="mj-h3 text-white mt-0">Mes autres offres</h3>
 				<p class=" text-white text-2xl">
 					Je mets la communication au service de la transition écologique
 				</p>

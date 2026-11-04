@@ -151,7 +151,7 @@
 <!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main-content">
 	<Section alt>
-		<h2>Les derniers posts</h2>
+		<h2 class="mj-h2">Les derniers posts</h2>
 		<p class="text-xl">Vous pouvez filtrer nos articles à l’aide des mots clés ci-dessous.</p>
 		<div class="flex mt-7 gap-3 flex-wrap">
 			{#each data.categories as category}
@@ -194,7 +194,7 @@
 		{@const isOdd = index % 2 != 0}
 
 		<Section alt={isOdd}>
-			<h2>{postGrouppedByCategory.categoryName}</h2>
+			<h2 class="mj-h2">{postGrouppedByCategory.categoryName}</h2>
 
 			<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 				{#each postGrouppedByCategory.posts as post, i}

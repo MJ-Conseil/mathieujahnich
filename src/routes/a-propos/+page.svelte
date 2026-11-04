@@ -27,7 +27,7 @@
 <!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" class="md:p-0 md:0" id="main-content">
 	<Section>
-		<h2 class="">Mathieu Jahnich</h2>
+		<h2 class="mj-h2">Mathieu Jahnich</h2>
 
 		<div class="md:flex flex-col gap-6">
 			<div class="flex flex-col md:flex-row gap-8">
@@ -35,7 +35,7 @@
 				<div>
 					<div class="flex items-center mb-3">
 						<Circle size={SIZE.SMALL} />
-						<h3 class="mj-h4 m-0 pl-3 md:w-full w-3/4">Consultant-chercheur indépendant</h3>
+						<h3 class="mj-h3 mj-h4 mt-0 mb-0 pl-3 md:w-full w-3/4">Consultant-chercheur indépendant</h3>
 					</div>
 
 					<p>
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 
-			<h3>De la recherche à l’action</h3>
+			<h3 class="mj-h3">De la recherche à l’action</h3>
 
 			<ul class="list-disc">
 				<li>
@@ -101,7 +101,7 @@
 				</li>
 			</ul>
 
-			<h3>Les missions d’expertise pour l’ADEME</h3>
+			<h3 class="mj-h3">Les missions d’expertise pour l’ADEME</h3>
 
 			Je travaille étroitement avec Valérie MARTIN, Cheffe du service Mobilisation citoyenne et
 			Médias de l’ADEME. Voici les principales missions réalisées :
@@ -129,7 +129,7 @@
 				</li>
 			</ul>
 
-			<h3>Born in 331 PPM</h3>
+			<h3 class="mj-h3">Born in 331 PPM</h3>
 			<div class="w-full">
 				<img src={mjnb} class="object-contain rounded-xl" alt="" />
 			</div>
@@ -164,7 +164,7 @@
 				énergies fossiles toujours plus grandissante et pour dénoncer l'injustice climatique. »
 			</p>
 
-			<h3>Focus sur les années 2023 et 2024</h3>
+			<h3 class="mj-h3">Focus sur les années 2023 et 2024</h3>
 
 			<p>
 				Pendant deux années, <span class="font-bold">Sandrine CADIC</span> et

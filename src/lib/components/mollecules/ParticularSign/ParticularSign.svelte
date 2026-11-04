@@ -14,6 +14,6 @@
 		<Circle size={SIZE.SMALL} />
 	</div>
 
-	<h3 class="my-6 mj-h4">{title}</h3>
+	<h3 class="mj-h3 mj-h4 mt-6 mb-6">{title}</h3>
 	<p>{content}</p>
 </div>

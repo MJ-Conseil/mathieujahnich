@@ -13,12 +13,12 @@
 </script>
 
 <div class="h-full w-full flex flex-col justify-evenly relative">
-	<div class="min-h-[250px]">
+	<div class="min-h-62.5 mj-h3">
 		{@render children?.()}
 	</div>
 
-	<h3 class="my-5">{title}</h3>
-	<p class="min-h-[100px]">
+	<h3 class="my-5 mj-h3">{title}</h3>
+	<p class="min-h-25">
 		{content}
 	</p>
 	{#if link}

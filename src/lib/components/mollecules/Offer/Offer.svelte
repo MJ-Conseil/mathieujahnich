@@ -13,8 +13,8 @@
 
 <div class="h-full w-full flex flex-col justify-evenly relative">
 	{@render children?.()}
-	<h3 class="my-5">{offerName}</h3>
-	<p class="min-h-[150px]">
+	<h3 class="my-5 mj-h3">{offerName}</h3>
+	<p class="min-h-37.5">
 		{offer}
 	</p>
 	{#if link}

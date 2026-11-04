@@ -21,7 +21,7 @@
 
 <div data-testid={id} class="py-2 px-3 border rounded-b-xl border-gray-light rounded-xl tata">
 	<h3
-		class="accordion-trigger__title text-xl md:text-2xl w-full m-0 p-0 min-h-[65px] flex items-center"
+		class="mj-h3 accordion-trigger__title text-xl md:text-2xl w-full mt-0 mb-0 p-0 min-h-[65px] flex items-center"
 	>
 		<button
 			bind:this={element}

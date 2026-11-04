@@ -34,7 +34,7 @@
 		</p>
 	</Section>
 	<Section alt>
-		<h2>Les numéros précédents</h2>
+		<h2 class="mj-h2">Les numéros précédents</h2>
 
 		<div class="h-full md:gap-x-10 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-2">
 			{#each data.newsletters as newsletter}

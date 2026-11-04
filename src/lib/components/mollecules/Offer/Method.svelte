@@ -19,7 +19,7 @@
 		<div class="absolute left-[-36px] top-[22px] hidden lg:block">
 			<Circle size={SIZE.MEDIUM} />
 		</div>
-		<h3 class="text-2xl lg:text-3xl font-extralight mb-6 lg:pl-6">{title}</h3>
+		<h3 class="mj-h3 text-2xl lg:text-3xl font-extralight mb-6 lg:pl-6">{title}</h3>
 		<div class="lg:text-[1.2rem]">
 			{@render children?.()}
 		</div>

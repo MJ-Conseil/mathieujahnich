@@ -161,7 +161,7 @@
 			</li>
 		</ul>
 
-		<h2>Voies de recours</h2>
+		<h2 class="mj-h2">Voies de recours</h2>
 
 		<p class="my-3">
 			Cette procédure est à utiliser dans le cas suivant. Vous avez signalé au responsable du site

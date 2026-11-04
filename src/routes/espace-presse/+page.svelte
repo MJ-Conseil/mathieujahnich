@@ -109,7 +109,7 @@
 <!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main-content">
 	<Section>
-		<h2 class="sr-only">Contactez-nous</h2>
+		<h2 class="mj-h2 sr-only">Contactez-nous</h2>
 
 		<div class="flex pb-4 flex-col md:flex-row text-blue-dark">
 			<img class="object-contain" src={picture} alt="Mathieu Jahnich durant une interview" />
@@ -147,7 +147,7 @@
 			{@const isOdd = index % 2 != 0}
 
 			<Section alt={isOdd}>
-				<h2>{mediaResourceItem.mediaResourceTypeName}</h2>
+				<h2 class="mj-h2">{mediaResourceItem.mediaResourceTypeName}</h2>
 
 				<div class="h-full md:gap-x-5 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-3">
 					{#each mediaResourceItem.resource as mediaResource, i}

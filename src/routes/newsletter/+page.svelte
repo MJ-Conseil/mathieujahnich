@@ -79,7 +79,7 @@
 
 <main id="main-content">
 	<Section>
-		<h2>Inscription à la newsletter de Mathieu Jahnich</h2>
+		<h2 class="mj-h2">Inscription à la newsletter de Mathieu Jahnich</h2>
 		<p class="">
 			Inscrivez-vous à ma newsletter afin de retrouver une sélection mensuelle de contenus
 			originaux, reliant les enjeux de soutenabilité aux pratiques marketing et communication.
@@ -158,7 +158,7 @@
 	</Section>
 
 	<Section alt>
-		<h2>Les numéros précédents</h2>
+		<h2 class="mj-h2">Les numéros précédents</h2>
 
 		<div class="h-full md:gap-x-10 md:gap-y-10 grid gap-y-5 mt-12 md:grid-cols-2">
 			{#each data.newsletters as newsletter}

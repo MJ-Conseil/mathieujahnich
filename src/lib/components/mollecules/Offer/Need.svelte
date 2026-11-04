@@ -14,7 +14,7 @@
 		<Circle size={SIZE.SMALL} />
 	</div>
 
-	<h3 class="my-8 mj-h4">{title}</h3>
+	<h3 class="mj-h3 mj-h4 mt-8 mb-8">{title}</h3>
 
 	{@render children?.()}
 </div>

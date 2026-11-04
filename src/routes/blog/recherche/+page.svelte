@@ -106,7 +106,7 @@
 <!-- svelte-ignore a11y_no_redundant_roles -- this is the main page section -->
 <main role="main" id="main">
 	<Section>
-		<h2>
+		<h2 class="mj-h2">
 			{`${posts.length} résultat${posts.length > 1 ? 's' : ''} trouvé${
 				posts.length > 1 ? 's' : ''
 			} ${searchParams.search ? `pour "${searchParams.search}"` : ''}`}

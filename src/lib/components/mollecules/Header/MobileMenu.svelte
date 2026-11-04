@@ -35,7 +35,7 @@
 	role="navigation"
 >
 	<header>
-		<h3 id="modal-title" class="sr-only">Menu de navigation</h3>
+		<h3 id="modal-title" class="mj-h3 sr-only">Menu de navigation</h3>
 		<div class="w-full flex justify-end">
 			<button
 				onclick={handleCloseModal}

@@ -69,7 +69,7 @@
 <!-- svelte-ignore a11y_no_redundant_roles -- this is the main section of the page -->
 <main role="main" class="md:p-0 md:0" id="main">
 	<Section>
-		<h2>Signes particuliers</h2>
+		<h2 class="mj-h2">Signes particuliers</h2>
 		<div class="lg:gap-x-20 lg:gap-y-10 grid gap-y-5 lg:grid-cols-3">
 			<ParticularSign
 				title="+ 25 ans d'experience"
@@ -93,7 +93,7 @@
 
 	<section class="pb-8 md:pb-8 md:p-0 md:py-4 p-4">
 		<Container>
-			<h2 class="mb-4">À la une du blog</h2>
+			<h2 class="mb-4 mj-h2">À la une du blog</h2>
 			<p class="font-ptsans text-xl md:my-12 my-8">
 				Depuis 2005, j'interroge l'alignement des pratiques communication et marketing avec les
 				enjeux de transition écologique. Retrouvez ici mes analyses, des témoignages et des

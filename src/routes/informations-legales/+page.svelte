@@ -21,7 +21,7 @@
 		<div class="h-full md:px-8">
 			<div class="md:grid md:grid-cols-3 md:gap-7">
 				<div>
-					<h2>Editeur du site</h2>
+					<h2 class="mj-h2">Editeur du site</h2>
 
 					<p class="py-2">Raison sociale : MJ Conseil</p>
 					<p class="py-2">
@@ -39,7 +39,7 @@
 					<p class="py-2">Directeur de rédaction et de publication : Mathieu JAHNICH</p>
 				</div>
 				<div>
-					<h2>Créateur du site</h2>
+					<h2 class="mj-h2">Créateur du site</h2>
 
 					<p class="py-2">Version actuelle</p>
 					<p class="py-2">Site réalisé par</p>
@@ -76,7 +76,7 @@
 					</p>
 				</div>
 				<div>
-					<h2>Hébergement</h2>
+					<h2 class="mj-h2">Hébergement</h2>
 
 					<p class="py-2">L’hébergement est assuré par {CONTACT_HOSTING.name}</p>
 					<p class="py-2">Raison sociale : {CONTACT_HOSTING.corporateName}</p>
@@ -97,7 +97,7 @@
 
 	<Section alt>
 		<div class="h-full md:px-44">
-			<h2 class="my-8">Conditions d’utilisation</h2>
+			<h2 class="my-8 mj-h2">Conditions d’utilisation</h2>
 			<p class="my-3">
 				Le site accessible par l’url suivant : <a
 					class="mj-link--ternary"
@@ -121,7 +121,7 @@
 
 	<Section>
 		<div class="h-full md:px-44">
-			<h2 class="my-8">Limitation et responsabilité</h2>
+			<h2 class="my-8 mj-h2">Limitation et responsabilité</h2>
 			<p class="my-3">
 				Les informations contenues sur ce site sont aussi précises que possible et le site est
 				périodiquement remis à jour, mais peut toutefois contenir des inexactitudes, des omissions
@@ -154,7 +154,7 @@
 
 	<Section alt>
 		<div class="h-full md:px-44">
-			<h2 class="my-8">Propriété intellectuelle</h2>
+			<h2 class="my-8 mj-h2">Propriété intellectuelle</h2>
 			<p class="my-3">
 				Tout le contenu du présent site, incluant, de façon non limitative, les graphismes, images,
 				textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la
@@ -175,7 +175,7 @@
 
 	<Section>
 		<div class="h-full md:px-44">
-			<h2 class="my-8">Confidentialité</h2>
+			<h2 class="my-8 mj-h2">Confidentialité</h2>
 			<p class="my-3">
 				Nous ne collectons aucune donnée personelle durant la navigation. Nous n'utilisons pas
 				Google Analytics ou autre type de système de suivi d'audience.
@@ -189,7 +189,7 @@
 
 	<Section alt>
 		<div class="h-full md:px-44">
-			<h2 class="my-8">Droit applicable</h2>
+			<h2 class="my-8 mj-h2">Droit applicable</h2>
 			<p class="my-3">
 				Tout litige en relation avec l’utilisation du site <a
 					class="mj-link--ternary"
