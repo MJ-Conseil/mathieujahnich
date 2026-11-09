@@ -97,106 +97,107 @@
 	@apply list-disc pl-6 text-blue-dark;
 }
 
-@utility blog-wrapper {
+@layer components {
 	/* Blog  */
+	.blog-wrapper {
+		& p {
+			@apply text-xl my-3;
+		}
 
-	& p {
-		@apply text-xl my-3;
+		& a {
+			@apply mj-link--ternary;
+		}
+
+		& ul {
+			@apply list-disc text-blue-dark;
+		}
+
+		& ol {
+			@apply list-disc text-blue-dark;
+		}
+
+		& li {
+			@apply mb-2;
+		}
+
+		& ol {
+			@apply list-decimal;
+		}
+
+		& ul {
+			@apply my-5 ml-5;
+		}
+
+		& ol {
+			@apply my-5 ml-5;
+		}
+
+		& ul li {
+			@apply text-xl my-2 mb-2;
+		}
+
+		& ol li {
+			@apply text-xl my-2 mb-2;
+		}
+
+		& h3 {
+			@apply mj-h3 mb-8 mt-12 wrap-break-word;
+		}
+
+		& h4 {
+			@apply mj-h4 mb-4 mt-8;
+		}
+
+		& a:hover {
+			@apply underline;
+		}
+
+		& p {
+			@apply leading-7 text-blue-dark;
+		}
+
+		& p img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 
-	& a {
-		@apply mj-link--ternary;
-	}
+	.html-wrapper {
+		& ul {
+			@apply list-disc text-blue-dark;
+		}
 
-	& ul {
-		@apply list-disc text-blue-dark;
-	}
+		& ol {
+			@apply list-disc text-blue-dark;
+		}
 
-	& ol {
-		@apply list-disc text-blue-dark;
-	}
+		& li {
+			@apply mb-2;
+		}
 
-	& li {
-		@apply mb-2;
-	}
+		& ul {
+			@apply pl-4 pb-3;
+		}
 
-	& ol {
-		@apply list-decimal;
-	}
+		& ol {
+			@apply pl-4 pb-3;
+		}
 
-	& ul {
-		@apply my-5 ml-5;
-	}
+		& ul li {
+			@apply text-lg!;
+		}
 
-	& ol {
-		@apply my-5 ml-5;
-	}
+		& ol li {
+			@apply text-lg!;
+		}
 
-	& ul li {
-		@apply text-xl my-2 mb-2;
-	}
+		& ul li {
+			@apply text-xl my-2 mb-2;
+		}
 
-	& ol li {
-		@apply text-xl my-2 mb-2;
-	}
-
-	& h3 {
-		@apply mb-8 mt-12 wrap-break-word;
-	}
-
-	& h4 {
-		@apply mb-4 mt-8;
-	}
-
-	& a:hover {
-		@apply underline;
-	}
-
-	& p {
-		@apply leading-7 text-blue-dark;
-	}
-
-	& p img {
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-@utility html-wrapper {
-	& ul {
-		@apply list-disc text-blue-dark;
-	}
-
-	& ol {
-		@apply list-disc text-blue-dark;
-	}
-
-	& li {
-		@apply mb-2;
-	}
-
-	& ul {
-		@apply pl-4 pb-3;
-	}
-
-	& ol {
-		@apply pl-4 pb-3;
-	}
-
-	& ul li {
-		@apply text-lg!;
-	}
-
-	& ol li {
-		@apply text-lg!;
-	}
-
-	& ul li {
-		@apply text-xl my-2 mb-2;
-	}
-
-	& ol li {
-		@apply text-xl my-2 mb-2;
+		& ol li {
+			@apply text-xl my-2 mb-2;
+		}
 	}
 }
 
