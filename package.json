@@ -27,7 +27,7 @@
 		"@tailwindcss/postcss": "^4.3.3",
 		"@testing-library/jest-dom": "^6.2.0",
 		"@testing-library/svelte": "^5.4.2",
-		"@types/jest": "^29.5.12",
+		"@types/jest": "^30.0.0",
 		"@types/node": "^26.6.6",
 		"autoprefixer": "^10.6.2",
 		"eslint": "^9.39.5",
