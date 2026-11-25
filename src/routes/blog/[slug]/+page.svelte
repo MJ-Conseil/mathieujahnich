@@ -38,7 +38,7 @@
 			</nav>
 
 			<p class="text-indigo font-bold font-ptsans mb-8">Article</p>
-			<h1 class="wrap-break-word">{data.post.title}</h1>
+			<h1 class="mj-h1 wrap-break-word">{data.post.title}</h1>
 			<p>
 				Rédigé par {data.post.author}, publié le {new Intl.DateTimeFormat('fr-FR', {
 					day: '2-digit',
